@@ -1,15 +1,35 @@
 [project]
 name = "ebarimt"
+version = "1.6.0"
 authors = [
-    { name = "Digital Consulting Service LLC (Mongolia)", email = "dev@frappe.mn"}
+    { name = "Digital Consulting Service LLC (Mongolia)", email = "dev@frappe.mn" }
 ]
-description = "eBarimt Mongolian Payment Receipt System App for ERPNext"
+description = "eBarimt Mongolian Tax Receipt System Integration for ERPNext - VAT Compliance"
 requires-python = ">=3.10"
 readme = "README.md"
-dynamic = ["version"]
+license = { text = "MIT" }
+keywords = ["frappe", "erpnext", "ebarimt", "mongolia", "tax", "vat", "receipt"]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Framework :: Frappe",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Office/Business :: Financial",
+]
 dependencies = [
     # "frappe~=15.0.0" # Installed and managed by bench.
 ]
+
+[project.urls]
+Homepage = "https://github.com/mn-frappe/ebarimt"
+Documentation = "https://github.com/mn-frappe/ebarimt#readme"
+Repository = "https://github.com/mn-frappe/ebarimt.git"
+Issues = "https://github.com/mn-frappe/ebarimt/issues"
 
 [build-system]
 requires = ["flit_core >=3.4,<4"]

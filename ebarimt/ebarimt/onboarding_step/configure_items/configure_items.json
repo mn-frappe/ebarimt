@@ -1,0 +1,22 @@
+{
+ "action": "View Report",
+ "action_label": "Configure Items",
+ "creation": "2024-12-14 00:00:00.000000",
+ "description": "Set up eBarimt product codes and VAT types for your items. Each item needs a product code for tax compliance.",
+ "docstatus": 0,
+ "doctype": "Onboarding Step",
+ "idx": 0,
+ "is_complete": 0,
+ "is_single": 0,
+ "is_skipped": 0,
+ "modified": "2024-12-14 00:00:00.000000",
+ "modified_by": "Administrator",
+ "name": "Configure Items",
+ "owner": "Administrator",
+ "path": "Item?ebarimt_vat_type=%5B%22like%22%2C%22%25%25%22%5D",
+ "reference_document": "Item",
+ "show_form_tour": 0,
+ "show_full_form": 0,
+ "title": "Configure Items",
+ "validate_action": 0
+}

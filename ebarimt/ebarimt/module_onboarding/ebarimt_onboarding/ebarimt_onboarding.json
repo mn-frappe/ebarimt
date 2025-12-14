@@ -1,0 +1,44 @@
+{
+ "allow_roles": [
+  {
+   "role": "System Manager"
+  },
+  {
+   "role": "Accounts Manager"
+  }
+ ],
+ "creation": "2024-12-14 00:00:00.000000",
+ "docstatus": 0,
+ "doctype": "Module Onboarding",
+ "documentation_url": "https://github.com/mn-frappe/ebarimt#readme",
+ "idx": 0,
+ "is_complete": 0,
+ "modified": "2024-12-14 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "eBarimt",
+ "name": "eBarimt Onboarding",
+ "owner": "Administrator",
+ "steps": [
+  {
+   "step": "Configure eBarimt Settings"
+  },
+  {
+   "step": "Test API Connection"
+  },
+  {
+   "step": "Setup Tax Codes"
+  },
+  {
+   "step": "Setup Payment Types"
+  },
+  {
+   "step": "Configure Items"
+  },
+  {
+   "step": "Create First Receipt"
+  }
+ ],
+ "subtitle": "Set up eBarimt tax receipt integration",
+ "success_message": "eBarimt is now configured! You can start generating tax receipts.",
+ "title": "eBarimt Setup"
+}

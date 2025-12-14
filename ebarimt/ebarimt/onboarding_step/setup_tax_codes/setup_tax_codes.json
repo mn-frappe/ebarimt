@@ -1,0 +1,22 @@
+{
+ "action": "View Report",
+ "action_label": "View Tax Codes",
+ "creation": "2024-12-14 00:00:00.000000",
+ "description": "Review the available tax codes synced from the tax authority. These determine VAT rates for different product categories.",
+ "docstatus": 0,
+ "doctype": "Onboarding Step",
+ "idx": 0,
+ "is_complete": 0,
+ "is_single": 0,
+ "is_skipped": 0,
+ "modified": "2024-12-14 00:00:00.000000",
+ "modified_by": "Administrator",
+ "name": "Setup Tax Codes",
+ "owner": "Administrator",
+ "path": "eBarimt Tax Code",
+ "reference_document": "eBarimt Tax Code",
+ "show_form_tour": 0,
+ "show_full_form": 0,
+ "title": "Setup Tax Codes",
+ "validate_action": 0
+}

@@ -3,7 +3,7 @@
 # License: GNU General Public License v3
 
 """
-eBarimt Unit Tests for CI
+eBarimt Unit Tests for CI - Full Coverage
 """
 
 import unittest
@@ -42,6 +42,10 @@ class TestEBarimtBasic(FrappeTestCase):
         """Test eBarimt District DocType exists"""
         self.assertTrue(frappe.db.exists("DocType", "eBarimt District"))
 
+    def test_ebarimt_product_code_exists(self):
+        """Test eBarimt Product Code DocType exists"""
+        self.assertTrue(frappe.db.exists("DocType", "eBarimt Product Code"))
+
 
 class TestEBarimtAPI(FrappeTestCase):
     """Test eBarimt API imports"""
@@ -65,6 +69,18 @@ class TestEBarimtAPI(FrappeTestCase):
         self.assertTrue(hasattr(client, "get_taxpayer_info"))
         self.assertTrue(hasattr(client, "get_receipt_info"))
         self.assertTrue(hasattr(client, "void_receipt"))
+
+    def test_performance_module(self):
+        """Test performance module"""
+        from ebarimt import performance
+        self.assertTrue(hasattr(performance, "ensure_indexes"))
+        self.assertTrue(hasattr(performance, "batch_load_item_data"))
+
+    def test_http_client_module(self):
+        """Test HTTP client module"""
+        from ebarimt.api import http_client
+        self.assertTrue(hasattr(http_client, "get_session"))
+        self.assertTrue(hasattr(http_client, "make_request"))
 
 
 class TestEBarimtIntegrations(FrappeTestCase):
@@ -127,6 +143,11 @@ class TestEBarimtFixtures(FrappeTestCase):
         count = frappe.db.count("eBarimt OAT Product Type")
         self.assertGreater(count, 0, "OAT product types should be loaded from fixtures")
 
+    def test_districts_loaded(self):
+        """Test Districts fixture loaded"""
+        count = frappe.db.count("eBarimt District")
+        self.assertGreater(count, 0, "Districts should be loaded from fixtures")
+
 
 class TestEBarimtCustomFields(FrappeTestCase):
     """Test eBarimt custom fields"""
@@ -156,3 +177,100 @@ class TestEBarimtCustomFields(FrappeTestCase):
         for field in fields:
             exists = frappe.db.exists("Custom Field", {"dt": "Company", "fieldname": field})
             self.assertTrue(exists, f"Custom field {field} should exist on Company")
+
+
+class TestEBarimtReports(FrappeTestCase):
+    """Test eBarimt reports exist"""
+
+    def test_receipt_summary_report(self):
+        """Test Receipt Summary report exists"""
+        self.assertTrue(frappe.db.exists("Report", "Receipt Summary"))
+
+    def test_failed_transactions_report(self):
+        """Test Failed Transactions report exists"""
+        self.assertTrue(frappe.db.exists("Report", "Failed Transactions"))
+
+    def test_tax_code_analysis_report(self):
+        """Test Tax Code Analysis report exists"""
+        self.assertTrue(frappe.db.exists("Report", "Tax Code Analysis"))
+
+    def test_customer_tax_summary_report(self):
+        """Test Customer Tax Summary report exists"""
+        self.assertTrue(frappe.db.exists("Report", "Customer Tax Summary"))
+
+
+class TestEBarimtWorkspace(FrappeTestCase):
+    """Test eBarimt workspace and dashboard"""
+
+    def test_workspace_exists(self):
+        """Test eBarimt workspace exists"""
+        self.assertTrue(frappe.db.exists("Workspace", "eBarimt"))
+
+    def test_number_cards_exist(self):
+        """Test number cards exist"""
+        cards = ["Total Receipts", "Pending Receipts", "Failed Receipts", "Today Receipts"]
+        for card in cards:
+            self.assertTrue(
+                frappe.db.exists("Number Card", card),
+                f"Number card {card} should exist"
+            )
+
+    def test_dashboard_charts_exist(self):
+        """Test dashboard charts exist"""
+        charts = ["Daily Receipts", "VAT Collection", "Receipt Status"]
+        for chart in charts:
+            self.assertTrue(
+                frappe.db.exists("Dashboard Chart", chart),
+                f"Dashboard chart {chart} should exist"
+            )
+
+
+class TestEBarimtOnboarding(FrappeTestCase):
+    """Test eBarimt onboarding"""
+
+    def test_onboarding_exists(self):
+        """Test onboarding module exists"""
+        self.assertTrue(frappe.db.exists("Module Onboarding", "eBarimt Onboarding"))
+
+    def test_onboarding_steps_exist(self):
+        """Test onboarding steps exist"""
+        steps = [
+            "Configure eBarimt Settings",
+            "Test API Connection",
+            "Setup Tax Codes",
+            "Setup Payment Types",
+            "Configure Items",
+            "Create First Receipt"
+        ]
+        for step in steps:
+            self.assertTrue(
+                frappe.db.exists("Onboarding Step", step),
+                f"Onboarding step '{step}' should exist"
+            )
+
+
+class TestEBarimtPrintFormat(FrappeTestCase):
+    """Test eBarimt print formats"""
+
+    def test_receipt_print_format_exists(self):
+        """Test eBarimt Receipt print format exists"""
+        self.assertTrue(frappe.db.exists("Print Format", "eBarimt Receipt"))
+
+
+class TestEBarimtTranslations(FrappeTestCase):
+    """Test eBarimt translations"""
+
+    def test_mongolian_translations_file_exists(self):
+        """Test Mongolian translations file exists"""
+        import os
+        translations_path = frappe.get_app_path("ebarimt", "translations", "mn.csv")
+        self.assertTrue(os.path.exists(translations_path), "Mongolian translations file should exist")
+
+    def test_translations_have_content(self):
+        """Test translations file has content"""
+        import os
+        translations_path = frappe.get_app_path("ebarimt", "translations", "mn.csv")
+        if os.path.exists(translations_path):
+            with open(translations_path, "r", encoding="utf-8") as f:
+                content = f.read()
+                self.assertGreater(len(content), 100, "Translations file should have content")

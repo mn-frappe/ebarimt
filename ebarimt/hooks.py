@@ -8,7 +8,7 @@ app_publisher = "Digital Consulting Service LLC (Mongolia)"
 app_description = "eBarimt Mongolian VAT Receipt System - Full ERPNext Integration"
 app_email = "dev@frappe.mn"
 app_license = "gpl-3.0"
-app_version = "1.5.0"
+app_version = "1.7.0"
 
 # Required Apps
 required_apps = ["frappe", "erpnext"]
@@ -38,8 +38,7 @@ after_migrate = [
     "ebarimt.performance.ensure_indexes"
 ]
 
-# Fixtures - Payment Types, Tax Codes, OAT Product Types, and Districts
-# eBarimt app manages its own districts independently
+# Fixtures - Payment Types, Tax Codes, OAT Product Types, Districts, and Custom Fields
 fixtures = [
     {
         "doctype": "eBarimt Payment Type",
@@ -55,6 +54,23 @@ fixtures = [
     },
     {
         "doctype": "eBarimt District"
+    },
+    {
+        "doctype": "Custom Field",
+        "filters": [
+            ["name", "like", "Customer-custom_%"],
+            ["name", "like", "Customer-ebarimt%"]
+        ],
+        "or_filters": [
+            ["name", "like", "Item-custom_ebarimt%"],
+            ["name", "like", "Item-ebarimt%"],
+            ["name", "like", "Sales Invoice-custom_ebarimt%"],
+            ["name", "like", "Sales Invoice-ebarimt%"],
+            ["name", "like", "POS Invoice-custom_ebarimt%"],
+            ["name", "like", "POS Invoice-ebarimt%"],
+            ["name", "like", "Company-custom_ebarimt%"],
+            ["name", "like", "Company-ebarimt%"]
+        ]
     }
 ]
 

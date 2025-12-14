@@ -1,0 +1,22 @@
+{
+ "action": "View Report",
+ "action_label": "View Payment Types",
+ "creation": "2024-12-14 00:00:00.000000",
+ "description": "Review payment types (Cash, Card, Transfer, etc.) that will be used when generating tax receipts.",
+ "docstatus": 0,
+ "doctype": "Onboarding Step",
+ "idx": 0,
+ "is_complete": 0,
+ "is_single": 0,
+ "is_skipped": 0,
+ "modified": "2024-12-14 00:00:00.000000",
+ "modified_by": "Administrator",
+ "name": "Setup Payment Types",
+ "owner": "Administrator",
+ "path": "eBarimt Payment Type",
+ "reference_document": "eBarimt Payment Type",
+ "show_form_tour": 0,
+ "show_full_form": 0,
+ "title": "Setup Payment Types",
+ "validate_action": 0
+}
