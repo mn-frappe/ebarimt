@@ -34,8 +34,8 @@ after_migrate = [
     "ebarimt.install.sync_district_codes"
 ]
 
-# Fixtures - Payment Types, Tax Codes, and OAT Product Types
-# District is shared from QPay app
+# Fixtures - Payment Types, Tax Codes, OAT Product Types, and Districts
+# eBarimt app manages its own districts independently
 fixtures = [
     {
         "doctype": "eBarimt Payment Type",
@@ -48,6 +48,9 @@ fixtures = [
     {
         "doctype": "eBarimt OAT Product Type",
         "filters": {"is_default": 1}
+    },
+    {
+        "doctype": "eBarimt District"
     }
 ]
 
@@ -74,7 +77,7 @@ doc_events = {
 }
 
 # Scheduled Tasks
-# Note: District sync is handled by QPay app since districts are shared
+# District sync handled by after_migrate hook
 scheduler_events = {
     "daily": [
         "ebarimt.tasks.sync_tax_codes_daily"

@@ -5,7 +5,8 @@
 """
 Scheduled Tasks for eBarimt
 
-Note: District sync is handled by QPay app since districts are shared.
+eBarimt app manages its own district codes via eBarimt District DocType.
+This allows independent operation without QPay installed.
 """
 
 import frappe

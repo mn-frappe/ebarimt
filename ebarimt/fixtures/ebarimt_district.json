@@ -1,0 +1,4556 @@
+[
+    {
+        "doctype": "eBarimt District",
+        "code": "3420",
+        "name_mn": "Сонгинохайрхан, 20-р хороо",
+        "name_en": "",
+        "aimag": "Сонгинохайрхан",
+        "sum": "20-р хороо",
+        "name": "3420"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "3421",
+        "name_mn": "Сонгинохайрхан, 21-р хороо",
+        "name_en": "",
+        "aimag": "Сонгинохайрхан",
+        "sum": "21-р хороо",
+        "name": "3421"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "3501",
+        "name_mn": "Чингэлтэй, 1-р хороо",
+        "name_en": "",
+        "aimag": "Чингэлтэй",
+        "sum": "1-р хороо",
+        "name": "3501"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "3502",
+        "name_mn": "Чингэлтэй, 2-р хороо",
+        "name_en": "",
+        "aimag": "Чингэлтэй",
+        "sum": "2-р хороо",
+        "name": "3502"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "3503",
+        "name_mn": "Чингэлтэй, 3-р хороо",
+        "name_en": "",
+        "aimag": "Чингэлтэй",
+        "sum": "3-р хороо",
+        "name": "3503"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "3504",
+        "name_mn": "Чингэлтэй, 4-р хороо",
+        "name_en": "",
+        "aimag": "Чингэлтэй",
+        "sum": "4-р хороо",
+        "name": "3504"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "3505",
+        "name_mn": "Чингэлтэй, 5-р хороо",
+        "name_en": "",
+        "aimag": "Чингэлтэй",
+        "sum": "5-р хороо",
+        "name": "3505"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "3506",
+        "name_mn": "Чингэлтэй, 6-р хороо",
+        "name_en": "",
+        "aimag": "Чингэлтэй",
+        "sum": "6-р хороо",
+        "name": "3506"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "3507",
+        "name_mn": "Чингэлтэй, 7-р хороо",
+        "name_en": "",
+        "aimag": "Чингэлтэй",
+        "sum": "7-р хороо",
+        "name": "3507"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "3508",
+        "name_mn": "Чингэлтэй, 8-р хороо",
+        "name_en": "",
+        "aimag": "Чингэлтэй",
+        "sum": "8-р хороо",
+        "name": "3508"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "3509",
+        "name_mn": "Чингэлтэй, 9-р хороо",
+        "name_en": "",
+        "aimag": "Чингэлтэй",
+        "sum": "9-р хороо",
+        "name": "3509"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "3510",
+        "name_mn": "Чингэлтэй, 10-р хороо",
+        "name_en": "",
+        "aimag": "Чингэлтэй",
+        "sum": "10-р хороо",
+        "name": "3510"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "0101",
+        "name_mn": "Архангай, Их тамир",
+        "name_en": "",
+        "aimag": "Архангай",
+        "sum": "Их тамир",
+        "name": "0101"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "0102",
+        "name_mn": "Архангай, Чулуут",
+        "name_en": "",
+        "aimag": "Архангай",
+        "sum": "Чулуут",
+        "name": "0102"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "0103",
+        "name_mn": "Архангай, Хангай",
+        "name_en": "",
+        "aimag": "Архангай",
+        "sum": "Хангай",
+        "name": "0103"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "0104",
+        "name_mn": "Архангай, Тариат",
+        "name_en": "",
+        "aimag": "Архангай",
+        "sum": "Тариат",
+        "name": "0104"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "0105",
+        "name_mn": "Архангай, Өндөр-Улаан",
+        "name_en": "",
+        "aimag": "Архангай",
+        "sum": "Өндөр-Улаан",
+        "name": "0105"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "0106",
+        "name_mn": "Архангай, Эрдэнэмандал",
+        "name_en": "",
+        "aimag": "Архангай",
+        "sum": "Эрдэнэмандал",
+        "name": "0106"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "0107",
+        "name_mn": "Архангай, Жаргалант",
+        "name_en": "",
+        "aimag": "Архангай",
+        "sum": "Жаргалант",
+        "name": "0107"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "0108",
+        "name_mn": "Архангай, Цэцэрлэг",
+        "name_en": "",
+        "aimag": "Архангай",
+        "sum": "Цэцэрлэг",
+        "name": "0108"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "0109",
+        "name_mn": "Архангай, Хайрхан",
+        "name_en": "",
+        "aimag": "Архангай",
+        "sum": "Хайрхан",
+        "name": "0109"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "0110",
+        "name_mn": "Архангай, Батцэнгэл",
+        "name_en": "",
+        "aimag": "Архангай",
+        "sum": "Батцэнгэл",
+        "name": "0110"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "0111",
+        "name_mn": "Архангай, Өлзийт",
+        "name_en": "",
+        "aimag": "Архангай",
+        "sum": "Өлзийт",
+        "name": "0111"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "0112",
+        "name_mn": "Архангай, Өгийнуур",
+        "name_en": "",
+        "aimag": "Архангай",
+        "sum": "Өгийнуур",
+        "name": "0112"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "0113",
+        "name_mn": "Архангай, Хашаат",
+        "name_en": "",
+        "aimag": "Архангай",
+        "sum": "Хашаат",
+        "name": "0113"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "0114",
+        "name_mn": "Архангай, Хотонт",
+        "name_en": "",
+        "aimag": "Архангай",
+        "sum": "Хотонт",
+        "name": "0114"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "0115",
+        "name_mn": "Архангай, Цэнхэр",
+        "name_en": "",
+        "aimag": "Архангай",
+        "sum": "Цэнхэр",
+        "name": "0115"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "0116",
+        "name_mn": "Архангай, Төвшрүүлэх",
+        "name_en": "",
+        "aimag": "Архангай",
+        "sum": "Төвшрүүлэх",
+        "name": "0116"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "0117",
+        "name_mn": "Архангай, Булган",
+        "name_en": "",
+        "aimag": "Архангай",
+        "sum": "Булган",
+        "name": "0117"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "0119",
+        "name_mn": "Архангай, Цахир",
+        "name_en": "",
+        "aimag": "Архангай",
+        "sum": "Цахир",
+        "name": "0119"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "0120",
+        "name_mn": "Архангай, Эрдэнэбулган",
+        "name_en": "",
+        "aimag": "Архангай",
+        "sum": "Эрдэнэбулган",
+        "name": "0120"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "0201",
+        "name_mn": "Баян-Өлгий, Алтай",
+        "name_en": "",
+        "aimag": "Баян-Өлгий",
+        "sum": "Алтай",
+        "name": "0201"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "0202",
+        "name_mn": "Баян-Өлгий, Алтанцөгц",
+        "name_en": "",
+        "aimag": "Баян-Өлгий",
+        "sum": "Алтанцөгц",
+        "name": "0202"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "0203",
+        "name_mn": "Баян-Өлгий, Баяннуур",
+        "name_en": "",
+        "aimag": "Баян-Өлгий",
+        "sum": "Баяннуур",
+        "name": "0203"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "0204",
+        "name_mn": "Баян-Өлгий, Бугат",
+        "name_en": "",
+        "aimag": "Баян-Өлгий",
+        "sum": "Бугат",
+        "name": "0204"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "0205",
+        "name_mn": "Баян-Өлгий, Булган",
+        "name_en": "",
+        "aimag": "Баян-Өлгий",
+        "sum": "Булган",
+        "name": "0205"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "0206",
+        "name_mn": "Баян-Өлгий, Буянт",
+        "name_en": "",
+        "aimag": "Баян-Өлгий",
+        "sum": "Буянт",
+        "name": "0206"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "0207",
+        "name_mn": "Баян-Өлгий, Дэлүүн",
+        "name_en": "",
+        "aimag": "Баян-Өлгий",
+        "sum": "Дэлүүн",
+        "name": "0207"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "0208",
+        "name_mn": "Баян-Өлгий, Ногооннуур",
+        "name_en": "",
+        "aimag": "Баян-Өлгий",
+        "sum": "Ногооннуур",
+        "name": "0208"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "0209",
+        "name_mn": "Баян-Өлгий, Сагсай",
+        "name_en": "",
+        "aimag": "Баян-Өлгий",
+        "sum": "Сагсай",
+        "name": "0209"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "0210",
+        "name_mn": "Баян-Өлгий, Толбо",
+        "name_en": "",
+        "aimag": "Баян-Өлгий",
+        "sum": "Толбо",
+        "name": "0210"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "0211",
+        "name_mn": "Баян-Өлгий, Улаанхус",
+        "name_en": "",
+        "aimag": "Баян-Өлгий",
+        "sum": "Улаанхус",
+        "name": "0211"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "0212",
+        "name_mn": "Баян-Өлгий, Цэнгэл",
+        "name_en": "",
+        "aimag": "Баян-Өлгий",
+        "sum": "Цэнгэл",
+        "name": "0212"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "0214",
+        "name_mn": "Баян-Өлгий, Өлгий",
+        "name_en": "",
+        "aimag": "Баян-Өлгий",
+        "sum": "Өлгий",
+        "name": "0214"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "0301",
+        "name_mn": "Баянхонгор, Баацагаан",
+        "name_en": "",
+        "aimag": "Баянхонгор",
+        "sum": "Баацагаан",
+        "name": "0301"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "0302",
+        "name_mn": "Баянхонгор, Баянбулаг",
+        "name_en": "",
+        "aimag": "Баянхонгор",
+        "sum": "Баянбулаг",
+        "name": "0302"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "0303",
+        "name_mn": "Баянхонгор, Баянговь",
+        "name_en": "",
+        "aimag": "Баянхонгор",
+        "sum": "Баянговь",
+        "name": "0303"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "0304",
+        "name_mn": "Баянхонгор, Баянлиг",
+        "name_en": "",
+        "aimag": "Баянхонгор",
+        "sum": "Баянлиг",
+        "name": "0304"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "0305",
+        "name_mn": "Баянхонгор, Баян-Овоо",
+        "name_en": "",
+        "aimag": "Баянхонгор",
+        "sum": "Баян-Овоо",
+        "name": "0305"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "0306",
+        "name_mn": "Баянхонгор, Баян-Өндөр",
+        "name_en": "",
+        "aimag": "Баянхонгор",
+        "sum": "Баян-Өндөр",
+        "name": "0306"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "0307",
+        "name_mn": "Баянхонгор, Баянцагаан",
+        "name_en": "",
+        "aimag": "Баянхонгор",
+        "sum": "Баянцагаан",
+        "name": "0307"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "0308",
+        "name_mn": "Баянхонгор, Богд",
+        "name_en": "",
+        "aimag": "Баянхонгор",
+        "sum": "Богд",
+        "name": "0308"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "0608",
+        "name_mn": "Дорноговь, Сайхандулаан",
+        "name_en": "",
+        "aimag": "Дорноговь",
+        "sum": "Сайхандулаан",
+        "name": "0608"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "0609",
+        "name_mn": "Дорноговь, Улаанбадрах",
+        "name_en": "",
+        "aimag": "Дорноговь",
+        "sum": "Улаанбадрах",
+        "name": "0609"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "0610",
+        "name_mn": "Дорноговь, Хатанбулаг",
+        "name_en": "",
+        "aimag": "Дорноговь",
+        "sum": "Хатанбулаг",
+        "name": "0610"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "0611",
+        "name_mn": "Дорноговь, Хөвсгөл",
+        "name_en": "",
+        "aimag": "Дорноговь",
+        "sum": "Хөвсгөл",
+        "name": "0611"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "0612",
+        "name_mn": "Дорноговь, Эрдэнэ",
+        "name_en": "",
+        "aimag": "Дорноговь",
+        "sum": "Эрдэнэ",
+        "name": "0612"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "0614",
+        "name_mn": "Дорноговь, Замын-Үүд",
+        "name_en": "",
+        "aimag": "Дорноговь",
+        "sum": "Замын-Үүд",
+        "name": "0614"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "0701",
+        "name_mn": "Дорнод, Баян-Уул",
+        "name_en": "",
+        "aimag": "Дорнод",
+        "sum": "Баян-Уул",
+        "name": "0701"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "0617",
+        "name_mn": "Дорноговь, Сайншанд",
+        "name_en": "",
+        "aimag": "Дорноговь",
+        "sum": "Сайншанд",
+        "name": "0617"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "0702",
+        "name_mn": "Дорнод, Баяндун",
+        "name_en": "",
+        "aimag": "Дорнод",
+        "sum": "Баяндун",
+        "name": "0702"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "0703",
+        "name_mn": "Дорнод, Баянтүмэн",
+        "name_en": "",
+        "aimag": "Дорнод",
+        "sum": "Баянтүмэн",
+        "name": "0703"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "3511",
+        "name_mn": "Чингэлтэй, 11-р хороо",
+        "name_en": "",
+        "aimag": "Чингэлтэй",
+        "sum": "11-р хороо",
+        "name": "3511"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "3512",
+        "name_mn": "Чингэлтэй, 12-р хороо",
+        "name_en": "",
+        "aimag": "Чингэлтэй",
+        "sum": "12-р хороо",
+        "name": "3512"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "3513",
+        "name_mn": "Чингэлтэй, 13-р хороо",
+        "name_en": "",
+        "aimag": "Чингэлтэй",
+        "sum": "13-р хороо",
+        "name": "3513"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "3514",
+        "name_mn": "Чингэлтэй, 14-р хороо",
+        "name_en": "",
+        "aimag": "Чингэлтэй",
+        "sum": "14-р хороо",
+        "name": "3514"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "3515",
+        "name_mn": "Чингэлтэй, 15-р хороо",
+        "name_en": "",
+        "aimag": "Чингэлтэй",
+        "sum": "15-р хороо",
+        "name": "3515"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "3516",
+        "name_mn": "Чингэлтэй, 16-р хороо",
+        "name_en": "",
+        "aimag": "Чингэлтэй",
+        "sum": "16-р хороо",
+        "name": "3516"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "3517",
+        "name_mn": "Чингэлтэй, 17-р хороо",
+        "name_en": "",
+        "aimag": "Чингэлтэй",
+        "sum": "17-р хороо",
+        "name": "3517"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "3518",
+        "name_mn": "Чингэлтэй, 18-р хороо",
+        "name_en": "",
+        "aimag": "Чингэлтэй",
+        "sum": "18-р хороо",
+        "name": "3518"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "3519",
+        "name_mn": "Чингэлтэй, 19-р хороо",
+        "name_en": "",
+        "aimag": "Чингэлтэй",
+        "sum": "19-р хороо",
+        "name": "3519"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "3520",
+        "name_mn": "Чингэлтэй, 20-р хороо",
+        "name_en": "",
+        "aimag": "Чингэлтэй",
+        "sum": "20-р хороо",
+        "name": "3520"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "3201",
+        "name_mn": "Говьсүмбэр, Сүмбэр",
+        "name_en": "",
+        "aimag": "Говьсүмбэр",
+        "sum": "Сүмбэр",
+        "name": "3201"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "3202",
+        "name_mn": "Говьсүмбэр, Баянтал",
+        "name_en": "",
+        "aimag": "Говьсүмбэр",
+        "sum": "Баянтал",
+        "name": "3202"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "3203",
+        "name_mn": "Говьсүмбэр, Шивээговь",
+        "name_en": "",
+        "aimag": "Говьсүмбэр",
+        "sum": "Шивээговь",
+        "name": "3203"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "2701",
+        "name_mn": "Багануур, 1-р хороо",
+        "name_en": "",
+        "aimag": "Багануур",
+        "sum": "1-р хороо",
+        "name": "2701"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "2702",
+        "name_mn": "Багануур, 2-р хороо",
+        "name_en": "",
+        "aimag": "Багануур",
+        "sum": "2-р хороо",
+        "name": "2702"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "2703",
+        "name_mn": "Багануур, 3-р хороо",
+        "name_en": "",
+        "aimag": "Багануур",
+        "sum": "3-р хороо",
+        "name": "2703"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "2704",
+        "name_mn": "Багануур, 4-р хороо",
+        "name_en": "",
+        "aimag": "Багануур",
+        "sum": "4-р хороо",
+        "name": "2704"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "2705",
+        "name_mn": "Багануур, 5-р хороо",
+        "name_en": "",
+        "aimag": "Багануур",
+        "sum": "5-р хороо",
+        "name": "2705"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "2706",
+        "name_mn": "Багануур, 6-р хороо",
+        "name_en": "",
+        "aimag": "Багануур",
+        "sum": "6-р хороо",
+        "name": "2706"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "2707",
+        "name_mn": "Багануур, 7-р хороо",
+        "name_en": "",
+        "aimag": "Багануур",
+        "sum": "7-р хороо",
+        "name": "2707"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "2708",
+        "name_mn": "Багануур, 8-р хороо",
+        "name_en": "",
+        "aimag": "Багануур",
+        "sum": "8-р хороо",
+        "name": "2708"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "2709",
+        "name_mn": "Багануур, 9-р хороо",
+        "name_en": "",
+        "aimag": "Багануур",
+        "sum": "9-р хороо ",
+        "name": "2709"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "2710",
+        "name_mn": "Багануур, 10-р хороо",
+        "name_en": "",
+        "aimag": "Багануур",
+        "sum": "10-р хороо",
+        "name": "2710"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "2801",
+        "name_mn": "Багахангай, 1-р хороо",
+        "name_en": "",
+        "aimag": "Багахангай",
+        "sum": "1-р хороо",
+        "name": "2801"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "2621",
+        "name_mn": "Баянгол, 21-р хороо",
+        "name_en": "",
+        "aimag": "Баянгол",
+        "sum": "21-р хороо",
+        "name": "2621"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "2622",
+        "name_mn": "Баянгол, 22-р хороо",
+        "name_en": "",
+        "aimag": "Баянгол",
+        "sum": "22-р хороо",
+        "name": "2622"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "2623",
+        "name_mn": "Баянгол, 23-р хороо",
+        "name_en": "",
+        "aimag": "Баянгол",
+        "sum": "23-р хороо",
+        "name": "2623"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "3422",
+        "name_mn": "Сонгинохайрхан, 22-р хороо",
+        "name_en": "",
+        "aimag": "Сонгинохайрхан",
+        "sum": "22-р хороо",
+        "name": "3422"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "3423",
+        "name_mn": "Сонгинохайрхан, 23-р хороо",
+        "name_en": "",
+        "aimag": "Сонгинохайрхан",
+        "sum": "23-р хороо",
+        "name": "3423"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "3424",
+        "name_mn": "Сонгинохайрхан, 24-р хороо",
+        "name_en": "",
+        "aimag": "Сонгинохайрхан",
+        "sum": "24-р хороо",
+        "name": "3424"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "3425",
+        "name_mn": "Сонгинохайрхан, 25-р хороо",
+        "name_en": "",
+        "aimag": "Сонгинохайрхан",
+        "sum": "25-р хороо",
+        "name": "3425"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "2802",
+        "name_mn": "Багахангай, 2-р хороо",
+        "name_en": "",
+        "aimag": "Багахангай",
+        "sum": "2-р хороо",
+        "name": "2802"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "2803",
+        "name_mn": "Багахангай, 3-р хороо",
+        "name_en": "",
+        "aimag": "Багахангай",
+        "sum": "3-р хороо",
+        "name": "2803"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "2804",
+        "name_mn": "Багахангай, 4-р хороо",
+        "name_en": "",
+        "aimag": "Багахангай",
+        "sum": "4-р хороо",
+        "name": "2804"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "2805",
+        "name_mn": "Багахангай, 5-р хороо",
+        "name_en": "",
+        "aimag": "Багахангай",
+        "sum": "5-р хороо ",
+        "name": "2805"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "2806",
+        "name_mn": "Багахангай, 6-р хороо",
+        "name_en": "",
+        "aimag": "Багахангай",
+        "sum": "6-р хороо",
+        "name": "2806"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "2807",
+        "name_mn": "Багахангай, 7-р хороо",
+        "name_en": "",
+        "aimag": "Багахангай",
+        "sum": "7-р хороо",
+        "name": "2807"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "2808",
+        "name_mn": "Багахангай, 8-р хороо",
+        "name_en": "",
+        "aimag": "Багахангай",
+        "sum": "8-р хороо",
+        "name": "2808"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "2809",
+        "name_mn": "Багахангай, 9-р хороо",
+        "name_en": "",
+        "aimag": "Багахангай",
+        "sum": "9-р хороо",
+        "name": "2809"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "2810",
+        "name_mn": "Багахангай, 10-р хороо",
+        "name_en": "",
+        "aimag": "Багахангай",
+        "sum": "10-р хороо",
+        "name": "2810"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "2901",
+        "name_mn": "Налайх, 1-р хороо",
+        "name_en": "",
+        "aimag": "Налайх",
+        "sum": "1-р хороо",
+        "name": "2901"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "2902",
+        "name_mn": "Налайх, 2-р хороо",
+        "name_en": "",
+        "aimag": "Налайх",
+        "sum": "2-р хороо",
+        "name": "2902"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "2903",
+        "name_mn": "Налайх, 3-р хороо",
+        "name_en": "",
+        "aimag": "Налайх",
+        "sum": "3-р хороо",
+        "name": "2903"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "2904",
+        "name_mn": "Налайх, 4-р хороо",
+        "name_en": "",
+        "aimag": "Налайх",
+        "sum": "4-р хороо",
+        "name": "2904"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "2905",
+        "name_mn": "Налайх, 5-р хороо",
+        "name_en": "",
+        "aimag": "Налайх",
+        "sum": "5-р хороо",
+        "name": "2905"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "2906",
+        "name_mn": "Налайх, 6-р хороо",
+        "name_en": "",
+        "aimag": "Налайх",
+        "sum": "6-р хороо",
+        "name": "2906"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "2907",
+        "name_mn": "Налайх, 7-р хороо",
+        "name_en": "",
+        "aimag": "Налайх",
+        "sum": "7-р хороо",
+        "name": "2907"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "2908",
+        "name_mn": "Налайх, 8-р хороо",
+        "name_en": "",
+        "aimag": "Налайх",
+        "sum": "8-р хороо",
+        "name": "2908"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "2909",
+        "name_mn": "Налайх, 9-р хороо",
+        "name_en": "",
+        "aimag": "Налайх",
+        "sum": "9-р хороо",
+        "name": "2909"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "2910",
+        "name_mn": "Налайх, 10-р хороо",
+        "name_en": "",
+        "aimag": "Налайх",
+        "sum": "10-р хороо",
+        "name": "2910"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "0704",
+        "name_mn": "Дорнод, Гурванзагал",
+        "name_en": "",
+        "aimag": "Дорнод",
+        "sum": "Гурванзагал",
+        "name": "0704"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "0705",
+        "name_mn": "Дорнод, Дашбалбар",
+        "name_en": "",
+        "aimag": "Дорнод",
+        "sum": "Дашбалбар",
+        "name": "0705"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "0706",
+        "name_mn": "Дорнод, Матад",
+        "name_en": "",
+        "aimag": "Дорнод",
+        "sum": "Матад",
+        "name": "0706"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "0707",
+        "name_mn": "Дорнод, Хөлөнбуйр",
+        "name_en": "",
+        "aimag": "Дорнод",
+        "sum": "Хөлөнбуйр",
+        "name": "0707"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "0708",
+        "name_mn": "Дорнод, Булган",
+        "name_en": "",
+        "aimag": "Дорнод",
+        "sum": "Булган",
+        "name": "0708"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "0709",
+        "name_mn": "Дорнод, Сэргэлэн",
+        "name_en": "",
+        "aimag": "Дорнод",
+        "sum": "Сэргэлэн",
+        "name": "0709"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "0711",
+        "name_mn": "Дорнод, Халхгол",
+        "name_en": "",
+        "aimag": "Дорнод",
+        "sum": "Халхгол",
+        "name": "0711"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "0712",
+        "name_mn": "Дорнод, Цагаан-Овоо",
+        "name_en": "",
+        "aimag": "Дорнод",
+        "sum": "Цагаан-Овоо",
+        "name": "0712"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "0713",
+        "name_mn": "Дорнод, Чулуунхороот",
+        "name_en": "",
+        "aimag": "Дорнод",
+        "sum": "Чулуунхороот",
+        "name": "0713"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "0714",
+        "name_mn": "Дорнод, Чойбалсан",
+        "name_en": "",
+        "aimag": "Дорнод",
+        "sum": "Чойбалсан",
+        "name": "0714"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "0715",
+        "name_mn": "Дорнод, Хэрлэн",
+        "name_en": "",
+        "aimag": "Дорнод",
+        "sum": "Хэрлэн",
+        "name": "0715"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "0801",
+        "name_mn": "Дундговь, Адаацаг",
+        "name_en": "",
+        "aimag": "Дундговь",
+        "sum": "Адаацаг",
+        "name": "0801"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "0802",
+        "name_mn": "Дундговь, Баянжаргалан",
+        "name_en": "",
+        "aimag": "Дундговь",
+        "sum": "Баянжаргалан",
+        "name": "0802"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "0803",
+        "name_mn": "Дундговь, Говь-Угтаал",
+        "name_en": "",
+        "aimag": "Дундговь",
+        "sum": "Говь-Угтаал",
+        "name": "0803"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "0804",
+        "name_mn": "Дундговь, Дэлгэрцогт",
+        "name_en": "",
+        "aimag": "Дундговь",
+        "sum": "Дэлгэрцогт",
+        "name": "0804"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "0805",
+        "name_mn": "Дундговь, Дэрэн",
+        "name_en": "",
+        "aimag": "Дундговь",
+        "sum": "Дэрэн",
+        "name": "0805"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "0806",
+        "name_mn": "Дундговь, Гурвансайхан",
+        "name_en": "",
+        "aimag": "Дундговь",
+        "sum": "Гурвансайхан",
+        "name": "0806"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "0807",
+        "name_mn": "Дундговь, Дэлгэрхангай",
+        "name_en": "",
+        "aimag": "Дундговь",
+        "sum": "Дэлгэрхангай",
+        "name": "0807"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "0808",
+        "name_mn": "Дундговь, Луус",
+        "name_en": "",
+        "aimag": "Дундговь",
+        "sum": "Луус",
+        "name": "0808"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "0810",
+        "name_mn": "Дундговь, Сайнцагаан",
+        "name_en": "",
+        "aimag": "Дундговь",
+        "sum": "Сайнцагаан",
+        "name": "0810"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "0811",
+        "name_mn": "Дундговь, Сайхан-Овоо",
+        "name_en": "",
+        "aimag": "Дундговь",
+        "sum": "Сайхан-Овоо",
+        "name": "0811"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "0812",
+        "name_mn": "Дундговь, Өлзийт",
+        "name_en": "",
+        "aimag": "Дундговь",
+        "sum": "Өлзийт",
+        "name": "0812"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "0813",
+        "name_mn": "Дундговь, Өндөршил",
+        "name_en": "",
+        "aimag": "Дундговь",
+        "sum": "Өндөршил",
+        "name": "0813"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "0814",
+        "name_mn": "Дундговь, Хулд",
+        "name_en": "",
+        "aimag": "Дундговь",
+        "sum": "Хулд",
+        "name": "0814"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "0815",
+        "name_mn": "Дундговь, Цагаандэлгэр",
+        "name_en": "",
+        "aimag": "Дундговь",
+        "sum": "Цагаандэлгэр",
+        "name": "0815"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "0816",
+        "name_mn": "Дундговь, Эрдэнэдалай",
+        "name_en": "",
+        "aimag": "Дундговь",
+        "sum": "Эрдэнэдалай",
+        "name": "0816"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "0901",
+        "name_mn": "Завхан, Алдархаан",
+        "name_en": "",
+        "aimag": "Завхан",
+        "sum": "Алдархаан",
+        "name": "0901"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "0902",
+        "name_mn": "Завхан, Асгат",
+        "name_en": "",
+        "aimag": "Завхан",
+        "sum": "Асгат",
+        "name": "0902"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "0903",
+        "name_mn": "Завхан, Баянтэс",
+        "name_en": "",
+        "aimag": "Завхан",
+        "sum": "Баянтэс",
+        "name": "0903"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "0904",
+        "name_mn": "Завхан, Баянхайрхан",
+        "name_en": "",
+        "aimag": "Завхан",
+        "sum": "Баянхайрхан",
+        "name": "0904"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "0906",
+        "name_mn": "Завхан, Дөрвөлжин",
+        "name_en": "",
+        "aimag": "Завхан",
+        "sum": "Дөрвөлжин",
+        "name": "0906"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "0907",
+        "name_mn": "Завхан, Идэр",
+        "name_en": "",
+        "aimag": "Завхан",
+        "sum": "Идэр",
+        "name": "0907"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "0908",
+        "name_mn": "Завхан, Их-Уул",
+        "name_en": "",
+        "aimag": "Завхан",
+        "sum": "Их-Уул",
+        "name": "0908"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "0909",
+        "name_mn": "Завхан, Нөмрөг",
+        "name_en": "",
+        "aimag": "Завхан",
+        "sum": "Нөмрөг",
+        "name": "0909"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "0910",
+        "name_mn": "Завхан, Отгон",
+        "name_en": "",
+        "aimag": "Завхан",
+        "sum": "Отгон",
+        "name": "0910"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "0911",
+        "name_mn": "Завхан, Сантмаргац",
+        "name_en": "",
+        "aimag": "Завхан",
+        "sum": "Сантмаргац",
+        "name": "0911"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "0912",
+        "name_mn": "Завхан, Сонгино",
+        "name_en": "",
+        "aimag": "Завхан",
+        "sum": "Сонгино",
+        "name": "0912"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "0913",
+        "name_mn": "Завхан, Түдэвтэй",
+        "name_en": "",
+        "aimag": "Завхан",
+        "sum": "Түдэвтэй",
+        "name": "0913"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "0914",
+        "name_mn": "Завхан, Тэс",
+        "name_en": "",
+        "aimag": "Завхан",
+        "sum": "Тэс",
+        "name": "0914"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "0915",
+        "name_mn": "Завхан, Тэлмэн",
+        "name_en": "",
+        "aimag": "Завхан",
+        "sum": "Тэлмэн",
+        "name": "0915"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "0916",
+        "name_mn": "Завхан, Улиастай",
+        "name_en": "",
+        "aimag": "Завхан",
+        "sum": "Улиастай",
+        "name": "0916"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "0917",
+        "name_mn": "Завхан, Цагаанхайрхан",
+        "name_en": "",
+        "aimag": "Завхан",
+        "sum": "Цагаанхайрхан",
+        "name": "0917"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "0918",
+        "name_mn": "Завхан, Цагаанчулуут",
+        "name_en": "",
+        "aimag": "Завхан",
+        "sum": "Цагаанчулуут",
+        "name": "0918"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "0919",
+        "name_mn": "Завхан, Цэцэн-Уул",
+        "name_en": "",
+        "aimag": "Завхан",
+        "sum": "Цэцэн-Уул",
+        "name": "0919"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "0920",
+        "name_mn": "Завхан, Шилүүстэй",
+        "name_en": "",
+        "aimag": "Завхан",
+        "sum": "Шилүүстэй",
+        "name": "0920"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "0921",
+        "name_mn": "Завхан, Эрдэнэхайрхан",
+        "name_en": "",
+        "aimag": "Завхан",
+        "sum": "Эрдэнэхайрхан",
+        "name": "0921"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "0922",
+        "name_mn": "Завхан, Яруу",
+        "name_en": "",
+        "aimag": "Завхан",
+        "sum": "Яруу",
+        "name": "0922"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "1210",
+        "name_mn": "Сүхбаатар, Уулбаян",
+        "name_en": "",
+        "aimag": "Сүхбаатар",
+        "sum": "Уулбаян",
+        "name": "1210"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "1211",
+        "name_mn": "Сүхбаатар, Халзан",
+        "name_en": "",
+        "aimag": "Сүхбаатар",
+        "sum": "Халзан",
+        "name": "1211"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "1212",
+        "name_mn": "Сүхбаатар, Эрдэнэцагаан",
+        "name_en": "",
+        "aimag": "Сүхбаатар",
+        "sum": "Эрдэнэцагаан",
+        "name": "1212"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "1214",
+        "name_mn": "Сүхбаатар, Баруун-Урт",
+        "name_en": "",
+        "aimag": "Сүхбаатар",
+        "sum": "Баруун-Урт",
+        "name": "1214"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "1301",
+        "name_mn": "Сэлэнгэ, Сүхбаатар",
+        "name_en": "",
+        "aimag": "Сэлэнгэ",
+        "sum": "Сүхбаатар",
+        "name": "1301"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "1302",
+        "name_mn": "Сэлэнгэ, Алтанбулаг",
+        "name_en": "",
+        "aimag": "Сэлэнгэ",
+        "sum": "Алтанбулаг",
+        "name": "1302"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "1303",
+        "name_mn": "Сэлэнгэ, Цагааннуур",
+        "name_en": "",
+        "aimag": "Сэлэнгэ",
+        "sum": "Цагааннуур",
+        "name": "1303"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "1304",
+        "name_mn": "Сэлэнгэ, Орхон",
+        "name_en": "",
+        "aimag": "Сэлэнгэ",
+        "sum": "Орхон",
+        "name": "1304"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "1305",
+        "name_mn": "Сэлэнгэ, Шаамар",
+        "name_en": "",
+        "aimag": "Сэлэнгэ",
+        "sum": "Шаамар",
+        "name": "1305"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "1307",
+        "name_mn": "Сэлэнгэ, Баруунбүрэн",
+        "name_en": "",
+        "aimag": "Сэлэнгэ",
+        "sum": "Баруунбүрэн",
+        "name": "1307"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "1308",
+        "name_mn": "Сэлэнгэ, Сант",
+        "name_en": "",
+        "aimag": "Сэлэнгэ",
+        "sum": "Сант",
+        "name": "1308"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "1309",
+        "name_mn": "Сэлэнгэ, Орхонтуул",
+        "name_en": "",
+        "aimag": "Сэлэнгэ",
+        "sum": "Орхонтуул",
+        "name": "1309"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "1310",
+        "name_mn": "Сэлэнгэ, Ерөө",
+        "name_en": "",
+        "aimag": "Сэлэнгэ",
+        "sum": "Ерөө",
+        "name": "1310"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "1311",
+        "name_mn": "Сэлэнгэ, Зүүнбүрэн",
+        "name_en": "",
+        "aimag": "Сэлэнгэ",
+        "sum": "Зүүнбүрэн",
+        "name": "1311"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "1312",
+        "name_mn": "Сэлэнгэ, Баянгол",
+        "name_en": "",
+        "aimag": "Сэлэнгэ",
+        "sum": "Баянгол",
+        "name": "1312"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "1313",
+        "name_mn": "Сэлэнгэ, Хушаат",
+        "name_en": "",
+        "aimag": "Сэлэнгэ",
+        "sum": "Хушаат",
+        "name": "1313"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "1314",
+        "name_mn": "Сэлэнгэ, Мандал",
+        "name_en": "",
+        "aimag": "Сэлэнгэ",
+        "sum": "Мандал",
+        "name": "1314"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "1315",
+        "name_mn": "Сэлэнгэ, Жавхлант",
+        "name_en": "",
+        "aimag": "Сэлэнгэ",
+        "sum": "Жавхлант",
+        "name": "1315"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "1316",
+        "name_mn": "Сэлэнгэ, Сайхан",
+        "name_en": "",
+        "aimag": "Сэлэнгэ",
+        "sum": "Сайхан",
+        "name": "1316"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "1319",
+        "name_mn": "Сэлэнгэ, Түшиг",
+        "name_en": "",
+        "aimag": "Сэлэнгэ",
+        "sum": "Түшиг",
+        "name": "1319"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "1321",
+        "name_mn": "Сэлэнгэ, Хүдэр",
+        "name_en": "",
+        "aimag": "Сэлэнгэ",
+        "sum": "Хүдэр",
+        "name": "1321"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "1401",
+        "name_mn": "Төв, Алтанбулаг",
+        "name_en": "",
+        "aimag": "Төв",
+        "sum": "Алтанбулаг",
+        "name": "1401"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "1402",
+        "name_mn": "Төв, Аргалант",
+        "name_en": "",
+        "aimag": "Төв",
+        "sum": "Аргалант",
+        "name": "1402"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "1403",
+        "name_mn": "Төв, Архуст",
+        "name_en": "",
+        "aimag": "Төв",
+        "sum": "Архуст",
+        "name": "1403"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "1404",
+        "name_mn": "Төв, Батсүмбэр",
+        "name_en": "",
+        "aimag": "Төв",
+        "sum": "Батсүмбэр",
+        "name": "1404"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "1405",
+        "name_mn": "Төв, Баян",
+        "name_en": "",
+        "aimag": "Төв",
+        "sum": "Баян",
+        "name": "1405"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "1406",
+        "name_mn": "Төв, Баян-Өнжүүл",
+        "name_en": "",
+        "aimag": "Төв",
+        "sum": "Баян-Өнжүүл",
+        "name": "1406"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "1407",
+        "name_mn": "Төв, Баяндэлгэр",
+        "name_en": "",
+        "aimag": "Төв",
+        "sum": "Баяндэлгэр",
+        "name": "1407"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "1408",
+        "name_mn": "Төв, Баянжаргалан",
+        "name_en": "",
+        "aimag": "Төв",
+        "sum": "Баянжаргалан",
+        "name": "1408"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "1409",
+        "name_mn": "Төв, Баянхангай",
+        "name_en": "",
+        "aimag": "Төв",
+        "sum": "Баянхангай",
+        "name": "1409"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "1410",
+        "name_mn": "Төв, Баянчандмань",
+        "name_en": "",
+        "aimag": "Төв",
+        "sum": "Баянчандмань",
+        "name": "1410"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "1411",
+        "name_mn": "Төв, Баянцагаан",
+        "name_en": "",
+        "aimag": "Төв",
+        "sum": "Баянцагаан",
+        "name": "1411"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "1412",
+        "name_mn": "Төв, Баянцогт",
+        "name_en": "",
+        "aimag": "Төв",
+        "sum": "Баянцогт",
+        "name": "1412"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "1413",
+        "name_mn": "Төв, Борнуур",
+        "name_en": "",
+        "aimag": "Төв",
+        "sum": "Борнуур",
+        "name": "1413"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "1414",
+        "name_mn": "Төв, Бүрэн",
+        "name_en": "",
+        "aimag": "Төв",
+        "sum": "Бүрэн",
+        "name": "1414"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "1415",
+        "name_mn": "Төв, Дэлгэрхаан",
+        "name_en": "",
+        "aimag": "Төв",
+        "sum": "Дэлгэрхаан",
+        "name": "1415"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "1416",
+        "name_mn": "Төв, Жаргалант",
+        "name_en": "",
+        "aimag": "Төв",
+        "sum": "Жаргалант",
+        "name": "1416"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "1417",
+        "name_mn": "Төв, Заамар",
+        "name_en": "",
+        "aimag": "Төв",
+        "sum": "Заамар",
+        "name": "1417"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "1418",
+        "name_mn": "Төв, Лүн",
+        "name_en": "",
+        "aimag": "Төв",
+        "sum": "Лүн",
+        "name": "1418"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "1419",
+        "name_mn": "Төв, Мөнгөнморьт",
+        "name_en": "",
+        "aimag": "Төв",
+        "sum": "Мөнгөнморьт",
+        "name": "1419"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "1420",
+        "name_mn": "Төв, Өндөрширээт",
+        "name_en": "",
+        "aimag": "Төв",
+        "sum": "Өндөрширээт",
+        "name": "1420"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "1421",
+        "name_mn": "Төв, Сэргэлэн",
+        "name_en": "",
+        "aimag": "Төв",
+        "sum": "Сэргэлэн",
+        "name": "1421"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "1422",
+        "name_mn": "Төв, Сүмбэр",
+        "name_en": "",
+        "aimag": "Төв",
+        "sum": "Сүмбэр",
+        "name": "1422"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "1423",
+        "name_mn": "Төв, Угтаалцайдам",
+        "name_en": "",
+        "aimag": "Төв",
+        "sum": "Угтаалцайдам",
+        "name": "1423"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "1424",
+        "name_mn": "Төв, Цээл",
+        "name_en": "",
+        "aimag": "Төв",
+        "sum": "Цээл",
+        "name": "1424"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "1425",
+        "name_mn": "Төв, Эрдэнэ",
+        "name_en": "",
+        "aimag": "Төв",
+        "sum": "Эрдэнэ",
+        "name": "1425"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "1426",
+        "name_mn": "Төв, Эрдэнэсант",
+        "name_en": "",
+        "aimag": "Төв",
+        "sum": "Эрдэнэсант",
+        "name": "1426"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "1427",
+        "name_mn": "Төв, Зуунмод",
+        "name_en": "",
+        "aimag": "Төв",
+        "sum": "Зуунмод",
+        "name": "1427"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "1501",
+        "name_mn": "Увс, Баруунтуруун",
+        "name_en": "",
+        "aimag": "Увс",
+        "sum": "Баруунтуруун",
+        "name": "1501"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "1502",
+        "name_mn": "Увс, Бөхмөрөн",
+        "name_en": "",
+        "aimag": "Увс",
+        "sum": "Бөхмөрөн",
+        "name": "1502"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "1503",
+        "name_mn": "Увс, Давст",
+        "name_en": "",
+        "aimag": "Увс",
+        "sum": "Давст",
+        "name": "1503"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "1504",
+        "name_mn": "Увс, Завхан",
+        "name_en": "",
+        "aimag": "Увс",
+        "sum": "Завхан",
+        "name": "1504"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "1505",
+        "name_mn": "Увс, Зүүнговь",
+        "name_en": "",
+        "aimag": "Увс",
+        "sum": "Зүүнговь",
+        "name": "1505"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "2421",
+        "name_mn": "Баянзүрх, 21-р хороо",
+        "name_en": "",
+        "aimag": "Баянзүрх",
+        "sum": "21-р хороо",
+        "name": "2421"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "2422",
+        "name_mn": "Баянзүрх, 22-р хороо",
+        "name_en": "",
+        "aimag": "Баянзүрх",
+        "sum": "22-р хороо",
+        "name": "2422"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "2423",
+        "name_mn": "Баянзүрх, 23-р хороо",
+        "name_en": "",
+        "aimag": "Баянзүрх",
+        "sum": "23-р хороо",
+        "name": "2423"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "2424",
+        "name_mn": "Баянзүрх, 24-р хороо",
+        "name_en": "",
+        "aimag": "Баянзүрх",
+        "sum": "24-р хороо",
+        "name": "2424"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "2521",
+        "name_mn": "Сүхбаатар дүүрэг, 21-р хороо",
+        "name_en": "",
+        "aimag": "Сүхбаатар дүүрэг",
+        "sum": "21-р хороо",
+        "name": "2521"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "2425",
+        "name_mn": "Баянзүрх, 25-р хороо",
+        "name_en": "",
+        "aimag": "Баянзүрх",
+        "sum": "25-р хороо",
+        "name": "2425"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "2426",
+        "name_mn": "Баянзүрх, 26-р хороо",
+        "name_en": "",
+        "aimag": "Баянзүрх",
+        "sum": "26-р хороо",
+        "name": "2426"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "2427",
+        "name_mn": "Баянзүрх, 27-р хороо",
+        "name_en": "",
+        "aimag": "Баянзүрх",
+        "sum": "27-р хороо",
+        "name": "2427"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "2428",
+        "name_mn": "Баянзүрх, 28-р хороо",
+        "name_en": "",
+        "aimag": "Баянзүрх",
+        "sum": "28-р хороо",
+        "name": "2428"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "3428",
+        "name_mn": "Сонгинохайрхан, 28-р хороо",
+        "name_en": "",
+        "aimag": "Сонгинохайрхан",
+        "sum": "28-р хороо",
+        "name": "3428"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "3429",
+        "name_mn": "Сонгинохайрхан, 29-р хороо",
+        "name_en": "",
+        "aimag": "Сонгинохайрхан",
+        "sum": "29-р хороо",
+        "name": "3429"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "3430",
+        "name_mn": "Сонгинохайрхан, 30-р хороо",
+        "name_en": "",
+        "aimag": "Сонгинохайрхан",
+        "sum": "30-р хороо",
+        "name": "3430"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "3431",
+        "name_mn": "Сонгинохайрхан, 31-р хороо",
+        "name_en": "",
+        "aimag": "Сонгинохайрхан",
+        "sum": "31-р хороо",
+        "name": "3431"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "3432",
+        "name_mn": "Сонгинохайрхан, 32-р хороо",
+        "name_en": "",
+        "aimag": "Сонгинохайрхан",
+        "sum": "32-р хороо",
+        "name": "3432"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "3426",
+        "name_mn": "Сонгинохайрхан, 26-р хороо",
+        "name_en": "",
+        "aimag": "Сонгинохайрхан",
+        "sum": "26-р хороо",
+        "name": "3426"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "3427",
+        "name_mn": "Сонгинохайрхан, 27-р хороо",
+        "name_en": "",
+        "aimag": "Сонгинохайрхан",
+        "sum": "27-р хороо",
+        "name": "3427"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "1506",
+        "name_mn": "Увс, Зүүнхангай",
+        "name_en": "",
+        "aimag": "Увс",
+        "sum": "Зүүнхангай",
+        "name": "1506"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "1507",
+        "name_mn": "Увс, Малчин",
+        "name_en": "",
+        "aimag": "Увс",
+        "sum": "Малчин",
+        "name": "1507"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "1508",
+        "name_mn": "Увс, Наранбулаг",
+        "name_en": "",
+        "aimag": "Увс",
+        "sum": "Наранбулаг",
+        "name": "1508"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "1509",
+        "name_mn": "Увс, Өлгий",
+        "name_en": "",
+        "aimag": "Увс",
+        "sum": "Өлгий",
+        "name": "1509"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "1510",
+        "name_mn": "Увс, Өмнөговь",
+        "name_en": "",
+        "aimag": "Увс",
+        "sum": "Өмнөговь",
+        "name": "1510"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "1511",
+        "name_mn": "Увс, Өндөрхангай",
+        "name_en": "",
+        "aimag": "Увс",
+        "sum": "Өндөрхангай",
+        "name": "1511"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "1512",
+        "name_mn": "Увс, Сагил",
+        "name_en": "",
+        "aimag": "Увс",
+        "sum": "Сагил",
+        "name": "1512"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "1513",
+        "name_mn": "Увс, Тариалан",
+        "name_en": "",
+        "aimag": "Увс",
+        "sum": "Тариалан",
+        "name": "1513"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "1514",
+        "name_mn": "Увс, Түргэн",
+        "name_en": "",
+        "aimag": "Увс",
+        "sum": "Түргэн",
+        "name": "1514"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "1515",
+        "name_mn": "Увс, Тэс",
+        "name_en": "",
+        "aimag": "Увс",
+        "sum": "Тэс",
+        "name": "1515"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "1517",
+        "name_mn": "Увс, Ховд",
+        "name_en": "",
+        "aimag": "Увс",
+        "sum": "Ховд",
+        "name": "1517"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "1518",
+        "name_mn": "Увс, Хяргас",
+        "name_en": "",
+        "aimag": "Увс",
+        "sum": "Хяргас",
+        "name": "1518"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "1519",
+        "name_mn": "Увс, Цагаанхайрхан",
+        "name_en": "",
+        "aimag": "Увс",
+        "sum": "Цагаанхайрхан",
+        "name": "1519"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "1520",
+        "name_mn": "Увс, Улаангом",
+        "name_en": "",
+        "aimag": "Увс",
+        "sum": "Улаангом",
+        "name": "1520"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "1601",
+        "name_mn": "Ховд, Алтай",
+        "name_en": "",
+        "aimag": "Ховд",
+        "sum": "Алтай",
+        "name": "1601"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "1602",
+        "name_mn": "Ховд, Булган",
+        "name_en": "",
+        "aimag": "Ховд",
+        "sum": "Булган",
+        "name": "1602"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "1603",
+        "name_mn": "Ховд, Буянт",
+        "name_en": "",
+        "aimag": "Ховд",
+        "sum": "Буянт",
+        "name": "1603"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "1604",
+        "name_mn": "Ховд, Дарви",
+        "name_en": "",
+        "aimag": "Ховд",
+        "sum": "Дарви",
+        "name": "1604"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "1605",
+        "name_mn": "Ховд, Дуут",
+        "name_en": "",
+        "aimag": "Ховд",
+        "sum": "Дуут",
+        "name": "1605"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "1606",
+        "name_mn": "Ховд, Дөргөн",
+        "name_en": "",
+        "aimag": "Ховд",
+        "sum": "Дөргөн",
+        "name": "1606"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "1607",
+        "name_mn": "Ховд, Зэрэг",
+        "name_en": "",
+        "aimag": "Ховд",
+        "sum": "Зэрэг",
+        "name": "1607"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "1608",
+        "name_mn": "Ховд, Манхан",
+        "name_en": "",
+        "aimag": "Ховд",
+        "sum": "Манхан",
+        "name": "1608"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "1609",
+        "name_mn": "Ховд, Мөст",
+        "name_en": "",
+        "aimag": "Ховд",
+        "sum": "Мөст",
+        "name": "1609"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "1610",
+        "name_mn": "Ховд, Мянгад",
+        "name_en": "",
+        "aimag": "Ховд",
+        "sum": "Мянгад",
+        "name": "1610"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "1611",
+        "name_mn": "Ховд, Мөнххайрхан",
+        "name_en": "",
+        "aimag": "Ховд",
+        "sum": "Мөнххайрхан",
+        "name": "1611"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "1612",
+        "name_mn": "Ховд, Үенч",
+        "name_en": "",
+        "aimag": "Ховд",
+        "sum": "Үенч",
+        "name": "1612"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "1613",
+        "name_mn": "Ховд, Ховд",
+        "name_en": "",
+        "aimag": "Ховд",
+        "sum": "Ховд",
+        "name": "1613"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "1614",
+        "name_mn": "Ховд, Цэцэг",
+        "name_en": "",
+        "aimag": "Ховд",
+        "sum": "Цэцэг",
+        "name": "1614"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "1615",
+        "name_mn": "Ховд, Чандмань",
+        "name_en": "",
+        "aimag": "Ховд",
+        "sum": "Чандмань",
+        "name": "1615"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "1616",
+        "name_mn": "Ховд, Эрдэнэбүрэн",
+        "name_en": "",
+        "aimag": "Ховд",
+        "sum": "Эрдэнэбүрэн",
+        "name": "1616"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "1617",
+        "name_mn": "Ховд, Жаргалант",
+        "name_en": "",
+        "aimag": "Ховд",
+        "sum": "Жаргалант",
+        "name": "1617"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "0309",
+        "name_mn": "Баянхонгор, Бөмбөгөр",
+        "name_en": "",
+        "aimag": "Баянхонгор",
+        "sum": "Бөмбөгөр",
+        "name": "0309"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "0310",
+        "name_mn": "Баянхонгор, Бууцагаан",
+        "name_en": "",
+        "aimag": "Баянхонгор",
+        "sum": "Бууцагаан",
+        "name": "0310"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "0311",
+        "name_mn": "Баянхонгор, Галуут",
+        "name_en": "",
+        "aimag": "Баянхонгор",
+        "sum": "Галуут",
+        "name": "0311"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "0312",
+        "name_mn": "Баянхонгор, Гурванбулаг",
+        "name_en": "",
+        "aimag": "Баянхонгор",
+        "sum": "Гурванбулаг",
+        "name": "0312"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "0313",
+        "name_mn": "Баянхонгор, Жаргалант",
+        "name_en": "",
+        "aimag": "Баянхонгор",
+        "sum": "Жаргалант",
+        "name": "0313"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "0314",
+        "name_mn": "Баянхонгор, Жинст",
+        "name_en": "",
+        "aimag": "Баянхонгор",
+        "sum": "Жинст",
+        "name": "0314"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "0315",
+        "name_mn": "Баянхонгор, Заг",
+        "name_en": "",
+        "aimag": "Баянхонгор",
+        "sum": "Заг",
+        "name": "0315"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "0316",
+        "name_mn": "Баянхонгор, Өлзийт",
+        "name_en": "",
+        "aimag": "Баянхонгор",
+        "sum": "Өлзийт",
+        "name": "0316"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "0317",
+        "name_mn": "Баянхонгор, Хүрээмарал",
+        "name_en": "",
+        "aimag": "Баянхонгор",
+        "sum": "Хүрээмарал",
+        "name": "0317"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "0318",
+        "name_mn": "Баянхонгор, Шинэжинст",
+        "name_en": "",
+        "aimag": "Баянхонгор",
+        "sum": "Шинэжинст",
+        "name": "0318"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "0319",
+        "name_mn": "Баянхонгор, Эрдэнэцогт",
+        "name_en": "",
+        "aimag": "Баянхонгор",
+        "sum": "Эрдэнэцогт",
+        "name": "0319"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "0320",
+        "name_mn": "Баянхонгор, Баянхонгор",
+        "name_en": "",
+        "aimag": "Баянхонгор",
+        "sum": "Баянхонгор",
+        "name": "0320"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "0401",
+        "name_mn": "Булган, Сайхан",
+        "name_en": "",
+        "aimag": "Булган",
+        "sum": "Сайхан",
+        "name": "0401"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "0402",
+        "name_mn": "Булган, Тэшиг",
+        "name_en": "",
+        "aimag": "Булган",
+        "sum": "Тэшиг",
+        "name": "0402"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "0403",
+        "name_mn": "Булган, Хутаг-Өндөр",
+        "name_en": "",
+        "aimag": "Булган",
+        "sum": "Хутаг-Өндөр",
+        "name": "0403"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "0404",
+        "name_mn": "Булган, Баян-Агт",
+        "name_en": "",
+        "aimag": "Булган",
+        "sum": "Баян-Агт",
+        "name": "0404"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "0405",
+        "name_mn": "Булган, Баяннуур",
+        "name_en": "",
+        "aimag": "Булган",
+        "sum": "Баяннуур",
+        "name": "0405"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "0406",
+        "name_mn": "Булган, Бугат",
+        "name_en": "",
+        "aimag": "Булган",
+        "sum": "Бугат",
+        "name": "0406"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "0407",
+        "name_mn": "Булган, Бүрэгхангай",
+        "name_en": "",
+        "aimag": "Булган",
+        "sum": "Бүрэгхангай",
+        "name": "0407"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "0408",
+        "name_mn": "Булган, Гурван Булаг",
+        "name_en": "",
+        "aimag": "Булган",
+        "sum": "Гурван Булаг",
+        "name": "0408"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "0409",
+        "name_mn": "Булган, Дашинчилэн",
+        "name_en": "",
+        "aimag": "Булган",
+        "sum": "Дашинчилэн",
+        "name": "0409"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "0410",
+        "name_mn": "Булган, Могод",
+        "name_en": "",
+        "aimag": "Булган",
+        "sum": "Могод",
+        "name": "0410"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "0411",
+        "name_mn": "Булган, Орхон",
+        "name_en": "",
+        "aimag": "Булган",
+        "sum": "Орхон",
+        "name": "0411"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "0412",
+        "name_mn": "Булган, Сэлэнгэ",
+        "name_en": "",
+        "aimag": "Булган",
+        "sum": "Сэлэнгэ",
+        "name": "0412"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "0413",
+        "name_mn": "Булган, Хангал",
+        "name_en": "",
+        "aimag": "Булган",
+        "sum": "Хангал",
+        "name": "0413"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "0414",
+        "name_mn": "Булган, Рашаант",
+        "name_en": "",
+        "aimag": "Булган",
+        "sum": "Рашаант",
+        "name": "0414"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "0415",
+        "name_mn": "Булган, Хишиг-Өндөр",
+        "name_en": "",
+        "aimag": "Булган",
+        "sum": "Хишиг-Өндөр",
+        "name": "0415"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "0416",
+        "name_mn": "Булган, Булган",
+        "name_en": "",
+        "aimag": "Булган",
+        "sum": "Булган",
+        "name": "0416"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "0501",
+        "name_mn": "Говь-Алтай, Алтай",
+        "name_en": "",
+        "aimag": "Говь-Алтай",
+        "sum": "Алтай",
+        "name": "0501"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "0503",
+        "name_mn": "Говь-Алтай, Баян-Уул",
+        "name_en": "",
+        "aimag": "Говь-Алтай",
+        "sum": "Баян-Уул",
+        "name": "0503"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "0504",
+        "name_mn": "Говь-Алтай, Бигэр",
+        "name_en": "",
+        "aimag": "Говь-Алтай",
+        "sum": "Бигэр",
+        "name": "0504"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "0505",
+        "name_mn": "Говь-Алтай, Бугат",
+        "name_en": "",
+        "aimag": "Говь-Алтай",
+        "sum": "Бугат",
+        "name": "0505"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "0506",
+        "name_mn": "Говь-Алтай, Жаргалан",
+        "name_en": "",
+        "aimag": "Говь-Алтай",
+        "sum": "Жаргалан",
+        "name": "0506"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "0507",
+        "name_mn": "Говь-Алтай, Дарив",
+        "name_en": "",
+        "aimag": "Говь-Алтай",
+        "sum": "Дарив",
+        "name": "0507"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "0508",
+        "name_mn": "Говь-Алтай, Дэлгэр",
+        "name_en": "",
+        "aimag": "Говь-Алтай",
+        "sum": "Дэлгэр",
+        "name": "0508"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "0509",
+        "name_mn": "Говь-Алтай, Тайшир",
+        "name_en": "",
+        "aimag": "Говь-Алтай",
+        "sum": "Тайшир",
+        "name": "0509"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "0510",
+        "name_mn": "Говь-Алтай, Тонхил",
+        "name_en": "",
+        "aimag": "Говь-Алтай",
+        "sum": "Тонхил",
+        "name": "0510"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "0511",
+        "name_mn": "Говь-Алтай, Төгрөг",
+        "name_en": "",
+        "aimag": "Говь-Алтай",
+        "sum": "Төгрөг",
+        "name": "0511"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "0512",
+        "name_mn": "Говь-Алтай, Халиун",
+        "name_en": "",
+        "aimag": "Говь-Алтай",
+        "sum": "Халиун",
+        "name": "0512"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "0513",
+        "name_mn": "Говь-Алтай, Хөхморьт",
+        "name_en": "",
+        "aimag": "Говь-Алтай",
+        "sum": "Хөхморьт",
+        "name": "0513"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "0514",
+        "name_mn": "Говь-Алтай, Цогт",
+        "name_en": "",
+        "aimag": "Говь-Алтай",
+        "sum": "Цогт",
+        "name": "0514"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "0515",
+        "name_mn": "Говь-Алтай, Цээл",
+        "name_en": "",
+        "aimag": "Говь-Алтай",
+        "sum": "Цээл",
+        "name": "0515"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "0516",
+        "name_mn": "Говь-Алтай, Чандмань",
+        "name_en": "",
+        "aimag": "Говь-Алтай",
+        "sum": "Чандмань",
+        "name": "0516"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "0517",
+        "name_mn": "Говь-Алтай, Шарга",
+        "name_en": "",
+        "aimag": "Говь-Алтай",
+        "sum": "Шарга",
+        "name": "0517"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "0518",
+        "name_mn": "Говь-Алтай, Эрдэнэ",
+        "name_en": "",
+        "aimag": "Говь-Алтай",
+        "sum": "Эрдэнэ",
+        "name": "0518"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "0601",
+        "name_mn": "Дорноговь, Айраг",
+        "name_en": "",
+        "aimag": "Дорноговь",
+        "sum": "Айраг",
+        "name": "0601"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "0602",
+        "name_mn": "Дорноговь, Алтанширээ",
+        "name_en": "",
+        "aimag": "Дорноговь",
+        "sum": "Алтанширээ",
+        "name": "0602"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "0603",
+        "name_mn": "Дорноговь, Даланжаргалан",
+        "name_en": "",
+        "aimag": "Дорноговь",
+        "sum": "Даланжаргалан",
+        "name": "0603"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "0604",
+        "name_mn": "Дорноговь, Дэлгэрэх",
+        "name_en": "",
+        "aimag": "Дорноговь",
+        "sum": "Дэлгэрэх",
+        "name": "0604"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "0605",
+        "name_mn": "Дорноговь, Иххэт",
+        "name_en": "",
+        "aimag": "Дорноговь",
+        "sum": "Иххэт",
+        "name": "0605"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "0606",
+        "name_mn": "Дорноговь, Мандах",
+        "name_en": "",
+        "aimag": "Дорноговь",
+        "sum": "Мандах",
+        "name": "0606"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "0607",
+        "name_mn": "Дорноговь, Өргөн",
+        "name_en": "",
+        "aimag": "Дорноговь",
+        "sum": "Өргөн",
+        "name": "0607"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "1701",
+        "name_mn": "Хөвсгөл, Алаг-Эрдэнэ",
+        "name_en": "",
+        "aimag": "Хөвсгөл",
+        "sum": "Алаг-Эрдэнэ",
+        "name": "1701"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "1702",
+        "name_mn": "Хөвсгөл, Арбулаг",
+        "name_en": "",
+        "aimag": "Хөвсгөл",
+        "sum": "Арбулаг",
+        "name": "1702"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "1703",
+        "name_mn": "Хөвсгөл, Баянзүрх",
+        "name_en": "",
+        "aimag": "Хөвсгөл",
+        "sum": "Баянзүрх",
+        "name": "1703"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "1704",
+        "name_mn": "Хөвсгөл, Бүрэнтогтох",
+        "name_en": "",
+        "aimag": "Хөвсгөл",
+        "sum": "Бүрэнтогтох",
+        "name": "1704"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "1705",
+        "name_mn": "Хөвсгөл, Галт",
+        "name_en": "",
+        "aimag": "Хөвсгөл",
+        "sum": "Галт",
+        "name": "1705"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "1706",
+        "name_mn": "Хөвсгөл, Жаргалант",
+        "name_en": "",
+        "aimag": "Хөвсгөл",
+        "sum": "Жаргалант",
+        "name": "1706"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "1707",
+        "name_mn": "Хөвсгөл, Их-Уул",
+        "name_en": "",
+        "aimag": "Хөвсгөл",
+        "sum": "Их-Уул",
+        "name": "1707"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "1708",
+        "name_mn": "Хөвсгөл, Рашаант",
+        "name_en": "",
+        "aimag": "Хөвсгөл",
+        "sum": "Рашаант",
+        "name": "1708"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "1709",
+        "name_mn": "Хөвсгөл, Рэнчинлхүмбэ",
+        "name_en": "",
+        "aimag": "Хөвсгөл",
+        "sum": "Рэнчинлхүмбэ",
+        "name": "1709"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "1710",
+        "name_mn": "Хөвсгөл, Тариалан",
+        "name_en": "",
+        "aimag": "Хөвсгөл",
+        "sum": "Тариалан",
+        "name": "1710"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "1711",
+        "name_mn": "Хөвсгөл, Тосонцэнгэл",
+        "name_en": "",
+        "aimag": "Хөвсгөл",
+        "sum": "Тосонцэнгэл",
+        "name": "1711"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "1712",
+        "name_mn": "Хөвсгөл, Төмөрбулаг",
+        "name_en": "",
+        "aimag": "Хөвсгөл",
+        "sum": "Төмөрбулаг",
+        "name": "1712"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "1713",
+        "name_mn": "Хөвсгөл, Түнэл",
+        "name_en": "",
+        "aimag": "Хөвсгөл",
+        "sum": "Түнэл",
+        "name": "1713"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "1714",
+        "name_mn": "Хөвсгөл, Улаан-Уул",
+        "name_en": "",
+        "aimag": "Хөвсгөл",
+        "sum": "Улаан-Уул",
+        "name": "1714"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "1715",
+        "name_mn": "Хөвсгөл, Ханх",
+        "name_en": "",
+        "aimag": "Хөвсгөл",
+        "sum": "Ханх",
+        "name": "1715"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "1717",
+        "name_mn": "Хөвсгөл, Цагаан-Уул",
+        "name_en": "",
+        "aimag": "Хөвсгөл",
+        "sum": "Цагаан-Уул",
+        "name": "1717"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "1718",
+        "name_mn": "Хөвсгөл, Цагаан-Үүр",
+        "name_en": "",
+        "aimag": "Хөвсгөл",
+        "sum": "Цагаан-Үүр",
+        "name": "1718"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "1719",
+        "name_mn": "Хөвсгөл, Цагааннуур",
+        "name_en": "",
+        "aimag": "Хөвсгөл",
+        "sum": "Цагааннуур",
+        "name": "1719"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "1720",
+        "name_mn": "Хөвсгөл, Цэцэрлэг",
+        "name_en": "",
+        "aimag": "Хөвсгөл",
+        "sum": "Цэцэрлэг",
+        "name": "1720"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "1721",
+        "name_mn": "Хөвсгөл, Чандмань-Өндөр",
+        "name_en": "",
+        "aimag": "Хөвсгөл",
+        "sum": "Чандмань-Өндөр",
+        "name": "1721"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "1722",
+        "name_mn": "Хөвсгөл, Шинэ-Идэр",
+        "name_en": "",
+        "aimag": "Хөвсгөл",
+        "sum": "Шинэ-Идэр",
+        "name": "1722"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "1723",
+        "name_mn": "Хөвсгөл, Эрдэнэбулган",
+        "name_en": "",
+        "aimag": "Хөвсгөл",
+        "sum": "Эрдэнэбулган",
+        "name": "1723"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "1724",
+        "name_mn": "Хөвсгөл, Мөрөн",
+        "name_en": "",
+        "aimag": "Хөвсгөл",
+        "sum": "Мөрөн",
+        "name": "1724"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "1801",
+        "name_mn": "Хэнтий, Галшар",
+        "name_en": "",
+        "aimag": "Хэнтий",
+        "sum": "Галшар",
+        "name": "1801"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "1802",
+        "name_mn": "Хэнтий, Баянхутаг",
+        "name_en": "",
+        "aimag": "Хэнтий",
+        "sum": "Баянхутаг",
+        "name": "1802"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "1803",
+        "name_mn": "Хэнтий, Баянмөнх",
+        "name_en": "",
+        "aimag": "Хэнтий",
+        "sum": "Баянмөнх",
+        "name": "1803"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "1804",
+        "name_mn": "Хэнтий, Дархан",
+        "name_en": "",
+        "aimag": "Хэнтий",
+        "sum": "Дархан",
+        "name": "1804"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "1805",
+        "name_mn": "Хэнтий, Дэлгэрхаан",
+        "name_en": "",
+        "aimag": "Хэнтий",
+        "sum": "Дэлгэрхаан",
+        "name": "1805"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "1806",
+        "name_mn": "Хэнтий, Жаргалтхаан",
+        "name_en": "",
+        "aimag": "Хэнтий",
+        "sum": "Жаргалтхаан",
+        "name": "1806"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "1807",
+        "name_mn": "Хэнтий, Цэнхэрмандал",
+        "name_en": "",
+        "aimag": "Хэнтий",
+        "sum": "Цэнхэрмандал",
+        "name": "1807"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "1808",
+        "name_mn": "Хэнтий, Өмнөдэлгэр",
+        "name_en": "",
+        "aimag": "Хэнтий",
+        "sum": "Өмнөдэлгэр",
+        "name": "1808"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "1809",
+        "name_mn": "Хэнтий, Батширээт",
+        "name_en": "",
+        "aimag": "Хэнтий",
+        "sum": "Батширээт",
+        "name": "1809"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "1810",
+        "name_mn": "Хэнтий, Биндэр",
+        "name_en": "",
+        "aimag": "Хэнтий",
+        "sum": "Биндэр",
+        "name": "1810"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "1811",
+        "name_mn": "Хэнтий, Баян-Адарга",
+        "name_en": "",
+        "aimag": "Хэнтий",
+        "sum": "Баян-Адарга",
+        "name": "1811"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "1812",
+        "name_mn": "Хэнтий, Дадал",
+        "name_en": "",
+        "aimag": "Хэнтий",
+        "sum": "Дадал",
+        "name": "1812"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "1813",
+        "name_mn": "Хэнтий, Норовлин",
+        "name_en": "",
+        "aimag": "Хэнтий",
+        "sum": "Норовлин",
+        "name": "1813"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "1814",
+        "name_mn": "Хэнтий, Батноров",
+        "name_en": "",
+        "aimag": "Хэнтий",
+        "sum": "Батноров",
+        "name": "1814"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "1815",
+        "name_mn": "Хэнтий, Баян-Овоо",
+        "name_en": "",
+        "aimag": "Хэнтий",
+        "sum": "Баян-Овоо",
+        "name": "1815"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "1816",
+        "name_mn": "Хэнтий, Мөрөн",
+        "name_en": "",
+        "aimag": "Хэнтий",
+        "sum": "Мөрөн",
+        "name": "1816"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "1817",
+        "name_mn": "Хэнтий, Хэрлэн",
+        "name_en": "",
+        "aimag": "Хэнтий",
+        "sum": "Хэрлэн",
+        "name": "1817"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "1901",
+        "name_mn": "Дархан-Уул, Дархан",
+        "name_en": "",
+        "aimag": "Дархан-Уул",
+        "sum": "Дархан",
+        "name": "1901"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "1902",
+        "name_mn": "Дархан-Уул, Шарын гол",
+        "name_en": "",
+        "aimag": "Дархан-Уул",
+        "sum": "Шарын гол",
+        "name": "1902"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "1903",
+        "name_mn": "Дархан-Уул, Хонгор",
+        "name_en": "",
+        "aimag": "Дархан-Уул",
+        "sum": "Хонгор",
+        "name": "1903"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "1904",
+        "name_mn": "Дархан-Уул, Орхон",
+        "name_en": "",
+        "aimag": "Дархан-Уул",
+        "sum": "Орхон",
+        "name": "1904"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "2001",
+        "name_mn": "Орхон, Баян-Өндөр",
+        "name_en": "",
+        "aimag": "Орхон",
+        "sum": "Баян-Өндөр",
+        "name": "2001"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "2002",
+        "name_mn": "Орхон, Жаргалант",
+        "name_en": "",
+        "aimag": "Орхон",
+        "sum": "Жаргалант",
+        "name": "2002"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "2301",
+        "name_mn": "Хан-Уул, 1-р хороо",
+        "name_en": "",
+        "aimag": "Хан-Уул",
+        "sum": "1-р хороо",
+        "name": "2301"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "2302",
+        "name_mn": "Хан-Уул, 2-р хороо",
+        "name_en": "",
+        "aimag": "Хан-Уул",
+        "sum": "2-р хороо",
+        "name": "2302"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "2303",
+        "name_mn": "Хан-Уул, 3-р хороо",
+        "name_en": "",
+        "aimag": "Хан-Уул",
+        "sum": "3-р хороо",
+        "name": "2303"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "2304",
+        "name_mn": "Хан-Уул, 4-р хороо",
+        "name_en": "",
+        "aimag": "Хан-Уул",
+        "sum": "4-р хороо",
+        "name": "2304"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "2305",
+        "name_mn": "Хан-Уул, 5-р хороо",
+        "name_en": "",
+        "aimag": "Хан-Уул",
+        "sum": "5-р хороо",
+        "name": "2305"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "2306",
+        "name_mn": "Хан-Уул, 6-р хороо",
+        "name_en": "",
+        "aimag": "Хан-Уул",
+        "sum": "6-р хороо",
+        "name": "2306"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "2307",
+        "name_mn": "Хан-Уул, 7-р хороо",
+        "name_en": "",
+        "aimag": "Хан-Уул",
+        "sum": "7-р хороо",
+        "name": "2307"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "2308",
+        "name_mn": "Хан-Уул, 8-р хороо",
+        "name_en": "",
+        "aimag": "Хан-Уул",
+        "sum": "8-р хороо",
+        "name": "2308"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "2309",
+        "name_mn": "Хан-Уул, 9-р хороо",
+        "name_en": "",
+        "aimag": "Хан-Уул",
+        "sum": "9-р хороо",
+        "name": "2309"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "2310",
+        "name_mn": "Хан-Уул, 10-р хороо",
+        "name_en": "",
+        "aimag": "Хан-Уул",
+        "sum": "10-р хороо",
+        "name": "2310"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "2311",
+        "name_mn": "Хан-Уул, 11-р хороо",
+        "name_en": "",
+        "aimag": "Хан-Уул",
+        "sum": "11-р хороо",
+        "name": "2311"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "2312",
+        "name_mn": "Хан-Уул, 12-р хороо",
+        "name_en": "",
+        "aimag": "Хан-Уул",
+        "sum": "12-р хороо",
+        "name": "2312"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "2313",
+        "name_mn": "Хан-Уул, 13-рхороо",
+        "name_en": "",
+        "aimag": "Хан-Уул",
+        "sum": "13-рхороо",
+        "name": "2313"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "2314",
+        "name_mn": "Хан-Уул, 14-р хороо",
+        "name_en": "",
+        "aimag": "Хан-Уул",
+        "sum": "14-р хороо",
+        "name": "2314"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "2315",
+        "name_mn": "Хан-Уул, 15-р хороо",
+        "name_en": "",
+        "aimag": "Хан-Уул",
+        "sum": "15-р хороо",
+        "name": "2315"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "2316",
+        "name_mn": "Хан-Уул, 16-р хороо",
+        "name_en": "",
+        "aimag": "Хан-Уул",
+        "sum": "16-р хороо",
+        "name": "2316"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "2317",
+        "name_mn": "Хан-Уул, 17-р хороо",
+        "name_en": "",
+        "aimag": "Хан-Уул",
+        "sum": "17-р хороо",
+        "name": "2317"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "2318",
+        "name_mn": "Хан-Уул, 18-р хороо",
+        "name_en": "",
+        "aimag": "Хан-Уул",
+        "sum": "18-р хороо",
+        "name": "2318"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "2319",
+        "name_mn": "Хан-Уул, 19-р хороо",
+        "name_en": "",
+        "aimag": "Хан-Уул",
+        "sum": "19-р хороо",
+        "name": "2319"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "2320",
+        "name_mn": "Хан-Уул, 20-р хороо",
+        "name_en": "",
+        "aimag": "Хан-Уул",
+        "sum": "20-р хороо",
+        "name": "2320"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "2401",
+        "name_mn": "Баянзүрх, 1-р хороо",
+        "name_en": "",
+        "aimag": "Баянзүрх",
+        "sum": "1-р хороо",
+        "name": "2401"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "2402",
+        "name_mn": "Баянзүрх, 2-р хороо",
+        "name_en": "",
+        "aimag": "Баянзүрх",
+        "sum": "2-р хороо",
+        "name": "2402"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "2403",
+        "name_mn": "Баянзүрх, 3-р хороо",
+        "name_en": "",
+        "aimag": "Баянзүрх",
+        "sum": "3-р хороо",
+        "name": "2403"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "2404",
+        "name_mn": "Баянзүрх, 4-р хороо",
+        "name_en": "",
+        "aimag": "Баянзүрх",
+        "sum": "4-р хороо",
+        "name": "2404"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "2405",
+        "name_mn": "Баянзүрх, 5-р хороо",
+        "name_en": "",
+        "aimag": "Баянзүрх",
+        "sum": "5-р хороо",
+        "name": "2405"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "2406",
+        "name_mn": "Баянзүрх, 6-р хороо",
+        "name_en": "",
+        "aimag": "Баянзүрх",
+        "sum": "6-р хороо",
+        "name": "2406"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "2407",
+        "name_mn": "Баянзүрх, 7-р хороо",
+        "name_en": "",
+        "aimag": "Баянзүрх",
+        "sum": "7-р хороо",
+        "name": "2407"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "2408",
+        "name_mn": "Баянзүрх, 8-р хороо",
+        "name_en": "",
+        "aimag": "Баянзүрх",
+        "sum": "8-р хороо",
+        "name": "2408"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "2409",
+        "name_mn": "Баянзүрх, 9-р хороо",
+        "name_en": "",
+        "aimag": "Баянзүрх",
+        "sum": "9-р хороо",
+        "name": "2409"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "2410",
+        "name_mn": "Баянзүрх, 10-р хороо",
+        "name_en": "",
+        "aimag": "Баянзүрх",
+        "sum": "10-р хороо",
+        "name": "2410"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "2411",
+        "name_mn": "Баянзүрх, 11-р хороо",
+        "name_en": "",
+        "aimag": "Баянзүрх",
+        "sum": "11-р хороо",
+        "name": "2411"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "2412",
+        "name_mn": "Баянзүрх, 12-р хороо",
+        "name_en": "",
+        "aimag": "Баянзүрх",
+        "sum": "12-р хороо",
+        "name": "2412"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "2413",
+        "name_mn": "Баянзүрх, 13-р хороо",
+        "name_en": "",
+        "aimag": "Баянзүрх",
+        "sum": "13-р хороо",
+        "name": "2413"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "2414",
+        "name_mn": "Баянзүрх, 14-р хороо",
+        "name_en": "",
+        "aimag": "Баянзүрх",
+        "sum": "14-р хороо",
+        "name": "2414"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "2415",
+        "name_mn": "Баянзүрх, 15-р хороо",
+        "name_en": "",
+        "aimag": "Баянзүрх",
+        "sum": "15-р хороо",
+        "name": "2415"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "2416",
+        "name_mn": "Баянзүрх, 16-р хороо",
+        "name_en": "",
+        "aimag": "Баянзүрх",
+        "sum": "16-р хороо",
+        "name": "2416"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "2417",
+        "name_mn": "Баянзүрх, 17-р хороо",
+        "name_en": "",
+        "aimag": "Баянзүрх",
+        "sum": "17-р хороо",
+        "name": "2417"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "2418",
+        "name_mn": "Баянзүрх, 18-р хороо",
+        "name_en": "",
+        "aimag": "Баянзүрх",
+        "sum": "18-р хороо",
+        "name": "2418"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "2419",
+        "name_mn": "Баянзүрх, 19-р хороо",
+        "name_en": "",
+        "aimag": "Баянзүрх",
+        "sum": "19-р хороо",
+        "name": "2419"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "2420",
+        "name_mn": "Баянзүрх, 20-р хороо",
+        "name_en": "",
+        "aimag": "Баянзүрх",
+        "sum": "20-р хороо",
+        "name": "2420"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "2501",
+        "name_mn": "Сүхбаатар дүүрэг, 1-р хороо",
+        "name_en": "",
+        "aimag": "Сүхбаатар дүүрэг",
+        "sum": "1-р хороо",
+        "name": "2501"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "2502",
+        "name_mn": "Сүхбаатар дүүрэг, 2-р хороо",
+        "name_en": "",
+        "aimag": "Сүхбаатар дүүрэг",
+        "sum": "2-р хороо",
+        "name": "2502"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "2503",
+        "name_mn": "Сүхбаатар дүүрэг, 3-р хороо",
+        "name_en": "",
+        "aimag": "Сүхбаатар дүүрэг",
+        "sum": "3-р хороо",
+        "name": "2503"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "2504",
+        "name_mn": "Сүхбаатар дүүрэг, 4-р хороо",
+        "name_en": "",
+        "aimag": "Сүхбаатар дүүрэг",
+        "sum": "4-р хороо",
+        "name": "2504"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "2505",
+        "name_mn": "Сүхбаатар дүүрэг, 5-р хороо",
+        "name_en": "",
+        "aimag": "Сүхбаатар дүүрэг",
+        "sum": "5-р хороо",
+        "name": "2505"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "2506",
+        "name_mn": "Сүхбаатар дүүрэг, 6-р хороо",
+        "name_en": "",
+        "aimag": "Сүхбаатар дүүрэг",
+        "sum": "6-р хороо",
+        "name": "2506"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "2507",
+        "name_mn": "Сүхбаатар дүүрэг, 7-р хороо",
+        "name_en": "",
+        "aimag": "Сүхбаатар дүүрэг",
+        "sum": "7-р хороо",
+        "name": "2507"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "2508",
+        "name_mn": "Сүхбаатар дүүрэг, 8-р хороо",
+        "name_en": "",
+        "aimag": "Сүхбаатар дүүрэг",
+        "sum": "8-р хороо",
+        "name": "2508"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "2509",
+        "name_mn": "Сүхбаатар дүүрэг, 9-р хороо",
+        "name_en": "",
+        "aimag": "Сүхбаатар дүүрэг",
+        "sum": "9-р хороо",
+        "name": "2509"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "2510",
+        "name_mn": "Сүхбаатар дүүрэг, 10-р хороо",
+        "name_en": "",
+        "aimag": "Сүхбаатар дүүрэг",
+        "sum": "10-р хороо",
+        "name": "2510"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "2511",
+        "name_mn": "Сүхбаатар дүүрэг, 11-р хороо",
+        "name_en": "",
+        "aimag": "Сүхбаатар дүүрэг",
+        "sum": "11-р хороо",
+        "name": "2511"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "2512",
+        "name_mn": "Сүхбаатар дүүрэг, 12-р хороо",
+        "name_en": "",
+        "aimag": "Сүхбаатар дүүрэг",
+        "sum": "12-р хороо ",
+        "name": "2512"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "2513",
+        "name_mn": "Сүхбаатар дүүрэг, 13-р хороо",
+        "name_en": "",
+        "aimag": "Сүхбаатар дүүрэг",
+        "sum": "13-р хороо",
+        "name": "2513"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "2514",
+        "name_mn": "Сүхбаатар дүүрэг, 14-р хороо",
+        "name_en": "",
+        "aimag": "Сүхбаатар дүүрэг",
+        "sum": "14-р хороо",
+        "name": "2514"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "2515",
+        "name_mn": "Сүхбаатар дүүрэг, 15-р хороо",
+        "name_en": "",
+        "aimag": "Сүхбаатар дүүрэг",
+        "sum": "15-р хороо",
+        "name": "2515"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "2516",
+        "name_mn": "Сүхбаатар дүүрэг, 16-р хороо",
+        "name_en": "",
+        "aimag": "Сүхбаатар дүүрэг",
+        "sum": "16-р хороо",
+        "name": "2516"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "2517",
+        "name_mn": "Сүхбаатар дүүрэг, 17-р хороо",
+        "name_en": "",
+        "aimag": "Сүхбаатар дүүрэг",
+        "sum": "17-р хороо",
+        "name": "2517"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "2518",
+        "name_mn": "Сүхбаатар дүүрэг, 18-р хороо",
+        "name_en": "",
+        "aimag": "Сүхбаатар дүүрэг",
+        "sum": "18-р хороо",
+        "name": "2518"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "2519",
+        "name_mn": "Сүхбаатар дүүрэг, 19-р хороо",
+        "name_en": "",
+        "aimag": "Сүхбаатар дүүрэг",
+        "sum": "19-р хороо",
+        "name": "2519"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "2520",
+        "name_mn": "Сүхбаатар дүүрэг, 20-р хороо",
+        "name_en": "",
+        "aimag": "Сүхбаатар дүүрэг",
+        "sum": "20-р хороо",
+        "name": "2520"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "2601",
+        "name_mn": "Баянгол, 1-р хороо",
+        "name_en": "",
+        "aimag": "Баянгол",
+        "sum": "1-р хороо",
+        "name": "2601"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "2602",
+        "name_mn": "Баянгол, 2-р хороо",
+        "name_en": "",
+        "aimag": "Баянгол",
+        "sum": "2-р хороо",
+        "name": "2602"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "2603",
+        "name_mn": "Баянгол, 3-р хороо",
+        "name_en": "",
+        "aimag": "Баянгол",
+        "sum": "3-р хороо",
+        "name": "2603"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "2604",
+        "name_mn": "Баянгол, 4-р хороо",
+        "name_en": "",
+        "aimag": "Баянгол",
+        "sum": "4-р хороо",
+        "name": "2604"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "2605",
+        "name_mn": "Баянгол, 5-р хороо",
+        "name_en": "",
+        "aimag": "Баянгол",
+        "sum": "5-р хороо",
+        "name": "2605"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "2606",
+        "name_mn": "Баянгол, 6-р хороо",
+        "name_en": "",
+        "aimag": "Баянгол",
+        "sum": "6-р хороо",
+        "name": "2606"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "2607",
+        "name_mn": "Баянгол, 7-р хороо",
+        "name_en": "",
+        "aimag": "Баянгол",
+        "sum": "7-р хороо",
+        "name": "2607"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "2608",
+        "name_mn": "Баянгол, 8-р хороо",
+        "name_en": "",
+        "aimag": "Баянгол",
+        "sum": "8-р хороо",
+        "name": "2608"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "2609",
+        "name_mn": "Баянгол, 9-р хороо",
+        "name_en": "",
+        "aimag": "Баянгол",
+        "sum": "9-р хороо",
+        "name": "2609"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "0923",
+        "name_mn": "Завхан, Завханмандал",
+        "name_en": "",
+        "aimag": "Завхан",
+        "sum": "Завханмандал",
+        "name": "0923"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "0924",
+        "name_mn": "Завхан, Ургамал",
+        "name_en": "",
+        "aimag": "Завхан",
+        "sum": "Ургамал",
+        "name": "0924"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "1001",
+        "name_mn": "Өвөрхангай, Баян-Өндөр",
+        "name_en": "",
+        "aimag": "Өвөрхангай",
+        "sum": "Баян-Өндөр",
+        "name": "1001"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "1002",
+        "name_mn": "Өвөрхангай, Бүрд",
+        "name_en": "",
+        "aimag": "Өвөрхангай",
+        "sum": "Бүрд",
+        "name": "1002"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "1003",
+        "name_mn": "Өвөрхангай, Бат-Өлзий",
+        "name_en": "",
+        "aimag": "Өвөрхангай",
+        "sum": "Бат-Өлзий",
+        "name": "1003"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "1004",
+        "name_mn": "Өвөрхангай, Баруунбаян-Улаан",
+        "name_en": "",
+        "aimag": "Өвөрхангай",
+        "sum": "Баруунбаян-Улаан",
+        "name": "1004"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "1005",
+        "name_mn": "Өвөрхангай, Баянгол",
+        "name_en": "",
+        "aimag": "Өвөрхангай",
+        "sum": "Баянгол",
+        "name": "1005"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "1006",
+        "name_mn": "Өвөрхангай, Гучин-Ус",
+        "name_en": "",
+        "aimag": "Өвөрхангай",
+        "sum": "Гучин-Ус",
+        "name": "1006"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "1007",
+        "name_mn": "Өвөрхангай, Есөн зүйл",
+        "name_en": "",
+        "aimag": "Өвөрхангай",
+        "sum": "Есөн зүйл",
+        "name": "1007"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "1008",
+        "name_mn": "Өвөрхангай, Өлзийт",
+        "name_en": "",
+        "aimag": "Өвөрхангай",
+        "sum": "Өлзийт",
+        "name": "1008"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "1009",
+        "name_mn": "Өвөрхангай, Зүүнбаян-Улаан",
+        "name_en": "",
+        "aimag": "Өвөрхангай",
+        "sum": "Зүүнбаян-Улаан",
+        "name": "1009"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "1010",
+        "name_mn": "Өвөрхангай, Хайрхандулаан",
+        "name_en": "",
+        "aimag": "Өвөрхангай",
+        "sum": "Хайрхандулаан",
+        "name": "1010"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "1011",
+        "name_mn": "Өвөрхангай, Нарийнтээл",
+        "name_en": "",
+        "aimag": "Өвөрхангай",
+        "sum": "Нарийнтээл",
+        "name": "1011"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "1012",
+        "name_mn": "Өвөрхангай, Сант",
+        "name_en": "",
+        "aimag": "Өвөрхангай",
+        "sum": "Сант",
+        "name": "1012"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "1013",
+        "name_mn": "Өвөрхангай, Тарагт",
+        "name_en": "",
+        "aimag": "Өвөрхангай",
+        "sum": "Тарагт",
+        "name": "1013"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "1014",
+        "name_mn": "Өвөрхангай, Төгрөг",
+        "name_en": "",
+        "aimag": "Өвөрхангай",
+        "sum": "Төгрөг",
+        "name": "1014"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "1015",
+        "name_mn": "Өвөрхангай, Уянга",
+        "name_en": "",
+        "aimag": "Өвөрхангай",
+        "sum": "Уянга",
+        "name": "1015"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "1016",
+        "name_mn": "Өвөрхангай, Богд",
+        "name_en": "",
+        "aimag": "Өвөрхангай",
+        "sum": "Богд",
+        "name": "1016"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "1017",
+        "name_mn": "Өвөрхангай, Хужирт",
+        "name_en": "",
+        "aimag": "Өвөрхангай",
+        "sum": "Хужирт",
+        "name": "1017"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "1018",
+        "name_mn": "Өвөрхангай, Хархорин",
+        "name_en": "",
+        "aimag": "Өвөрхангай",
+        "sum": "Хархорин",
+        "name": "1018"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "1019",
+        "name_mn": "Өвөрхангай, Арвайхээр",
+        "name_en": "",
+        "aimag": "Өвөрхангай",
+        "sum": "Арвайхээр",
+        "name": "1019"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "1101",
+        "name_mn": "Өмнөговь, Баяндалай",
+        "name_en": "",
+        "aimag": "Өмнөговь",
+        "sum": "Баяндалай",
+        "name": "1101"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "1102",
+        "name_mn": "Өмнөговь, Баян-Овоо",
+        "name_en": "",
+        "aimag": "Өмнөговь",
+        "sum": "Баян-Овоо",
+        "name": "1102"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "1103",
+        "name_mn": "Өмнөговь, Булган",
+        "name_en": "",
+        "aimag": "Өмнөговь",
+        "sum": "Булган",
+        "name": "1103"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "1104",
+        "name_mn": "Өмнөговь, Гурвантэс",
+        "name_en": "",
+        "aimag": "Өмнөговь",
+        "sum": "Гурвантэс",
+        "name": "1104"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "1105",
+        "name_mn": "Өмнөговь, Мандал-Овоо",
+        "name_en": "",
+        "aimag": "Өмнөговь",
+        "sum": "Мандал-Овоо",
+        "name": "1105"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "1106",
+        "name_mn": "Өмнөговь, Манлай",
+        "name_en": "",
+        "aimag": "Өмнөговь",
+        "sum": "Манлай",
+        "name": "1106"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "1107",
+        "name_mn": "Өмнөговь, Номгон",
+        "name_en": "",
+        "aimag": "Өмнөговь",
+        "sum": "Номгон",
+        "name": "1107"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "1108",
+        "name_mn": "Өмнөговь, Ноён",
+        "name_en": "",
+        "aimag": "Өмнөговь",
+        "sum": "Ноён",
+        "name": "1108"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "1109",
+        "name_mn": "Өмнөговь, Ханбогд",
+        "name_en": "",
+        "aimag": "Өмнөговь",
+        "sum": "Ханбогд",
+        "name": "1109"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "1110",
+        "name_mn": "Өмнөговь, Ханхонгор",
+        "name_en": "",
+        "aimag": "Өмнөговь",
+        "sum": "Ханхонгор",
+        "name": "1110"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "1111",
+        "name_mn": "Өмнөговь, Хүрмэн",
+        "name_en": "",
+        "aimag": "Өмнөговь",
+        "sum": "Хүрмэн",
+        "name": "1111"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "1824",
+        "name_mn": "Хэнтий, Бор-Өндөр",
+        "name_en": "",
+        "aimag": "Хэнтий",
+        "sum": "Бор-Өндөр",
+        "name": "1824"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "1112",
+        "name_mn": "Өмнөговь, Сэврэй",
+        "name_en": "",
+        "aimag": "Өмнөговь",
+        "sum": "Сэврэй",
+        "name": "1112"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "1113",
+        "name_mn": "Өмнөговь, Цогт-Овоо",
+        "name_en": "",
+        "aimag": "Өмнөговь",
+        "sum": "Цогт-Овоо",
+        "name": "1113"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "1114",
+        "name_mn": "Өмнөговь, Цогтцэций",
+        "name_en": "",
+        "aimag": "Өмнөговь",
+        "sum": "Цогтцэций",
+        "name": "1114"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "1115",
+        "name_mn": "Өмнөговь, Даланзадгад",
+        "name_en": "",
+        "aimag": "Өмнөговь",
+        "sum": "Даланзадгад",
+        "name": "1115"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "1201",
+        "name_mn": "Сүхбаатар, Асгат",
+        "name_en": "",
+        "aimag": "Сүхбаатар",
+        "sum": "Асгат",
+        "name": "1201"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "1202",
+        "name_mn": "Сүхбаатар, Баяндэлгэр",
+        "name_en": "",
+        "aimag": "Сүхбаатар",
+        "sum": "Баяндэлгэр",
+        "name": "1202"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "1203",
+        "name_mn": "Сүхбаатар, Дарьганга",
+        "name_en": "",
+        "aimag": "Сүхбаатар",
+        "sum": "Дарьганга",
+        "name": "1203"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "1204",
+        "name_mn": "Сүхбаатар, Мөнххаан",
+        "name_en": "",
+        "aimag": "Сүхбаатар",
+        "sum": "Мөнххаан",
+        "name": "1204"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "1205",
+        "name_mn": "Сүхбаатар, Наран",
+        "name_en": "",
+        "aimag": "Сүхбаатар",
+        "sum": "Наран",
+        "name": "1205"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "1206",
+        "name_mn": "Сүхбаатар, Онгон",
+        "name_en": "",
+        "aimag": "Сүхбаатар",
+        "sum": "Онгон",
+        "name": "1206"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "1207",
+        "name_mn": "Сүхбаатар, Сүхбаатар",
+        "name_en": "",
+        "aimag": "Сүхбаатар",
+        "sum": "Сүхбаатар",
+        "name": "1207"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "1208",
+        "name_mn": "Сүхбаатар, Түвшинширээ",
+        "name_en": "",
+        "aimag": "Сүхбаатар",
+        "sum": "Түвшинширээ",
+        "name": "1208"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "1209",
+        "name_mn": "Сүхбаатар, Түмэнцогт",
+        "name_en": "",
+        "aimag": "Сүхбаатар",
+        "sum": "Түмэнцогт",
+        "name": "1209"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "2610",
+        "name_mn": "Баянгол, 10-р хороо",
+        "name_en": "",
+        "aimag": "Баянгол",
+        "sum": "10-р хороо",
+        "name": "2610"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "2611",
+        "name_mn": "Баянгол, 11-р хороо",
+        "name_en": "",
+        "aimag": "Баянгол",
+        "sum": "11-р хороо",
+        "name": "2611"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "2612",
+        "name_mn": "Баянгол, 12-р хороо",
+        "name_en": "",
+        "aimag": "Баянгол",
+        "sum": "12-р хороо",
+        "name": "2612"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "2613",
+        "name_mn": "Баянгол, 13-р хороо",
+        "name_en": "",
+        "aimag": "Баянгол",
+        "sum": "13-р хороо",
+        "name": "2613"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "2614",
+        "name_mn": "Баянгол, 14-р хороо",
+        "name_en": "",
+        "aimag": "Баянгол",
+        "sum": "14-р хороо",
+        "name": "2614"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "2615",
+        "name_mn": "Баянгол, 15-р хороо",
+        "name_en": "",
+        "aimag": "Баянгол",
+        "sum": "15-р хороо",
+        "name": "2615"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "2616",
+        "name_mn": "Баянгол, 16-р хороо",
+        "name_en": "",
+        "aimag": "Баянгол",
+        "sum": "16-р хороо",
+        "name": "2616"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "2617",
+        "name_mn": "Баянгол, 17-р хороо",
+        "name_en": "",
+        "aimag": "Баянгол",
+        "sum": "17-р хороо",
+        "name": "2617"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "2618",
+        "name_mn": "Баянгол, 18-р хороо",
+        "name_en": "",
+        "aimag": "Баянгол",
+        "sum": "18-р хороо",
+        "name": "2618"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "2619",
+        "name_mn": "Баянгол, 19-р хороо",
+        "name_en": "",
+        "aimag": "Баянгол",
+        "sum": "19-р хороо",
+        "name": "2619"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "2620",
+        "name_mn": "Баянгол, 20-р хороо",
+        "name_en": "",
+        "aimag": "Баянгол",
+        "sum": "20-р хороо",
+        "name": "2620"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "3401",
+        "name_mn": "Сонгинохайрхан, 1-р хороо",
+        "name_en": "",
+        "aimag": "Сонгинохайрхан",
+        "sum": "1-р хороо",
+        "name": "3401"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "3402",
+        "name_mn": "Сонгинохайрхан, 2-р хороо",
+        "name_en": "",
+        "aimag": "Сонгинохайрхан",
+        "sum": "2-р хороо",
+        "name": "3402"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "3403",
+        "name_mn": "Сонгинохайрхан, 3-р хороо",
+        "name_en": "",
+        "aimag": "Сонгинохайрхан",
+        "sum": "3-р хороо",
+        "name": "3403"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "3404",
+        "name_mn": "Сонгинохайрхан, 4-р хороо",
+        "name_en": "",
+        "aimag": "Сонгинохайрхан",
+        "sum": "4-р хороо",
+        "name": "3404"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "3405",
+        "name_mn": "Сонгинохайрхан, 5-р хороо",
+        "name_en": "",
+        "aimag": "Сонгинохайрхан",
+        "sum": "5-р хороо",
+        "name": "3405"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "3406",
+        "name_mn": "Сонгинохайрхан, 6-р хороо",
+        "name_en": "",
+        "aimag": "Сонгинохайрхан",
+        "sum": "6-р хороо",
+        "name": "3406"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "3407",
+        "name_mn": "Сонгинохайрхан, 7-р хороо",
+        "name_en": "",
+        "aimag": "Сонгинохайрхан",
+        "sum": "7-р хороо",
+        "name": "3407"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "3408",
+        "name_mn": "Сонгинохайрхан, 8-р хороо",
+        "name_en": "",
+        "aimag": "Сонгинохайрхан",
+        "sum": "8-р хороо",
+        "name": "3408"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "3409",
+        "name_mn": "Сонгинохайрхан, 9-р хороо",
+        "name_en": "",
+        "aimag": "Сонгинохайрхан",
+        "sum": "9-р хороо",
+        "name": "3409"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "3410",
+        "name_mn": "Сонгинохайрхан, 10-р хороо",
+        "name_en": "",
+        "aimag": "Сонгинохайрхан",
+        "sum": "10-р хороо",
+        "name": "3410"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "3411",
+        "name_mn": "Сонгинохайрхан, 11-р хороо",
+        "name_en": "",
+        "aimag": "Сонгинохайрхан",
+        "sum": "11-р хороо",
+        "name": "3411"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "3412",
+        "name_mn": "Сонгинохайрхан, 12-р хороо",
+        "name_en": "",
+        "aimag": "Сонгинохайрхан",
+        "sum": "12-р хороо",
+        "name": "3412"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "3413",
+        "name_mn": "Сонгинохайрхан, 13-р хороо",
+        "name_en": "",
+        "aimag": "Сонгинохайрхан",
+        "sum": "13-р хороо",
+        "name": "3413"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "3414",
+        "name_mn": "Сонгинохайрхан, 14-р хороо",
+        "name_en": "",
+        "aimag": "Сонгинохайрхан",
+        "sum": "14-р хороо",
+        "name": "3414"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "3415",
+        "name_mn": "Сонгинохайрхан, 15-р хороо",
+        "name_en": "",
+        "aimag": "Сонгинохайрхан",
+        "sum": "15-р хороо",
+        "name": "3415"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "3416",
+        "name_mn": "Сонгинохайрхан, 16-р хороо",
+        "name_en": "",
+        "aimag": "Сонгинохайрхан",
+        "sum": "16-р хороо",
+        "name": "3416"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "3417",
+        "name_mn": "Сонгинохайрхан, 17-р хороо",
+        "name_en": "",
+        "aimag": "Сонгинохайрхан",
+        "sum": "17-р хороо",
+        "name": "3417"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "3418",
+        "name_mn": "Сонгинохайрхан, 18-р хороо",
+        "name_en": "",
+        "aimag": "Сонгинохайрхан",
+        "sum": "18-р хороо",
+        "name": "3418"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "3419",
+        "name_mn": "Сонгинохайрхан, 19-р хороо",
+        "name_en": "",
+        "aimag": "Сонгинохайрхан",
+        "sum": "19-р хороо",
+        "name": "3419"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "0519",
+        "name_mn": "Говь-Алтай, Есөнбулаг",
+        "name_en": "",
+        "aimag": "Говь-Алтай",
+        "sum": "Есөнбулаг",
+        "name": "0519"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "0417",
+        "name_mn": "Булган, Өлзийт",
+        "name_en": "",
+        "aimag": "Булган",
+        "sum": "Өлзийт",
+        "name": "0417"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "0418",
+        "name_mn": "Булган, Хялганат",
+        "name_en": "",
+        "aimag": "Булган",
+        "sum": "Хялганат",
+        "name": "0418"
+    },
+    {
+        "doctype": "eBarimt District",
+        "code": "0905",
+        "name_mn": "Завхан, Тосонцэнгэл",
+        "name_en": "",
+        "aimag": "Завхан",
+        "sum": "Тосонцэнгэл",
+        "name": "0905"
+    }
+]

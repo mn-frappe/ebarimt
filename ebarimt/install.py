@@ -28,9 +28,8 @@ def after_install():
     print("Test credentials have been configured.")
     print("Go to eBarimt Settings to test connection.")
     print("")
-    print("District codes: Shared via QPay District DocType")
-    print("  - If QPay app is installed, districts are already available")
-    print("  - Otherwise, districts are loaded from eBarimt fixtures")
+    print("District codes: Loaded from eBarimt District DocType")
+    print("  - eBarimt app manages its own district codes independently")
     print("=" * 60)
 
 
@@ -110,7 +109,7 @@ def load_default_fixtures():
     load_default_oat_product_types()
     print("OAT product types loaded.")
     
-    # Load district codes (shared with QPay app via QPay District DocType)
+    # Load district codes (eBarimt District DocType)
     load_district_codes()
     
     # Note: Tax codes are synced from eBarimt API via sync_tax_codes_daily task
@@ -118,21 +117,15 @@ def load_default_fixtures():
 
 def load_district_codes():
     """
-    Load district codes into QPay District DocType.
+    Load district codes into eBarimt District DocType.
     
-    QPay District is shared between QPay and eBarimt apps.
-    This function loads/updates district codes independently,
-    skipping if already exists with same data.
+    eBarimt app manages its own district codes independently.
+    This allows eBarimt to work without QPay installed.
     """
     import os
     
-    # Check if QPay District DocType exists (could be from QPay or created manually)
-    if not frappe.db.exists("DocType", "QPay District"):
-        print("  ⚠ QPay District DocType not found. Please install QPay app or create the DocType.")
-        return
-    
     fixture_path = os.path.join(
-        os.path.dirname(__file__), "fixtures", "qpay_district.json"
+        os.path.dirname(__file__), "fixtures", "ebarimt_district.json"
     )
     
     if not os.path.exists(fixture_path):
@@ -148,26 +141,24 @@ def load_district_codes():
         skipped = 0
         
         for district in districts:
-            code = district.get("district_code")
+            code = district.get("code")
             if not code:
                 continue
             
-            if frappe.db.exists("QPay District", code):
+            if frappe.db.exists("eBarimt District", code):
                 # Check if needs update
-                existing = frappe.get_doc("QPay District", code)
+                existing = frappe.get_doc("eBarimt District", code)
                 needs_update = (
-                    existing.branch_name != district.get("branch_name") or
-                    existing.sub_branch_name != district.get("sub_branch_name") or
-                    existing.branch_code != district.get("branch_code") or
-                    existing.sub_branch_code != district.get("sub_branch_code")
+                    existing.name_mn != district.get("name_mn") or
+                    existing.aimag != district.get("aimag") or
+                    existing.sum != district.get("sum")
                 )
                 
                 if needs_update:
-                    existing.branch_name = district.get("branch_name")
-                    existing.sub_branch_name = district.get("sub_branch_name")
-                    existing.branch_code = district.get("branch_code")
-                    existing.sub_branch_code = district.get("sub_branch_code")
-                    existing.enabled = district.get("enabled", 1)
+                    existing.name_mn = district.get("name_mn")
+                    existing.name_en = district.get("name_en", "")
+                    existing.aimag = district.get("aimag")
+                    existing.sum = district.get("sum")
                     existing.flags.ignore_permissions = True
                     existing.save()
                     updated += 1
@@ -175,13 +166,12 @@ def load_district_codes():
                     skipped += 1
             else:
                 # Create new district
-                doc = frappe.new_doc("QPay District")
-                doc.district_code = code
-                doc.branch_name = district.get("branch_name")
-                doc.sub_branch_name = district.get("sub_branch_name")
-                doc.branch_code = district.get("branch_code")
-                doc.sub_branch_code = district.get("sub_branch_code")
-                doc.enabled = district.get("enabled", 1)
+                doc = frappe.new_doc("eBarimt District")
+                doc.code = code
+                doc.name_mn = district.get("name_mn")
+                doc.name_en = district.get("name_en", "")
+                doc.aimag = district.get("aimag")
+                doc.sum = district.get("sum")
                 doc.flags.ignore_permissions = True
                 doc.insert()
                 created += 1
@@ -341,20 +331,16 @@ def sync_district_codes():
     """
     Sync district codes on migration.
     
-    Called by after_migrate hook to ensure districts are available
-    even if QPay app is not installed.
+    Called by after_migrate hook to ensure districts are available.
+    eBarimt app manages its own district codes independently.
     """
     import os
     
-    # Check if QPay District DocType exists
-    if not frappe.db.exists("DocType", "QPay District"):
-        return  # Silent return on migrate - DocType might not exist yet
-    
     # Check if we need to sync (only if empty or has fewer records)
-    current_count = frappe.db.count("QPay District")
+    current_count = frappe.db.count("eBarimt District")
     
     fixture_path = os.path.join(
-        os.path.dirname(__file__), "fixtures", "qpay_district.json"
+        os.path.dirname(__file__), "fixtures", "ebarimt_district.json"
     )
     
     if not os.path.exists(fixture_path):
@@ -372,18 +358,17 @@ def sync_district_codes():
         
         created = 0
         for district in districts:
-            code = district.get("district_code")
+            code = district.get("code")
             if not code:
                 continue
             
-            if not frappe.db.exists("QPay District", code):
-                doc = frappe.new_doc("QPay District")
-                doc.district_code = code
-                doc.branch_name = district.get("branch_name")
-                doc.sub_branch_name = district.get("sub_branch_name")
-                doc.branch_code = district.get("branch_code")
-                doc.sub_branch_code = district.get("sub_branch_code")
-                doc.enabled = district.get("enabled", 1)
+            if not frappe.db.exists("eBarimt District", code):
+                doc = frappe.new_doc("eBarimt District")
+                doc.code = code
+                doc.name_mn = district.get("name_mn")
+                doc.name_en = district.get("name_en", "")
+                doc.aimag = district.get("aimag")
+                doc.sum = district.get("sum")
                 doc.flags.ignore_permissions = True
                 doc.insert()
                 created += 1

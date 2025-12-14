@@ -180,7 +180,7 @@
    "fieldname": "district_code",
    "fieldtype": "Link",
    "label": "District Code",
-   "options": "QPay District"
+   "options": "eBarimt District"
   },
   {
    "fieldname": "pos_no",

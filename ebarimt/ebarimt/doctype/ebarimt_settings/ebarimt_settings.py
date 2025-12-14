@@ -109,8 +109,8 @@ class eBarimtSettings(Document):
 			# Default to Bayanzurkh District (most common)
 			default_code = "0102"
 			
-			# Check if QPay District exists
-			if frappe.db.exists("QPay District", default_code):
+			# Check if eBarimt District exists
+			if frappe.db.exists("eBarimt District", default_code):
 				self.district_code = default_code
 				self.save()
 				return {
@@ -121,7 +121,7 @@ class eBarimtSettings(Document):
 			else:
 				return {
 					"success": False,
-					"message": _("District codes not synced. Please sync from QPay Settings first.")
+					"message": _("District codes not loaded. Please run: bench --site [site] migrate")
 				}
 		except Exception as e:
 			return {
