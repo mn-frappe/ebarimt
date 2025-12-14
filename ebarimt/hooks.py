@@ -28,14 +28,15 @@ doctype_js = {
 after_install = "ebarimt.install.after_install"
 before_uninstall = "ebarimt.install.before_uninstall"
 
-# Fixtures
+# Fixtures - Payment Types and Tax Codes only
+# District is shared from QPay app
 fixtures = [
     {
         "doctype": "eBarimt Payment Type",
         "filters": {"is_default": 1}
     },
     {
-        "doctype": "eBarimt District",
+        "doctype": "eBarimt Tax Code",
         "filters": {"is_default": 1}
     }
 ]
@@ -63,12 +64,10 @@ doc_events = {
 }
 
 # Scheduled Tasks
+# Note: District sync is handled by QPay app since districts are shared
 scheduler_events = {
     "daily": [
         "ebarimt.tasks.sync_tax_codes_daily"
-    ],
-    "weekly": [
-        "ebarimt.tasks.sync_districts_weekly"
     ]
 }
 

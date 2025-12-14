@@ -4,6 +4,8 @@
 
 """
 Scheduled Tasks for eBarimt
+
+Note: District sync is handled by QPay app since districts are shared.
 """
 
 import frappe
@@ -13,6 +15,9 @@ from frappe import _
 def sync_tax_codes_daily():
     """Daily sync of tax codes from eBarimt"""
     if not frappe.db.get_single_value("eBarimt Settings", "enabled"):
+        return
+    
+    if not frappe.db.get_single_value("eBarimt Settings", "auto_sync_tax_codes"):
         return
     
     try:
@@ -27,26 +32,6 @@ def sync_tax_codes_daily():
         frappe.log_error(
             message=str(e),
             title="eBarimt Tax Code Sync Failed"
-        )
-
-
-def sync_districts_weekly():
-    """Weekly sync of district codes from eBarimt"""
-    if not frappe.db.get_single_value("eBarimt Settings", "enabled"):
-        return
-    
-    try:
-        from ebarimt.ebarimt.doctype.ebarimt_district.ebarimt_district import sync_districts
-        result = sync_districts()
-        
-        if result.get("success"):
-            frappe.logger("ebarimt").info(
-                f"Districts synced successfully: {result.get('count', 0)} districts"
-            )
-    except Exception as e:
-        frappe.log_error(
-            message=str(e),
-            title="eBarimt District Sync Failed"
         )
 
 

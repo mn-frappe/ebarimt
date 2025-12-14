@@ -1,254 +1,463 @@
 {
- "actions": [],
- "creation": "2024-12-14 10:00:00.000000",
- "doctype": "DocType",
- "engine": "InnoDB",
- "field_order": [
-  "enabled",
-  "environment",
-  "column_break_1",
-  "auto_submit_receipt",
-  "enable_debug_log",
-  "section_credentials",
-  "api_username",
-  "api_password",
-  "column_break_creds",
-  "api_key",
-  "section_pos",
-  "pos_no",
-  "operator_tin",
-  "column_break_pos",
-  "merchant_tin",
-  "district_code",
-  "section_defaults",
-  "default_bill_type",
-  "default_payment_type",
-  "column_break_defaults",
-  "include_city_tax",
-  "section_status",
-  "connection_status",
-  "last_sync",
-  "column_break_status",
-  "operator_name",
-  "left_lotteries",
-  "section_urls",
-  "proxy_url",
-  "fallback_ip"
- ],
- "fields": [
-  {
-   "default": "1",
-   "fieldname": "enabled",
-   "fieldtype": "Check",
-   "label": "Enabled",
-   "description": "Enable eBarimt integration"
-  },
-  {
-   "default": "Staging",
-   "fieldname": "environment",
-   "fieldtype": "Select",
-   "label": "Environment",
-   "options": "Staging\nProduction",
-   "reqd": 1,
-   "description": "Staging for testing, Production for live"
-  },
-  {
-   "fieldname": "column_break_1",
-   "fieldtype": "Column Break"
-  },
-  {
-   "default": "1",
-   "fieldname": "auto_submit_receipt",
-   "fieldtype": "Check",
-   "label": "Auto Submit Receipt",
-   "description": "Automatically send receipt when Sales Invoice is submitted"
-  },
-  {
-   "default": "0",
-   "fieldname": "enable_debug_log",
-   "fieldtype": "Check",
-   "label": "Enable Debug Log"
-  },
-  {
-   "fieldname": "section_credentials",
-   "fieldtype": "Section Break",
-   "label": "API Credentials",
-   "collapsible": 0
-  },
-  {
-   "fieldname": "api_username",
-   "fieldtype": "Data",
-   "label": "API Username",
-   "description": "ITC/eBarimt account username"
-  },
-  {
-   "fieldname": "api_password",
-   "fieldtype": "Password",
-   "label": "API Password",
-   "description": "ITC/eBarimt account password"
-  },
-  {
-   "fieldname": "column_break_creds",
-   "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "api_key",
-   "fieldtype": "Password",
-   "label": "X-API-KEY",
-   "description": "API Key from posapi@itc.gov.mn (for operator functions)"
-  },
-  {
-   "fieldname": "section_pos",
-   "fieldtype": "Section Break",
-   "label": "POS Configuration"
-  },
-  {
-   "fieldname": "pos_no",
-   "fieldtype": "Data",
-   "label": "POS Number",
-   "description": "POS registration number from eBarimt"
-  },
-  {
-   "fieldname": "operator_tin",
-   "fieldtype": "Data",
-   "label": "Operator TIN",
-   "read_only": 1,
-   "description": "Operator taxpayer ID (auto-filled)"
-  },
-  {
-   "fieldname": "column_break_pos",
-   "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "merchant_tin",
-   "fieldtype": "Data",
-   "label": "Merchant TIN",
-   "description": "Your company's taxpayer ID"
-  },
-  {
-   "fieldname": "district_code",
-   "fieldtype": "Link",
-   "label": "District Code",
-   "options": "eBarimt District",
-   "description": "Business location district code"
-  },
-  {
-   "fieldname": "section_defaults",
-   "fieldtype": "Section Break",
-   "label": "Default Settings"
-  },
-  {
-   "default": "B2C_RECEIPT",
-   "fieldname": "default_bill_type",
-   "fieldtype": "Select",
-   "label": "Default Bill Type",
-   "options": "B2C_RECEIPT\nB2B_RECEIPT",
-   "description": "B2C=Consumer with lottery, B2B=Business"
-  },
-  {
-   "default": "CASH",
-   "fieldname": "default_payment_type",
-   "fieldtype": "Select",
-   "label": "Default Payment Type",
-   "options": "CASH\nPAYMENT_CARD\nBANK_TRANSFER",
-   "description": "Default payment method for receipts"
-  },
-  {
-   "fieldname": "column_break_defaults",
-   "fieldtype": "Column Break"
-  },
-  {
-   "default": "1",
-   "fieldname": "include_city_tax",
-   "fieldtype": "Check",
-   "label": "Include City Tax",
-   "description": "Include NHAT (city tax) in receipts"
-  },
-  {
-   "fieldname": "section_status",
-   "fieldtype": "Section Break",
-   "label": "Connection Status",
-   "collapsible": 1
-  },
-  {
-   "fieldname": "connection_status",
-   "fieldtype": "Select",
-   "label": "Status",
-   "options": "\nConnected\nDisconnected\nNot Configured",
-   "read_only": 1
-  },
-  {
-   "fieldname": "last_sync",
-   "fieldtype": "Datetime",
-   "label": "Last Sync",
-   "read_only": 1
-  },
-  {
-   "fieldname": "column_break_status",
-   "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "operator_name",
-   "fieldtype": "Data",
-   "label": "Operator Name",
-   "read_only": 1
-  },
-  {
-   "fieldname": "left_lotteries",
-   "fieldtype": "Int",
-   "label": "Remaining Lotteries",
-   "read_only": 1,
-   "description": "Number of lottery tickets remaining"
-  },
-  {
-   "fieldname": "section_urls",
-   "fieldtype": "Section Break",
-   "label": "API URLs",
-   "collapsible": 1
-  },
-  {
-   "default": "https://api.frappe.mn",
-   "fieldname": "proxy_url",
-   "fieldtype": "Data",
-   "label": "Proxy URL",
-   "read_only": 1,
-   "description": "Primary API gateway"
-  },
-  {
-   "default": "103.153.141.167",
-   "fieldname": "fallback_ip",
-   "fieldtype": "Data",
-   "label": "Fallback IP",
-   "read_only": 1,
-   "description": "IP fallback when DNS fails"
-  }
- ],
- "index_web_pages_for_search": 1,
- "issingle": 1,
- "links": [],
- "modified": "2024-12-14 10:00:00.000000",
- "modified_by": "Administrator",
- "module": "eBarimt",
- "name": "eBarimt Settings",
- "owner": "Administrator",
- "permissions": [
-  {
-   "create": 1,
-   "delete": 1,
-   "email": 1,
-   "print": 1,
-   "read": 1,
-   "role": "System Manager",
-   "share": 1,
-   "write": 1
-  },
-  {
-   "read": 1,
-   "role": "Accounts Manager",
-   "write": 1
-  }
- ],
- "sort_field": "modified",
- "sort_order": "DESC",
- "track_changes": 1
+    "actions": [],
+    "allow_rename": 0,
+    "autoname": "eBarimt Settings",
+    "creation": "2024-12-14 10:00:00.000000",
+    "doctype": "DocType",
+    "engine": "InnoDB",
+    "field_order": [
+        "tab_connection",
+        "section_status",
+        "enabled",
+        "environment",
+        "column_break_status",
+        "connection_status_html",
+        "section_credentials",
+        "api_username",
+        "api_password",
+        "column_break_credentials",
+        "api_key",
+        "test_connection_btn",
+        "section_pos",
+        "pos_no",
+        "operator_tin",
+        "column_break_pos",
+        "merchant_tin",
+        "district_code",
+        "detect_district_btn",
+        "section_connection_info",
+        "operator_name",
+        "left_lotteries",
+        "column_break_connection_info",
+        "last_sync",
+        "connection_status",
+        "tab_automation",
+        "section_receipt",
+        "auto_submit_receipt",
+        "auto_void_on_cancel",
+        "column_break_receipt",
+        "default_bill_type",
+        "default_payment_type",
+        "section_tax",
+        "include_city_tax",
+        "column_break_tax",
+        "auto_sync_tax_codes",
+        "section_erpnext",
+        "enable_erpnext_integration",
+        "auto_lookup_tin",
+        "column_break_erpnext",
+        "auto_lookup_barcode",
+        "tab_advanced",
+        "section_api",
+        "proxy_url",
+        "fallback_ip",
+        "column_break_api",
+        "timeout",
+        "max_retries",
+        "section_debug",
+        "enable_debug_log",
+        "log_api_calls",
+        "column_break_debug",
+        "alert_email",
+        "section_tokens",
+        "access_token",
+        "token_expiry",
+        "column_break_tokens",
+        "refresh_token",
+        "refresh_expiry"
+    ],
+    "fields": [
+        {
+            "fieldname": "tab_connection",
+            "fieldtype": "Tab Break",
+            "label": "Connection"
+        },
+        {
+            "fieldname": "section_status",
+            "fieldtype": "Section Break",
+            "label": "eBarimt VAT Receipt System"
+        },
+        {
+            "default": "1",
+            "fieldname": "enabled",
+            "fieldtype": "Check",
+            "in_list_view": 1,
+            "label": "Enabled",
+            "bold": 1,
+            "description": "Enable eBarimt VAT receipt integration"
+        },
+        {
+            "default": "Staging",
+            "fieldname": "environment",
+            "fieldtype": "Select",
+            "in_list_view": 1,
+            "label": "Environment",
+            "options": "Staging\nProduction",
+            "reqd": 1,
+            "bold": 1,
+            "description": "Staging for testing, Production for live"
+        },
+        {
+            "fieldname": "column_break_status",
+            "fieldtype": "Column Break"
+        },
+        {
+            "fieldname": "connection_status_html",
+            "fieldtype": "HTML",
+            "label": "Status"
+        },
+        {
+            "fieldname": "section_credentials",
+            "fieldtype": "Section Break",
+            "label": "API Credentials",
+            "description": "Get credentials from ITC (posapi@itc.gov.mn)"
+        },
+        {
+            "fieldname": "api_username",
+            "fieldtype": "Data",
+            "label": "API Username",
+            "description": "ITC/eBarimt account username"
+        },
+        {
+            "fieldname": "api_password",
+            "fieldtype": "Password",
+            "label": "API Password",
+            "description": "ITC/eBarimt account password"
+        },
+        {
+            "fieldname": "column_break_credentials",
+            "fieldtype": "Column Break"
+        },
+        {
+            "fieldname": "api_key",
+            "fieldtype": "Password",
+            "label": "X-API-KEY",
+            "description": "API Key from posapi@itc.gov.mn (for operator functions)"
+        },
+        {
+            "fieldname": "test_connection_btn",
+            "fieldtype": "Button",
+            "label": "Test Connection"
+        },
+        {
+            "fieldname": "section_pos",
+            "fieldtype": "Section Break",
+            "label": "POS Configuration",
+            "description": "Register your POS at eBarimt portal (https://ebarimt.mn)"
+        },
+        {
+            "fieldname": "pos_no",
+            "fieldtype": "Data",
+            "label": "POS Number",
+            "description": "POS registration number from eBarimt"
+        },
+        {
+            "fieldname": "operator_tin",
+            "fieldtype": "Data",
+            "label": "Operator TIN",
+            "read_only": 1,
+            "description": "Operator taxpayer ID (auto-filled from API)"
+        },
+        {
+            "fieldname": "column_break_pos",
+            "fieldtype": "Column Break"
+        },
+        {
+            "fieldname": "merchant_tin",
+            "fieldtype": "Data",
+            "label": "Merchant TIN",
+            "description": "Your company's taxpayer ID (ТТД)"
+        },
+        {
+            "fieldname": "district_code",
+            "fieldtype": "Link",
+            "label": "District Code",
+            "options": "QPay District",
+            "description": "Business location district code. Click Detect to auto-fill."
+        },
+        {
+            "fieldname": "detect_district_btn",
+            "fieldtype": "Button",
+            "label": "📍 Detect Location"
+        },
+        {
+            "fieldname": "section_connection_info",
+            "fieldtype": "Section Break",
+            "label": "Connection Status",
+            "collapsible": 1
+        },
+        {
+            "fieldname": "operator_name",
+            "fieldtype": "Data",
+            "label": "Operator Name",
+            "read_only": 1
+        },
+        {
+            "fieldname": "left_lotteries",
+            "fieldtype": "Int",
+            "label": "Remaining Lotteries",
+            "read_only": 1,
+            "description": "Number of lottery tickets remaining"
+        },
+        {
+            "fieldname": "column_break_connection_info",
+            "fieldtype": "Column Break"
+        },
+        {
+            "fieldname": "last_sync",
+            "fieldtype": "Datetime",
+            "label": "Last Sync",
+            "read_only": 1
+        },
+        {
+            "fieldname": "connection_status",
+            "fieldtype": "Select",
+            "label": "Status",
+            "options": "\nConnected\nDisconnected\nNot Configured",
+            "read_only": 1
+        },
+        {
+            "fieldname": "tab_automation",
+            "fieldtype": "Tab Break",
+            "label": "Automation"
+        },
+        {
+            "fieldname": "section_receipt",
+            "fieldtype": "Section Break",
+            "label": "Receipt Automation"
+        },
+        {
+            "default": "1",
+            "fieldname": "auto_submit_receipt",
+            "fieldtype": "Check",
+            "label": "Auto-submit Receipt",
+            "bold": 1,
+            "description": "Automatically send receipt when Sales Invoice is submitted"
+        },
+        {
+            "default": "1",
+            "fieldname": "auto_void_on_cancel",
+            "fieldtype": "Check",
+            "label": "Auto-void on Cancel",
+            "description": "Automatically void receipt when Sales Invoice is cancelled"
+        },
+        {
+            "fieldname": "column_break_receipt",
+            "fieldtype": "Column Break"
+        },
+        {
+            "default": "B2C_RECEIPT",
+            "fieldname": "default_bill_type",
+            "fieldtype": "Select",
+            "label": "Default Bill Type",
+            "options": "B2C_RECEIPT\nB2B_RECEIPT",
+            "description": "B2C=Consumer with lottery, B2B=Business"
+        },
+        {
+            "default": "CASH",
+            "fieldname": "default_payment_type",
+            "fieldtype": "Select",
+            "label": "Default Payment Type",
+            "options": "CASH\nPAYMENT_CARD\nBANK_TRANSFER\nMOBILE\nCOUPON",
+            "description": "Default payment method for receipts"
+        },
+        {
+            "fieldname": "section_tax",
+            "fieldtype": "Section Break",
+            "label": "Tax Settings"
+        },
+        {
+            "default": "1",
+            "fieldname": "include_city_tax",
+            "fieldtype": "Check",
+            "label": "Include City Tax (NHAT)",
+            "description": "Include NHAT (city tax) in receipts for UB businesses"
+        },
+        {
+            "fieldname": "column_break_tax",
+            "fieldtype": "Column Break"
+        },
+        {
+            "default": "1",
+            "fieldname": "auto_sync_tax_codes",
+            "fieldtype": "Check",
+            "label": "Auto-sync Tax Codes",
+            "description": "Automatically sync VAT exempt/zero codes from eBarimt"
+        },
+        {
+            "fieldname": "section_erpnext",
+            "fieldtype": "Section Break",
+            "label": "ERPNext Integration",
+            "collapsible": 1,
+            "collapsible_depends_on": "eval:!doc.enable_erpnext_integration"
+        },
+        {
+            "default": "1",
+            "fieldname": "enable_erpnext_integration",
+            "fieldtype": "Check",
+            "label": "Enable ERPNext Integration",
+            "bold": 1,
+            "description": "Link eBarimt receipts with Sales Invoice, Customer, Item"
+        },
+        {
+            "default": "1",
+            "fieldname": "auto_lookup_tin",
+            "fieldtype": "Check",
+            "label": "Auto-lookup TIN",
+            "depends_on": "enable_erpnext_integration",
+            "description": "Automatically lookup taxpayer info when entering TIN in Customer"
+        },
+        {
+            "fieldname": "column_break_erpnext",
+            "fieldtype": "Column Break"
+        },
+        {
+            "default": "1",
+            "fieldname": "auto_lookup_barcode",
+            "fieldtype": "Check",
+            "label": "Auto-lookup Barcode/BUNA",
+            "depends_on": "enable_erpnext_integration",
+            "description": "Automatically lookup product info when entering barcode in Item"
+        },
+        {
+            "fieldname": "tab_advanced",
+            "fieldtype": "Tab Break",
+            "label": "Advanced"
+        },
+        {
+            "fieldname": "section_api",
+            "fieldtype": "Section Break",
+            "label": "API Configuration",
+            "collapsible": 1,
+            "collapsible_depends_on": "eval:0"
+        },
+        {
+            "default": "https://api.frappe.mn",
+            "fieldname": "proxy_url",
+            "fieldtype": "Data",
+            "label": "Proxy URL",
+            "description": "Primary API gateway"
+        },
+        {
+            "default": "103.153.141.167",
+            "fieldname": "fallback_ip",
+            "fieldtype": "Data",
+            "label": "Fallback IP",
+            "description": "IP fallback when DNS fails"
+        },
+        {
+            "fieldname": "column_break_api",
+            "fieldtype": "Column Break"
+        },
+        {
+            "default": "30",
+            "fieldname": "timeout",
+            "fieldtype": "Int",
+            "label": "API Timeout (seconds)"
+        },
+        {
+            "default": "3",
+            "fieldname": "max_retries",
+            "fieldtype": "Int",
+            "label": "Max Retries"
+        },
+        {
+            "fieldname": "section_debug",
+            "fieldtype": "Section Break",
+            "label": "Debug & Notifications",
+            "collapsible": 1,
+            "collapsible_depends_on": "eval:0"
+        },
+        {
+            "default": "0",
+            "fieldname": "enable_debug_log",
+            "fieldtype": "Check",
+            "label": "Enable Debug Log"
+        },
+        {
+            "default": "0",
+            "fieldname": "log_api_calls",
+            "fieldtype": "Check",
+            "label": "Log API Calls (Debug)"
+        },
+        {
+            "fieldname": "column_break_debug",
+            "fieldtype": "Column Break"
+        },
+        {
+            "fieldname": "alert_email",
+            "fieldtype": "Data",
+            "label": "Alert Email",
+            "options": "Email",
+            "description": "Email for eBarimt alerts and errors"
+        },
+        {
+            "fieldname": "section_tokens",
+            "fieldtype": "Section Break",
+            "label": "Token Information",
+            "collapsible": 1,
+            "collapsible_depends_on": "eval:0"
+        },
+        {
+            "fieldname": "access_token",
+            "fieldtype": "Password",
+            "label": "Access Token",
+            "read_only": 1,
+            "hidden": 1
+        },
+        {
+            "fieldname": "token_expiry",
+            "fieldtype": "Datetime",
+            "label": "Token Expiry",
+            "read_only": 1
+        },
+        {
+            "fieldname": "column_break_tokens",
+            "fieldtype": "Column Break"
+        },
+        {
+            "fieldname": "refresh_token",
+            "fieldtype": "Password",
+            "label": "Refresh Token",
+            "read_only": 1,
+            "hidden": 1
+        },
+        {
+            "fieldname": "refresh_expiry",
+            "fieldtype": "Datetime",
+            "label": "Refresh Expiry",
+            "read_only": 1
+        }
+    ],
+    "hide_toolbar": 1,
+    "index_web_pages_for_search": 1,
+    "issingle": 1,
+    "links": [],
+    "modified": "2024-12-14 16:00:00.000000",
+    "modified_by": "Administrator",
+    "module": "eBarimt",
+    "name": "eBarimt Settings",
+    "naming_rule": "Expression (old style)",
+    "owner": "Administrator",
+    "permissions": [
+        {
+            "create": 1,
+            "delete": 1,
+            "email": 1,
+            "print": 1,
+            "read": 1,
+            "role": "System Manager",
+            "share": 1,
+            "write": 1
+        },
+        {
+            "read": 1,
+            "role": "Accounts Manager",
+            "write": 1
+        }
+    ],
+    "sort_field": "creation",
+    "sort_order": "DESC",
+    "states": [],
+    "track_changes": 1
 }

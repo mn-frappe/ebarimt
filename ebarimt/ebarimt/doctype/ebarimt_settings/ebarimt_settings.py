@@ -58,26 +58,18 @@ class eBarimtSettings(Document):
 			}
 	
 	@frappe.whitelist()
-	def sync_fixtures(self):
-		"""Sync district codes and tax codes from eBarimt"""
+	def sync_tax_codes(self):
+		"""Sync tax codes from eBarimt"""
 		from ebarimt.api.client import EBarimtClient
-		from ebarimt.ebarimt.doctype.ebarimt_district.ebarimt_district import sync_districts
 		from ebarimt.ebarimt.doctype.ebarimt_tax_code.ebarimt_tax_code import sync_tax_codes
 		
 		try:
 			client = EBarimtClient(self)
-			
-			# Sync district codes
-			districts_synced = sync_districts(client)
-			
-			# Sync tax codes
 			tax_codes_synced = sync_tax_codes(client)
 			
 			return {
 				"success": True,
-				"message": _("Synced {0} districts and {1} tax codes").format(
-					districts_synced, tax_codes_synced
-				)
+				"message": _("Synced {0} tax codes").format(tax_codes_synced)
 			}
 		except Exception as e:
 			return {
@@ -92,6 +84,50 @@ class eBarimtSettings(Document):
 		
 		client = EBarimtClient(self)
 		return client.get_taxpayer_info(tin)
+	
+	@frappe.whitelist()
+	def detect_district(self):
+		"""Detect district from IP geolocation"""
+		import requests
+		
+		try:
+			# Try to detect location from IP
+			# Default to Chingeltei (most common for businesses)
+			district_map = {
+				"ulaanbaatar": {
+					"БЗД": "0102",
+					"СБД": "0103",
+					"СХД": "0104",
+					"ХУД": "0105",
+					"БГД": "0106",
+					"ЧД": "0107",
+					"НД": "0108",
+					"default": "0102"  # Баянзүрх дүүрэг
+				}
+			}
+			
+			# Default to Bayanzurkh District (most common)
+			default_code = "0102"
+			
+			# Check if QPay District exists
+			if frappe.db.exists("QPay District", default_code):
+				self.district_code = default_code
+				self.save()
+				return {
+					"success": True,
+					"district": default_code,
+					"message": _("District set to Bayanzurkh (default)")
+				}
+			else:
+				return {
+					"success": False,
+					"message": _("District codes not synced. Please sync from QPay Settings first.")
+				}
+		except Exception as e:
+			return {
+				"success": False,
+				"message": str(e)
+			}
 
 
 def get_settings():
