@@ -341,3 +341,104 @@ def calculate_item_taxes(amount, classification_code=None):
     from ebarimt.ebarimt.doctype.ebarimt_product_code.ebarimt_product_code import calculate_item_taxes as calc_taxes
     return calc_taxes(flt(amount), classification_code)
 
+
+# =========================================================================
+# Unified Product Code Operations (for QPay integration)
+# =========================================================================
+
+@frappe.whitelist()
+def get_unified_product_code(code):
+    """
+    Get product code from eBarimt (preferred) or QPay.
+    
+    This is the unified API for both apps.
+    eBarimt is preferred because it has tax configuration.
+    
+    Args:
+        code: Product classification code (GS1)
+    
+    Returns:
+        dict: Product code info with source
+    """
+    from ebarimt.integrations.unified_product_codes import get_product_code
+    return get_product_code(code)
+
+
+@frappe.whitelist()
+def search_unified_product_codes(query, limit=20):
+    """
+    Search product codes from both eBarimt and QPay.
+    
+    Args:
+        query: Search string
+        limit: Max results
+    
+    Returns:
+        list: Matching product codes with source
+    """
+    from ebarimt.integrations.unified_product_codes import search_product_codes
+    return search_product_codes(query, limit)
+
+
+@frappe.whitelist()
+def sync_with_qpay():
+    """
+    Bidirectional sync between eBarimt and QPay product codes.
+    
+    Ensures both apps have the same codes without duplication.
+    
+    Returns:
+        dict: Sync results
+    """
+    from ebarimt.integrations.unified_product_codes import sync_product_codes
+    return sync_product_codes()
+
+
+@frappe.whitelist()
+def get_item_tax_info(item_code):
+    """
+    Get complete tax information for an Item.
+    
+    Args:
+        item_code: Item code
+    
+    Returns:
+        dict: Tax info (vat_type, vat_rate, city_tax_rate, excise_type)
+    """
+    from ebarimt.integrations.unified_product_codes import get_tax_info_for_item
+    return get_tax_info_for_item(item_code)
+
+
+@frappe.whitelist()
+def create_items_from_product_codes(force=False):
+    """
+    Create ERPNext Items from eBarimt Product Codes.
+    
+    Avoids duplicates by checking existing Items globally.
+    Links Items to eBarimt Product Code via custom field.
+    
+    Args:
+        force: If True, update existing items
+    
+    Returns:
+        dict: Import statistics
+    """
+    from ebarimt.ebarimt.doctype.ebarimt_product_code.import_gs1_codes import create_items_from_product_codes as do_create
+    if isinstance(force, str):
+        force = force.lower() == "true"
+    return do_create(force)
+
+
+@frappe.whitelist()
+def sync_product_codes_to_qpay():
+    """
+    Sync eBarimt Product Codes to QPay Product Code DocType.
+    
+    Ensures QPay has the same codes with tax info from eBarimt.
+    
+    Returns:
+        dict: Sync statistics
+    """
+    from ebarimt.ebarimt.doctype.ebarimt_product_code.import_gs1_codes import sync_to_qpay
+    return sync_to_qpay()
+

@@ -342,3 +342,181 @@ def load_default_product_codes():
     
     frappe.db.commit()
     return imported
+
+
+def create_items_from_product_codes(force=False):
+    """
+    Create ERPNext Items from eBarimt Product Codes.
+    
+    AVOIDS DUPLICATES: Checks if Item already exists before creating.
+    Links Items to eBarimt Product Code via custom field.
+    
+    Args:
+        force: If True, update existing items
+    
+    Returns:
+        dict: Import statistics
+    """
+    if not frappe.db.exists("DocType", "Item"):
+        return {"status": "skipped", "message": "ERPNext not installed"}
+    
+    # Create Item Group if needed
+    gs1_group = "GS1 Products"
+    if not frappe.db.exists("Item Group", gs1_group):
+        parent_group = "All Item Groups"
+        if not frappe.db.exists("Item Group", parent_group):
+            return {"status": "skipped", "message": "ERPNext setup not complete"}
+        
+        frappe.get_doc({
+            "doctype": "Item Group",
+            "item_group_name": gs1_group,
+            "parent_item_group": parent_group,
+            "is_group": 0
+        }).insert(ignore_permissions=True)
+        frappe.db.commit()
+    
+    # Get all eBarimt Product Codes
+    product_codes = frappe.get_all(
+        "eBarimt Product Code",
+        filters={"enabled": 1},
+        fields=["classification_code", "name_mn", "name_en"]
+    )
+    
+    # Get ALL existing items (not just GS1 group) to avoid duplicates
+    all_existing_items = set(frappe.get_all("Item", pluck="item_code"))
+    
+    # Check for custom field
+    has_product_code_field = frappe.db.exists(
+        "Custom Field",
+        {"dt": "Item", "fieldname": "custom_ebarimt_product_code"}
+    )
+    
+    created = 0
+    updated = 0
+    skipped = 0
+    
+    for pc in product_codes:
+        code = pc.classification_code
+        name = pc.name_mn or pc.name_en or code
+        
+        if code in all_existing_items:
+            if force:
+                # Update existing item
+                update_data = {"item_name": name[:140], "description": name}
+                if has_product_code_field:
+                    update_data["custom_ebarimt_product_code"] = code
+                frappe.db.set_value("Item", code, update_data)
+                updated += 1
+            else:
+                skipped += 1
+        else:
+            # Create new item
+            item_data = {
+                "doctype": "Item",
+                "item_code": code,
+                "item_name": name[:140],
+                "item_group": gs1_group,
+                "stock_uom": "Nos",
+                "is_stock_item": 0,
+                "is_sales_item": 1,
+                "is_purchase_item": 0,
+                "description": name,
+                "disabled": 0,
+            }
+            
+            if has_product_code_field:
+                item_data["custom_ebarimt_product_code"] = code
+            
+            try:
+                item = frappe.get_doc(item_data)
+                item.flags.ignore_permissions = True
+                item.flags.ignore_mandatory = True
+                item.insert()
+                created += 1
+                all_existing_items.add(code)
+            except Exception:
+                skipped += 1
+        
+        if (created + updated) % 500 == 0:
+            frappe.db.commit()
+    
+    frappe.db.commit()
+    
+    return {
+        "status": "success",
+        "created": created,
+        "updated": updated,
+        "skipped": skipped,
+        "total": len(product_codes)
+    }
+
+
+def sync_to_qpay():
+    """
+    Sync eBarimt Product Codes to QPay Product Code.
+    
+    This ensures QPay has the same codes with tax info from eBarimt.
+    Maps eBarimt VAT types to QPay VAT types:
+    - STANDARD -> Standard
+    - ZERO -> Zero Rate
+    - EXEMPT -> VAT Free
+    """
+    if not frappe.db.exists("DocType", "QPay Product Code"):
+        return {"status": "skipped", "message": "QPay not installed"}
+    
+    # VAT type mapping: eBarimt -> QPay
+    vat_type_map = {
+        "STANDARD": "Standard",
+        "ZERO": "Zero Rate",
+        "EXEMPT": "VAT Free"
+    }
+    
+    # Get all eBarimt codes
+    ebarimt_codes = frappe.get_all(
+        "eBarimt Product Code",
+        filters={"enabled": 1},
+        fields=["classification_code", "name_mn", "code_level", "vat_type"]
+    )
+    
+    # Get existing QPay codes
+    existing_qpay = set(frappe.get_all("QPay Product Code", pluck="product_code"))
+    
+    created = 0
+    updated = 0
+    
+    for ec in ebarimt_codes:
+        code = ec.classification_code
+        qpay_vat_type = vat_type_map.get(ec.vat_type, "Standard")
+        
+        if code in existing_qpay:
+            frappe.db.set_value("QPay Product Code", code, {
+                "description": ec.name_mn,
+                "code_level": ec.code_level,
+                "vat_type": qpay_vat_type
+            })
+            updated += 1
+        else:
+            try:
+                frappe.get_doc({
+                    "doctype": "QPay Product Code",
+                    "product_code": code,
+                    "description": ec.name_mn,
+                    "code_level": ec.code_level or "Brick",
+                    "vat_type": qpay_vat_type,
+                    "enabled": 1
+                }).insert(ignore_permissions=True)
+                created += 1
+            except Exception:
+                pass
+        
+        if (created + updated) % 500 == 0:
+            frappe.db.commit()
+    
+    frappe.db.commit()
+    
+    return {
+        "status": "success",
+        "created": created,
+        "updated": updated,
+        "total": len(ebarimt_codes)
+    }
