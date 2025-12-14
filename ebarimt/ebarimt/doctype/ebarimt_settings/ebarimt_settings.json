@@ -75,7 +75,9 @@
         {
             "fieldname": "section_status",
             "fieldtype": "Section Break",
-            "label": "eBarimt VAT Receipt System"
+            "label": "eBarimt VAT Receipt System",
+            "collapsible": 1,
+            "collapsible_depends_on": "eval:0"
         },
         {
             "default": "1",
@@ -110,7 +112,9 @@
             "fieldname": "section_credentials",
             "fieldtype": "Section Break",
             "label": "API Credentials",
-            "description": "Get credentials from ITC (posapi@itc.gov.mn)"
+            "description": "Get credentials from ITC (posapi@itc.gov.mn)",
+            "collapsible": 1,
+            "collapsible_depends_on": "eval:0"
         },
         {
             "fieldname": "api_username",
@@ -143,7 +147,9 @@
             "fieldname": "section_pos",
             "fieldtype": "Section Break",
             "label": "POS Configuration",
-            "description": "Register your POS at eBarimt portal (https://ebarimt.mn)"
+            "description": "Register your POS at eBarimt portal (https://ebarimt.mn)",
+            "collapsible": 1,
+            "collapsible_depends_on": "eval:0"
         },
         {
             "fieldname": "pos_no",
@@ -224,7 +230,9 @@
         {
             "fieldname": "section_receipt",
             "fieldtype": "Section Break",
-            "label": "Receipt Automation"
+            "label": "Receipt Automation",
+            "collapsible": 1,
+            "collapsible_depends_on": "eval:0"
         },
         {
             "default": "1",
@@ -264,7 +272,9 @@
         {
             "fieldname": "section_tax",
             "fieldtype": "Section Break",
-            "label": "Tax Settings"
+            "label": "Tax Settings",
+            "collapsible": 1,
+            "collapsible_depends_on": "eval:0"
         },
         {
             "default": "1",
