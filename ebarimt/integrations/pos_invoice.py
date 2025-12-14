@@ -166,11 +166,30 @@ def build_pos_receipt_data(pos_doc, settings, bill_type):
     if bill_type == "B2B_RECEIPT":
         customer_tin = get_customer_tin(pos_doc.customer)
     
-    # Build items
+    # OPTIMIZED: Batch load all item data in 3-4 queries instead of N*4 queries
+    from ebarimt.performance import batch_load_item_data
+    
+    item_codes = [item.item_code for item in pos_doc.items]
+    item_data_map = batch_load_item_data(item_codes, settings)
+    
+    # Build items using batch-loaded data
     stocks = []
+    city_tax_rate = flt(settings.get("city_tax_rate") or 2) / 100
+    
     for item in pos_doc.items:
-        tax_code = get_item_tax_code(item.item_code, settings)
-        barcode = get_item_barcode(item.item_code)
+        item_info = item_data_map.get(item.item_code, {})
+        
+        # Calculate VAT based on product code vat_type
+        vat_type = item_info.get("vat_type", "STANDARD")
+        if vat_type in ("ZERO", "EXEMPT"):
+            vat_amount = 0
+        else:
+            vat_amount = flt(item.amount * 10 / 110, 2)
+        
+        # Calculate city tax
+        city_tax = 0
+        if settings.get("enable_city_tax") and item_info.get("city_tax_applicable"):
+            city_tax = flt(item.amount * city_tax_rate, 2)
         
         stocks.append({
             "code": item.item_code,
@@ -179,9 +198,9 @@ def build_pos_receipt_data(pos_doc, settings, bill_type):
             "qty": flt(item.qty, 2),
             "unitPrice": flt(item.rate, 2),
             "totalAmount": flt(item.amount, 2),
-            "cityTax": get_city_tax_amount(item, settings),
-            "vat": get_vat_amount(item),
-            "barCode": barcode or item.item_code
+            "cityTax": city_tax,
+            "vat": vat_amount,
+            "barCode": item_info.get("barcode", item.item_code)
         })
     
     # Build payments from POS payment entries

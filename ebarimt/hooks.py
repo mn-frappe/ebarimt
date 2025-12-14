@@ -34,7 +34,8 @@ before_uninstall = "ebarimt.install.before_uninstall"
 # Migration - ensure workspace links exist and districts are synced
 after_migrate = [
     "ebarimt.install.add_to_integrations_workspace",
-    "ebarimt.install.sync_district_codes"
+    "ebarimt.install.sync_district_codes",
+    "ebarimt.performance.ensure_indexes"
 ]
 
 # Fixtures - Payment Types, Tax Codes, OAT Product Types, and Districts

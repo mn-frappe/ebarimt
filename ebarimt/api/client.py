@@ -64,7 +64,7 @@ class EBarimtClient:
 	def _request(self, method, url, fallback_urls=None, auth_required=False, 
 				 api_key=None, **kwargs):
 		"""
-		Make HTTP request with automatic fallback
+		Make HTTP request with automatic fallback and connection pooling
 		
 		Args:
 			method: HTTP method (GET, POST, DELETE)
@@ -74,6 +74,8 @@ class EBarimtClient:
 			api_key: X-API-KEY header value if needed
 			**kwargs: Additional requests parameters
 		"""
+		from ebarimt.api.http_client import make_request
+		
 		headers = kwargs.pop("headers", {})
 		
 		# Add auth header if required
@@ -98,7 +100,8 @@ class EBarimtClient:
 		last_error = None
 		for try_url in urls:
 			try:
-				response = requests.request(method, try_url, **kwargs)
+				# OPTIMIZED: Use connection-pooled HTTP client
+				response = make_request(method, try_url, **kwargs)
 				
 				# Log request
 				self._log_request(method, try_url, response.status_code, kwargs.get("json"))

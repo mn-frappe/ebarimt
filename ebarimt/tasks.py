@@ -41,62 +41,46 @@ def sync_pending_receipts_daily():
     """
     Daily sync of pending/unsent receipts to eBarimt
     Retries failed receipts from the last 7 days
+    OPTIMIZED: Uses batch operations and single sendData call
     """
     if not frappe.db.get_single_value("eBarimt Settings", "enabled"):
         return
     
     from ebarimt.api.client import EBarimtClient
+    from ebarimt.performance import bulk_update_receipt_status, get_pending_receipts_fast
     
     settings = frappe.get_cached_doc("eBarimt Settings")
     
-    # Get pending receipts from last 7 days
-    pending_logs = frappe.get_all(
-        "eBarimt Receipt Log",
-        filters={
-            "status": ["in", ["Pending", "Failed"]],
-            "creation": [">=", add_days(now_datetime(), -7)]
-        },
-        fields=["name", "invoice_type", "invoice_name"],
-        limit=100
-    )
+    # OPTIMIZED: Use fast SQL query
+    pending_logs = get_pending_receipts_fast(limit=100, days=7)
     
     if not pending_logs:
         return
     
-    client = EBarimtClient(
-        environment=settings.environment,
-        operator_tin=settings.operator_tin,
-        pos_no=settings.pos_no,
-        merchant_tin=settings.merchant_tin,
-        username=settings.username,
-        password=settings.get_password("password")
-    )
+    client = EBarimtClient(settings=settings)
     
-    synced = 0
-    failed = 0
-    
-    for log in pending_logs:
-        try:
-            # Try to send the data
-            result = client.send_data()
+    try:
+        # Single sendData call syncs all pending receipts
+        result = client.send_data()
+        
+        if result.get("success"):
+            # OPTIMIZED: Batch update all pending logs to Synced
+            updates = {log["name"]: "Synced" for log in pending_logs}
+            synced = bulk_update_receipt_status(updates)
             
-            if result.get("success"):
-                frappe.db.set_value(
-                    "eBarimt Receipt Log",
-                    log.name,
-                    "status",
-                    "Synced"
-                )
-                synced += 1
-            else:
-                failed += 1
-                
-        except Exception as e:
-            frappe.log_error(
-                message=str(e),
-                title=f"Receipt Sync Failed: {log.name}"
+            frappe.logger("ebarimt").info(
+                f"Daily receipt sync: {synced} receipts potentially synced"
             )
-            failed += 1
+        else:
+            frappe.log_error(
+                message=f"sendData failed: {result.get('message', 'Unknown error')}",
+                title="eBarimt Daily Sync Failed"
+            )
+    except Exception as e:
+        frappe.log_error(
+            message=str(e),
+            title="eBarimt Daily Sync Failed"
+        )
     
     frappe.db.commit()
     
