@@ -46,9 +46,14 @@ def on_submit_invoice(doc, method=None):
     if not settings.auto_submit_on_invoice:
         return
     
-    # Skip if already has receipt
+    # Skip if already has receipt (from eBarimt app)
     if doc.get("custom_ebarimt_receipt_id"):
         frappe.msgprint(_("eBarimt receipt already exists for this invoice"))
+        return
+    
+    # Skip if QPay app already handled eBarimt (if setting enabled)
+    # QPay creates eBarimt via its own API and stores it in QPay Invoice
+    if settings.get("skip_if_qpay_ebarimt") and has_qpay_ebarimt(doc):
         return
     
     # Skip credit notes / returns for now
@@ -68,6 +73,42 @@ def on_submit_invoice(doc, method=None):
             _("eBarimt receipt submission failed: {0}").format(str(e)),
             indicator="red"
         )
+
+
+def has_qpay_ebarimt(doc):
+    """
+    Check if QPay app already created eBarimt for this invoice.
+    
+    QPay app creates eBarimt via QPay's API (ebarimt_v3/create) when payment is received.
+    This prevents duplicate eBarimt receipts when both apps are installed.
+    
+    Returns:
+        bool: True if QPay already handled eBarimt for this invoice
+    """
+    # Check if QPay Invoice DocType exists (QPay app installed)
+    if not frappe.db.exists("DocType", "QPay Invoice"):
+        return False
+    
+    # Check if there's a QPay Invoice with eBarimt for this Sales Invoice
+    # QPay uses 'payment_status' for payment state and 'ebarimt_created' as checkbox
+    qpay_invoice = frappe.db.get_value(
+        "QPay Invoice",
+        {
+            "reference_doctype": "Sales Invoice",
+            "reference_name": doc.name,
+        },
+        ["name", "ebarimt_id", "ebarimt_created", "payment_status"],
+        as_dict=True
+    )
+    
+    if qpay_invoice and qpay_invoice.get("ebarimt_created") and qpay_invoice.get("ebarimt_id"):
+        frappe.msgprint(
+            _("eBarimt already created via QPay (ID: {0})").format(qpay_invoice.ebarimt_id),
+            indicator="blue"
+        )
+        return True
+    
+    return False
 
 
 def submit_ebarimt_receipt(invoice_doc):

@@ -38,6 +38,7 @@
         "column_break_receipt",
         "default_bill_type",
         "default_payment_type",
+        "skip_if_qpay_ebarimt",
         "section_tax",
         "include_city_tax",
         "column_break_tax",
@@ -268,6 +269,13 @@
             "label": "Default Payment Type",
             "options": "CASH\nPAYMENT_CARD\nBANK_TRANSFER\nMOBILE\nCOUPON",
             "description": "Default payment method for receipts"
+        },
+        {
+            "default": "1",
+            "fieldname": "skip_if_qpay_ebarimt",
+            "fieldtype": "Check",
+            "label": "Skip if QPay handled eBarimt",
+            "description": "Skip receipt creation if QPay app already created eBarimt for the invoice"
         },
         {
             "fieldname": "section_tax",
