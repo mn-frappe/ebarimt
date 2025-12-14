@@ -1,0 +1,234 @@
+{
+ "actions": [],
+ "autoname": "field:classification_code",
+ "creation": "2024-12-14 16:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_basic",
+  "classification_code",
+  "name_mn",
+  "name_en",
+  "column_break_basic",
+  "code_level",
+  "parent_code",
+  "enabled",
+  "section_hierarchy",
+  "segment_code",
+  "segment_name",
+  "family_code",
+  "family_name",
+  "column_break_hierarchy",
+  "class_code",
+  "class_name",
+  "brick_code",
+  "brick_name",
+  "section_tax",
+  "vat_type",
+  "vat_code",
+  "vat_code_name",
+  "column_break_tax",
+  "city_tax_applicable",
+  "excise_type",
+  "oat_product_code"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_basic",
+   "fieldtype": "Section Break",
+   "label": "Product Information"
+  },
+  {
+   "fieldname": "classification_code",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Classification Code",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "name_mn",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Name (Mongolian)"
+  },
+  {
+   "fieldname": "name_en",
+   "fieldtype": "Data",
+   "label": "Name (English)"
+  },
+  {
+   "fieldname": "column_break_basic",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Brick",
+   "fieldname": "code_level",
+   "fieldtype": "Select",
+   "in_standard_filter": 1,
+   "label": "Code Level",
+   "options": "Segment\nFamily\nClass\nBrick"
+  },
+  {
+   "fieldname": "parent_code",
+   "fieldtype": "Link",
+   "label": "Parent Code",
+   "options": "eBarimt Product Code"
+  },
+  {
+   "default": "1",
+   "fieldname": "enabled",
+   "fieldtype": "Check",
+   "label": "Enabled"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "section_hierarchy",
+   "fieldtype": "Section Break",
+   "label": "Classification Hierarchy"
+  },
+  {
+   "fieldname": "segment_code",
+   "fieldtype": "Data",
+   "label": "Segment Code (2 digits)",
+   "read_only": 1
+  },
+  {
+   "fieldname": "segment_name",
+   "fieldtype": "Data",
+   "label": "Segment Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "family_code",
+   "fieldtype": "Data",
+   "label": "Family Code (3 digits)",
+   "read_only": 1
+  },
+  {
+   "fieldname": "family_name",
+   "fieldtype": "Data",
+   "label": "Family Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_hierarchy",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "class_code",
+   "fieldtype": "Data",
+   "label": "Class Code (4 digits)",
+   "read_only": 1
+  },
+  {
+   "fieldname": "class_name",
+   "fieldtype": "Data",
+   "label": "Class Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "brick_code",
+   "fieldtype": "Data",
+   "label": "Brick Code (6 digits)",
+   "read_only": 1
+  },
+  {
+   "fieldname": "brick_name",
+   "fieldtype": "Data",
+   "label": "Brick Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_tax",
+   "fieldtype": "Section Break",
+   "label": "Tax Configuration"
+  },
+  {
+   "default": "STANDARD",
+   "fieldname": "vat_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "VAT Type",
+   "options": "STANDARD\nZERO\nEXEMPT"
+  },
+  {
+   "fieldname": "vat_code",
+   "fieldtype": "Data",
+   "label": "VAT Code",
+   "description": "Tax exemption code (501-507 for 0%, 305-447 for exempt)"
+  },
+  {
+   "fieldname": "vat_code_name",
+   "fieldtype": "Small Text",
+   "label": "VAT Code Description",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_tax",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "city_tax_applicable",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "City Tax Applicable",
+   "description": "2% city tax for alcohol, tobacco, fuel in Ulaanbaatar"
+  },
+  {
+   "fieldname": "excise_type",
+   "fieldtype": "Select",
+   "in_standard_filter": 1,
+   "label": "Excise Type",
+   "options": "\nAlcohol\nTobacco\nFuel"
+  },
+  {
+   "fieldname": "oat_product_code",
+   "fieldtype": "Link",
+   "label": "OAT Product Type",
+   "options": "eBarimt OAT Product Type",
+   "description": "Excise stamp product type (codes 4-33)"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-12-14 16:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "eBarimt",
+ "name": "eBarimt Product Code",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "read": 1,
+   "role": "Accounts User"
+  },
+  {
+   "read": 1,
+   "role": "Sales User"
+  }
+ ],
+ "quick_entry": 1,
+ "search_fields": "name_mn,name_en,vat_type",
+ "sort_field": "classification_code",
+ "sort_order": "ASC",
+ "states": [],
+ "title_field": "name_mn",
+ "track_changes": 1
+}

@@ -296,19 +296,89 @@ def get_item_barcode(item_code):
 
 
 def get_city_tax_amount(item, settings):
-    """Calculate city tax amount for item"""
-    # Only certain categories have city tax
+    """Calculate city tax amount for item based on product code or item settings"""
+    # Check if city tax is enabled globally
     if not settings.get("enable_city_tax"):
         return 0
     
-    city_tax_rate = flt(settings.get("city_tax_rate") or 0) / 100
+    # First check item-level setting
+    item_doc = frappe.get_cached_doc("Item", item.item_code)
+    
+    # Check if item has product code with city tax info
+    product_code = item_doc.get("custom_ebarimt_product_code")
+    if product_code:
+        product = frappe.db.get_value(
+            "eBarimt Product Code",
+            product_code,
+            ["city_tax_applicable", "excise_type"],
+            as_dict=True
+        )
+        if product and not product.city_tax_applicable:
+            return 0
+    elif not item_doc.get("custom_city_tax_applicable"):
+        # No product code and item-level city tax not checked
+        return 0
+    
+    city_tax_rate = flt(settings.get("city_tax_rate") or 2) / 100
     return flt(item.amount * city_tax_rate, 2)
 
 
 def get_vat_amount(item):
-    """Get VAT amount from item"""
-    # VAT is typically included in price in Mongolia (10%)
+    """Get VAT amount from item based on product code"""
+    item_doc = frappe.get_cached_doc("Item", item.item_code)
+    
+    # Check product code for VAT type
+    product_code = item_doc.get("custom_ebarimt_product_code")
+    if product_code:
+        vat_type = frappe.db.get_value("eBarimt Product Code", product_code, "vat_type")
+        if vat_type in ("ZERO", "EXEMPT"):
+            return 0
+    
+    # Standard VAT (10% included in price in Mongolia)
     return flt(item.amount * 10 / 110, 2)
+
+
+def get_item_tax_info(item):
+    """
+    Get complete tax information for an item.
+    
+    Returns dict with vat_type, vat_amount, city_tax_amount, excise_type
+    """
+    item_doc = frappe.get_cached_doc("Item", item.item_code)
+    product_code = item_doc.get("custom_ebarimt_product_code")
+    
+    result = {
+        "vat_type": "STANDARD",
+        "vat_amount": flt(item.amount * 10 / 110, 2),
+        "city_tax_applicable": False,
+        "city_tax_amount": 0,
+        "excise_type": None
+    }
+    
+    if product_code:
+        product = frappe.db.get_value(
+            "eBarimt Product Code",
+            product_code,
+            ["vat_type", "city_tax_applicable", "excise_type"],
+            as_dict=True
+        )
+        if product:
+            result["vat_type"] = product.vat_type
+            result["excise_type"] = product.excise_type
+            result["city_tax_applicable"] = bool(product.city_tax_applicable)
+            
+            # Calculate VAT based on type
+            if product.vat_type in ("ZERO", "EXEMPT"):
+                result["vat_amount"] = 0
+    
+    # Also check item-level settings as fallback
+    if not product_code:
+        if item_doc.get("custom_city_tax_applicable"):
+            result["city_tax_applicable"] = True
+        if item_doc.get("custom_is_oat"):
+            result["excise_type"] = "Unknown"
+    
+    return result
 
 
 @frappe.whitelist()

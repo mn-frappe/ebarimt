@@ -10,6 +10,7 @@ Whitelisted API functions for frontend access
 
 import frappe
 from frappe import _
+from frappe.utils import flt
 from ebarimt.api.client import EBarimtClient
 
 
@@ -282,3 +283,61 @@ def get_receipt_stats():
         "total_amount": total_amount,
         "success_rate": round(success / total * 100, 1) if total > 0 else 0
     }
+
+
+# =========================================================================
+# Product Code Operations
+# =========================================================================
+
+@frappe.whitelist()
+def sync_product_codes(file_path=None):
+    """
+    Sync GS1 product codes from Excel file.
+    
+    Args:
+        file_path: Path to QPayAPIv2.xlsx file (optional, defaults to /opt/docs/QPayAPIv2.xlsx)
+    
+    Returns:
+        dict with import statistics
+    """
+    from ebarimt.ebarimt.doctype.ebarimt_product_code.import_gs1_codes import sync_product_codes as do_sync
+    return do_sync(file_path)
+
+
+@frappe.whitelist()
+def load_default_product_codes():
+    """Load commonly used product codes with correct tax settings."""
+    from ebarimt.ebarimt.doctype.ebarimt_product_code.import_gs1_codes import load_default_product_codes as do_load
+    return do_load()
+
+
+@frappe.whitelist()
+def get_product_tax_info(classification_code):
+    """
+    Get tax information for a product by classification code.
+    
+    Args:
+        classification_code: GS1 classification code
+    
+    Returns:
+        dict with vat_type, vat_rate, city_tax_applicable, excise_type
+    """
+    from ebarimt.ebarimt.doctype.ebarimt_product_code.ebarimt_product_code import get_product_tax_info as get_tax
+    return get_tax(classification_code)
+
+
+@frappe.whitelist()
+def calculate_item_taxes(amount, classification_code=None):
+    """
+    Calculate taxes for an item amount.
+    
+    Args:
+        amount: Item amount (includes VAT)
+        classification_code: GS1 product code (optional)
+    
+    Returns:
+        dict with net_amount, vat_amount, city_tax_amount, total_amount
+    """
+    from ebarimt.ebarimt.doctype.ebarimt_product_code.ebarimt_product_code import calculate_item_taxes as calc_taxes
+    return calc_taxes(flt(amount), classification_code)
+

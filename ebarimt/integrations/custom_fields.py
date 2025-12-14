@@ -117,10 +117,18 @@ def get_custom_fields():
                 "collapsible": 1
             },
             {
+                "fieldname": "custom_ebarimt_product_code",
+                "label": "eBarimt Product Code",
+                "fieldtype": "Link",
+                "options": "eBarimt Product Code",
+                "insert_after": "ebarimt_item_section",
+                "description": "GS1 classification code for tax calculation"
+            },
+            {
                 "fieldname": "custom_ebarimt_barcode",
                 "label": "eBarimt Barcode",
                 "fieldtype": "Data",
-                "insert_after": "ebarimt_item_section",
+                "insert_after": "custom_ebarimt_product_code",
                 "description": "Barcode for eBarimt receipt (BUNA/EAN/UPC)"
             },
             {
@@ -137,7 +145,9 @@ def get_custom_fields():
                 "fieldtype": "Check",
                 "insert_after": "custom_ebarimt_tax_code",
                 "default": 0,
-                "description": "Check if this is an excise product (alcohol, tobacco)"
+                "description": "Check if this is an excise product (alcohol, tobacco)",
+                "fetch_from": "custom_ebarimt_product_code.excise_type",
+                "fetch_if_empty": 1
             },
             {
                 "fieldname": "custom_city_tax_applicable",
@@ -145,7 +155,9 @@ def get_custom_fields():
                 "fieldtype": "Check",
                 "insert_after": "custom_is_oat",
                 "default": 0,
-                "description": "Check if city tax applies to this item"
+                "description": "Check if city tax applies to this item",
+                "fetch_from": "custom_ebarimt_product_code.city_tax_applicable",
+                "fetch_if_empty": 1
             },
             {
                 "fieldname": "custom_ebarimt_product_name",
