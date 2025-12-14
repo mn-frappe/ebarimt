@@ -456,20 +456,10 @@ def sync_to_qpay():
     Sync eBarimt Product Codes to QPay Product Code.
     
     This ensures QPay has the same codes with tax info from eBarimt.
-    Maps eBarimt VAT types to QPay VAT types:
-    - STANDARD -> Standard
-    - ZERO -> Zero Rate
-    - EXEMPT -> VAT Free
+    Both apps now use the same VAT types: STANDARD, ZERO, EXEMPT
     """
     if not frappe.db.exists("DocType", "QPay Product Code"):
         return {"status": "skipped", "message": "QPay not installed"}
-    
-    # VAT type mapping: eBarimt -> QPay
-    vat_type_map = {
-        "STANDARD": "Standard",
-        "ZERO": "Zero Rate",
-        "EXEMPT": "VAT Free"
-    }
     
     # Get all eBarimt codes
     ebarimt_codes = frappe.get_all(
@@ -486,13 +476,12 @@ def sync_to_qpay():
     
     for ec in ebarimt_codes:
         code = ec.classification_code
-        qpay_vat_type = vat_type_map.get(ec.vat_type, "Standard")
         
         if code in existing_qpay:
             frappe.db.set_value("QPay Product Code", code, {
                 "description": ec.name_mn,
                 "code_level": ec.code_level,
-                "vat_type": qpay_vat_type
+                "vat_type": ec.vat_type  # Same format: STANDARD/ZERO/EXEMPT
             })
             updated += 1
         else:
@@ -502,7 +491,7 @@ def sync_to_qpay():
                     "product_code": code,
                     "description": ec.name_mn,
                     "code_level": ec.code_level or "Brick",
-                    "vat_type": qpay_vat_type,
+                    "vat_type": ec.vat_type or "STANDARD",  # Same format
                     "enabled": 1
                 }).insert(ignore_permissions=True)
                 created += 1
