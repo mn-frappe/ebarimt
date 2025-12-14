@@ -102,7 +102,13 @@ def load_default_fixtures():
     load_default_payment_types()
     print("Payment types loaded.")
     
+    # Load OAT product types
+    from ebarimt.ebarimt.doctype.ebarimt_oat_product_type.ebarimt_oat_product_type import load_default_oat_product_types
+    load_default_oat_product_types()
+    print("OAT product types loaded.")
+    
     # Note: Districts are shared from QPay app - no need to load here
+    # Note: Tax codes are synced from eBarimt API via sync_tax_codes_daily task
 
 
 def before_uninstall():

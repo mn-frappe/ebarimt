@@ -11,7 +11,8 @@
   "tax_type_name",
   "column_break_1",
   "start_date",
-  "end_date"
+  "end_date",
+  "is_default"
  ],
  "fields": [
   {
@@ -56,6 +57,13 @@
    "fieldtype": "Date",
    "label": "End Date",
    "description": "Validity end date"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_default",
+   "fieldtype": "Check",
+   "label": "Is Default",
+   "description": "Default fixture to export"
   }
  ],
  "index_web_pages_for_search": 1,

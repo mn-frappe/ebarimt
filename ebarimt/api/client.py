@@ -597,6 +597,76 @@ class EBarimtClient:
 			return response.json()
 		return {"status": response.status_code, "msg": response.text}
 	
+	def get_available_stamps_paginated(self, reg_no, barcode, stock_type, position_id, 
+									   page_number=1, page_size=100, api_key=None):
+		"""
+		Get available excise stamps with pagination and detailed info
+		Returns manufacturer info, QR codes, etc.
+		
+		Args:
+			reg_no: Seller registration number
+			barcode: Product barcode
+			stock_type: Product type code (4-33)
+			position_id: Stamp type code (3-6)
+			page_number: Page number for pagination
+			page_size: Items per page (max 100)
+			api_key: X-API-KEY header (optional)
+			
+		Returns:
+			list: Detailed stamp info [{barCode, orderDate, manufactorRegno, productName, qrCode, stockNumber}]
+		"""
+		headers = {}
+		if api_key:
+			headers["X-API-KEY"] = api_key
+		
+		response = self._request(
+			"GET",
+			f"{self.itc_url}/api/inventory/getActiveStockInfo",
+			fallback_urls=[f"{self.itc_url_direct}/api/inventory/getActiveStockInfo"],
+			auth_required=True,
+			headers=headers,
+			params={
+				"regNo": reg_no,
+				"barCode": barcode,
+				"stockType": stock_type,
+				"positionId": position_id,
+				"pageNumber": page_number,
+				"pageSize": page_size
+			}
+		)
+		
+		if response.status_code == 200:
+			data = response.json()
+			if data.get("status") == 200:
+				return data.get("data", [])
+		return []
+	
+	def set_product_owner(self, pos_rno, products):
+		"""
+		Mark products as own-manufactured for multi-manufacturer scenarios
+		
+		Args:
+			pos_rno: Receipt ID (33-digit DDTD)
+			products: List of [{barcode, isProductOwner (1=own, 0=other)}]
+			
+		Returns:
+			dict: Result with status
+		"""
+		response = self._request(
+			"POST",
+			f"{self.api_url}/api/tpi/receipt/setPosReceiptDtlByProductOwner",
+			fallback_urls=[f"{self.api_url_direct}/api/tpi/receipt/setPosReceiptDtlByProductOwner"],
+			auth_required=True,
+			json={
+				"posRno": pos_rno,
+				"productOwnerDtlModelList": products
+			}
+		)
+		
+		if response.status_code == 200:
+			return response.json()
+		return {"status": response.status_code, "msg": response.text}
+	
 	# =========================================================================
 	# TPI Data API - Sales Data (Night-time only 1:00-7:00)
 	# =========================================================================

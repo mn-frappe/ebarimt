@@ -28,7 +28,7 @@ doctype_js = {
 after_install = "ebarimt.install.after_install"
 before_uninstall = "ebarimt.install.before_uninstall"
 
-# Fixtures - Payment Types and Tax Codes only
+# Fixtures - Payment Types, Tax Codes, and OAT Product Types
 # District is shared from QPay app
 fixtures = [
     {
@@ -37,6 +37,10 @@ fixtures = [
     },
     {
         "doctype": "eBarimt Tax Code",
+        "filters": {"is_default": 1}
+    },
+    {
+        "doctype": "eBarimt OAT Product Type",
         "filters": {"is_default": 1}
     }
 ]
