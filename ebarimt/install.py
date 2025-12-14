@@ -28,8 +28,9 @@ def after_install():
     print("Test credentials have been configured.")
     print("Go to eBarimt Settings to test connection.")
     print("")
-    print("NOTE: District codes are shared from QPay app.")
-    print("Make sure QPay app is installed and districts are synced.")
+    print("District codes: Shared via QPay District DocType")
+    print("  - If QPay app is installed, districts are already available")
+    print("  - Otherwise, districts are loaded from eBarimt fixtures")
     print("=" * 60)
 
 
@@ -109,8 +110,87 @@ def load_default_fixtures():
     load_default_oat_product_types()
     print("OAT product types loaded.")
     
-    # Note: Districts are shared from QPay app - no need to load here
+    # Load district codes (shared with QPay app via QPay District DocType)
+    load_district_codes()
+    
     # Note: Tax codes are synced from eBarimt API via sync_tax_codes_daily task
+
+
+def load_district_codes():
+    """
+    Load district codes into QPay District DocType.
+    
+    QPay District is shared between QPay and eBarimt apps.
+    This function loads/updates district codes independently,
+    skipping if already exists with same data.
+    """
+    import os
+    
+    # Check if QPay District DocType exists (could be from QPay or created manually)
+    if not frappe.db.exists("DocType", "QPay District"):
+        print("  ⚠ QPay District DocType not found. Please install QPay app or create the DocType.")
+        return
+    
+    fixture_path = os.path.join(
+        os.path.dirname(__file__), "fixtures", "qpay_district.json"
+    )
+    
+    if not os.path.exists(fixture_path):
+        print("  ⚠ District fixture file not found.")
+        return
+    
+    try:
+        with open(fixture_path, "r", encoding="utf-8") as f:
+            districts = json.load(f)
+        
+        created = 0
+        updated = 0
+        skipped = 0
+        
+        for district in districts:
+            code = district.get("district_code")
+            if not code:
+                continue
+            
+            if frappe.db.exists("QPay District", code):
+                # Check if needs update
+                existing = frappe.get_doc("QPay District", code)
+                needs_update = (
+                    existing.branch_name != district.get("branch_name") or
+                    existing.sub_branch_name != district.get("sub_branch_name") or
+                    existing.branch_code != district.get("branch_code") or
+                    existing.sub_branch_code != district.get("sub_branch_code")
+                )
+                
+                if needs_update:
+                    existing.branch_name = district.get("branch_name")
+                    existing.sub_branch_name = district.get("sub_branch_name")
+                    existing.branch_code = district.get("branch_code")
+                    existing.sub_branch_code = district.get("sub_branch_code")
+                    existing.enabled = district.get("enabled", 1)
+                    existing.flags.ignore_permissions = True
+                    existing.save()
+                    updated += 1
+                else:
+                    skipped += 1
+            else:
+                # Create new district
+                doc = frappe.new_doc("QPay District")
+                doc.district_code = code
+                doc.branch_name = district.get("branch_name")
+                doc.sub_branch_name = district.get("sub_branch_name")
+                doc.branch_code = district.get("branch_code")
+                doc.sub_branch_code = district.get("sub_branch_code")
+                doc.enabled = district.get("enabled", 1)
+                doc.flags.ignore_permissions = True
+                doc.insert()
+                created += 1
+        
+        frappe.db.commit()
+        print(f"  District codes: {created} created, {updated} updated, {skipped} unchanged")
+        
+    except Exception as e:
+        print(f"  ⚠ Error loading district codes: {e}")
 
 
 def before_uninstall():
@@ -255,3 +335,62 @@ def remove_from_integrations_workspace():
         
     except Exception as e:
         print(f"  ⚠ Could not remove from Integrations workspace: {e}")
+
+
+def sync_district_codes():
+    """
+    Sync district codes on migration.
+    
+    Called by after_migrate hook to ensure districts are available
+    even if QPay app is not installed.
+    """
+    import os
+    
+    # Check if QPay District DocType exists
+    if not frappe.db.exists("DocType", "QPay District"):
+        return  # Silent return on migrate - DocType might not exist yet
+    
+    # Check if we need to sync (only if empty or has fewer records)
+    current_count = frappe.db.count("QPay District")
+    
+    fixture_path = os.path.join(
+        os.path.dirname(__file__), "fixtures", "qpay_district.json"
+    )
+    
+    if not os.path.exists(fixture_path):
+        return
+    
+    try:
+        with open(fixture_path, "r", encoding="utf-8") as f:
+            districts = json.load(f)
+        
+        fixture_count = len(districts)
+        
+        # Only sync if we have fewer districts than the fixture
+        if current_count >= fixture_count:
+            return
+        
+        created = 0
+        for district in districts:
+            code = district.get("district_code")
+            if not code:
+                continue
+            
+            if not frappe.db.exists("QPay District", code):
+                doc = frappe.new_doc("QPay District")
+                doc.district_code = code
+                doc.branch_name = district.get("branch_name")
+                doc.sub_branch_name = district.get("sub_branch_name")
+                doc.branch_code = district.get("branch_code")
+                doc.sub_branch_code = district.get("sub_branch_code")
+                doc.enabled = district.get("enabled", 1)
+                doc.flags.ignore_permissions = True
+                doc.insert()
+                created += 1
+        
+        if created > 0:
+            frappe.db.commit()
+            print(f"  ✓ Synced {created} district codes")
+            
+    except Exception:
+        pass  # Silent fail on migrate

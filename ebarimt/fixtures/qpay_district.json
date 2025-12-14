@@ -1,0 +1,5062 @@
+[
+    {
+        "doctype": "QPay District",
+        "name": "3420",
+        "district_code": "3420",
+        "branch_name": "Сонгинохайрхан",
+        "branch_code": "34",
+        "sub_branch_name": "20-р хороо",
+        "sub_branch_code": "20",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "3421",
+        "district_code": "3421",
+        "branch_name": "Сонгинохайрхан",
+        "branch_code": "34",
+        "sub_branch_name": "21-р хороо",
+        "sub_branch_code": "21",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "3501",
+        "district_code": "3501",
+        "branch_name": "Чингэлтэй",
+        "branch_code": "35",
+        "sub_branch_name": "1-р хороо",
+        "sub_branch_code": "1",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "3502",
+        "district_code": "3502",
+        "branch_name": "Чингэлтэй",
+        "branch_code": "35",
+        "sub_branch_name": "2-р хороо",
+        "sub_branch_code": "2",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "3503",
+        "district_code": "3503",
+        "branch_name": "Чингэлтэй",
+        "branch_code": "35",
+        "sub_branch_name": "3-р хороо",
+        "sub_branch_code": "3",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "3504",
+        "district_code": "3504",
+        "branch_name": "Чингэлтэй",
+        "branch_code": "35",
+        "sub_branch_name": "4-р хороо",
+        "sub_branch_code": "4",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "3505",
+        "district_code": "3505",
+        "branch_name": "Чингэлтэй",
+        "branch_code": "35",
+        "sub_branch_name": "5-р хороо",
+        "sub_branch_code": "5",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "3506",
+        "district_code": "3506",
+        "branch_name": "Чингэлтэй",
+        "branch_code": "35",
+        "sub_branch_name": "6-р хороо",
+        "sub_branch_code": "6",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "3507",
+        "district_code": "3507",
+        "branch_name": "Чингэлтэй",
+        "branch_code": "35",
+        "sub_branch_name": "7-р хороо",
+        "sub_branch_code": "7",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "3508",
+        "district_code": "3508",
+        "branch_name": "Чингэлтэй",
+        "branch_code": "35",
+        "sub_branch_name": "8-р хороо",
+        "sub_branch_code": "8",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "3509",
+        "district_code": "3509",
+        "branch_name": "Чингэлтэй",
+        "branch_code": "35",
+        "sub_branch_name": "9-р хороо",
+        "sub_branch_code": "9",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "3510",
+        "district_code": "3510",
+        "branch_name": "Чингэлтэй",
+        "branch_code": "35",
+        "sub_branch_name": "10-р хороо",
+        "sub_branch_code": "10",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "0101",
+        "district_code": "0101",
+        "branch_name": "Архангай",
+        "branch_code": "1",
+        "sub_branch_name": "Их тамир",
+        "sub_branch_code": "1",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "0102",
+        "district_code": "0102",
+        "branch_name": "Архангай",
+        "branch_code": "1",
+        "sub_branch_name": "Чулуут",
+        "sub_branch_code": "2",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "0103",
+        "district_code": "0103",
+        "branch_name": "Архангай",
+        "branch_code": "1",
+        "sub_branch_name": "Хангай",
+        "sub_branch_code": "3",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "0104",
+        "district_code": "0104",
+        "branch_name": "Архангай",
+        "branch_code": "1",
+        "sub_branch_name": "Тариат",
+        "sub_branch_code": "4",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "0105",
+        "district_code": "0105",
+        "branch_name": "Архангай",
+        "branch_code": "1",
+        "sub_branch_name": "Өндөр-Улаан",
+        "sub_branch_code": "5",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "0106",
+        "district_code": "0106",
+        "branch_name": "Архангай",
+        "branch_code": "1",
+        "sub_branch_name": "Эрдэнэмандал",
+        "sub_branch_code": "6",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "0107",
+        "district_code": "0107",
+        "branch_name": "Архангай",
+        "branch_code": "1",
+        "sub_branch_name": "Жаргалант",
+        "sub_branch_code": "7",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "0108",
+        "district_code": "0108",
+        "branch_name": "Архангай",
+        "branch_code": "1",
+        "sub_branch_name": "Цэцэрлэг",
+        "sub_branch_code": "8",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "0109",
+        "district_code": "0109",
+        "branch_name": "Архангай",
+        "branch_code": "1",
+        "sub_branch_name": "Хайрхан",
+        "sub_branch_code": "9",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "0110",
+        "district_code": "0110",
+        "branch_name": "Архангай",
+        "branch_code": "1",
+        "sub_branch_name": "Батцэнгэл",
+        "sub_branch_code": "10",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "0111",
+        "district_code": "0111",
+        "branch_name": "Архангай",
+        "branch_code": "1",
+        "sub_branch_name": "Өлзийт",
+        "sub_branch_code": "11",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "0112",
+        "district_code": "0112",
+        "branch_name": "Архангай",
+        "branch_code": "1",
+        "sub_branch_name": "Өгийнуур",
+        "sub_branch_code": "12",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "0113",
+        "district_code": "0113",
+        "branch_name": "Архангай",
+        "branch_code": "1",
+        "sub_branch_name": "Хашаат",
+        "sub_branch_code": "13",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "0114",
+        "district_code": "0114",
+        "branch_name": "Архангай",
+        "branch_code": "1",
+        "sub_branch_name": "Хотонт",
+        "sub_branch_code": "14",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "0115",
+        "district_code": "0115",
+        "branch_name": "Архангай",
+        "branch_code": "1",
+        "sub_branch_name": "Цэнхэр",
+        "sub_branch_code": "15",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "0116",
+        "district_code": "0116",
+        "branch_name": "Архангай",
+        "branch_code": "1",
+        "sub_branch_name": "Төвшрүүлэх",
+        "sub_branch_code": "16",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "0117",
+        "district_code": "0117",
+        "branch_name": "Архангай",
+        "branch_code": "1",
+        "sub_branch_name": "Булган",
+        "sub_branch_code": "17",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "0119",
+        "district_code": "0119",
+        "branch_name": "Архангай",
+        "branch_code": "1",
+        "sub_branch_name": "Цахир",
+        "sub_branch_code": "19",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "0120",
+        "district_code": "0120",
+        "branch_name": "Архангай",
+        "branch_code": "1",
+        "sub_branch_name": "Эрдэнэбулган",
+        "sub_branch_code": "20",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "0201",
+        "district_code": "0201",
+        "branch_name": "Баян-Өлгий",
+        "branch_code": "2",
+        "sub_branch_name": "Алтай",
+        "sub_branch_code": "1",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "0202",
+        "district_code": "0202",
+        "branch_name": "Баян-Өлгий",
+        "branch_code": "2",
+        "sub_branch_name": "Алтанцөгц",
+        "sub_branch_code": "2",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "0203",
+        "district_code": "0203",
+        "branch_name": "Баян-Өлгий",
+        "branch_code": "2",
+        "sub_branch_name": "Баяннуур",
+        "sub_branch_code": "3",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "0204",
+        "district_code": "0204",
+        "branch_name": "Баян-Өлгий",
+        "branch_code": "2",
+        "sub_branch_name": "Бугат",
+        "sub_branch_code": "4",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "0205",
+        "district_code": "0205",
+        "branch_name": "Баян-Өлгий",
+        "branch_code": "2",
+        "sub_branch_name": "Булган",
+        "sub_branch_code": "5",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "0206",
+        "district_code": "0206",
+        "branch_name": "Баян-Өлгий",
+        "branch_code": "2",
+        "sub_branch_name": "Буянт",
+        "sub_branch_code": "6",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "0207",
+        "district_code": "0207",
+        "branch_name": "Баян-Өлгий",
+        "branch_code": "2",
+        "sub_branch_name": "Дэлүүн",
+        "sub_branch_code": "7",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "0208",
+        "district_code": "0208",
+        "branch_name": "Баян-Өлгий",
+        "branch_code": "2",
+        "sub_branch_name": "Ногооннуур",
+        "sub_branch_code": "8",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "0209",
+        "district_code": "0209",
+        "branch_name": "Баян-Өлгий",
+        "branch_code": "2",
+        "sub_branch_name": "Сагсай",
+        "sub_branch_code": "9",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "0210",
+        "district_code": "0210",
+        "branch_name": "Баян-Өлгий",
+        "branch_code": "2",
+        "sub_branch_name": "Толбо",
+        "sub_branch_code": "10",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "0211",
+        "district_code": "0211",
+        "branch_name": "Баян-Өлгий",
+        "branch_code": "2",
+        "sub_branch_name": "Улаанхус",
+        "sub_branch_code": "11",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "0212",
+        "district_code": "0212",
+        "branch_name": "Баян-Өлгий",
+        "branch_code": "2",
+        "sub_branch_name": "Цэнгэл",
+        "sub_branch_code": "12",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "0214",
+        "district_code": "0214",
+        "branch_name": "Баян-Өлгий",
+        "branch_code": "2",
+        "sub_branch_name": "Өлгий",
+        "sub_branch_code": "14",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "0301",
+        "district_code": "0301",
+        "branch_name": "Баянхонгор",
+        "branch_code": "3",
+        "sub_branch_name": "Баацагаан",
+        "sub_branch_code": "1",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "0302",
+        "district_code": "0302",
+        "branch_name": "Баянхонгор",
+        "branch_code": "3",
+        "sub_branch_name": "Баянбулаг",
+        "sub_branch_code": "2",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "0303",
+        "district_code": "0303",
+        "branch_name": "Баянхонгор",
+        "branch_code": "3",
+        "sub_branch_name": "Баянговь",
+        "sub_branch_code": "3",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "0304",
+        "district_code": "0304",
+        "branch_name": "Баянхонгор",
+        "branch_code": "3",
+        "sub_branch_name": "Баянлиг",
+        "sub_branch_code": "4",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "0305",
+        "district_code": "0305",
+        "branch_name": "Баянхонгор",
+        "branch_code": "3",
+        "sub_branch_name": "Баян-Овоо",
+        "sub_branch_code": "5",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "0306",
+        "district_code": "0306",
+        "branch_name": "Баянхонгор",
+        "branch_code": "3",
+        "sub_branch_name": "Баян-Өндөр",
+        "sub_branch_code": "6",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "0307",
+        "district_code": "0307",
+        "branch_name": "Баянхонгор",
+        "branch_code": "3",
+        "sub_branch_name": "Баянцагаан",
+        "sub_branch_code": "7",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "0308",
+        "district_code": "0308",
+        "branch_name": "Баянхонгор",
+        "branch_code": "3",
+        "sub_branch_name": "Богд",
+        "sub_branch_code": "8",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "0608",
+        "district_code": "0608",
+        "branch_name": "Дорноговь",
+        "branch_code": "6",
+        "sub_branch_name": "Сайхандулаан",
+        "sub_branch_code": "8",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "0609",
+        "district_code": "0609",
+        "branch_name": "Дорноговь",
+        "branch_code": "6",
+        "sub_branch_name": "Улаанбадрах",
+        "sub_branch_code": "9",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "0610",
+        "district_code": "0610",
+        "branch_name": "Дорноговь",
+        "branch_code": "6",
+        "sub_branch_name": "Хатанбулаг",
+        "sub_branch_code": "10",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "0611",
+        "district_code": "0611",
+        "branch_name": "Дорноговь",
+        "branch_code": "6",
+        "sub_branch_name": "Хөвсгөл",
+        "sub_branch_code": "11",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "0612",
+        "district_code": "0612",
+        "branch_name": "Дорноговь",
+        "branch_code": "6",
+        "sub_branch_name": "Эрдэнэ",
+        "sub_branch_code": "12",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "0614",
+        "district_code": "0614",
+        "branch_name": "Дорноговь",
+        "branch_code": "6",
+        "sub_branch_name": "Замын-Үүд",
+        "sub_branch_code": "14",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "0701",
+        "district_code": "0701",
+        "branch_name": "Дорнод",
+        "branch_code": "7",
+        "sub_branch_name": "Баян-Уул",
+        "sub_branch_code": "1",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "0617",
+        "district_code": "0617",
+        "branch_name": "Дорноговь",
+        "branch_code": "6",
+        "sub_branch_name": "Сайншанд",
+        "sub_branch_code": "17",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "0702",
+        "district_code": "0702",
+        "branch_name": "Дорнод",
+        "branch_code": "7",
+        "sub_branch_name": "Баяндун",
+        "sub_branch_code": "2",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "0703",
+        "district_code": "0703",
+        "branch_name": "Дорнод",
+        "branch_code": "7",
+        "sub_branch_name": "Баянтүмэн",
+        "sub_branch_code": "3",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "3511",
+        "district_code": "3511",
+        "branch_name": "Чингэлтэй",
+        "branch_code": "35",
+        "sub_branch_name": "11-р хороо",
+        "sub_branch_code": "11",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "3512",
+        "district_code": "3512",
+        "branch_name": "Чингэлтэй",
+        "branch_code": "35",
+        "sub_branch_name": "12-р хороо",
+        "sub_branch_code": "12",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "3513",
+        "district_code": "3513",
+        "branch_name": "Чингэлтэй",
+        "branch_code": "35",
+        "sub_branch_name": "13-р хороо",
+        "sub_branch_code": "13",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "3514",
+        "district_code": "3514",
+        "branch_name": "Чингэлтэй",
+        "branch_code": "35",
+        "sub_branch_name": "14-р хороо",
+        "sub_branch_code": "14",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "3515",
+        "district_code": "3515",
+        "branch_name": "Чингэлтэй",
+        "branch_code": "35",
+        "sub_branch_name": "15-р хороо",
+        "sub_branch_code": "15",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "3516",
+        "district_code": "3516",
+        "branch_name": "Чингэлтэй",
+        "branch_code": "35",
+        "sub_branch_name": "16-р хороо",
+        "sub_branch_code": "16",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "3517",
+        "district_code": "3517",
+        "branch_name": "Чингэлтэй",
+        "branch_code": "35",
+        "sub_branch_name": "17-р хороо",
+        "sub_branch_code": "17",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "3518",
+        "district_code": "3518",
+        "branch_name": "Чингэлтэй",
+        "branch_code": "35",
+        "sub_branch_name": "18-р хороо",
+        "sub_branch_code": "18",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "3519",
+        "district_code": "3519",
+        "branch_name": "Чингэлтэй",
+        "branch_code": "35",
+        "sub_branch_name": "19-р хороо",
+        "sub_branch_code": "19",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "3520",
+        "district_code": "3520",
+        "branch_name": "Чингэлтэй",
+        "branch_code": "35",
+        "sub_branch_name": "20-р хороо",
+        "sub_branch_code": "20",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "3201",
+        "district_code": "3201",
+        "branch_name": "Говьсүмбэр",
+        "branch_code": "32",
+        "sub_branch_name": "Сүмбэр",
+        "sub_branch_code": "1",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "3202",
+        "district_code": "3202",
+        "branch_name": "Говьсүмбэр",
+        "branch_code": "32",
+        "sub_branch_name": "Баянтал",
+        "sub_branch_code": "2",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "3203",
+        "district_code": "3203",
+        "branch_name": "Говьсүмбэр",
+        "branch_code": "32",
+        "sub_branch_name": "Шивээговь",
+        "sub_branch_code": "3",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "2701",
+        "district_code": "2701",
+        "branch_name": "Багануур",
+        "branch_code": "27",
+        "sub_branch_name": "1-р хороо",
+        "sub_branch_code": "1",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "2702",
+        "district_code": "2702",
+        "branch_name": "Багануур",
+        "branch_code": "27",
+        "sub_branch_name": "2-р хороо",
+        "sub_branch_code": "2",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "2703",
+        "district_code": "2703",
+        "branch_name": "Багануур",
+        "branch_code": "27",
+        "sub_branch_name": "3-р хороо",
+        "sub_branch_code": "3",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "2704",
+        "district_code": "2704",
+        "branch_name": "Багануур",
+        "branch_code": "27",
+        "sub_branch_name": "4-р хороо",
+        "sub_branch_code": "4",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "2705",
+        "district_code": "2705",
+        "branch_name": "Багануур",
+        "branch_code": "27",
+        "sub_branch_name": "5-р хороо",
+        "sub_branch_code": "5",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "2706",
+        "district_code": "2706",
+        "branch_name": "Багануур",
+        "branch_code": "27",
+        "sub_branch_name": "6-р хороо",
+        "sub_branch_code": "6",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "2707",
+        "district_code": "2707",
+        "branch_name": "Багануур",
+        "branch_code": "27",
+        "sub_branch_name": "7-р хороо",
+        "sub_branch_code": "7",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "2708",
+        "district_code": "2708",
+        "branch_name": "Багануур",
+        "branch_code": "27",
+        "sub_branch_name": "8-р хороо",
+        "sub_branch_code": "8",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "2709",
+        "district_code": "2709",
+        "branch_name": "Багануур",
+        "branch_code": "27",
+        "sub_branch_name": "9-р хороо ",
+        "sub_branch_code": "9",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "2710",
+        "district_code": "2710",
+        "branch_name": "Багануур",
+        "branch_code": "27",
+        "sub_branch_name": "10-р хороо",
+        "sub_branch_code": "10",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "2801",
+        "district_code": "2801",
+        "branch_name": "Багахангай",
+        "branch_code": "28",
+        "sub_branch_name": "1-р хороо",
+        "sub_branch_code": "1",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "2621",
+        "district_code": "2621",
+        "branch_name": "Баянгол",
+        "branch_code": "26",
+        "sub_branch_name": "21-р хороо",
+        "sub_branch_code": "21",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "2622",
+        "district_code": "2622",
+        "branch_name": "Баянгол",
+        "branch_code": "26",
+        "sub_branch_name": "22-р хороо",
+        "sub_branch_code": "22",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "2623",
+        "district_code": "2623",
+        "branch_name": "Баянгол",
+        "branch_code": "26",
+        "sub_branch_name": "23-р хороо",
+        "sub_branch_code": "23",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "3422",
+        "district_code": "3422",
+        "branch_name": "Сонгинохайрхан",
+        "branch_code": "34",
+        "sub_branch_name": "22-р хороо",
+        "sub_branch_code": "22",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "3423",
+        "district_code": "3423",
+        "branch_name": "Сонгинохайрхан",
+        "branch_code": "34",
+        "sub_branch_name": "23-р хороо",
+        "sub_branch_code": "23",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "3424",
+        "district_code": "3424",
+        "branch_name": "Сонгинохайрхан",
+        "branch_code": "34",
+        "sub_branch_name": "24-р хороо",
+        "sub_branch_code": "24",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "3425",
+        "district_code": "3425",
+        "branch_name": "Сонгинохайрхан",
+        "branch_code": "34",
+        "sub_branch_name": "25-р хороо",
+        "sub_branch_code": "25",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "2802",
+        "district_code": "2802",
+        "branch_name": "Багахангай",
+        "branch_code": "28",
+        "sub_branch_name": "2-р хороо",
+        "sub_branch_code": "2",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "2803",
+        "district_code": "2803",
+        "branch_name": "Багахангай",
+        "branch_code": "28",
+        "sub_branch_name": "3-р хороо",
+        "sub_branch_code": "3",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "2804",
+        "district_code": "2804",
+        "branch_name": "Багахангай",
+        "branch_code": "28",
+        "sub_branch_name": "4-р хороо",
+        "sub_branch_code": "4",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "2805",
+        "district_code": "2805",
+        "branch_name": "Багахангай",
+        "branch_code": "28",
+        "sub_branch_name": "5-р хороо ",
+        "sub_branch_code": "5",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "2806",
+        "district_code": "2806",
+        "branch_name": "Багахангай",
+        "branch_code": "28",
+        "sub_branch_name": "6-р хороо",
+        "sub_branch_code": "6",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "2807",
+        "district_code": "2807",
+        "branch_name": "Багахангай",
+        "branch_code": "28",
+        "sub_branch_name": "7-р хороо",
+        "sub_branch_code": "7",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "2808",
+        "district_code": "2808",
+        "branch_name": "Багахангай",
+        "branch_code": "28",
+        "sub_branch_name": "8-р хороо",
+        "sub_branch_code": "8",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "2809",
+        "district_code": "2809",
+        "branch_name": "Багахангай",
+        "branch_code": "28",
+        "sub_branch_name": "9-р хороо",
+        "sub_branch_code": "9",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "2810",
+        "district_code": "2810",
+        "branch_name": "Багахангай",
+        "branch_code": "28",
+        "sub_branch_name": "10-р хороо",
+        "sub_branch_code": "10",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "2901",
+        "district_code": "2901",
+        "branch_name": "Налайх",
+        "branch_code": "29",
+        "sub_branch_name": "1-р хороо",
+        "sub_branch_code": "1",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "2902",
+        "district_code": "2902",
+        "branch_name": "Налайх",
+        "branch_code": "29",
+        "sub_branch_name": "2-р хороо",
+        "sub_branch_code": "2",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "2903",
+        "district_code": "2903",
+        "branch_name": "Налайх",
+        "branch_code": "29",
+        "sub_branch_name": "3-р хороо",
+        "sub_branch_code": "3",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "2904",
+        "district_code": "2904",
+        "branch_name": "Налайх",
+        "branch_code": "29",
+        "sub_branch_name": "4-р хороо",
+        "sub_branch_code": "4",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "2905",
+        "district_code": "2905",
+        "branch_name": "Налайх",
+        "branch_code": "29",
+        "sub_branch_name": "5-р хороо",
+        "sub_branch_code": "5",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "2906",
+        "district_code": "2906",
+        "branch_name": "Налайх",
+        "branch_code": "29",
+        "sub_branch_name": "6-р хороо",
+        "sub_branch_code": "6",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "2907",
+        "district_code": "2907",
+        "branch_name": "Налайх",
+        "branch_code": "29",
+        "sub_branch_name": "7-р хороо",
+        "sub_branch_code": "7",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "2908",
+        "district_code": "2908",
+        "branch_name": "Налайх",
+        "branch_code": "29",
+        "sub_branch_name": "8-р хороо",
+        "sub_branch_code": "8",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "2909",
+        "district_code": "2909",
+        "branch_name": "Налайх",
+        "branch_code": "29",
+        "sub_branch_name": "9-р хороо",
+        "sub_branch_code": "9",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "2910",
+        "district_code": "2910",
+        "branch_name": "Налайх",
+        "branch_code": "29",
+        "sub_branch_name": "10-р хороо",
+        "sub_branch_code": "10",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "0704",
+        "district_code": "0704",
+        "branch_name": "Дорнод",
+        "branch_code": "7",
+        "sub_branch_name": "Гурванзагал",
+        "sub_branch_code": "4",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "0705",
+        "district_code": "0705",
+        "branch_name": "Дорнод",
+        "branch_code": "7",
+        "sub_branch_name": "Дашбалбар",
+        "sub_branch_code": "5",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "0706",
+        "district_code": "0706",
+        "branch_name": "Дорнод",
+        "branch_code": "7",
+        "sub_branch_name": "Матад",
+        "sub_branch_code": "6",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "0707",
+        "district_code": "0707",
+        "branch_name": "Дорнод",
+        "branch_code": "7",
+        "sub_branch_name": "Хөлөнбуйр",
+        "sub_branch_code": "7",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "0708",
+        "district_code": "0708",
+        "branch_name": "Дорнод",
+        "branch_code": "7",
+        "sub_branch_name": "Булган",
+        "sub_branch_code": "8",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "0709",
+        "district_code": "0709",
+        "branch_name": "Дорнод",
+        "branch_code": "7",
+        "sub_branch_name": "Сэргэлэн",
+        "sub_branch_code": "9",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "0711",
+        "district_code": "0711",
+        "branch_name": "Дорнод",
+        "branch_code": "7",
+        "sub_branch_name": "Халхгол",
+        "sub_branch_code": "11",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "0712",
+        "district_code": "0712",
+        "branch_name": "Дорнод",
+        "branch_code": "7",
+        "sub_branch_name": "Цагаан-Овоо",
+        "sub_branch_code": "12",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "0713",
+        "district_code": "0713",
+        "branch_name": "Дорнод",
+        "branch_code": "7",
+        "sub_branch_name": "Чулуунхороот",
+        "sub_branch_code": "13",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "0714",
+        "district_code": "0714",
+        "branch_name": "Дорнод",
+        "branch_code": "7",
+        "sub_branch_name": "Чойбалсан",
+        "sub_branch_code": "14",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "0715",
+        "district_code": "0715",
+        "branch_name": "Дорнод",
+        "branch_code": "7",
+        "sub_branch_name": "Хэрлэн",
+        "sub_branch_code": "15",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "0801",
+        "district_code": "0801",
+        "branch_name": "Дундговь",
+        "branch_code": "8",
+        "sub_branch_name": "Адаацаг",
+        "sub_branch_code": "1",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "0802",
+        "district_code": "0802",
+        "branch_name": "Дундговь",
+        "branch_code": "8",
+        "sub_branch_name": "Баянжаргалан",
+        "sub_branch_code": "2",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "0803",
+        "district_code": "0803",
+        "branch_name": "Дундговь",
+        "branch_code": "8",
+        "sub_branch_name": "Говь-Угтаал",
+        "sub_branch_code": "3",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "0804",
+        "district_code": "0804",
+        "branch_name": "Дундговь",
+        "branch_code": "8",
+        "sub_branch_name": "Дэлгэрцогт",
+        "sub_branch_code": "4",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "0805",
+        "district_code": "0805",
+        "branch_name": "Дундговь",
+        "branch_code": "8",
+        "sub_branch_name": "Дэрэн",
+        "sub_branch_code": "5",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "0806",
+        "district_code": "0806",
+        "branch_name": "Дундговь",
+        "branch_code": "8",
+        "sub_branch_name": "Гурвансайхан",
+        "sub_branch_code": "6",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "0807",
+        "district_code": "0807",
+        "branch_name": "Дундговь",
+        "branch_code": "8",
+        "sub_branch_name": "Дэлгэрхангай",
+        "sub_branch_code": "7",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "0808",
+        "district_code": "0808",
+        "branch_name": "Дундговь",
+        "branch_code": "8",
+        "sub_branch_name": "Луус",
+        "sub_branch_code": "8",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "0810",
+        "district_code": "0810",
+        "branch_name": "Дундговь",
+        "branch_code": "8",
+        "sub_branch_name": "Сайнцагаан",
+        "sub_branch_code": "10",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "0811",
+        "district_code": "0811",
+        "branch_name": "Дундговь",
+        "branch_code": "8",
+        "sub_branch_name": "Сайхан-Овоо",
+        "sub_branch_code": "11",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "0812",
+        "district_code": "0812",
+        "branch_name": "Дундговь",
+        "branch_code": "8",
+        "sub_branch_name": "Өлзийт",
+        "sub_branch_code": "12",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "0813",
+        "district_code": "0813",
+        "branch_name": "Дундговь",
+        "branch_code": "8",
+        "sub_branch_name": "Өндөршил",
+        "sub_branch_code": "13",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "0814",
+        "district_code": "0814",
+        "branch_name": "Дундговь",
+        "branch_code": "8",
+        "sub_branch_name": "Хулд",
+        "sub_branch_code": "14",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "0815",
+        "district_code": "0815",
+        "branch_name": "Дундговь",
+        "branch_code": "8",
+        "sub_branch_name": "Цагаандэлгэр",
+        "sub_branch_code": "15",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "0816",
+        "district_code": "0816",
+        "branch_name": "Дундговь",
+        "branch_code": "8",
+        "sub_branch_name": "Эрдэнэдалай",
+        "sub_branch_code": "16",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "0901",
+        "district_code": "0901",
+        "branch_name": "Завхан",
+        "branch_code": "9",
+        "sub_branch_name": "Алдархаан",
+        "sub_branch_code": "1",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "0902",
+        "district_code": "0902",
+        "branch_name": "Завхан",
+        "branch_code": "9",
+        "sub_branch_name": "Асгат",
+        "sub_branch_code": "2",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "0903",
+        "district_code": "0903",
+        "branch_name": "Завхан",
+        "branch_code": "9",
+        "sub_branch_name": "Баянтэс",
+        "sub_branch_code": "3",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "0904",
+        "district_code": "0904",
+        "branch_name": "Завхан",
+        "branch_code": "9",
+        "sub_branch_name": "Баянхайрхан",
+        "sub_branch_code": "4",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "0906",
+        "district_code": "0906",
+        "branch_name": "Завхан",
+        "branch_code": "9",
+        "sub_branch_name": "Дөрвөлжин",
+        "sub_branch_code": "6",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "0907",
+        "district_code": "0907",
+        "branch_name": "Завхан",
+        "branch_code": "9",
+        "sub_branch_name": "Идэр",
+        "sub_branch_code": "7",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "0908",
+        "district_code": "0908",
+        "branch_name": "Завхан",
+        "branch_code": "9",
+        "sub_branch_name": "Их-Уул",
+        "sub_branch_code": "8",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "0909",
+        "district_code": "0909",
+        "branch_name": "Завхан",
+        "branch_code": "9",
+        "sub_branch_name": "Нөмрөг",
+        "sub_branch_code": "9",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "0910",
+        "district_code": "0910",
+        "branch_name": "Завхан",
+        "branch_code": "9",
+        "sub_branch_name": "Отгон",
+        "sub_branch_code": "10",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "0911",
+        "district_code": "0911",
+        "branch_name": "Завхан",
+        "branch_code": "9",
+        "sub_branch_name": "Сантмаргац",
+        "sub_branch_code": "11",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "0912",
+        "district_code": "0912",
+        "branch_name": "Завхан",
+        "branch_code": "9",
+        "sub_branch_name": "Сонгино",
+        "sub_branch_code": "12",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "0913",
+        "district_code": "0913",
+        "branch_name": "Завхан",
+        "branch_code": "9",
+        "sub_branch_name": "Түдэвтэй",
+        "sub_branch_code": "13",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "0914",
+        "district_code": "0914",
+        "branch_name": "Завхан",
+        "branch_code": "9",
+        "sub_branch_name": "Тэс",
+        "sub_branch_code": "14",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "0915",
+        "district_code": "0915",
+        "branch_name": "Завхан",
+        "branch_code": "9",
+        "sub_branch_name": "Тэлмэн",
+        "sub_branch_code": "15",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "0916",
+        "district_code": "0916",
+        "branch_name": "Завхан",
+        "branch_code": "9",
+        "sub_branch_name": "Улиастай",
+        "sub_branch_code": "16",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "0917",
+        "district_code": "0917",
+        "branch_name": "Завхан",
+        "branch_code": "9",
+        "sub_branch_name": "Цагаанхайрхан",
+        "sub_branch_code": "17",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "0918",
+        "district_code": "0918",
+        "branch_name": "Завхан",
+        "branch_code": "9",
+        "sub_branch_name": "Цагаанчулуут",
+        "sub_branch_code": "18",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "0919",
+        "district_code": "0919",
+        "branch_name": "Завхан",
+        "branch_code": "9",
+        "sub_branch_name": "Цэцэн-Уул",
+        "sub_branch_code": "19",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "0920",
+        "district_code": "0920",
+        "branch_name": "Завхан",
+        "branch_code": "9",
+        "sub_branch_name": "Шилүүстэй",
+        "sub_branch_code": "20",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "0921",
+        "district_code": "0921",
+        "branch_name": "Завхан",
+        "branch_code": "9",
+        "sub_branch_name": "Эрдэнэхайрхан",
+        "sub_branch_code": "21",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "0922",
+        "district_code": "0922",
+        "branch_name": "Завхан",
+        "branch_code": "9",
+        "sub_branch_name": "Яруу",
+        "sub_branch_code": "22",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "1210",
+        "district_code": "1210",
+        "branch_name": "Сүхбаатар",
+        "branch_code": "12",
+        "sub_branch_name": "Уулбаян",
+        "sub_branch_code": "10",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "1211",
+        "district_code": "1211",
+        "branch_name": "Сүхбаатар",
+        "branch_code": "12",
+        "sub_branch_name": "Халзан",
+        "sub_branch_code": "11",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "1212",
+        "district_code": "1212",
+        "branch_name": "Сүхбаатар",
+        "branch_code": "12",
+        "sub_branch_name": "Эрдэнэцагаан",
+        "sub_branch_code": "12",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "1214",
+        "district_code": "1214",
+        "branch_name": "Сүхбаатар",
+        "branch_code": "12",
+        "sub_branch_name": "Баруун-Урт",
+        "sub_branch_code": "14",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "1301",
+        "district_code": "1301",
+        "branch_name": "Сэлэнгэ",
+        "branch_code": "13",
+        "sub_branch_name": "Сүхбаатар",
+        "sub_branch_code": "1",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "1302",
+        "district_code": "1302",
+        "branch_name": "Сэлэнгэ",
+        "branch_code": "13",
+        "sub_branch_name": "Алтанбулаг",
+        "sub_branch_code": "2",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "1303",
+        "district_code": "1303",
+        "branch_name": "Сэлэнгэ",
+        "branch_code": "13",
+        "sub_branch_name": "Цагааннуур",
+        "sub_branch_code": "3",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "1304",
+        "district_code": "1304",
+        "branch_name": "Сэлэнгэ",
+        "branch_code": "13",
+        "sub_branch_name": "Орхон",
+        "sub_branch_code": "4",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "1305",
+        "district_code": "1305",
+        "branch_name": "Сэлэнгэ",
+        "branch_code": "13",
+        "sub_branch_name": "Шаамар",
+        "sub_branch_code": "5",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "1307",
+        "district_code": "1307",
+        "branch_name": "Сэлэнгэ",
+        "branch_code": "13",
+        "sub_branch_name": "Баруунбүрэн",
+        "sub_branch_code": "7",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "1308",
+        "district_code": "1308",
+        "branch_name": "Сэлэнгэ",
+        "branch_code": "13",
+        "sub_branch_name": "Сант",
+        "sub_branch_code": "8",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "1309",
+        "district_code": "1309",
+        "branch_name": "Сэлэнгэ",
+        "branch_code": "13",
+        "sub_branch_name": "Орхонтуул",
+        "sub_branch_code": "9",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "1310",
+        "district_code": "1310",
+        "branch_name": "Сэлэнгэ",
+        "branch_code": "13",
+        "sub_branch_name": "Ерөө",
+        "sub_branch_code": "10",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "1311",
+        "district_code": "1311",
+        "branch_name": "Сэлэнгэ",
+        "branch_code": "13",
+        "sub_branch_name": "Зүүнбүрэн",
+        "sub_branch_code": "11",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "1312",
+        "district_code": "1312",
+        "branch_name": "Сэлэнгэ",
+        "branch_code": "13",
+        "sub_branch_name": "Баянгол",
+        "sub_branch_code": "12",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "1313",
+        "district_code": "1313",
+        "branch_name": "Сэлэнгэ",
+        "branch_code": "13",
+        "sub_branch_name": "Хушаат",
+        "sub_branch_code": "13",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "1314",
+        "district_code": "1314",
+        "branch_name": "Сэлэнгэ",
+        "branch_code": "13",
+        "sub_branch_name": "Мандал",
+        "sub_branch_code": "14",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "1315",
+        "district_code": "1315",
+        "branch_name": "Сэлэнгэ",
+        "branch_code": "13",
+        "sub_branch_name": "Жавхлант",
+        "sub_branch_code": "15",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "1316",
+        "district_code": "1316",
+        "branch_name": "Сэлэнгэ",
+        "branch_code": "13",
+        "sub_branch_name": "Сайхан",
+        "sub_branch_code": "16",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "1319",
+        "district_code": "1319",
+        "branch_name": "Сэлэнгэ",
+        "branch_code": "13",
+        "sub_branch_name": "Түшиг",
+        "sub_branch_code": "19",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "1321",
+        "district_code": "1321",
+        "branch_name": "Сэлэнгэ",
+        "branch_code": "13",
+        "sub_branch_name": "Хүдэр",
+        "sub_branch_code": "21",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "1401",
+        "district_code": "1401",
+        "branch_name": "Төв",
+        "branch_code": "14",
+        "sub_branch_name": "Алтанбулаг",
+        "sub_branch_code": "1",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "1402",
+        "district_code": "1402",
+        "branch_name": "Төв",
+        "branch_code": "14",
+        "sub_branch_name": "Аргалант",
+        "sub_branch_code": "2",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "1403",
+        "district_code": "1403",
+        "branch_name": "Төв",
+        "branch_code": "14",
+        "sub_branch_name": "Архуст",
+        "sub_branch_code": "3",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "1404",
+        "district_code": "1404",
+        "branch_name": "Төв",
+        "branch_code": "14",
+        "sub_branch_name": "Батсүмбэр",
+        "sub_branch_code": "4",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "1405",
+        "district_code": "1405",
+        "branch_name": "Төв",
+        "branch_code": "14",
+        "sub_branch_name": "Баян",
+        "sub_branch_code": "5",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "1406",
+        "district_code": "1406",
+        "branch_name": "Төв",
+        "branch_code": "14",
+        "sub_branch_name": "Баян-Өнжүүл",
+        "sub_branch_code": "6",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "1407",
+        "district_code": "1407",
+        "branch_name": "Төв",
+        "branch_code": "14",
+        "sub_branch_name": "Баяндэлгэр",
+        "sub_branch_code": "7",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "1408",
+        "district_code": "1408",
+        "branch_name": "Төв",
+        "branch_code": "14",
+        "sub_branch_name": "Баянжаргалан",
+        "sub_branch_code": "8",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "1409",
+        "district_code": "1409",
+        "branch_name": "Төв",
+        "branch_code": "14",
+        "sub_branch_name": "Баянхангай",
+        "sub_branch_code": "9",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "1410",
+        "district_code": "1410",
+        "branch_name": "Төв",
+        "branch_code": "14",
+        "sub_branch_name": "Баянчандмань",
+        "sub_branch_code": "10",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "1411",
+        "district_code": "1411",
+        "branch_name": "Төв",
+        "branch_code": "14",
+        "sub_branch_name": "Баянцагаан",
+        "sub_branch_code": "11",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "1412",
+        "district_code": "1412",
+        "branch_name": "Төв",
+        "branch_code": "14",
+        "sub_branch_name": "Баянцогт",
+        "sub_branch_code": "12",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "1413",
+        "district_code": "1413",
+        "branch_name": "Төв",
+        "branch_code": "14",
+        "sub_branch_name": "Борнуур",
+        "sub_branch_code": "13",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "1414",
+        "district_code": "1414",
+        "branch_name": "Төв",
+        "branch_code": "14",
+        "sub_branch_name": "Бүрэн",
+        "sub_branch_code": "14",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "1415",
+        "district_code": "1415",
+        "branch_name": "Төв",
+        "branch_code": "14",
+        "sub_branch_name": "Дэлгэрхаан",
+        "sub_branch_code": "15",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "1416",
+        "district_code": "1416",
+        "branch_name": "Төв",
+        "branch_code": "14",
+        "sub_branch_name": "Жаргалант",
+        "sub_branch_code": "16",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "1417",
+        "district_code": "1417",
+        "branch_name": "Төв",
+        "branch_code": "14",
+        "sub_branch_name": "Заамар",
+        "sub_branch_code": "17",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "1418",
+        "district_code": "1418",
+        "branch_name": "Төв",
+        "branch_code": "14",
+        "sub_branch_name": "Лүн",
+        "sub_branch_code": "18",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "1419",
+        "district_code": "1419",
+        "branch_name": "Төв",
+        "branch_code": "14",
+        "sub_branch_name": "Мөнгөнморьт",
+        "sub_branch_code": "19",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "1420",
+        "district_code": "1420",
+        "branch_name": "Төв",
+        "branch_code": "14",
+        "sub_branch_name": "Өндөрширээт",
+        "sub_branch_code": "20",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "1421",
+        "district_code": "1421",
+        "branch_name": "Төв",
+        "branch_code": "14",
+        "sub_branch_name": "Сэргэлэн",
+        "sub_branch_code": "21",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "1422",
+        "district_code": "1422",
+        "branch_name": "Төв",
+        "branch_code": "14",
+        "sub_branch_name": "Сүмбэр",
+        "sub_branch_code": "22",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "1423",
+        "district_code": "1423",
+        "branch_name": "Төв",
+        "branch_code": "14",
+        "sub_branch_name": "Угтаалцайдам",
+        "sub_branch_code": "23",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "1424",
+        "district_code": "1424",
+        "branch_name": "Төв",
+        "branch_code": "14",
+        "sub_branch_name": "Цээл",
+        "sub_branch_code": "24",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "1425",
+        "district_code": "1425",
+        "branch_name": "Төв",
+        "branch_code": "14",
+        "sub_branch_name": "Эрдэнэ",
+        "sub_branch_code": "25",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "1426",
+        "district_code": "1426",
+        "branch_name": "Төв",
+        "branch_code": "14",
+        "sub_branch_name": "Эрдэнэсант",
+        "sub_branch_code": "26",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "1427",
+        "district_code": "1427",
+        "branch_name": "Төв",
+        "branch_code": "14",
+        "sub_branch_name": "Зуунмод",
+        "sub_branch_code": "27",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "1501",
+        "district_code": "1501",
+        "branch_name": "Увс",
+        "branch_code": "15",
+        "sub_branch_name": "Баруунтуруун",
+        "sub_branch_code": "1",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "1502",
+        "district_code": "1502",
+        "branch_name": "Увс",
+        "branch_code": "15",
+        "sub_branch_name": "Бөхмөрөн",
+        "sub_branch_code": "2",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "1503",
+        "district_code": "1503",
+        "branch_name": "Увс",
+        "branch_code": "15",
+        "sub_branch_name": "Давст",
+        "sub_branch_code": "3",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "1504",
+        "district_code": "1504",
+        "branch_name": "Увс",
+        "branch_code": "15",
+        "sub_branch_name": "Завхан",
+        "sub_branch_code": "4",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "1505",
+        "district_code": "1505",
+        "branch_name": "Увс",
+        "branch_code": "15",
+        "sub_branch_name": "Зүүнговь",
+        "sub_branch_code": "5",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "2421",
+        "district_code": "2421",
+        "branch_name": "Баянзүрх",
+        "branch_code": "24",
+        "sub_branch_name": "21-р хороо",
+        "sub_branch_code": "21",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "2422",
+        "district_code": "2422",
+        "branch_name": "Баянзүрх",
+        "branch_code": "24",
+        "sub_branch_name": "22-р хороо",
+        "sub_branch_code": "22",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "2423",
+        "district_code": "2423",
+        "branch_name": "Баянзүрх",
+        "branch_code": "24",
+        "sub_branch_name": "23-р хороо",
+        "sub_branch_code": "23",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "2424",
+        "district_code": "2424",
+        "branch_name": "Баянзүрх",
+        "branch_code": "24",
+        "sub_branch_name": "24-р хороо",
+        "sub_branch_code": "24",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "2521",
+        "district_code": "2521",
+        "branch_name": "Сүхбаатар дүүрэг",
+        "branch_code": "25",
+        "sub_branch_name": "21-р хороо",
+        "sub_branch_code": "21",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "2425",
+        "district_code": "2425",
+        "branch_name": "Баянзүрх",
+        "branch_code": "24",
+        "sub_branch_name": "25-р хороо",
+        "sub_branch_code": "25",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "2426",
+        "district_code": "2426",
+        "branch_name": "Баянзүрх",
+        "branch_code": "24",
+        "sub_branch_name": "26-р хороо",
+        "sub_branch_code": "26",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "2427",
+        "district_code": "2427",
+        "branch_name": "Баянзүрх",
+        "branch_code": "24",
+        "sub_branch_name": "27-р хороо",
+        "sub_branch_code": "27",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "2428",
+        "district_code": "2428",
+        "branch_name": "Баянзүрх",
+        "branch_code": "24",
+        "sub_branch_name": "28-р хороо",
+        "sub_branch_code": "28",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "3428",
+        "district_code": "3428",
+        "branch_name": "Сонгинохайрхан",
+        "branch_code": "34",
+        "sub_branch_name": "28-р хороо",
+        "sub_branch_code": "28",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "3429",
+        "district_code": "3429",
+        "branch_name": "Сонгинохайрхан",
+        "branch_code": "34",
+        "sub_branch_name": "29-р хороо",
+        "sub_branch_code": "29",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "3430",
+        "district_code": "3430",
+        "branch_name": "Сонгинохайрхан",
+        "branch_code": "34",
+        "sub_branch_name": "30-р хороо",
+        "sub_branch_code": "30",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "3431",
+        "district_code": "3431",
+        "branch_name": "Сонгинохайрхан",
+        "branch_code": "34",
+        "sub_branch_name": "31-р хороо",
+        "sub_branch_code": "31",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "3432",
+        "district_code": "3432",
+        "branch_name": "Сонгинохайрхан",
+        "branch_code": "34",
+        "sub_branch_name": "32-р хороо",
+        "sub_branch_code": "32",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "3426",
+        "district_code": "3426",
+        "branch_name": "Сонгинохайрхан",
+        "branch_code": "34",
+        "sub_branch_name": "26-р хороо",
+        "sub_branch_code": "26",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "3427",
+        "district_code": "3427",
+        "branch_name": "Сонгинохайрхан",
+        "branch_code": "34",
+        "sub_branch_name": "27-р хороо",
+        "sub_branch_code": "27",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "1506",
+        "district_code": "1506",
+        "branch_name": "Увс",
+        "branch_code": "15",
+        "sub_branch_name": "Зүүнхангай",
+        "sub_branch_code": "6",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "1507",
+        "district_code": "1507",
+        "branch_name": "Увс",
+        "branch_code": "15",
+        "sub_branch_name": "Малчин",
+        "sub_branch_code": "7",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "1508",
+        "district_code": "1508",
+        "branch_name": "Увс",
+        "branch_code": "15",
+        "sub_branch_name": "Наранбулаг",
+        "sub_branch_code": "8",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "1509",
+        "district_code": "1509",
+        "branch_name": "Увс",
+        "branch_code": "15",
+        "sub_branch_name": "Өлгий",
+        "sub_branch_code": "9",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "1510",
+        "district_code": "1510",
+        "branch_name": "Увс",
+        "branch_code": "15",
+        "sub_branch_name": "Өмнөговь",
+        "sub_branch_code": "10",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "1511",
+        "district_code": "1511",
+        "branch_name": "Увс",
+        "branch_code": "15",
+        "sub_branch_name": "Өндөрхангай",
+        "sub_branch_code": "11",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "1512",
+        "district_code": "1512",
+        "branch_name": "Увс",
+        "branch_code": "15",
+        "sub_branch_name": "Сагил",
+        "sub_branch_code": "12",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "1513",
+        "district_code": "1513",
+        "branch_name": "Увс",
+        "branch_code": "15",
+        "sub_branch_name": "Тариалан",
+        "sub_branch_code": "13",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "1514",
+        "district_code": "1514",
+        "branch_name": "Увс",
+        "branch_code": "15",
+        "sub_branch_name": "Түргэн",
+        "sub_branch_code": "14",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "1515",
+        "district_code": "1515",
+        "branch_name": "Увс",
+        "branch_code": "15",
+        "sub_branch_name": "Тэс",
+        "sub_branch_code": "15",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "1517",
+        "district_code": "1517",
+        "branch_name": "Увс",
+        "branch_code": "15",
+        "sub_branch_name": "Ховд",
+        "sub_branch_code": "17",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "1518",
+        "district_code": "1518",
+        "branch_name": "Увс",
+        "branch_code": "15",
+        "sub_branch_name": "Хяргас",
+        "sub_branch_code": "18",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "1519",
+        "district_code": "1519",
+        "branch_name": "Увс",
+        "branch_code": "15",
+        "sub_branch_name": "Цагаанхайрхан",
+        "sub_branch_code": "19",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "1520",
+        "district_code": "1520",
+        "branch_name": "Увс",
+        "branch_code": "15",
+        "sub_branch_name": "Улаангом",
+        "sub_branch_code": "20",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "1601",
+        "district_code": "1601",
+        "branch_name": "Ховд",
+        "branch_code": "16",
+        "sub_branch_name": "Алтай",
+        "sub_branch_code": "1",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "1602",
+        "district_code": "1602",
+        "branch_name": "Ховд",
+        "branch_code": "16",
+        "sub_branch_name": "Булган",
+        "sub_branch_code": "2",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "1603",
+        "district_code": "1603",
+        "branch_name": "Ховд",
+        "branch_code": "16",
+        "sub_branch_name": "Буянт",
+        "sub_branch_code": "3",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "1604",
+        "district_code": "1604",
+        "branch_name": "Ховд",
+        "branch_code": "16",
+        "sub_branch_name": "Дарви",
+        "sub_branch_code": "4",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "1605",
+        "district_code": "1605",
+        "branch_name": "Ховд",
+        "branch_code": "16",
+        "sub_branch_name": "Дуут",
+        "sub_branch_code": "5",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "1606",
+        "district_code": "1606",
+        "branch_name": "Ховд",
+        "branch_code": "16",
+        "sub_branch_name": "Дөргөн",
+        "sub_branch_code": "6",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "1607",
+        "district_code": "1607",
+        "branch_name": "Ховд",
+        "branch_code": "16",
+        "sub_branch_name": "Зэрэг",
+        "sub_branch_code": "7",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "1608",
+        "district_code": "1608",
+        "branch_name": "Ховд",
+        "branch_code": "16",
+        "sub_branch_name": "Манхан",
+        "sub_branch_code": "8",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "1609",
+        "district_code": "1609",
+        "branch_name": "Ховд",
+        "branch_code": "16",
+        "sub_branch_name": "Мөст",
+        "sub_branch_code": "9",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "1610",
+        "district_code": "1610",
+        "branch_name": "Ховд",
+        "branch_code": "16",
+        "sub_branch_name": "Мянгад",
+        "sub_branch_code": "10",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "1611",
+        "district_code": "1611",
+        "branch_name": "Ховд",
+        "branch_code": "16",
+        "sub_branch_name": "Мөнххайрхан",
+        "sub_branch_code": "11",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "1612",
+        "district_code": "1612",
+        "branch_name": "Ховд",
+        "branch_code": "16",
+        "sub_branch_name": "Үенч",
+        "sub_branch_code": "12",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "1613",
+        "district_code": "1613",
+        "branch_name": "Ховд",
+        "branch_code": "16",
+        "sub_branch_name": "Ховд",
+        "sub_branch_code": "13",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "1614",
+        "district_code": "1614",
+        "branch_name": "Ховд",
+        "branch_code": "16",
+        "sub_branch_name": "Цэцэг",
+        "sub_branch_code": "14",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "1615",
+        "district_code": "1615",
+        "branch_name": "Ховд",
+        "branch_code": "16",
+        "sub_branch_name": "Чандмань",
+        "sub_branch_code": "15",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "1616",
+        "district_code": "1616",
+        "branch_name": "Ховд",
+        "branch_code": "16",
+        "sub_branch_name": "Эрдэнэбүрэн",
+        "sub_branch_code": "16",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "1617",
+        "district_code": "1617",
+        "branch_name": "Ховд",
+        "branch_code": "16",
+        "sub_branch_name": "Жаргалант",
+        "sub_branch_code": "17",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "0309",
+        "district_code": "0309",
+        "branch_name": "Баянхонгор",
+        "branch_code": "3",
+        "sub_branch_name": "Бөмбөгөр",
+        "sub_branch_code": "9",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "0310",
+        "district_code": "0310",
+        "branch_name": "Баянхонгор",
+        "branch_code": "3",
+        "sub_branch_name": "Бууцагаан",
+        "sub_branch_code": "10",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "0311",
+        "district_code": "0311",
+        "branch_name": "Баянхонгор",
+        "branch_code": "3",
+        "sub_branch_name": "Галуут",
+        "sub_branch_code": "11",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "0312",
+        "district_code": "0312",
+        "branch_name": "Баянхонгор",
+        "branch_code": "3",
+        "sub_branch_name": "Гурванбулаг",
+        "sub_branch_code": "12",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "0313",
+        "district_code": "0313",
+        "branch_name": "Баянхонгор",
+        "branch_code": "3",
+        "sub_branch_name": "Жаргалант",
+        "sub_branch_code": "13",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "0314",
+        "district_code": "0314",
+        "branch_name": "Баянхонгор",
+        "branch_code": "3",
+        "sub_branch_name": "Жинст",
+        "sub_branch_code": "14",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "0315",
+        "district_code": "0315",
+        "branch_name": "Баянхонгор",
+        "branch_code": "3",
+        "sub_branch_name": "Заг",
+        "sub_branch_code": "15",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "0316",
+        "district_code": "0316",
+        "branch_name": "Баянхонгор",
+        "branch_code": "3",
+        "sub_branch_name": "Өлзийт",
+        "sub_branch_code": "16",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "0317",
+        "district_code": "0317",
+        "branch_name": "Баянхонгор",
+        "branch_code": "3",
+        "sub_branch_name": "Хүрээмарал",
+        "sub_branch_code": "17",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "0318",
+        "district_code": "0318",
+        "branch_name": "Баянхонгор",
+        "branch_code": "3",
+        "sub_branch_name": "Шинэжинст",
+        "sub_branch_code": "18",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "0319",
+        "district_code": "0319",
+        "branch_name": "Баянхонгор",
+        "branch_code": "3",
+        "sub_branch_name": "Эрдэнэцогт",
+        "sub_branch_code": "19",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "0320",
+        "district_code": "0320",
+        "branch_name": "Баянхонгор",
+        "branch_code": "3",
+        "sub_branch_name": "Баянхонгор",
+        "sub_branch_code": "20",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "0401",
+        "district_code": "0401",
+        "branch_name": "Булган",
+        "branch_code": "4",
+        "sub_branch_name": "Сайхан",
+        "sub_branch_code": "1",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "0402",
+        "district_code": "0402",
+        "branch_name": "Булган",
+        "branch_code": "4",
+        "sub_branch_name": "Тэшиг",
+        "sub_branch_code": "2",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "0403",
+        "district_code": "0403",
+        "branch_name": "Булган",
+        "branch_code": "4",
+        "sub_branch_name": "Хутаг-Өндөр",
+        "sub_branch_code": "3",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "0404",
+        "district_code": "0404",
+        "branch_name": "Булган",
+        "branch_code": "4",
+        "sub_branch_name": "Баян-Агт",
+        "sub_branch_code": "4",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "0405",
+        "district_code": "0405",
+        "branch_name": "Булган",
+        "branch_code": "4",
+        "sub_branch_name": "Баяннуур",
+        "sub_branch_code": "5",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "0406",
+        "district_code": "0406",
+        "branch_name": "Булган",
+        "branch_code": "4",
+        "sub_branch_name": "Бугат",
+        "sub_branch_code": "6",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "0407",
+        "district_code": "0407",
+        "branch_name": "Булган",
+        "branch_code": "4",
+        "sub_branch_name": "Бүрэгхангай",
+        "sub_branch_code": "7",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "0408",
+        "district_code": "0408",
+        "branch_name": "Булган",
+        "branch_code": "4",
+        "sub_branch_name": "Гурван Булаг",
+        "sub_branch_code": "8",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "0409",
+        "district_code": "0409",
+        "branch_name": "Булган",
+        "branch_code": "4",
+        "sub_branch_name": "Дашинчилэн",
+        "sub_branch_code": "9",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "0410",
+        "district_code": "0410",
+        "branch_name": "Булган",
+        "branch_code": "4",
+        "sub_branch_name": "Могод",
+        "sub_branch_code": "10",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "0411",
+        "district_code": "0411",
+        "branch_name": "Булган",
+        "branch_code": "4",
+        "sub_branch_name": "Орхон",
+        "sub_branch_code": "11",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "0412",
+        "district_code": "0412",
+        "branch_name": "Булган",
+        "branch_code": "4",
+        "sub_branch_name": "Сэлэнгэ",
+        "sub_branch_code": "12",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "0413",
+        "district_code": "0413",
+        "branch_name": "Булган",
+        "branch_code": "4",
+        "sub_branch_name": "Хангал",
+        "sub_branch_code": "13",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "0414",
+        "district_code": "0414",
+        "branch_name": "Булган",
+        "branch_code": "4",
+        "sub_branch_name": "Рашаант",
+        "sub_branch_code": "14",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "0415",
+        "district_code": "0415",
+        "branch_name": "Булган",
+        "branch_code": "4",
+        "sub_branch_name": "Хишиг-Өндөр",
+        "sub_branch_code": "15",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "0416",
+        "district_code": "0416",
+        "branch_name": "Булган",
+        "branch_code": "4",
+        "sub_branch_name": "Булган",
+        "sub_branch_code": "16",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "0501",
+        "district_code": "0501",
+        "branch_name": "Говь-Алтай",
+        "branch_code": "5",
+        "sub_branch_name": "Алтай",
+        "sub_branch_code": "1",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "0503",
+        "district_code": "0503",
+        "branch_name": "Говь-Алтай",
+        "branch_code": "5",
+        "sub_branch_name": "Баян-Уул",
+        "sub_branch_code": "3",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "0504",
+        "district_code": "0504",
+        "branch_name": "Говь-Алтай",
+        "branch_code": "5",
+        "sub_branch_name": "Бигэр",
+        "sub_branch_code": "4",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "0505",
+        "district_code": "0505",
+        "branch_name": "Говь-Алтай",
+        "branch_code": "5",
+        "sub_branch_name": "Бугат",
+        "sub_branch_code": "5",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "0506",
+        "district_code": "0506",
+        "branch_name": "Говь-Алтай",
+        "branch_code": "5",
+        "sub_branch_name": "Жаргалан",
+        "sub_branch_code": "6",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "0507",
+        "district_code": "0507",
+        "branch_name": "Говь-Алтай",
+        "branch_code": "5",
+        "sub_branch_name": "Дарив",
+        "sub_branch_code": "7",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "0508",
+        "district_code": "0508",
+        "branch_name": "Говь-Алтай",
+        "branch_code": "5",
+        "sub_branch_name": "Дэлгэр",
+        "sub_branch_code": "8",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "0509",
+        "district_code": "0509",
+        "branch_name": "Говь-Алтай",
+        "branch_code": "5",
+        "sub_branch_name": "Тайшир",
+        "sub_branch_code": "9",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "0510",
+        "district_code": "0510",
+        "branch_name": "Говь-Алтай",
+        "branch_code": "5",
+        "sub_branch_name": "Тонхил",
+        "sub_branch_code": "10",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "0511",
+        "district_code": "0511",
+        "branch_name": "Говь-Алтай",
+        "branch_code": "5",
+        "sub_branch_name": "Төгрөг",
+        "sub_branch_code": "11",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "0512",
+        "district_code": "0512",
+        "branch_name": "Говь-Алтай",
+        "branch_code": "5",
+        "sub_branch_name": "Халиун",
+        "sub_branch_code": "12",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "0513",
+        "district_code": "0513",
+        "branch_name": "Говь-Алтай",
+        "branch_code": "5",
+        "sub_branch_name": "Хөхморьт",
+        "sub_branch_code": "13",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "0514",
+        "district_code": "0514",
+        "branch_name": "Говь-Алтай",
+        "branch_code": "5",
+        "sub_branch_name": "Цогт",
+        "sub_branch_code": "14",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "0515",
+        "district_code": "0515",
+        "branch_name": "Говь-Алтай",
+        "branch_code": "5",
+        "sub_branch_name": "Цээл",
+        "sub_branch_code": "15",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "0516",
+        "district_code": "0516",
+        "branch_name": "Говь-Алтай",
+        "branch_code": "5",
+        "sub_branch_name": "Чандмань",
+        "sub_branch_code": "16",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "0517",
+        "district_code": "0517",
+        "branch_name": "Говь-Алтай",
+        "branch_code": "5",
+        "sub_branch_name": "Шарга",
+        "sub_branch_code": "17",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "0518",
+        "district_code": "0518",
+        "branch_name": "Говь-Алтай",
+        "branch_code": "5",
+        "sub_branch_name": "Эрдэнэ",
+        "sub_branch_code": "18",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "0601",
+        "district_code": "0601",
+        "branch_name": "Дорноговь",
+        "branch_code": "6",
+        "sub_branch_name": "Айраг",
+        "sub_branch_code": "1",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "0602",
+        "district_code": "0602",
+        "branch_name": "Дорноговь",
+        "branch_code": "6",
+        "sub_branch_name": "Алтанширээ",
+        "sub_branch_code": "2",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "0603",
+        "district_code": "0603",
+        "branch_name": "Дорноговь",
+        "branch_code": "6",
+        "sub_branch_name": "Даланжаргалан",
+        "sub_branch_code": "3",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "0604",
+        "district_code": "0604",
+        "branch_name": "Дорноговь",
+        "branch_code": "6",
+        "sub_branch_name": "Дэлгэрэх",
+        "sub_branch_code": "4",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "0605",
+        "district_code": "0605",
+        "branch_name": "Дорноговь",
+        "branch_code": "6",
+        "sub_branch_name": "Иххэт",
+        "sub_branch_code": "5",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "0606",
+        "district_code": "0606",
+        "branch_name": "Дорноговь",
+        "branch_code": "6",
+        "sub_branch_name": "Мандах",
+        "sub_branch_code": "6",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "0607",
+        "district_code": "0607",
+        "branch_name": "Дорноговь",
+        "branch_code": "6",
+        "sub_branch_name": "Өргөн",
+        "sub_branch_code": "7",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "1701",
+        "district_code": "1701",
+        "branch_name": "Хөвсгөл",
+        "branch_code": "17",
+        "sub_branch_name": "Алаг-Эрдэнэ",
+        "sub_branch_code": "1",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "1702",
+        "district_code": "1702",
+        "branch_name": "Хөвсгөл",
+        "branch_code": "17",
+        "sub_branch_name": "Арбулаг",
+        "sub_branch_code": "2",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "1703",
+        "district_code": "1703",
+        "branch_name": "Хөвсгөл",
+        "branch_code": "17",
+        "sub_branch_name": "Баянзүрх",
+        "sub_branch_code": "3",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "1704",
+        "district_code": "1704",
+        "branch_name": "Хөвсгөл",
+        "branch_code": "17",
+        "sub_branch_name": "Бүрэнтогтох",
+        "sub_branch_code": "4",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "1705",
+        "district_code": "1705",
+        "branch_name": "Хөвсгөл",
+        "branch_code": "17",
+        "sub_branch_name": "Галт",
+        "sub_branch_code": "5",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "1706",
+        "district_code": "1706",
+        "branch_name": "Хөвсгөл",
+        "branch_code": "17",
+        "sub_branch_name": "Жаргалант",
+        "sub_branch_code": "6",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "1707",
+        "district_code": "1707",
+        "branch_name": "Хөвсгөл",
+        "branch_code": "17",
+        "sub_branch_name": "Их-Уул",
+        "sub_branch_code": "7",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "1708",
+        "district_code": "1708",
+        "branch_name": "Хөвсгөл",
+        "branch_code": "17",
+        "sub_branch_name": "Рашаант",
+        "sub_branch_code": "8",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "1709",
+        "district_code": "1709",
+        "branch_name": "Хөвсгөл",
+        "branch_code": "17",
+        "sub_branch_name": "Рэнчинлхүмбэ",
+        "sub_branch_code": "9",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "1710",
+        "district_code": "1710",
+        "branch_name": "Хөвсгөл",
+        "branch_code": "17",
+        "sub_branch_name": "Тариалан",
+        "sub_branch_code": "10",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "1711",
+        "district_code": "1711",
+        "branch_name": "Хөвсгөл",
+        "branch_code": "17",
+        "sub_branch_name": "Тосонцэнгэл",
+        "sub_branch_code": "11",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "1712",
+        "district_code": "1712",
+        "branch_name": "Хөвсгөл",
+        "branch_code": "17",
+        "sub_branch_name": "Төмөрбулаг",
+        "sub_branch_code": "12",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "1713",
+        "district_code": "1713",
+        "branch_name": "Хөвсгөл",
+        "branch_code": "17",
+        "sub_branch_name": "Түнэл",
+        "sub_branch_code": "13",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "1714",
+        "district_code": "1714",
+        "branch_name": "Хөвсгөл",
+        "branch_code": "17",
+        "sub_branch_name": "Улаан-Уул",
+        "sub_branch_code": "14",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "1715",
+        "district_code": "1715",
+        "branch_name": "Хөвсгөл",
+        "branch_code": "17",
+        "sub_branch_name": "Ханх",
+        "sub_branch_code": "15",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "1717",
+        "district_code": "1717",
+        "branch_name": "Хөвсгөл",
+        "branch_code": "17",
+        "sub_branch_name": "Цагаан-Уул",
+        "sub_branch_code": "17",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "1718",
+        "district_code": "1718",
+        "branch_name": "Хөвсгөл",
+        "branch_code": "17",
+        "sub_branch_name": "Цагаан-Үүр",
+        "sub_branch_code": "18",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "1719",
+        "district_code": "1719",
+        "branch_name": "Хөвсгөл",
+        "branch_code": "17",
+        "sub_branch_name": "Цагааннуур",
+        "sub_branch_code": "19",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "1720",
+        "district_code": "1720",
+        "branch_name": "Хөвсгөл",
+        "branch_code": "17",
+        "sub_branch_name": "Цэцэрлэг",
+        "sub_branch_code": "20",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "1721",
+        "district_code": "1721",
+        "branch_name": "Хөвсгөл",
+        "branch_code": "17",
+        "sub_branch_name": "Чандмань-Өндөр",
+        "sub_branch_code": "21",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "1722",
+        "district_code": "1722",
+        "branch_name": "Хөвсгөл",
+        "branch_code": "17",
+        "sub_branch_name": "Шинэ-Идэр",
+        "sub_branch_code": "22",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "1723",
+        "district_code": "1723",
+        "branch_name": "Хөвсгөл",
+        "branch_code": "17",
+        "sub_branch_name": "Эрдэнэбулган",
+        "sub_branch_code": "23",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "1724",
+        "district_code": "1724",
+        "branch_name": "Хөвсгөл",
+        "branch_code": "17",
+        "sub_branch_name": "Мөрөн",
+        "sub_branch_code": "24",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "1801",
+        "district_code": "1801",
+        "branch_name": "Хэнтий",
+        "branch_code": "18",
+        "sub_branch_name": "Галшар",
+        "sub_branch_code": "1",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "1802",
+        "district_code": "1802",
+        "branch_name": "Хэнтий",
+        "branch_code": "18",
+        "sub_branch_name": "Баянхутаг",
+        "sub_branch_code": "2",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "1803",
+        "district_code": "1803",
+        "branch_name": "Хэнтий",
+        "branch_code": "18",
+        "sub_branch_name": "Баянмөнх",
+        "sub_branch_code": "3",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "1804",
+        "district_code": "1804",
+        "branch_name": "Хэнтий",
+        "branch_code": "18",
+        "sub_branch_name": "Дархан",
+        "sub_branch_code": "4",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "1805",
+        "district_code": "1805",
+        "branch_name": "Хэнтий",
+        "branch_code": "18",
+        "sub_branch_name": "Дэлгэрхаан",
+        "sub_branch_code": "5",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "1806",
+        "district_code": "1806",
+        "branch_name": "Хэнтий",
+        "branch_code": "18",
+        "sub_branch_name": "Жаргалтхаан",
+        "sub_branch_code": "6",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "1807",
+        "district_code": "1807",
+        "branch_name": "Хэнтий",
+        "branch_code": "18",
+        "sub_branch_name": "Цэнхэрмандал",
+        "sub_branch_code": "7",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "1808",
+        "district_code": "1808",
+        "branch_name": "Хэнтий",
+        "branch_code": "18",
+        "sub_branch_name": "Өмнөдэлгэр",
+        "sub_branch_code": "8",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "1809",
+        "district_code": "1809",
+        "branch_name": "Хэнтий",
+        "branch_code": "18",
+        "sub_branch_name": "Батширээт",
+        "sub_branch_code": "9",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "1810",
+        "district_code": "1810",
+        "branch_name": "Хэнтий",
+        "branch_code": "18",
+        "sub_branch_name": "Биндэр",
+        "sub_branch_code": "10",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "1811",
+        "district_code": "1811",
+        "branch_name": "Хэнтий",
+        "branch_code": "18",
+        "sub_branch_name": "Баян-Адарга",
+        "sub_branch_code": "11",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "1812",
+        "district_code": "1812",
+        "branch_name": "Хэнтий",
+        "branch_code": "18",
+        "sub_branch_name": "Дадал",
+        "sub_branch_code": "12",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "1813",
+        "district_code": "1813",
+        "branch_name": "Хэнтий",
+        "branch_code": "18",
+        "sub_branch_name": "Норовлин",
+        "sub_branch_code": "13",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "1814",
+        "district_code": "1814",
+        "branch_name": "Хэнтий",
+        "branch_code": "18",
+        "sub_branch_name": "Батноров",
+        "sub_branch_code": "14",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "1815",
+        "district_code": "1815",
+        "branch_name": "Хэнтий",
+        "branch_code": "18",
+        "sub_branch_name": "Баян-Овоо",
+        "sub_branch_code": "15",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "1816",
+        "district_code": "1816",
+        "branch_name": "Хэнтий",
+        "branch_code": "18",
+        "sub_branch_name": "Мөрөн",
+        "sub_branch_code": "16",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "1817",
+        "district_code": "1817",
+        "branch_name": "Хэнтий",
+        "branch_code": "18",
+        "sub_branch_name": "Хэрлэн",
+        "sub_branch_code": "17",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "1901",
+        "district_code": "1901",
+        "branch_name": "Дархан-Уул",
+        "branch_code": "19",
+        "sub_branch_name": "Дархан",
+        "sub_branch_code": "1",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "1902",
+        "district_code": "1902",
+        "branch_name": "Дархан-Уул",
+        "branch_code": "19",
+        "sub_branch_name": "Шарын гол",
+        "sub_branch_code": "2",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "1903",
+        "district_code": "1903",
+        "branch_name": "Дархан-Уул",
+        "branch_code": "19",
+        "sub_branch_name": "Хонгор",
+        "sub_branch_code": "3",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "1904",
+        "district_code": "1904",
+        "branch_name": "Дархан-Уул",
+        "branch_code": "19",
+        "sub_branch_name": "Орхон",
+        "sub_branch_code": "4",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "2001",
+        "district_code": "2001",
+        "branch_name": "Орхон",
+        "branch_code": "20",
+        "sub_branch_name": "Баян-Өндөр",
+        "sub_branch_code": "1",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "2002",
+        "district_code": "2002",
+        "branch_name": "Орхон",
+        "branch_code": "20",
+        "sub_branch_name": "Жаргалант",
+        "sub_branch_code": "2",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "2301",
+        "district_code": "2301",
+        "branch_name": "Хан-Уул",
+        "branch_code": "23",
+        "sub_branch_name": "1-р хороо",
+        "sub_branch_code": "1",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "2302",
+        "district_code": "2302",
+        "branch_name": "Хан-Уул",
+        "branch_code": "23",
+        "sub_branch_name": "2-р хороо",
+        "sub_branch_code": "2",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "2303",
+        "district_code": "2303",
+        "branch_name": "Хан-Уул",
+        "branch_code": "23",
+        "sub_branch_name": "3-р хороо",
+        "sub_branch_code": "3",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "2304",
+        "district_code": "2304",
+        "branch_name": "Хан-Уул",
+        "branch_code": "23",
+        "sub_branch_name": "4-р хороо",
+        "sub_branch_code": "4",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "2305",
+        "district_code": "2305",
+        "branch_name": "Хан-Уул",
+        "branch_code": "23",
+        "sub_branch_name": "5-р хороо",
+        "sub_branch_code": "5",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "2306",
+        "district_code": "2306",
+        "branch_name": "Хан-Уул",
+        "branch_code": "23",
+        "sub_branch_name": "6-р хороо",
+        "sub_branch_code": "6",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "2307",
+        "district_code": "2307",
+        "branch_name": "Хан-Уул",
+        "branch_code": "23",
+        "sub_branch_name": "7-р хороо",
+        "sub_branch_code": "7",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "2308",
+        "district_code": "2308",
+        "branch_name": "Хан-Уул",
+        "branch_code": "23",
+        "sub_branch_name": "8-р хороо",
+        "sub_branch_code": "8",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "2309",
+        "district_code": "2309",
+        "branch_name": "Хан-Уул",
+        "branch_code": "23",
+        "sub_branch_name": "9-р хороо",
+        "sub_branch_code": "9",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "2310",
+        "district_code": "2310",
+        "branch_name": "Хан-Уул",
+        "branch_code": "23",
+        "sub_branch_name": "10-р хороо",
+        "sub_branch_code": "10",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "2311",
+        "district_code": "2311",
+        "branch_name": "Хан-Уул",
+        "branch_code": "23",
+        "sub_branch_name": "11-р хороо",
+        "sub_branch_code": "11",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "2312",
+        "district_code": "2312",
+        "branch_name": "Хан-Уул",
+        "branch_code": "23",
+        "sub_branch_name": "12-р хороо",
+        "sub_branch_code": "12",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "2313",
+        "district_code": "2313",
+        "branch_name": "Хан-Уул",
+        "branch_code": "23",
+        "sub_branch_name": "13-рхороо",
+        "sub_branch_code": "13",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "2314",
+        "district_code": "2314",
+        "branch_name": "Хан-Уул",
+        "branch_code": "23",
+        "sub_branch_name": "14-р хороо",
+        "sub_branch_code": "14",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "2315",
+        "district_code": "2315",
+        "branch_name": "Хан-Уул",
+        "branch_code": "23",
+        "sub_branch_name": "15-р хороо",
+        "sub_branch_code": "15",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "2316",
+        "district_code": "2316",
+        "branch_name": "Хан-Уул",
+        "branch_code": "23",
+        "sub_branch_name": "16-р хороо",
+        "sub_branch_code": "16",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "2317",
+        "district_code": "2317",
+        "branch_name": "Хан-Уул",
+        "branch_code": "23",
+        "sub_branch_name": "17-р хороо",
+        "sub_branch_code": "17",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "2318",
+        "district_code": "2318",
+        "branch_name": "Хан-Уул",
+        "branch_code": "23",
+        "sub_branch_name": "18-р хороо",
+        "sub_branch_code": "18",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "2319",
+        "district_code": "2319",
+        "branch_name": "Хан-Уул",
+        "branch_code": "23",
+        "sub_branch_name": "19-р хороо",
+        "sub_branch_code": "19",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "2320",
+        "district_code": "2320",
+        "branch_name": "Хан-Уул",
+        "branch_code": "23",
+        "sub_branch_name": "20-р хороо",
+        "sub_branch_code": "20",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "2401",
+        "district_code": "2401",
+        "branch_name": "Баянзүрх",
+        "branch_code": "24",
+        "sub_branch_name": "1-р хороо",
+        "sub_branch_code": "1",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "2402",
+        "district_code": "2402",
+        "branch_name": "Баянзүрх",
+        "branch_code": "24",
+        "sub_branch_name": "2-р хороо",
+        "sub_branch_code": "2",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "2403",
+        "district_code": "2403",
+        "branch_name": "Баянзүрх",
+        "branch_code": "24",
+        "sub_branch_name": "3-р хороо",
+        "sub_branch_code": "3",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "2404",
+        "district_code": "2404",
+        "branch_name": "Баянзүрх",
+        "branch_code": "24",
+        "sub_branch_name": "4-р хороо",
+        "sub_branch_code": "4",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "2405",
+        "district_code": "2405",
+        "branch_name": "Баянзүрх",
+        "branch_code": "24",
+        "sub_branch_name": "5-р хороо",
+        "sub_branch_code": "5",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "2406",
+        "district_code": "2406",
+        "branch_name": "Баянзүрх",
+        "branch_code": "24",
+        "sub_branch_name": "6-р хороо",
+        "sub_branch_code": "6",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "2407",
+        "district_code": "2407",
+        "branch_name": "Баянзүрх",
+        "branch_code": "24",
+        "sub_branch_name": "7-р хороо",
+        "sub_branch_code": "7",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "2408",
+        "district_code": "2408",
+        "branch_name": "Баянзүрх",
+        "branch_code": "24",
+        "sub_branch_name": "8-р хороо",
+        "sub_branch_code": "8",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "2409",
+        "district_code": "2409",
+        "branch_name": "Баянзүрх",
+        "branch_code": "24",
+        "sub_branch_name": "9-р хороо",
+        "sub_branch_code": "9",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "2410",
+        "district_code": "2410",
+        "branch_name": "Баянзүрх",
+        "branch_code": "24",
+        "sub_branch_name": "10-р хороо",
+        "sub_branch_code": "10",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "2411",
+        "district_code": "2411",
+        "branch_name": "Баянзүрх",
+        "branch_code": "24",
+        "sub_branch_name": "11-р хороо",
+        "sub_branch_code": "11",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "2412",
+        "district_code": "2412",
+        "branch_name": "Баянзүрх",
+        "branch_code": "24",
+        "sub_branch_name": "12-р хороо",
+        "sub_branch_code": "12",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "2413",
+        "district_code": "2413",
+        "branch_name": "Баянзүрх",
+        "branch_code": "24",
+        "sub_branch_name": "13-р хороо",
+        "sub_branch_code": "13",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "2414",
+        "district_code": "2414",
+        "branch_name": "Баянзүрх",
+        "branch_code": "24",
+        "sub_branch_name": "14-р хороо",
+        "sub_branch_code": "14",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "2415",
+        "district_code": "2415",
+        "branch_name": "Баянзүрх",
+        "branch_code": "24",
+        "sub_branch_name": "15-р хороо",
+        "sub_branch_code": "15",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "2416",
+        "district_code": "2416",
+        "branch_name": "Баянзүрх",
+        "branch_code": "24",
+        "sub_branch_name": "16-р хороо",
+        "sub_branch_code": "16",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "2417",
+        "district_code": "2417",
+        "branch_name": "Баянзүрх",
+        "branch_code": "24",
+        "sub_branch_name": "17-р хороо",
+        "sub_branch_code": "17",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "2418",
+        "district_code": "2418",
+        "branch_name": "Баянзүрх",
+        "branch_code": "24",
+        "sub_branch_name": "18-р хороо",
+        "sub_branch_code": "18",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "2419",
+        "district_code": "2419",
+        "branch_name": "Баянзүрх",
+        "branch_code": "24",
+        "sub_branch_name": "19-р хороо",
+        "sub_branch_code": "19",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "2420",
+        "district_code": "2420",
+        "branch_name": "Баянзүрх",
+        "branch_code": "24",
+        "sub_branch_name": "20-р хороо",
+        "sub_branch_code": "20",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "2501",
+        "district_code": "2501",
+        "branch_name": "Сүхбаатар дүүрэг",
+        "branch_code": "25",
+        "sub_branch_name": "1-р хороо",
+        "sub_branch_code": "1",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "2502",
+        "district_code": "2502",
+        "branch_name": "Сүхбаатар дүүрэг",
+        "branch_code": "25",
+        "sub_branch_name": "2-р хороо",
+        "sub_branch_code": "2",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "2503",
+        "district_code": "2503",
+        "branch_name": "Сүхбаатар дүүрэг",
+        "branch_code": "25",
+        "sub_branch_name": "3-р хороо",
+        "sub_branch_code": "3",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "2504",
+        "district_code": "2504",
+        "branch_name": "Сүхбаатар дүүрэг",
+        "branch_code": "25",
+        "sub_branch_name": "4-р хороо",
+        "sub_branch_code": "4",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "2505",
+        "district_code": "2505",
+        "branch_name": "Сүхбаатар дүүрэг",
+        "branch_code": "25",
+        "sub_branch_name": "5-р хороо",
+        "sub_branch_code": "5",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "2506",
+        "district_code": "2506",
+        "branch_name": "Сүхбаатар дүүрэг",
+        "branch_code": "25",
+        "sub_branch_name": "6-р хороо",
+        "sub_branch_code": "6",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "2507",
+        "district_code": "2507",
+        "branch_name": "Сүхбаатар дүүрэг",
+        "branch_code": "25",
+        "sub_branch_name": "7-р хороо",
+        "sub_branch_code": "7",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "2508",
+        "district_code": "2508",
+        "branch_name": "Сүхбаатар дүүрэг",
+        "branch_code": "25",
+        "sub_branch_name": "8-р хороо",
+        "sub_branch_code": "8",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "2509",
+        "district_code": "2509",
+        "branch_name": "Сүхбаатар дүүрэг",
+        "branch_code": "25",
+        "sub_branch_name": "9-р хороо",
+        "sub_branch_code": "9",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "2510",
+        "district_code": "2510",
+        "branch_name": "Сүхбаатар дүүрэг",
+        "branch_code": "25",
+        "sub_branch_name": "10-р хороо",
+        "sub_branch_code": "10",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "2511",
+        "district_code": "2511",
+        "branch_name": "Сүхбаатар дүүрэг",
+        "branch_code": "25",
+        "sub_branch_name": "11-р хороо",
+        "sub_branch_code": "11",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "2512",
+        "district_code": "2512",
+        "branch_name": "Сүхбаатар дүүрэг",
+        "branch_code": "25",
+        "sub_branch_name": "12-р хороо ",
+        "sub_branch_code": "12",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "2513",
+        "district_code": "2513",
+        "branch_name": "Сүхбаатар дүүрэг",
+        "branch_code": "25",
+        "sub_branch_name": "13-р хороо",
+        "sub_branch_code": "13",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "2514",
+        "district_code": "2514",
+        "branch_name": "Сүхбаатар дүүрэг",
+        "branch_code": "25",
+        "sub_branch_name": "14-р хороо",
+        "sub_branch_code": "14",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "2515",
+        "district_code": "2515",
+        "branch_name": "Сүхбаатар дүүрэг",
+        "branch_code": "25",
+        "sub_branch_name": "15-р хороо",
+        "sub_branch_code": "15",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "2516",
+        "district_code": "2516",
+        "branch_name": "Сүхбаатар дүүрэг",
+        "branch_code": "25",
+        "sub_branch_name": "16-р хороо",
+        "sub_branch_code": "16",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "2517",
+        "district_code": "2517",
+        "branch_name": "Сүхбаатар дүүрэг",
+        "branch_code": "25",
+        "sub_branch_name": "17-р хороо",
+        "sub_branch_code": "17",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "2518",
+        "district_code": "2518",
+        "branch_name": "Сүхбаатар дүүрэг",
+        "branch_code": "25",
+        "sub_branch_name": "18-р хороо",
+        "sub_branch_code": "18",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "2519",
+        "district_code": "2519",
+        "branch_name": "Сүхбаатар дүүрэг",
+        "branch_code": "25",
+        "sub_branch_name": "19-р хороо",
+        "sub_branch_code": "19",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "2520",
+        "district_code": "2520",
+        "branch_name": "Сүхбаатар дүүрэг",
+        "branch_code": "25",
+        "sub_branch_name": "20-р хороо",
+        "sub_branch_code": "20",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "2601",
+        "district_code": "2601",
+        "branch_name": "Баянгол",
+        "branch_code": "26",
+        "sub_branch_name": "1-р хороо",
+        "sub_branch_code": "1",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "2602",
+        "district_code": "2602",
+        "branch_name": "Баянгол",
+        "branch_code": "26",
+        "sub_branch_name": "2-р хороо",
+        "sub_branch_code": "2",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "2603",
+        "district_code": "2603",
+        "branch_name": "Баянгол",
+        "branch_code": "26",
+        "sub_branch_name": "3-р хороо",
+        "sub_branch_code": "3",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "2604",
+        "district_code": "2604",
+        "branch_name": "Баянгол",
+        "branch_code": "26",
+        "sub_branch_name": "4-р хороо",
+        "sub_branch_code": "4",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "2605",
+        "district_code": "2605",
+        "branch_name": "Баянгол",
+        "branch_code": "26",
+        "sub_branch_name": "5-р хороо",
+        "sub_branch_code": "5",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "2606",
+        "district_code": "2606",
+        "branch_name": "Баянгол",
+        "branch_code": "26",
+        "sub_branch_name": "6-р хороо",
+        "sub_branch_code": "6",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "2607",
+        "district_code": "2607",
+        "branch_name": "Баянгол",
+        "branch_code": "26",
+        "sub_branch_name": "7-р хороо",
+        "sub_branch_code": "7",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "2608",
+        "district_code": "2608",
+        "branch_name": "Баянгол",
+        "branch_code": "26",
+        "sub_branch_name": "8-р хороо",
+        "sub_branch_code": "8",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "2609",
+        "district_code": "2609",
+        "branch_name": "Баянгол",
+        "branch_code": "26",
+        "sub_branch_name": "9-р хороо",
+        "sub_branch_code": "9",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "0923",
+        "district_code": "0923",
+        "branch_name": "Завхан",
+        "branch_code": "9",
+        "sub_branch_name": "Завханмандал",
+        "sub_branch_code": "23",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "0924",
+        "district_code": "0924",
+        "branch_name": "Завхан",
+        "branch_code": "9",
+        "sub_branch_name": "Ургамал",
+        "sub_branch_code": "24",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "1001",
+        "district_code": "1001",
+        "branch_name": "Өвөрхангай",
+        "branch_code": "10",
+        "sub_branch_name": "Баян-Өндөр",
+        "sub_branch_code": "1",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "1002",
+        "district_code": "1002",
+        "branch_name": "Өвөрхангай",
+        "branch_code": "10",
+        "sub_branch_name": "Бүрд",
+        "sub_branch_code": "2",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "1003",
+        "district_code": "1003",
+        "branch_name": "Өвөрхангай",
+        "branch_code": "10",
+        "sub_branch_name": "Бат-Өлзий",
+        "sub_branch_code": "3",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "1004",
+        "district_code": "1004",
+        "branch_name": "Өвөрхангай",
+        "branch_code": "10",
+        "sub_branch_name": "Баруунбаян-Улаан",
+        "sub_branch_code": "4",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "1005",
+        "district_code": "1005",
+        "branch_name": "Өвөрхангай",
+        "branch_code": "10",
+        "sub_branch_name": "Баянгол",
+        "sub_branch_code": "5",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "1006",
+        "district_code": "1006",
+        "branch_name": "Өвөрхангай",
+        "branch_code": "10",
+        "sub_branch_name": "Гучин-Ус",
+        "sub_branch_code": "6",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "1007",
+        "district_code": "1007",
+        "branch_name": "Өвөрхангай",
+        "branch_code": "10",
+        "sub_branch_name": "Есөн зүйл",
+        "sub_branch_code": "7",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "1008",
+        "district_code": "1008",
+        "branch_name": "Өвөрхангай",
+        "branch_code": "10",
+        "sub_branch_name": "Өлзийт",
+        "sub_branch_code": "8",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "1009",
+        "district_code": "1009",
+        "branch_name": "Өвөрхангай",
+        "branch_code": "10",
+        "sub_branch_name": "Зүүнбаян-Улаан",
+        "sub_branch_code": "9",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "1010",
+        "district_code": "1010",
+        "branch_name": "Өвөрхангай",
+        "branch_code": "10",
+        "sub_branch_name": "Хайрхандулаан",
+        "sub_branch_code": "10",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "1011",
+        "district_code": "1011",
+        "branch_name": "Өвөрхангай",
+        "branch_code": "10",
+        "sub_branch_name": "Нарийнтээл",
+        "sub_branch_code": "11",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "1012",
+        "district_code": "1012",
+        "branch_name": "Өвөрхангай",
+        "branch_code": "10",
+        "sub_branch_name": "Сант",
+        "sub_branch_code": "12",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "1013",
+        "district_code": "1013",
+        "branch_name": "Өвөрхангай",
+        "branch_code": "10",
+        "sub_branch_name": "Тарагт",
+        "sub_branch_code": "13",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "1014",
+        "district_code": "1014",
+        "branch_name": "Өвөрхангай",
+        "branch_code": "10",
+        "sub_branch_name": "Төгрөг",
+        "sub_branch_code": "14",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "1015",
+        "district_code": "1015",
+        "branch_name": "Өвөрхангай",
+        "branch_code": "10",
+        "sub_branch_name": "Уянга",
+        "sub_branch_code": "15",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "1016",
+        "district_code": "1016",
+        "branch_name": "Өвөрхангай",
+        "branch_code": "10",
+        "sub_branch_name": "Богд",
+        "sub_branch_code": "16",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "1017",
+        "district_code": "1017",
+        "branch_name": "Өвөрхангай",
+        "branch_code": "10",
+        "sub_branch_name": "Хужирт",
+        "sub_branch_code": "17",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "1018",
+        "district_code": "1018",
+        "branch_name": "Өвөрхангай",
+        "branch_code": "10",
+        "sub_branch_name": "Хархорин",
+        "sub_branch_code": "18",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "1019",
+        "district_code": "1019",
+        "branch_name": "Өвөрхангай",
+        "branch_code": "10",
+        "sub_branch_name": "Арвайхээр",
+        "sub_branch_code": "19",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "1101",
+        "district_code": "1101",
+        "branch_name": "Өмнөговь",
+        "branch_code": "11",
+        "sub_branch_name": "Баяндалай",
+        "sub_branch_code": "1",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "1102",
+        "district_code": "1102",
+        "branch_name": "Өмнөговь",
+        "branch_code": "11",
+        "sub_branch_name": "Баян-Овоо",
+        "sub_branch_code": "2",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "1103",
+        "district_code": "1103",
+        "branch_name": "Өмнөговь",
+        "branch_code": "11",
+        "sub_branch_name": "Булган",
+        "sub_branch_code": "3",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "1104",
+        "district_code": "1104",
+        "branch_name": "Өмнөговь",
+        "branch_code": "11",
+        "sub_branch_name": "Гурвантэс",
+        "sub_branch_code": "4",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "1105",
+        "district_code": "1105",
+        "branch_name": "Өмнөговь",
+        "branch_code": "11",
+        "sub_branch_name": "Мандал-Овоо",
+        "sub_branch_code": "5",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "1106",
+        "district_code": "1106",
+        "branch_name": "Өмнөговь",
+        "branch_code": "11",
+        "sub_branch_name": "Манлай",
+        "sub_branch_code": "6",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "1107",
+        "district_code": "1107",
+        "branch_name": "Өмнөговь",
+        "branch_code": "11",
+        "sub_branch_name": "Номгон",
+        "sub_branch_code": "7",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "1108",
+        "district_code": "1108",
+        "branch_name": "Өмнөговь",
+        "branch_code": "11",
+        "sub_branch_name": "Ноён",
+        "sub_branch_code": "8",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "1109",
+        "district_code": "1109",
+        "branch_name": "Өмнөговь",
+        "branch_code": "11",
+        "sub_branch_name": "Ханбогд",
+        "sub_branch_code": "9",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "1110",
+        "district_code": "1110",
+        "branch_name": "Өмнөговь",
+        "branch_code": "11",
+        "sub_branch_name": "Ханхонгор",
+        "sub_branch_code": "10",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "1111",
+        "district_code": "1111",
+        "branch_name": "Өмнөговь",
+        "branch_code": "11",
+        "sub_branch_name": "Хүрмэн",
+        "sub_branch_code": "11",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "1824",
+        "district_code": "1824",
+        "branch_name": "Хэнтий",
+        "branch_code": "18",
+        "sub_branch_name": "Бор-Өндөр",
+        "sub_branch_code": "24",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "1112",
+        "district_code": "1112",
+        "branch_name": "Өмнөговь",
+        "branch_code": "11",
+        "sub_branch_name": "Сэврэй",
+        "sub_branch_code": "12",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "1113",
+        "district_code": "1113",
+        "branch_name": "Өмнөговь",
+        "branch_code": "11",
+        "sub_branch_name": "Цогт-Овоо",
+        "sub_branch_code": "13",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "1114",
+        "district_code": "1114",
+        "branch_name": "Өмнөговь",
+        "branch_code": "11",
+        "sub_branch_name": "Цогтцэций",
+        "sub_branch_code": "14",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "1115",
+        "district_code": "1115",
+        "branch_name": "Өмнөговь",
+        "branch_code": "11",
+        "sub_branch_name": "Даланзадгад",
+        "sub_branch_code": "15",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "1201",
+        "district_code": "1201",
+        "branch_name": "Сүхбаатар",
+        "branch_code": "12",
+        "sub_branch_name": "Асгат",
+        "sub_branch_code": "1",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "1202",
+        "district_code": "1202",
+        "branch_name": "Сүхбаатар",
+        "branch_code": "12",
+        "sub_branch_name": "Баяндэлгэр",
+        "sub_branch_code": "2",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "1203",
+        "district_code": "1203",
+        "branch_name": "Сүхбаатар",
+        "branch_code": "12",
+        "sub_branch_name": "Дарьганга",
+        "sub_branch_code": "3",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "1204",
+        "district_code": "1204",
+        "branch_name": "Сүхбаатар",
+        "branch_code": "12",
+        "sub_branch_name": "Мөнххаан",
+        "sub_branch_code": "4",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "1205",
+        "district_code": "1205",
+        "branch_name": "Сүхбаатар",
+        "branch_code": "12",
+        "sub_branch_name": "Наран",
+        "sub_branch_code": "5",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "1206",
+        "district_code": "1206",
+        "branch_name": "Сүхбаатар",
+        "branch_code": "12",
+        "sub_branch_name": "Онгон",
+        "sub_branch_code": "6",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "1207",
+        "district_code": "1207",
+        "branch_name": "Сүхбаатар",
+        "branch_code": "12",
+        "sub_branch_name": "Сүхбаатар",
+        "sub_branch_code": "7",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "1208",
+        "district_code": "1208",
+        "branch_name": "Сүхбаатар",
+        "branch_code": "12",
+        "sub_branch_name": "Түвшинширээ",
+        "sub_branch_code": "8",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "1209",
+        "district_code": "1209",
+        "branch_name": "Сүхбаатар",
+        "branch_code": "12",
+        "sub_branch_name": "Түмэнцогт",
+        "sub_branch_code": "9",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "2610",
+        "district_code": "2610",
+        "branch_name": "Баянгол",
+        "branch_code": "26",
+        "sub_branch_name": "10-р хороо",
+        "sub_branch_code": "10",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "2611",
+        "district_code": "2611",
+        "branch_name": "Баянгол",
+        "branch_code": "26",
+        "sub_branch_name": "11-р хороо",
+        "sub_branch_code": "11",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "2612",
+        "district_code": "2612",
+        "branch_name": "Баянгол",
+        "branch_code": "26",
+        "sub_branch_name": "12-р хороо",
+        "sub_branch_code": "12",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "2613",
+        "district_code": "2613",
+        "branch_name": "Баянгол",
+        "branch_code": "26",
+        "sub_branch_name": "13-р хороо",
+        "sub_branch_code": "13",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "2614",
+        "district_code": "2614",
+        "branch_name": "Баянгол",
+        "branch_code": "26",
+        "sub_branch_name": "14-р хороо",
+        "sub_branch_code": "14",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "2615",
+        "district_code": "2615",
+        "branch_name": "Баянгол",
+        "branch_code": "26",
+        "sub_branch_name": "15-р хороо",
+        "sub_branch_code": "15",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "2616",
+        "district_code": "2616",
+        "branch_name": "Баянгол",
+        "branch_code": "26",
+        "sub_branch_name": "16-р хороо",
+        "sub_branch_code": "16",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "2617",
+        "district_code": "2617",
+        "branch_name": "Баянгол",
+        "branch_code": "26",
+        "sub_branch_name": "17-р хороо",
+        "sub_branch_code": "17",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "2618",
+        "district_code": "2618",
+        "branch_name": "Баянгол",
+        "branch_code": "26",
+        "sub_branch_name": "18-р хороо",
+        "sub_branch_code": "18",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "2619",
+        "district_code": "2619",
+        "branch_name": "Баянгол",
+        "branch_code": "26",
+        "sub_branch_name": "19-р хороо",
+        "sub_branch_code": "19",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "2620",
+        "district_code": "2620",
+        "branch_name": "Баянгол",
+        "branch_code": "26",
+        "sub_branch_name": "20-р хороо",
+        "sub_branch_code": "20",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "3401",
+        "district_code": "3401",
+        "branch_name": "Сонгинохайрхан",
+        "branch_code": "34",
+        "sub_branch_name": "1-р хороо",
+        "sub_branch_code": "1",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "3402",
+        "district_code": "3402",
+        "branch_name": "Сонгинохайрхан",
+        "branch_code": "34",
+        "sub_branch_name": "2-р хороо",
+        "sub_branch_code": "2",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "3403",
+        "district_code": "3403",
+        "branch_name": "Сонгинохайрхан",
+        "branch_code": "34",
+        "sub_branch_name": "3-р хороо",
+        "sub_branch_code": "3",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "3404",
+        "district_code": "3404",
+        "branch_name": "Сонгинохайрхан",
+        "branch_code": "34",
+        "sub_branch_name": "4-р хороо",
+        "sub_branch_code": "4",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "3405",
+        "district_code": "3405",
+        "branch_name": "Сонгинохайрхан",
+        "branch_code": "34",
+        "sub_branch_name": "5-р хороо",
+        "sub_branch_code": "5",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "3406",
+        "district_code": "3406",
+        "branch_name": "Сонгинохайрхан",
+        "branch_code": "34",
+        "sub_branch_name": "6-р хороо",
+        "sub_branch_code": "6",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "3407",
+        "district_code": "3407",
+        "branch_name": "Сонгинохайрхан",
+        "branch_code": "34",
+        "sub_branch_name": "7-р хороо",
+        "sub_branch_code": "7",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "3408",
+        "district_code": "3408",
+        "branch_name": "Сонгинохайрхан",
+        "branch_code": "34",
+        "sub_branch_name": "8-р хороо",
+        "sub_branch_code": "8",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "3409",
+        "district_code": "3409",
+        "branch_name": "Сонгинохайрхан",
+        "branch_code": "34",
+        "sub_branch_name": "9-р хороо",
+        "sub_branch_code": "9",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "3410",
+        "district_code": "3410",
+        "branch_name": "Сонгинохайрхан",
+        "branch_code": "34",
+        "sub_branch_name": "10-р хороо",
+        "sub_branch_code": "10",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "3411",
+        "district_code": "3411",
+        "branch_name": "Сонгинохайрхан",
+        "branch_code": "34",
+        "sub_branch_name": "11-р хороо",
+        "sub_branch_code": "11",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "3412",
+        "district_code": "3412",
+        "branch_name": "Сонгинохайрхан",
+        "branch_code": "34",
+        "sub_branch_name": "12-р хороо",
+        "sub_branch_code": "12",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "3413",
+        "district_code": "3413",
+        "branch_name": "Сонгинохайрхан",
+        "branch_code": "34",
+        "sub_branch_name": "13-р хороо",
+        "sub_branch_code": "13",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "3414",
+        "district_code": "3414",
+        "branch_name": "Сонгинохайрхан",
+        "branch_code": "34",
+        "sub_branch_name": "14-р хороо",
+        "sub_branch_code": "14",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "3415",
+        "district_code": "3415",
+        "branch_name": "Сонгинохайрхан",
+        "branch_code": "34",
+        "sub_branch_name": "15-р хороо",
+        "sub_branch_code": "15",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "3416",
+        "district_code": "3416",
+        "branch_name": "Сонгинохайрхан",
+        "branch_code": "34",
+        "sub_branch_name": "16-р хороо",
+        "sub_branch_code": "16",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "3417",
+        "district_code": "3417",
+        "branch_name": "Сонгинохайрхан",
+        "branch_code": "34",
+        "sub_branch_name": "17-р хороо",
+        "sub_branch_code": "17",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "3418",
+        "district_code": "3418",
+        "branch_name": "Сонгинохайрхан",
+        "branch_code": "34",
+        "sub_branch_name": "18-р хороо",
+        "sub_branch_code": "18",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "3419",
+        "district_code": "3419",
+        "branch_name": "Сонгинохайрхан",
+        "branch_code": "34",
+        "sub_branch_name": "19-р хороо",
+        "sub_branch_code": "19",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "0519",
+        "district_code": "0519",
+        "branch_name": "Говь-Алтай",
+        "branch_code": "5",
+        "sub_branch_name": "Есөнбулаг",
+        "sub_branch_code": "19",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "0417",
+        "district_code": "0417",
+        "branch_name": "Булган",
+        "branch_code": "4",
+        "sub_branch_name": "Өлзийт",
+        "sub_branch_code": "17",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "0418",
+        "district_code": "0418",
+        "branch_name": "Булган",
+        "branch_code": "4",
+        "sub_branch_name": "Хялганат",
+        "sub_branch_code": "18",
+        "enabled": 1
+    },
+    {
+        "doctype": "QPay District",
+        "name": "0905",
+        "district_code": "0905",
+        "branch_name": "Завхан",
+        "branch_code": "9",
+        "sub_branch_name": "Тосонцэнгэл",
+        "sub_branch_code": "5",
+        "enabled": 1
+    }
+]
