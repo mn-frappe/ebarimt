@@ -9,6 +9,7 @@ Sets up default configuration for staging environment
 
 import frappe
 from frappe import _
+import json
 
 
 def after_install():
@@ -16,6 +17,7 @@ def after_install():
     create_custom_fields()
     setup_default_settings()
     load_default_fixtures()
+    add_to_integrations_workspace()
     
     frappe.db.commit()
     
@@ -118,4 +120,138 @@ def before_uninstall():
     from ebarimt.integrations.custom_fields import delete_custom_fields
     delete_custom_fields()
     
+    remove_from_integrations_workspace()
+    
     print("eBarimt uninstalled.")
+
+
+def add_to_integrations_workspace():
+    """
+    Add eBarimt Settings link to MN Settings section in Integrations workspace.
+    
+    Creates "MN Settings" card if it doesn't exist (for standalone installation),
+    or adds to existing MN Settings card (if QPay is installed).
+    """
+    if not frappe.db.exists("Workspace", "Integrations"):
+        return
+    
+    try:
+        ws = frappe.get_doc("Workspace", "Integrations")
+        
+        # Check if MN Settings card already exists (from QPay or other MN apps)
+        mn_card_exists = any(
+            link.label == "MN Settings" and link.type == "Card Break"
+            for link in ws.links
+        )
+        
+        if not mn_card_exists:
+            # Add MN Settings card break
+            ws.append("links", {
+                "type": "Card Break",
+                "label": "MN Settings",
+                "hidden": 0,
+                "is_query_report": 0,
+                "link_count": 0,
+                "onboard": 0
+            })
+        
+        # Check if eBarimt Settings link already exists
+        ebarimt_link_exists = any(
+            link.link_to == "eBarimt Settings" and link.type == "Link"
+            for link in ws.links
+        )
+        
+        if not ebarimt_link_exists:
+            # Add eBarimt Settings link
+            ws.append("links", {
+                "type": "Link",
+                "label": "eBarimt Settings",
+                "link_type": "DocType",
+                "link_to": "eBarimt Settings",
+                "hidden": 0,
+                "is_query_report": 0,
+                "link_count": 0,
+                "onboard": 0,
+                "dependencies": "",
+                "only_for": ""
+            })
+        
+        # Update content JSON to include MN Settings card
+        if ws.content:
+            content = json.loads(ws.content)
+            mn_card_in_content = any(
+                item.get("data", {}).get("card_name") == "MN Settings"
+                for item in content
+                if item.get("type") == "card"
+            )
+            if not mn_card_in_content:
+                # Add MN Settings card to content
+                content.append({
+                    "id": frappe.generate_hash(length=10),
+                    "type": "card",
+                    "data": {"card_name": "MN Settings", "col": 4}
+                })
+                ws.content = json.dumps(content)
+        
+        ws.save(ignore_permissions=True)
+        frappe.db.commit()
+        print("  ✓ Added eBarimt Settings to Integrations workspace (MN Settings section)")
+        
+    except Exception as e:
+        print(f"  ⚠ Could not add to Integrations workspace: {e}")
+
+
+def remove_from_integrations_workspace():
+    """
+    Remove eBarimt Settings link from Integrations workspace during uninstall.
+    
+    Only removes eBarimt-specific link, keeps MN Settings card if other apps use it.
+    """
+    if not frappe.db.exists("Workspace", "Integrations"):
+        return
+    
+    try:
+        ws = frappe.get_doc("Workspace", "Integrations")
+        
+        # Remove eBarimt Settings link
+        ws.links = [
+            link for link in ws.links
+            if not (link.link_to == "eBarimt Settings" and link.type == "Link")
+        ]
+        
+        # Check if MN Settings card has any remaining links
+        mn_card_idx = None
+        has_other_mn_links = False
+        
+        for idx, link in enumerate(ws.links):
+            if link.label == "MN Settings" and link.type == "Card Break":
+                mn_card_idx = idx
+            elif mn_card_idx is not None and link.type == "Card Break":
+                # Next card started, check if there were links
+                break
+            elif mn_card_idx is not None and link.type == "Link":
+                has_other_mn_links = True
+        
+        # If no other MN links, remove the MN Settings card too
+        if mn_card_idx is not None and not has_other_mn_links:
+            ws.links = [
+                link for link in ws.links
+                if not (link.label == "MN Settings" and link.type == "Card Break")
+            ]
+            
+            # Also remove from content
+            if ws.content:
+                content = json.loads(ws.content)
+                content = [
+                    item for item in content
+                    if not (item.get("type") == "card" and 
+                           item.get("data", {}).get("card_name") == "MN Settings")
+                ]
+                ws.content = json.dumps(content)
+        
+        ws.save(ignore_permissions=True)
+        frappe.db.commit()
+        print("  ✓ Removed eBarimt Settings from Integrations workspace")
+        
+    except Exception as e:
+        print(f"  ⚠ Could not remove from Integrations workspace: {e}")

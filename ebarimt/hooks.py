@@ -28,6 +28,9 @@ doctype_js = {
 after_install = "ebarimt.install.after_install"
 before_uninstall = "ebarimt.install.before_uninstall"
 
+# Migration - ensure workspace links exist
+after_migrate = "ebarimt.install.add_to_integrations_workspace"
+
 # Fixtures - Payment Types, Tax Codes, and OAT Product Types
 # District is shared from QPay app
 fixtures = [
