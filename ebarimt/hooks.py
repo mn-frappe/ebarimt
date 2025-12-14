@@ -8,7 +8,7 @@ app_publisher = "Digital Consulting Service LLC (Mongolia)"
 app_description = "eBarimt Mongolian VAT Receipt System - Full ERPNext Integration"
 app_email = "dev@frappe.mn"
 app_license = "gpl-3.0"
-app_version = "1.2.0"
+app_version = "1.3.0"
 
 # Required Apps
 required_apps = ["frappe", "erpnext"]

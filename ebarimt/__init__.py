@@ -7,4 +7,4 @@ eBarimt - Mongolian VAT Receipt System for ERPNext
 Full integration with eBarimt (баримт.мн) tax receipt system
 """
 
-__version__ = "1.2.0"
+__version__ = "1.3.0"
