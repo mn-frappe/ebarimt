@@ -1,0 +1,1 @@
+# eBarimt Payment Type

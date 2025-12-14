@@ -1,0 +1,254 @@
+{
+ "actions": [],
+ "creation": "2024-12-14 10:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "enabled",
+  "environment",
+  "column_break_1",
+  "auto_submit_receipt",
+  "enable_debug_log",
+  "section_credentials",
+  "api_username",
+  "api_password",
+  "column_break_creds",
+  "api_key",
+  "section_pos",
+  "pos_no",
+  "operator_tin",
+  "column_break_pos",
+  "merchant_tin",
+  "district_code",
+  "section_defaults",
+  "default_bill_type",
+  "default_payment_type",
+  "column_break_defaults",
+  "include_city_tax",
+  "section_status",
+  "connection_status",
+  "last_sync",
+  "column_break_status",
+  "operator_name",
+  "left_lotteries",
+  "section_urls",
+  "proxy_url",
+  "fallback_ip"
+ ],
+ "fields": [
+  {
+   "default": "1",
+   "fieldname": "enabled",
+   "fieldtype": "Check",
+   "label": "Enabled",
+   "description": "Enable eBarimt integration"
+  },
+  {
+   "default": "Staging",
+   "fieldname": "environment",
+   "fieldtype": "Select",
+   "label": "Environment",
+   "options": "Staging\nProduction",
+   "reqd": 1,
+   "description": "Staging for testing, Production for live"
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "1",
+   "fieldname": "auto_submit_receipt",
+   "fieldtype": "Check",
+   "label": "Auto Submit Receipt",
+   "description": "Automatically send receipt when Sales Invoice is submitted"
+  },
+  {
+   "default": "0",
+   "fieldname": "enable_debug_log",
+   "fieldtype": "Check",
+   "label": "Enable Debug Log"
+  },
+  {
+   "fieldname": "section_credentials",
+   "fieldtype": "Section Break",
+   "label": "API Credentials",
+   "collapsible": 0
+  },
+  {
+   "fieldname": "api_username",
+   "fieldtype": "Data",
+   "label": "API Username",
+   "description": "ITC/eBarimt account username"
+  },
+  {
+   "fieldname": "api_password",
+   "fieldtype": "Password",
+   "label": "API Password",
+   "description": "ITC/eBarimt account password"
+  },
+  {
+   "fieldname": "column_break_creds",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "api_key",
+   "fieldtype": "Password",
+   "label": "X-API-KEY",
+   "description": "API Key from posapi@itc.gov.mn (for operator functions)"
+  },
+  {
+   "fieldname": "section_pos",
+   "fieldtype": "Section Break",
+   "label": "POS Configuration"
+  },
+  {
+   "fieldname": "pos_no",
+   "fieldtype": "Data",
+   "label": "POS Number",
+   "description": "POS registration number from eBarimt"
+  },
+  {
+   "fieldname": "operator_tin",
+   "fieldtype": "Data",
+   "label": "Operator TIN",
+   "read_only": 1,
+   "description": "Operator taxpayer ID (auto-filled)"
+  },
+  {
+   "fieldname": "column_break_pos",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "merchant_tin",
+   "fieldtype": "Data",
+   "label": "Merchant TIN",
+   "description": "Your company's taxpayer ID"
+  },
+  {
+   "fieldname": "district_code",
+   "fieldtype": "Link",
+   "label": "District Code",
+   "options": "eBarimt District",
+   "description": "Business location district code"
+  },
+  {
+   "fieldname": "section_defaults",
+   "fieldtype": "Section Break",
+   "label": "Default Settings"
+  },
+  {
+   "default": "B2C_RECEIPT",
+   "fieldname": "default_bill_type",
+   "fieldtype": "Select",
+   "label": "Default Bill Type",
+   "options": "B2C_RECEIPT\nB2B_RECEIPT",
+   "description": "B2C=Consumer with lottery, B2B=Business"
+  },
+  {
+   "default": "CASH",
+   "fieldname": "default_payment_type",
+   "fieldtype": "Select",
+   "label": "Default Payment Type",
+   "options": "CASH\nPAYMENT_CARD\nBANK_TRANSFER",
+   "description": "Default payment method for receipts"
+  },
+  {
+   "fieldname": "column_break_defaults",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "1",
+   "fieldname": "include_city_tax",
+   "fieldtype": "Check",
+   "label": "Include City Tax",
+   "description": "Include NHAT (city tax) in receipts"
+  },
+  {
+   "fieldname": "section_status",
+   "fieldtype": "Section Break",
+   "label": "Connection Status",
+   "collapsible": 1
+  },
+  {
+   "fieldname": "connection_status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "\nConnected\nDisconnected\nNot Configured",
+   "read_only": 1
+  },
+  {
+   "fieldname": "last_sync",
+   "fieldtype": "Datetime",
+   "label": "Last Sync",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_status",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "operator_name",
+   "fieldtype": "Data",
+   "label": "Operator Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "left_lotteries",
+   "fieldtype": "Int",
+   "label": "Remaining Lotteries",
+   "read_only": 1,
+   "description": "Number of lottery tickets remaining"
+  },
+  {
+   "fieldname": "section_urls",
+   "fieldtype": "Section Break",
+   "label": "API URLs",
+   "collapsible": 1
+  },
+  {
+   "default": "https://api.frappe.mn",
+   "fieldname": "proxy_url",
+   "fieldtype": "Data",
+   "label": "Proxy URL",
+   "read_only": 1,
+   "description": "Primary API gateway"
+  },
+  {
+   "default": "103.153.141.167",
+   "fieldname": "fallback_ip",
+   "fieldtype": "Data",
+   "label": "Fallback IP",
+   "read_only": 1,
+   "description": "IP fallback when DNS fails"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "issingle": 1,
+ "links": [],
+ "modified": "2024-12-14 10:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "eBarimt",
+ "name": "eBarimt Settings",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "read": 1,
+   "role": "Accounts Manager",
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

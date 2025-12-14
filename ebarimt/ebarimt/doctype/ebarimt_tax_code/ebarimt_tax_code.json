@@ -1,0 +1,93 @@
+{
+ "actions": [],
+ "autoname": "field:tax_product_code",
+ "creation": "2024-12-14 10:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "tax_product_code",
+  "tax_product_name",
+  "tax_type_code",
+  "tax_type_name",
+  "column_break_1",
+  "start_date",
+  "end_date"
+ ],
+ "fields": [
+  {
+   "fieldname": "tax_product_code",
+   "fieldtype": "Data",
+   "label": "Tax Product Code",
+   "unique": 1,
+   "in_list_view": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "tax_product_name",
+   "fieldtype": "Small Text",
+   "label": "Tax Product Name",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "tax_type_code",
+   "fieldtype": "Int",
+   "label": "Tax Type Code",
+   "description": "1=VAT, 2=VAT_FREE, 3=VAT_ZERO, 5=NO_VAT"
+  },
+  {
+   "fieldname": "tax_type_name",
+   "fieldtype": "Data",
+   "label": "Tax Type Name",
+   "in_list_view": 1,
+   "options": "VAT\nVAT_FREE\nVAT_ZERO\nNO_VAT"
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "start_date",
+   "fieldtype": "Date",
+   "label": "Start Date",
+   "description": "Validity start date"
+  },
+  {
+   "fieldname": "end_date",
+   "fieldtype": "Date",
+   "label": "End Date",
+   "description": "Validity end date"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-12-14 10:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "eBarimt",
+ "name": "eBarimt Tax Code",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "read": 1,
+   "role": "Accounts User"
+  }
+ ],
+ "quick_entry": 1,
+ "search_fields": "tax_product_name,tax_type_name",
+ "sort_field": "tax_product_code",
+ "sort_order": "ASC",
+ "title_field": "tax_product_name",
+ "track_changes": 0
+}

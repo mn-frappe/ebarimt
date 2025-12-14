@@ -1,0 +1,288 @@
+{
+ "actions": [],
+ "autoname": "naming_series:",
+ "creation": "2024-12-14 10:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "sales_invoice",
+  "pos_invoice",
+  "column_break_1",
+  "status",
+  "environment",
+  "section_receipt",
+  "bill_type",
+  "receipt_id",
+  "lottery_number",
+  "column_break_receipt",
+  "receipt_date",
+  "internal_id",
+  "section_amounts",
+  "total_amount",
+  "vat_amount",
+  "city_tax",
+  "column_break_amounts",
+  "cash_amount",
+  "non_cash_amount",
+  "section_parties",
+  "merchant_tin",
+  "customer_tin",
+  "column_break_parties",
+  "district_code",
+  "pos_no",
+  "section_qr",
+  "qr_data",
+  "section_response",
+  "response_data",
+  "error_message",
+  "section_return",
+  "return_receipt_id",
+  "is_return",
+  "original_receipt"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "options": "EB-.YYYY.-.#####",
+   "reqd": 1,
+   "default": "EB-.YYYY.-.#####"
+  },
+  {
+   "fieldname": "sales_invoice",
+   "fieldtype": "Link",
+   "label": "Sales Invoice",
+   "options": "Sales Invoice",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "pos_invoice",
+   "fieldtype": "Link",
+   "label": "POS Invoice",
+   "options": "POS Invoice"
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Pending\nSuccess\nFailed\nVoided",
+   "default": "Pending",
+   "in_list_view": 1,
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "environment",
+   "fieldtype": "Select",
+   "label": "Environment",
+   "options": "Staging\nProduction",
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "section_receipt",
+   "fieldtype": "Section Break",
+   "label": "Receipt Details"
+  },
+  {
+   "fieldname": "bill_type",
+   "fieldtype": "Select",
+   "label": "Bill Type",
+   "options": "B2C_RECEIPT\nB2B_RECEIPT",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "receipt_id",
+   "fieldtype": "Data",
+   "label": "Receipt ID (DDTD)",
+   "description": "33-digit unique receipt identifier",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "lottery_number",
+   "fieldtype": "Data",
+   "label": "Lottery Number",
+   "description": "Consumer lottery ticket number"
+  },
+  {
+   "fieldname": "column_break_receipt",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "receipt_date",
+   "fieldtype": "Datetime",
+   "label": "Receipt Date"
+  },
+  {
+   "fieldname": "internal_id",
+   "fieldtype": "Data",
+   "label": "Internal ID",
+   "description": "POS internal receipt ID"
+  },
+  {
+   "fieldname": "section_amounts",
+   "fieldtype": "Section Break",
+   "label": "Amounts"
+  },
+  {
+   "fieldname": "total_amount",
+   "fieldtype": "Currency",
+   "label": "Total Amount"
+  },
+  {
+   "fieldname": "vat_amount",
+   "fieldtype": "Currency",
+   "label": "VAT Amount"
+  },
+  {
+   "fieldname": "city_tax",
+   "fieldtype": "Currency",
+   "label": "City Tax"
+  },
+  {
+   "fieldname": "column_break_amounts",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "cash_amount",
+   "fieldtype": "Currency",
+   "label": "Cash Amount"
+  },
+  {
+   "fieldname": "non_cash_amount",
+   "fieldtype": "Currency",
+   "label": "Non-Cash Amount"
+  },
+  {
+   "fieldname": "section_parties",
+   "fieldtype": "Section Break",
+   "label": "Parties"
+  },
+  {
+   "fieldname": "merchant_tin",
+   "fieldtype": "Data",
+   "label": "Merchant TIN"
+  },
+  {
+   "fieldname": "customer_tin",
+   "fieldtype": "Data",
+   "label": "Customer TIN"
+  },
+  {
+   "fieldname": "column_break_parties",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "district_code",
+   "fieldtype": "Link",
+   "label": "District Code",
+   "options": "eBarimt District"
+  },
+  {
+   "fieldname": "pos_no",
+   "fieldtype": "Data",
+   "label": "POS Number"
+  },
+  {
+   "fieldname": "section_qr",
+   "fieldtype": "Section Break",
+   "label": "QR Code",
+   "collapsible": 1
+  },
+  {
+   "fieldname": "qr_data",
+   "fieldtype": "Small Text",
+   "label": "QR Data"
+  },
+  {
+   "fieldname": "section_response",
+   "fieldtype": "Section Break",
+   "label": "API Response",
+   "collapsible": 1
+  },
+  {
+   "fieldname": "response_data",
+   "fieldtype": "Code",
+   "label": "Response Data",
+   "options": "JSON"
+  },
+  {
+   "fieldname": "error_message",
+   "fieldtype": "Small Text",
+   "label": "Error Message"
+  },
+  {
+   "fieldname": "section_return",
+   "fieldtype": "Section Break",
+   "label": "Return Info",
+   "collapsible": 1
+  },
+  {
+   "fieldname": "return_receipt_id",
+   "fieldtype": "Data",
+   "label": "Return Receipt ID"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_return",
+   "fieldtype": "Check",
+   "label": "Is Return"
+  },
+  {
+   "fieldname": "original_receipt",
+   "fieldtype": "Link",
+   "label": "Original Receipt",
+   "options": "eBarimt Receipt Log"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [
+  {
+   "link_doctype": "Sales Invoice",
+   "link_fieldname": "sales_invoice"
+  }
+ ],
+ "modified": "2024-12-14 10:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "eBarimt",
+ "name": "eBarimt Receipt Log",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Accounts User"
+  },
+  {
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Accounts Manager"
+  }
+ ],
+ "search_fields": "sales_invoice,receipt_id,lottery_number",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "title_field": "receipt_id",
+ "track_changes": 1
+}
