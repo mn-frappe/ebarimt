@@ -417,3 +417,224 @@ def on_cancel_invoice(doc, method=None):
                 _("Warning: eBarimt receipt could not be voided automatically. Please void manually."),
                 indicator="orange"
             )
+
+
+@frappe.whitelist()
+def create_return_receipt(original_invoice_name, return_invoice_name):
+    """Create return/credit receipt for a return invoice"""
+    from ebarimt.api.client import EBarimtClient
+    from ebarimt.ebarimt.doctype.ebarimt_receipt_log.ebarimt_receipt_log import create_receipt_log
+    
+    original_doc = frappe.get_doc("Sales Invoice", original_invoice_name)
+    return_doc = frappe.get_doc("Sales Invoice", return_invoice_name)
+    
+    if not original_doc.get("custom_ebarimt_receipt_id"):
+        frappe.throw(_("Original invoice has no eBarimt receipt"))
+    
+    if not return_doc.is_return:
+        frappe.throw(_("Invoice is not a return/credit note"))
+    
+    settings = frappe.get_cached_doc("eBarimt Settings")
+    
+    client = EBarimtClient(
+        environment=settings.environment,
+        operator_tin=settings.operator_tin,
+        pos_no=settings.pos_no,
+        merchant_tin=settings.merchant_tin,
+        username=settings.username,
+        password=settings.get_password("password")
+    )
+    
+    # Create return receipt with original receipt ID
+    response = client.delete_receipt(original_doc.custom_ebarimt_receipt_id)
+    
+    if response.get("success"):
+        # Update return invoice
+        frappe.db.set_value("Sales Invoice", return_invoice_name, {
+            "custom_ebarimt_receipt_id": response.get("returnBillId"),
+            "custom_ebarimt_date": now_datetime()
+        }, update_modified=False)
+        
+        # Create return receipt log
+        log = frappe.new_doc("eBarimt Receipt Log")
+        log.sales_invoice = return_invoice_name
+        log.environment = settings.environment
+        log.bill_type = original_doc.get("custom_ebarimt_bill_type") or "B2C_RECEIPT"
+        log.status = "Success"
+        log.receipt_id = response.get("returnBillId")
+        log.is_return = 1
+        log.original_receipt = original_doc.custom_ebarimt_receipt_id
+        log.total_amount = abs(flt(return_doc.grand_total))
+        log.response_data = frappe.as_json(response)
+        log.flags.ignore_permissions = True
+        log.insert()
+        
+        return {"success": True, "return_receipt_id": response.get("returnBillId")}
+    
+    return {"success": False, "message": response.get("message")}
+
+
+@frappe.whitelist()
+def get_receipt_status(invoice_name):
+    """Get eBarimt receipt status for an invoice"""
+    doc = frappe.get_doc("Sales Invoice", invoice_name)
+    
+    result = {
+        "has_receipt": bool(doc.get("custom_ebarimt_receipt_id")),
+        "receipt_id": doc.get("custom_ebarimt_receipt_id"),
+        "lottery": doc.get("custom_ebarimt_lottery"),
+        "qr_data": doc.get("custom_ebarimt_qr_data"),
+        "date": doc.get("custom_ebarimt_date"),
+        "bill_type": doc.get("custom_ebarimt_bill_type")
+    }
+    
+    # Get receipt log info
+    receipt_log = frappe.db.get_value(
+        "eBarimt Receipt Log",
+        {"sales_invoice": invoice_name},
+        ["name", "status", "error_message"],
+        as_dict=True
+    )
+    
+    if receipt_log:
+        result["log_status"] = receipt_log.status
+        result["error_message"] = receipt_log.error_message
+    
+    return result
+
+
+@frappe.whitelist()
+def retry_failed_receipt(invoice_name):
+    """Retry submitting a failed receipt"""
+    doc = frappe.get_doc("Sales Invoice", invoice_name)
+    
+    if doc.get("custom_ebarimt_receipt_id"):
+        frappe.throw(_("Invoice already has a receipt"))
+    
+    # Delete old failed log
+    frappe.db.delete("eBarimt Receipt Log", {
+        "sales_invoice": invoice_name,
+        "status": "Failed"
+    })
+    
+    # Try again
+    submit_ebarimt_receipt(doc)
+    
+    return {"success": True}
+
+
+@frappe.whitelist()
+def bulk_submit_receipts(invoices=None):
+    """Bulk submit eBarimt receipts for multiple invoices"""
+    if invoices:
+        if isinstance(invoices, str):
+            import json
+            invoices = json.loads(invoices)
+    else:
+        # Get invoices without receipts
+        invoices = frappe.get_all(
+            "Sales Invoice",
+            filters={
+                "docstatus": 1,
+                "custom_ebarimt_receipt_id": ["is", "not set"],
+                "is_return": 0
+            },
+            pluck="name",
+            limit=50
+        )
+    
+    success = 0
+    failed = 0
+    
+    for invoice_name in invoices:
+        try:
+            doc = frappe.get_doc("Sales Invoice", invoice_name)
+            submit_ebarimt_receipt(doc)
+            success += 1
+        except Exception as e:
+            frappe.log_error(
+                message=str(e),
+                title=f"Bulk Receipt Failed: {invoice_name}"
+            )
+            failed += 1
+    
+    frappe.db.commit()
+    
+    return {
+        "success": True,
+        "submitted": success,
+        "failed": failed
+    }
+
+
+@frappe.whitelist()
+def get_receipt_qr_image(invoice_name):
+    """Generate QR code image for receipt"""
+    doc = frappe.get_doc("Sales Invoice", invoice_name)
+    
+    if not doc.get("custom_ebarimt_qr_data"):
+        return None
+    
+    import base64
+    try:
+        import qrcode
+        from io import BytesIO
+        
+        qr = qrcode.QRCode(version=1, box_size=4, border=2)
+        qr.add_data(doc.custom_ebarimt_qr_data)
+        qr.make(fit=True)
+        
+        img = qr.make_image(fill_color="black", back_color="white")
+        
+        buffer = BytesIO()
+        img.save(buffer, format="PNG")
+        img_str = base64.b64encode(buffer.getvalue()).decode()
+        
+        return f"data:image/png;base64,{img_str}"
+    except ImportError:
+        return None
+
+
+@frappe.whitelist()
+def validate_receipt_data(invoice_name):
+    """Validate invoice data before submitting to eBarimt"""
+    doc = frappe.get_doc("Sales Invoice", invoice_name)
+    settings = frappe.get_cached_doc("eBarimt Settings")
+    
+    errors = []
+    warnings = []
+    
+    # Check bill type
+    bill_type = doc.get("custom_ebarimt_bill_type") or settings.default_bill_type or "B2C_RECEIPT"
+    
+    # B2B requires customer TIN
+    if bill_type == "B2B_RECEIPT":
+        customer_tin = get_customer_tin(doc.customer)
+        if not customer_tin:
+            errors.append(_("Customer TIN is required for B2B receipts"))
+    
+    # Check items have barcodes
+    items_without_barcode = []
+    for item in doc.items:
+        item_doc = frappe.get_cached_doc("Item", item.item_code)
+        barcode = item_doc.get("custom_ebarimt_barcode")
+        if not barcode and not item_doc.barcodes:
+            items_without_barcode.append(item.item_code)
+    
+    if items_without_barcode:
+        warnings.append(_("Items without barcode: {0}").format(", ".join(items_without_barcode)))
+    
+    # Check district code
+    if not settings.default_district:
+        warnings.append(_("Default district not configured"))
+    
+    # Check amounts
+    if doc.grand_total <= 0:
+        errors.append(_("Invoice amount must be greater than zero"))
+    
+    return {
+        "valid": len(errors) == 0,
+        "errors": errors,
+        "warnings": warnings
+    }
+

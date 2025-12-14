@@ -31,6 +31,12 @@
   "column_break_parties",
   "district_code",
   "pos_no",
+  "section_payment",
+  "payment_entry",
+  "payment_type",
+  "column_break_payment",
+  "payment_amount",
+  "payment_date",
   "section_qr",
   "qr_data",
   "section_response",
@@ -186,6 +192,41 @@
    "fieldname": "pos_no",
    "fieldtype": "Data",
    "label": "POS Number"
+  },
+  {
+   "fieldname": "section_payment",
+   "fieldtype": "Section Break",
+   "label": "Payment Info",
+   "collapsible": 1
+  },
+  {
+   "fieldname": "payment_entry",
+   "fieldtype": "Link",
+   "label": "Payment Entry",
+   "options": "Payment Entry",
+   "read_only": 1
+  },
+  {
+   "fieldname": "payment_type",
+   "fieldtype": "Link",
+   "label": "Payment Type",
+   "options": "eBarimt Payment Type"
+  },
+  {
+   "fieldname": "column_break_payment",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "payment_amount",
+   "fieldtype": "Currency",
+   "label": "Payment Amount",
+   "read_only": 1
+  },
+  {
+   "fieldname": "payment_date",
+   "fieldtype": "Date",
+   "label": "Payment Date",
+   "read_only": 1
   },
   {
    "fieldname": "section_qr",

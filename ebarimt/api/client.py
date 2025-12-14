@@ -462,6 +462,105 @@ class EBarimtClient:
 		return {"status": response.status_code, "msg": response.text}
 	
 	# =========================================================================
+	# Foreign Tourist API - VAT Refund for Tourists
+	# =========================================================================
+	
+	def get_foreigner_info(self, passport_no=None, f_register=None):
+		"""
+		Lookup foreign tourist by passport or F-register number
+		
+		Args:
+			passport_no: Foreign passport number
+			f_register: F-register number (Mongolian resident foreigner)
+			
+		Returns:
+			dict: Tourist info with customerNo for receipt registration
+		"""
+		payload = {}
+		if passport_no:
+			payload["passportNo"] = passport_no
+		elif f_register:
+			payload["fRegister"] = f_register
+		
+		response = self._request(
+			"POST",
+			f"{self.itc_url}/api/easy-register/rest/v1/getForeignerInfo",
+			fallback_urls=[f"{self.itc_url_direct}/api/easy-register/rest/v1/getForeignerInfo"],
+			auth_required=True,
+			json=payload
+		)
+		
+		if response.status_code == 200:
+			data = response.json()
+			if data.get("status") == 200:
+				return data
+		return None
+	
+	def get_foreigner_by_username(self, username):
+		"""
+		Lookup foreign tourist by eBarimt username
+		
+		Args:
+			username: eBarimt login username
+			
+		Returns:
+			dict: Tourist profile info
+		"""
+		response = self._request(
+			"POST",
+			f"{self.itc_url}/api/easy-register/rest/v1/getForeignerByUsername",
+			fallback_urls=[f"{self.itc_url_direct}/api/easy-register/rest/v1/getForeignerByUsername"],
+			auth_required=True,
+			json={"username": username}
+		)
+		
+		if response.status_code == 200:
+			data = response.json()
+			if data.get("status") == 200:
+				return data
+		return None
+	
+	def register_foreigner(self, passport_no, first_name, last_name, country_code, 
+						   email=None, phone=None):
+		"""
+		Register foreign tourist in eBarimt system for VAT refund
+		
+		Args:
+			passport_no: Foreign passport number
+			first_name: Tourist first name
+			last_name: Tourist last name
+			country_code: ISO country code (e.g., 'US', 'CN', 'KR')
+			email: Email address (optional)
+			phone: Phone number (optional)
+			
+		Returns:
+			dict: Registration result with customerNo
+		"""
+		payload = {
+			"passportNo": passport_no,
+			"firstName": first_name,
+			"lastName": last_name,
+			"countryCode": country_code
+		}
+		
+		if email:
+			payload["email"] = email
+		if phone:
+			payload["phoneNum"] = phone
+		
+		response = self._request(
+			"POST",
+			f"{self.itc_url}/api/easy-register/rest/v1/setForeignerInfo",
+			fallback_urls=[f"{self.itc_url_direct}/api/easy-register/rest/v1/setForeignerInfo"],
+			auth_required=True,
+			json=payload
+		)
+		
+		if response.status_code == 200:
+			return response.json()
+		return {"status": response.status_code, "msg": response.text}
+	
+	# =========================================================================
 	# OAT API - Excise Tax Stamp Tracking
 	# =========================================================================
 	

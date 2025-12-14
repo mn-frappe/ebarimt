@@ -11,6 +11,7 @@ This allows independent operation without QPay installed.
 
 import frappe
 from frappe import _
+from frappe.utils import add_days, add_years, now_datetime
 
 
 def sync_tax_codes_daily():
@@ -36,19 +37,214 @@ def sync_tax_codes_daily():
         )
 
 
-def cleanup_old_receipt_logs():
+def sync_pending_receipts_daily():
     """
-    Cleanup old receipt logs (optional - run manually or add to scheduler)
+    Daily sync of pending/unsent receipts to eBarimt
+    Retries failed receipts from the last 7 days
+    """
+    if not frappe.db.get_single_value("eBarimt Settings", "enabled"):
+        return
+    
+    from ebarimt.api.client import EBarimtClient
+    
+    settings = frappe.get_cached_doc("eBarimt Settings")
+    
+    # Get pending receipts from last 7 days
+    pending_logs = frappe.get_all(
+        "eBarimt Receipt Log",
+        filters={
+            "status": ["in", ["Pending", "Failed"]],
+            "creation": [">=", add_days(now_datetime(), -7)]
+        },
+        fields=["name", "invoice_type", "invoice_name"],
+        limit=100
+    )
+    
+    if not pending_logs:
+        return
+    
+    client = EBarimtClient(
+        environment=settings.environment,
+        operator_tin=settings.operator_tin,
+        pos_no=settings.pos_no,
+        merchant_tin=settings.merchant_tin,
+        username=settings.username,
+        password=settings.get_password("password")
+    )
+    
+    synced = 0
+    failed = 0
+    
+    for log in pending_logs:
+        try:
+            # Try to send the data
+            result = client.send_data()
+            
+            if result.get("success"):
+                frappe.db.set_value(
+                    "eBarimt Receipt Log",
+                    log.name,
+                    "status",
+                    "Synced"
+                )
+                synced += 1
+            else:
+                failed += 1
+                
+        except Exception as e:
+            frappe.log_error(
+                message=str(e),
+                title=f"Receipt Sync Failed: {log.name}"
+            )
+            failed += 1
+    
+    frappe.db.commit()
+    
+    frappe.logger("ebarimt").info(
+        f"Daily receipt sync: {synced} synced, {failed} failed"
+    )
+
+
+def sync_unsent_receipts():
+    """
+    Hourly sync of unsent receipts
+    Uses sendData API to push any locally stored receipts
+    """
+    if not frappe.db.get_single_value("eBarimt Settings", "enabled"):
+        return
+    
+    from ebarimt.api.client import EBarimtClient
+    
+    settings = frappe.get_cached_doc("eBarimt Settings")
+    
+    client = EBarimtClient(
+        environment=settings.environment,
+        operator_tin=settings.operator_tin,
+        pos_no=settings.pos_no,
+        merchant_tin=settings.merchant_tin,
+        username=settings.username,
+        password=settings.get_password("password")
+    )
+    
+    try:
+        result = client.send_data()
+        
+        if result.get("success"):
+            frappe.logger("ebarimt").info(
+                f"Hourly receipt sync completed: {result.get('message', 'OK')}"
+            )
+    except Exception as e:
+        frappe.log_error(
+            message=str(e),
+            title="eBarimt Hourly Sync Failed"
+        )
+
+
+def cleanup_old_failed_logs():
+    """
+    Daily cleanup of old failed receipt logs
     Keeps logs for 5 years as per tax requirements
     """
-    from frappe.utils import add_years, now_datetime
-    
     cutoff_date = add_years(now_datetime(), -5)
     
-    # Only delete failed logs, keep successful ones
-    frappe.db.delete("eBarimt Receipt Log", {
+    # Only delete failed logs older than 5 years
+    deleted = frappe.db.delete("eBarimt Receipt Log", {
         "status": "Failed",
         "creation": ["<", cutoff_date]
     })
     
+    if deleted:
+        frappe.db.commit()
+        frappe.logger("ebarimt").info(f"Cleaned up {deleted} old failed receipt logs")
+
+
+def sync_taxpayer_info_weekly():
+    """
+    Weekly sync of taxpayer information for customers with TIN
+    Updates VAT payer status, city tax status, etc.
+    """
+    if not frappe.db.get_single_value("eBarimt Settings", "enabled"):
+        return
+    
+    auto_sync = frappe.db.get_single_value("eBarimt Settings", "auto_lookup_taxpayer")
+    if not auto_sync:
+        return
+    
+    from ebarimt.integrations.customer import sync_taxpayer_info
+    
+    # Get customers with TIN that haven't been synced recently
+    cutoff_date = add_days(now_datetime(), -30)  # Sync if not updated in 30 days
+    
+    customers = frappe.get_all(
+        "Customer",
+        filters={
+            "custom_tin": ["is", "set"],
+            "custom_tin": ["!=", ""],
+            "modified": ["<", cutoff_date]
+        },
+        fields=["name"],
+        limit=50
+    )
+    
+    synced = 0
+    for customer in customers:
+        try:
+            result = sync_taxpayer_info(customer.name)
+            if result.get("success"):
+                synced += 1
+        except Exception as e:
+            frappe.log_error(
+                message=str(e),
+                title=f"Taxpayer Sync Failed: {customer.name}"
+            )
+    
     frappe.db.commit()
+    
+    if synced:
+        frappe.logger("ebarimt").info(f"Weekly taxpayer sync: {synced} customers updated")
+
+
+def sync_barcode_info_weekly():
+    """
+    Weekly sync of barcode/BUNA information for items
+    Updates product names, manufacturers, tax codes
+    """
+    if not frappe.db.get_single_value("eBarimt Settings", "enabled"):
+        return
+    
+    auto_sync = frappe.db.get_single_value("eBarimt Settings", "auto_lookup_barcode")
+    if not auto_sync:
+        return
+    
+    from ebarimt.integrations.item import sync_barcode_info
+    
+    # Get items with barcode that haven't been synced recently
+    cutoff_date = add_days(now_datetime(), -30)
+    
+    items = frappe.get_all(
+        "Item",
+        filters=[
+            ["custom_ebarimt_barcode", "is", "set"],
+            ["custom_ebarimt_barcode", "!=", ""],
+            ["modified", "<", cutoff_date]
+        ],
+        fields=["name", "custom_ebarimt_barcode"],
+        limit=50
+    )
+    
+    synced = 0
+    for item in items:
+        try:
+            result = sync_barcode_info(item.name, item.custom_ebarimt_barcode)
+            if result.get("success"):
+                synced += 1
+        except Exception as e:
+            frappe.log_error(
+                message=str(e),
+                title=f"Barcode Sync Failed: {item.name}"
+            )
+    
+    frappe.db.commit()
+    
+    if synced:
+        frappe.logger("ebarimt").info(f"Weekly barcode sync: {synced} items updated")

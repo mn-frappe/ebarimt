@@ -8,7 +8,7 @@ app_publisher = "Digital Consulting Service LLC (Mongolia)"
 app_description = "eBarimt Mongolian VAT Receipt System - Full ERPNext Integration"
 app_email = "dev@frappe.mn"
 app_license = "gpl-3.0"
-app_version = "1.3.0"
+app_version = "1.4.0"
 
 # Required Apps
 required_apps = ["frappe", "erpnext"]
@@ -21,7 +21,10 @@ doctype_js = {
     "Sales Invoice": "public/js/sales_invoice.js",
     "POS Invoice": "public/js/pos_invoice.js",
     "Customer": "public/js/customer.js",
-    "Item": "public/js/item.js"
+    "Item": "public/js/item.js",
+    "Payment Entry": "public/js/payment_entry.js",
+    "Company": "public/js/company.js",
+    "Mode of Payment": "public/js/mode_of_payment.js"
 }
 
 # Installation
@@ -62,9 +65,9 @@ doc_events = {
         "on_cancel": "ebarimt.integrations.sales_invoice.on_cancel_invoice"
     },
     "POS Invoice": {
-        "validate": "ebarimt.integrations.sales_invoice.validate_invoice_for_ebarimt",
-        "on_submit": "ebarimt.integrations.sales_invoice.on_submit_invoice",
-        "on_cancel": "ebarimt.integrations.sales_invoice.on_cancel_invoice"
+        "validate": "ebarimt.integrations.pos_invoice.validate_pos_invoice",
+        "on_submit": "ebarimt.integrations.pos_invoice.on_submit_pos_invoice",
+        "on_cancel": "ebarimt.integrations.pos_invoice.on_cancel_pos_invoice"
     },
     "Customer": {
         "validate": "ebarimt.integrations.customer.validate_customer",
@@ -73,6 +76,18 @@ doc_events = {
     "Item": {
         "validate": "ebarimt.integrations.item.validate_item",
         "after_insert": "ebarimt.integrations.item.after_insert_item"
+    },
+    "Payment Entry": {
+        "validate": "ebarimt.integrations.payment_entry.validate_payment_entry",
+        "on_submit": "ebarimt.integrations.payment_entry.on_submit_payment_entry",
+        "on_cancel": "ebarimt.integrations.payment_entry.on_cancel_payment_entry"
+    },
+    "Company": {
+        "validate": "ebarimt.integrations.company.validate_company",
+        "after_insert": "ebarimt.integrations.company.after_insert_company"
+    },
+    "Mode of Payment": {
+        "validate": "ebarimt.integrations.mode_of_payment.validate_mode_of_payment"
     }
 }
 
@@ -80,7 +95,16 @@ doc_events = {
 # District sync handled by after_migrate hook
 scheduler_events = {
     "daily": [
-        "ebarimt.tasks.sync_tax_codes_daily"
+        "ebarimt.tasks.sync_tax_codes_daily",
+        "ebarimt.tasks.sync_pending_receipts_daily",
+        "ebarimt.tasks.cleanup_old_failed_logs"
+    ],
+    "hourly": [
+        "ebarimt.tasks.sync_unsent_receipts"
+    ],
+    "weekly": [
+        "ebarimt.tasks.sync_taxpayer_info_weekly",
+        "ebarimt.tasks.sync_barcode_info_weekly"
     ]
 }
 

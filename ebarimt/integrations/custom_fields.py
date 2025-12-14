@@ -65,6 +65,47 @@ def get_custom_fields():
                 "default": 0,
                 "read_only": 1,
                 "hidden": 1
+            },
+            {
+                "fieldname": "ebarimt_foreigner_section",
+                "label": "Foreign Customer (VAT Refund)",
+                "fieldtype": "Section Break",
+                "insert_after": "custom_taxpayer_synced",
+                "collapsible": 1,
+                "depends_on": "custom_is_foreigner"
+            },
+            {
+                "fieldname": "custom_is_foreigner",
+                "label": "Is Foreign Customer",
+                "fieldtype": "Check",
+                "insert_after": "ebarimt_foreigner_section",
+                "default": 0,
+                "description": "Check for foreign tourists eligible for VAT refund"
+            },
+            {
+                "fieldname": "custom_ebarimt_customer_no",
+                "label": "eBarimt Customer No",
+                "fieldtype": "Data",
+                "insert_after": "custom_is_foreigner",
+                "read_only": 1,
+                "depends_on": "custom_is_foreigner",
+                "description": "eBarimt customer number for foreigners"
+            },
+            {
+                "fieldname": "custom_passport_no",
+                "label": "Passport Number",
+                "fieldtype": "Data",
+                "insert_after": "custom_ebarimt_customer_no",
+                "depends_on": "custom_is_foreigner",
+                "description": "Foreign passport number"
+            },
+            {
+                "fieldname": "custom_country_code",
+                "label": "Country Code",
+                "fieldtype": "Data",
+                "insert_after": "custom_passport_no",
+                "depends_on": "custom_is_foreigner",
+                "description": "ISO country code (e.g., US, CN, KR)"
             }
         ],
         "Item": [
