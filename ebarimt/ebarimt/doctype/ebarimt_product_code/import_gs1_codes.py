@@ -1,5 +1,7 @@
 # Copyright (c) 2024, Digital Consulting Service LLC (Mongolia)
 # License: GNU General Public License v3
+# pyright: reportMissingImports=false, reportAttributeAccessIssue=false
+# ruff: noqa: E501
 
 """
 Import GS1 Product Codes from QPayAPIv2.xlsx
@@ -79,10 +81,7 @@ def import_gs1_codes_from_excel(file_path=None):
     Args:
         file_path: Path to Excel file. Defaults to /opt/docs/QPayAPIv2.xlsx
     """
-    try:
-        import pandas as pd
-    except ImportError:
-        frappe.throw("pandas is required for Excel import. Install with: pip install pandas openpyxl")
+    import pandas as pd  # type: ignore
     
     if not file_path:
         file_path = "/opt/docs/QPayAPIv2.xlsx"
@@ -104,7 +103,7 @@ def import_gs1_codes_from_excel(file_path=None):
     for idx, row in df.iterrows():
         try:
             # Skip header rows
-            if idx < 2:
+            if int(idx) < 2:  # type: ignore
                 continue
             
             # Get values from columns
@@ -200,7 +199,7 @@ def import_gs1_codes_from_excel(file_path=None):
             if imported % 500 == 0:
                 frappe.db.commit()
                 frappe.publish_progress(
-                    percent=int(idx / len(df) * 100),
+                    percent=int(int(idx) / len(df) * 100),  # type: ignore
                     title="Importing GS1 Codes",
                     description=f"Imported {imported} codes..."
                 )

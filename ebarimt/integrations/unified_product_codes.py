@@ -1,5 +1,6 @@
 # Copyright (c) 2024, Digital Consulting Service LLC (Mongolia)
 # License: GNU General Public License v3
+# pyright: reportAttributeAccessIssue=false, reportArgumentType=false
 
 """
 Unified Product Code Integration for eBarimt and QPay

@@ -1,5 +1,6 @@
 # Copyright (c) 2024, Digital Consulting Service LLC (Mongolia)
 # License: GNU General Public License v3
+# pyright: reportAttributeAccessIssue=false, reportArgumentType=false
 
 """
 eBarimt Product Code - GS1 Classification with Tax Mapping

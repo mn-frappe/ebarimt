@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 # Copyright (c) 2024, Digital Consulting Service LLC (Mongolia)
 # License: GNU General Public License v3
-# pyright: reportAttributeAccessIssue=false, reportIndexIssue=false
+# pyright: reportAttributeAccessIssue=false, reportIndexIssue=false, reportOperatorIssue=false, reportArgumentType=false
 
 """
 eBarimt API Endpoints
