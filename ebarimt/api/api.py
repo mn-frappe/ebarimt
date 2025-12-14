@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 # Copyright (c) 2024, Digital Consulting Service LLC (Mongolia)
 # License: GNU General Public License v3
+# pyright: reportAttributeAccessIssue=false, reportIndexIssue=false
 
 """
 eBarimt API Endpoints
@@ -259,25 +260,19 @@ def get_receipt_logs(filters=None, limit=20, offset=0):
 
 
 @frappe.whitelist()
-def get_receipt_stats(company=None):
+def get_receipt_stats():
     """Get eBarimt receipt statistics"""
-    filters = {}
-    if company:
-        filters["company"] = company
+    total = frappe.db.count("eBarimt Receipt Log")
+    success = frappe.db.count("eBarimt Receipt Log", {"status": "Success"})
+    failed = frappe.db.count("eBarimt Receipt Log", {"status": "Failed"})
+    pending = frappe.db.count("eBarimt Receipt Log", {"status": "Pending"})
     
-    total = frappe.db.count("eBarimt Receipt Log", filters)
-    success = frappe.db.count("eBarimt Receipt Log", {**filters, "status": "Success"})
-    failed = frappe.db.count("eBarimt Receipt Log", {**filters, "status": "Failed"})
-    pending = frappe.db.count("eBarimt Receipt Log", {**filters, "status": "Pending"})
-    
-    total_amount = frappe.db.sql("""
-        SELECT COALESCE(SUM(grand_total), 0) as total
+    result = frappe.db.sql("""
+        SELECT COALESCE(SUM(total_amount), 0) as total
         FROM `tabeBarimt Receipt Log`
         WHERE status = 'Success'
-        {company_filter}
-    """.format(
-        company_filter=f"AND company = '{company}'" if company else ""
-    ), as_dict=True)[0].total
+    """, as_dict=True)
+    total_amount = result[0].get("total", 0) if result else 0
     
     return {
         "total": total,

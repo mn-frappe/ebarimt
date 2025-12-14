@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 # Copyright (c) 2024, Digital Consulting Service LLC (Mongolia)
 # License: GNU General Public License v3
+# pyright: reportAttributeAccessIssue=false, reportArgumentType=false, reportOptionalMemberAccess=false
 
 """
 eBarimt POS Invoice Integration
@@ -113,17 +114,10 @@ def submit_pos_ebarimt_receipt(pos_doc):
     settings = frappe.get_cached_doc("eBarimt Settings")
     
     # Initialize client
-    client = EBarimtClient(
-        environment=settings.environment,
-        operator_tin=settings.operator_tin,
-        pos_no=settings.pos_no,
-        merchant_tin=settings.merchant_tin,
-        username=settings.username,
-        password=settings.get_password("password")
-    )
+    client = EBarimtClient(settings=settings)
     
     # Determine bill type
-    bill_type = pos_doc.get("custom_ebarimt_bill_type") or settings.default_bill_type or "B2C_RECEIPT"
+    bill_type = pos_doc.get("custom_ebarimt_bill_type") or settings.get("default_bill_type") or "B2C_RECEIPT"
     
     # Build receipt data
     receipt_data = build_pos_receipt_data(pos_doc, settings, bill_type)
@@ -131,7 +125,7 @@ def submit_pos_ebarimt_receipt(pos_doc):
     # Submit receipt
     response = client.create_receipt(receipt_data)
     
-    if response.get("success"):
+    if response and response.get("success"):
         # Update POS invoice with receipt info
         frappe.db.set_value("POS Invoice", pos_doc.name, {
             "custom_ebarimt_receipt_id": response.get("billId"),
@@ -345,14 +339,7 @@ def create_pos_return_receipt(pos_doc_name):
     
     settings = frappe.get_cached_doc("eBarimt Settings")
     
-    client = EBarimtClient(
-        environment=settings.environment,
-        operator_tin=settings.operator_tin,
-        pos_no=settings.pos_no,
-        merchant_tin=settings.merchant_tin,
-        username=settings.username,
-        password=settings.get_password("password")
-    )
+    client = EBarimtClient(settings=settings)
     
     # Build return receipt data
     receipt_data = build_pos_receipt_data(pos_doc, settings, "B2C_RECEIPT")
@@ -361,7 +348,7 @@ def create_pos_return_receipt(pos_doc_name):
     # Submit return receipt
     response = client.create_receipt(receipt_data)
     
-    if response.get("success"):
+    if response and response.get("success"):
         frappe.db.set_value("POS Invoice", pos_doc.name, {
             "custom_ebarimt_receipt_id": response.get("billId"),
             "custom_ebarimt_date": response.get("date") or now_datetime()

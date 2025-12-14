@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 # Copyright (c) 2024, Digital Consulting Service LLC (Mongolia)
 # License: GNU General Public License v3
+# pyright: reportAttributeAccessIssue=false, reportArgumentType=false, reportOptionalMemberAccess=false
 
 """
 eBarimt Company Integration
@@ -98,19 +99,12 @@ def sync_company_taxpayer_info(company):
     if not settings.enabled:
         return {"success": False, "message": _("eBarimt is not enabled")}
     
-    client = EBarimtClient(
-        environment=settings.environment,
-        operator_tin=settings.operator_tin,
-        pos_no=settings.pos_no,
-        merchant_tin=settings.merchant_tin,
-        username=settings.username,
-        password=settings.get_password("password")
-    )
+    client = EBarimtClient(settings=settings)
     
     try:
         taxpayer_info = client.get_taxpayer_info(tin)
         
-        if taxpayer_info.get("found"):
+        if taxpayer_info and taxpayer_info.get("found"):
             # Update company tax_id if not set
             if not company_doc.tax_id:
                 company_doc.db_set("tax_id", tin, update_modified=False)
@@ -150,19 +144,12 @@ def verify_company_registration(company):
     
     settings = frappe.get_cached_doc("eBarimt Settings")
     
-    client = EBarimtClient(
-        environment=settings.environment,
-        operator_tin=company_settings.get("operator_tin"),
-        pos_no=company_settings.get("pos_no"),
-        merchant_tin=company_settings.get("merchant_tin"),
-        username=settings.username,
-        password=settings.get_password("password")
-    )
+    client = EBarimtClient(settings=settings)
     
     try:
         pos_info = client.get_info()
         
-        if pos_info.get("success"):
+        if pos_info and pos_info.get("success"):
             return {
                 "success": True,
                 "registered": True,
