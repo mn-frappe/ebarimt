@@ -2,14 +2,9 @@
 # For license information, please see license.txt
 
 # import frappe
-from frappe.tests import IntegrationTestCase, UnitTestCase
+from frappe.tests.utils import FrappeTestCase
 
 
-class UnitTesteBarimtProductCode(UnitTestCase):
-    """Unit tests for eBarimt Product Code."""
-    pass
-
-
-class TestEBarimtProductCode(IntegrationTestCase):
-    """Integration tests for eBarimt Product Code."""
+class TesteBarimtProductCode(FrappeTestCase):
+    """Tests for eBarimt Product Code DocType."""
     pass
