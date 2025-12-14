@@ -3,9 +3,9 @@
 # License: GNU General Public License v3
 
 # import frappe
-from frappe.tests import IntegrationTestCase
+from frappe.tests.utils import FrappeTestCase
 
 
-class TesteBarimtDistrict(IntegrationTestCase):
+class TesteBarimtDistrict(FrappeTestCase):
     """Tests for eBarimt District DocType."""
     pass
