@@ -183,6 +183,41 @@ class EBarimtClient:
 			error_msg = error_data.get("message", response.text)
 			frappe.throw(_("Failed to create receipt: {0}").format(error_msg))
 	
+	def get_receipt_info(self, receipt_id):
+		"""
+		Get receipt information by ID
+		
+		Args:
+			receipt_id: 33-digit receipt ID (DDTD)
+			
+		Returns:
+			dict: Receipt information
+		"""
+		response = self._request(
+			"GET",
+			f"{self.pos_url}/receipt/{receipt_id}",
+			fallback_urls=[f"{self.pos_url_ip}/receipt/{receipt_id}"]
+		)
+		
+		if response.status_code == 200:
+			return response.json()
+		return None
+	
+	def void_receipt(self, receipt_id, receipt_date=None):
+		"""
+		Void/return a B2C receipt (alias for delete_receipt)
+		Only works for unconfirmed B2C receipts
+		
+		Args:
+			receipt_id: 33-digit receipt ID (DDTD)
+			receipt_date: Receipt date (yyyy-MM-dd HH:mm:ss), defaults to now
+		"""
+		if not receipt_date:
+			from frappe.utils import now_datetime
+			receipt_date = now_datetime().strftime("%Y-%m-%d %H:%M:%S")
+		
+		return self.delete_receipt(receipt_id, receipt_date)
+	
 	def delete_receipt(self, receipt_id, receipt_date):
 		"""
 		Void/return a B2C receipt

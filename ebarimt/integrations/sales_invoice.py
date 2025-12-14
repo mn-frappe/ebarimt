@@ -349,6 +349,35 @@ def calculate_vat(invoice_doc):
     return total_vat
 
 
+def get_district_code(invoice_doc, settings):
+    """Get district code for invoice"""
+    # Try company address first
+    if invoice_doc.company:
+        company_address = frappe.db.get_value(
+            "Dynamic Link",
+            {
+                "link_doctype": "Company",
+                "link_name": invoice_doc.company,
+                "parenttype": "Address"
+            },
+            "parent"
+        )
+        
+        if company_address:
+            district = frappe.db.get_value("Address", company_address, "custom_ebarimt_district")
+            if district:
+                district_code = frappe.db.get_value("eBarimt District", district, "district_code")
+                if district_code:
+                    return district_code
+    
+    # Fall back to settings default
+    if settings.get("default_district"):
+        return frappe.db.get_value("eBarimt District", settings.default_district, "district_code") or ""
+    
+    # Default to Ulaanbaatar
+    return "34"
+
+
 @frappe.whitelist()
 def manual_submit_receipt(invoice_name):
     """Manually submit eBarimt receipt for an invoice"""

@@ -12,6 +12,28 @@ from frappe import _
 from frappe.utils import cint
 
 
+def validate_tin_format(tin):
+    """
+    Validate TIN format
+    TIN should be 7-12 digits
+    
+    Returns:
+        bool: True if valid, False otherwise
+    """
+    if not tin:
+        return False
+    
+    tin = str(tin).strip()
+    
+    if not tin.isdigit():
+        return False
+    
+    if len(tin) < 7 or len(tin) > 12:
+        return False
+    
+    return True
+
+
 def validate_customer(doc, method=None):
     """Validate customer TIN if provided"""
     if not doc.get("custom_tin"):
@@ -323,10 +345,10 @@ def bulk_sync_taxpayer_info(customers=None):
 
 
 @frappe.whitelist()
-def validate_tin_format(tin):
+def check_tin_format(tin):
     """
-    Validate TIN format without API call
-    Returns validation result
+    Check TIN format without API call - whitelisted API endpoint
+    Returns validation result as dict
     """
     if not tin:
         return {"valid": False, "message": _("TIN is required")}
