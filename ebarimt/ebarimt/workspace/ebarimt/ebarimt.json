@@ -1,0 +1,180 @@
+{
+ "charts": [],
+ "content": "[{\"id\":\"kqXrXlYEwh\",\"type\":\"onboarding\",\"data\":{\"onboarding_name\":\"eBarimt Onboarding\",\"col\":12}},{\"id\":\"d9gRkKxLJC\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Total Receipts\",\"col\":3}},{\"id\":\"a7hTmNpQRs\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Pending Receipts\",\"col\":3}},{\"id\":\"f2kLpWqXYz\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Failed Receipts\",\"col\":3}},{\"id\":\"m5nRtYuIOp\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Today Receipts\",\"col\":3}},{\"id\":\"g8bVcXzASD\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"eBarimt Settings\",\"col\":3}},{\"id\":\"h9cWdYaBTF\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"New Receipt\",\"col\":3}},{\"id\":\"j1eXfZcCUG\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Receipt Log\",\"col\":3}},{\"id\":\"k2fYgAdDVH\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Product Codes\",\"col\":3}},{\"id\":\"p4hZiBfFXJ\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Reports</b></span>\",\"col\":12}},{\"id\":\"q5iAjCgGYK\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Receipt Summary\",\"col\":4}},{\"id\":\"r6jBkDhHZL\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Tax Analysis\",\"col\":4}},{\"id\":\"s7kClEiIaM\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Failed Transactions\",\"col\":4}},{\"id\":\"t8lDmFjJbN\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Master Data</b></span>\",\"col\":12}},{\"id\":\"u9mEnGkKcO\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Tax Codes\",\"col\":3}},{\"id\":\"v0nFoHlLdP\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Payment Types\",\"col\":3}},{\"id\":\"w1oGpImMeQ\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Districts\",\"col\":3}},{\"id\":\"x2pHqJnNfR\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"OAT Types\",\"col\":3}}]",
+ "creation": "2024-12-14 00:00:00.000000",
+ "custom_blocks": [],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 0,
+ "icon": "receipt",
+ "idx": 0,
+ "is_hidden": 0,
+ "label": "eBarimt",
+ "links": [
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "eBarimt Settings",
+   "link_count": 0,
+   "link_to": "eBarimt Settings",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Receipt Log",
+   "link_count": 0,
+   "link_to": "eBarimt Receipt Log",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Product Codes",
+   "link_count": 0,
+   "link_to": "eBarimt Product Code",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Tax Codes",
+   "link_count": 0,
+   "link_to": "eBarimt Tax Code",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Payment Types",
+   "link_count": 0,
+   "link_to": "eBarimt Payment Type",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Districts",
+   "link_count": 0,
+   "link_to": "eBarimt District",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "OAT Product Types",
+   "link_count": 0,
+   "link_to": "eBarimt OAT Product Type",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  }
+ ],
+ "modified": "2024-12-14 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "eBarimt",
+ "name": "eBarimt",
+ "number_cards": [
+  {
+   "label": "Total Receipts",
+   "number_card_name": "Total Receipts"
+  },
+  {
+   "label": "Pending Receipts",
+   "number_card_name": "Pending Receipts"
+  },
+  {
+   "label": "Failed Receipts",
+   "number_card_name": "Failed Receipts"
+  },
+  {
+   "label": "Today Receipts",
+   "number_card_name": "Today Receipts"
+  }
+ ],
+ "owner": "Administrator",
+ "parent_page": "",
+ "public": 1,
+ "restrict_to_domain": "",
+ "roles": [],
+ "sequence_id": 10.0,
+ "shortcuts": [
+  {
+   "color": "Blue",
+   "doc_view": "List",
+   "label": "eBarimt Settings",
+   "link_to": "eBarimt Settings",
+   "restrict_to_domain": "",
+   "stats_filter": "",
+   "type": "DocType"
+  },
+  {
+   "color": "Green",
+   "doc_view": "List",
+   "label": "Receipt Log",
+   "link_to": "eBarimt Receipt Log",
+   "restrict_to_domain": "",
+   "stats_filter": "",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Product Codes",
+   "link_to": "eBarimt Product Code",
+   "restrict_to_domain": "",
+   "stats_filter": "",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Tax Codes",
+   "link_to": "eBarimt Tax Code",
+   "restrict_to_domain": "",
+   "stats_filter": "",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Payment Types",
+   "link_to": "eBarimt Payment Type",
+   "restrict_to_domain": "",
+   "stats_filter": "",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Districts",
+   "link_to": "eBarimt District",
+   "restrict_to_domain": "",
+   "stats_filter": "",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "OAT Types",
+   "link_to": "eBarimt OAT Product Type",
+   "restrict_to_domain": "",
+   "stats_filter": "",
+   "type": "DocType"
+  }
+ ],
+ "title": "eBarimt"
+}

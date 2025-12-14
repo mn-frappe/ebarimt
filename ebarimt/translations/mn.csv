@@ -1,0 +1,74 @@
+eBarimt,иБаримт
+eBarimt Settings,иБаримт Тохиргоо
+eBarimt Receipt Log,иБаримт Баримтын Лог
+eBarimt Product Code,иБаримт Барааны Код
+eBarimt Tax Code,иБаримт Татварын Код
+eBarimt Payment Type,иБаримт Төлбөрийн Төрөл
+eBarimt District,иБаримт Дүүрэг
+eBarimt OAT Product Type,иБаримт OAT Барааны Төрөл
+Receipt ID,Баримтын Дугаар
+Lottery Number,Сугалааны Дугаар
+QR Code,QR Код
+VAT Amount,НӨАТ Дүн
+City Tax,Нийслэлийн Татвар
+Total Amount,Нийт Дүн
+Tax Code,Татварын Код
+Payment Type,Төлбөрийн Төрөл
+Customer TIN,Харилцагчийн РД
+Taxpayer Name,Татвар Төлөгчийн Нэр
+Registration Number,Регистрийн Дугаар
+District Code,Дүүргийн Код
+Status,Төлөв
+Sent,Илгээсэн
+Pending,Хүлээгдэж буй
+Failed,Амжилтгүй
+Cancelled,Цуцлагдсан
+Retry,Дахин Оролдох
+Retry All Failed,Бүх Амжилтгүй Дахин Оролдох
+Receipt Summary,Баримтын Нэгтгэл
+Failed Transactions,Амжилтгүй Гүйлгээнүүд
+Tax Analysis,Татварын Шинжилгээ
+Total Receipts,Нийт Баримт
+Successful,Амжилттай
+Total VAT,Нийт НӨАТ
+Total City Tax,Нийт Нийслэлийн Татвар
+Total Revenue,Нийт Орлого
+Error Message,Алдааны Мэдээлэл
+Retries,Дахин Оролдолт
+Last Retry,Сүүлийн Оролдлого
+Amount at Risk,Эрсдэлтэй Дүн
+Generate eBarimt,иБаримт Үүсгэх
+Cancel eBarimt,иБаримт Цуцлах
+Resend eBarimt,иБаримт Дахин Илгээх
+Check Status,Төлөв Шалгах
+Sync Tax Codes,Татварын Кодууд Синк Хийх
+Sync Product Codes,Барааны Кодууд Синк Хийх
+Test Connection,Холболт Шалгах
+API URL,API URL
+Username,Хэрэглэгчийн Нэр
+Password,Нууц Үг
+Branch No,Салбарын Дугаар
+POS No,POS Дугаар
+Enabled,Идэвхтэй
+Company,Компани
+Customer,Харилцагч
+Invoice,Нэхэмжлэх
+Sales Invoice,Борлуулалтын Нэхэмжлэх
+POS Invoice,POS Нэхэмжлэх
+Payment Entry,Төлбөрийн Бичилт
+Item,Бараа
+Barcode,Баркод
+Standard VAT,Стандарт НӨАТ
+Zero VAT,Тэг НӨАТ
+Exempt VAT,НӨАТ Чөлөөлөгдсөн
+B2C,Иргэн
+B2B,Байгууллага
+Return,Буцаалт
+Credit Note,Кредит Ноот
+Date,Огноо
+From Date,Эхлэх Огноо
+To Date,Дуусах Огноо
+Today,Өнөөдөр
+This Week,Энэ Долоо Хоног
+This Month,Энэ Сар
+This Year,Энэ Жил
