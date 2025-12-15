@@ -858,6 +858,95 @@ class EBarimtClient:
 			return response.json()
 		return {"status": response.status_code, "msg": response.text}
 
+	# =========================================================================
+	# ERP Purchase Data API - Parent company subsidiary purchases
+	# =========================================================================
+	
+	def get_erp_purchase_data(self, parent_tin, start_date, end_date, subsidiary_tins=None):
+		"""
+		Get subsidiary company purchase data for parent (holding) companies.
+		
+		Per eBarimt.yaml /api/tpi/receipt/getSaleListERP:
+		Parent taxpayers can retrieve purchase data of their subsidiary companies.
+		
+		Args:
+			parent_tin: Parent company TIN (pin)
+			start_date: Start date (YYYY-MM-DD HH:MM:SS)
+			end_date: End date (YYYY-MM-DD HH:MM:SS)
+			subsidiary_tins: List of subsidiary TINs (subPin), optional
+			
+		Returns:
+			dict: Purchase receipt data with prPosRno, amounts, dates, etc.
+		"""
+		payload = {
+			"pin": parent_tin,
+			"startDate": start_date,
+			"endDate": end_date
+		}
+		
+		if subsidiary_tins:
+			payload["subPin"] = subsidiary_tins
+		else:
+			payload["subPin"] = []
+		
+		response = self._request(
+			"POST",
+			f"{self.api_url}/api/tpi/receipt/getSaleListERP",
+			fallback_urls=[f"{self.api_url_direct}/api/tpi/receipt/getSaleListERP"],
+			auth_required=True,
+			api_key=self.settings.get_password("api_key"),
+			json=payload
+		)
+		
+		if response.status_code == 200:
+			return response.json()
+		return {"status": response.status_code, "msg": response.text}
+
+	# =========================================================================
+	# Customs Declaration API - Import/Export customs data
+	# =========================================================================
+	
+	def get_customs_declarations(self, start_date, end_date, page_number=1, page_size=100):
+		"""
+		Get customs declaration data for legal entities.
+		
+		Per eBarimt.yaml /rest/e-inventory-service/api/v1/tpiDeclaration:
+		Retrieves import/export customs declarations including:
+		- Declaration number (dclrNo)
+		- Declaration date (dclrDate)
+		- Goods info (goodsnm, itemuprc, dutyamt, exciseamt, vatamt, etc.)
+		
+		Args:
+			start_date: Start date (YYYY-MM-DD)
+			end_date: End date (YYYY-MM-DD)
+			page_number: Page number for pagination (default: 1)
+			page_size: Page size (default: 100)
+			
+		Returns:
+			dict: Customs declaration data with content array
+		"""
+		# Customs API uses different base URL (data.ebarimt.mn)
+		is_staging = self.settings.environment == "Staging"
+		customs_url = "https://st-inventory.ebarimt.mn" if is_staging else "https://data.ebarimt.mn"
+		
+		response = self._request(
+			"POST",
+			f"{customs_url}/rest/e-inventory-service/api/v1/tpiDeclaration",
+			fallback_urls=[],
+			auth_required=True,
+			api_key=self.settings.get_password("customs_api_key") if self.settings.get("customs_api_key") else self.settings.get_password("api_key"),
+			json={
+				"startDate": start_date,
+				"endDate": end_date,
+				"pageNumber": page_number,
+				"pageSize": page_size
+			}
+		)
+		
+		if response.status_code == 200:
+			return response.json()
+		return {"status": response.status_code, "msg": response.text}
+
 
 # Convenience function
 def get_client():
