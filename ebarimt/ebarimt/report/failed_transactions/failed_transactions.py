@@ -151,7 +151,7 @@ def get_summary(data):
             for r in data
             if r.get("creation")
             and (
-                frappe.utils.now_datetime() - r.get("creation")
+                frappe.utils.now_datetime() - r.get("creation")  # pyright: ignore[reportAttributeAccessIssue]
             ).total_seconds()
             < 86400
         ]
