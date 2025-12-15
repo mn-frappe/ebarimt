@@ -15,7 +15,9 @@ Full integration with eBarimt (баримт.мн) tax receipt system
 - Mode of Payment (eBarimt payment type mapping)
 
 100% API Coverage:
-- 26/26 eBarimt ITC endpoints implemented
+- 28/28 eBarimt ITC endpoints implemented
+- getSaleListERP (ERP subsidiary purchases)
+- tpiDeclaration (Customs declarations)
 """
 
-__version__ = "1.4.0"
+__version__ = "1.8.0"
