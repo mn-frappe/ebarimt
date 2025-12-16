@@ -43,15 +43,15 @@ class EBarimtClient:
 			self.pos_url = f"{self.proxy_base}/test/rest"
 			self.pos_url_ip = f"{self.ip_fallback}/test/rest"
 			
-			# Public API (ebarimt.mn) - direct for now
-			self.api_url = "https://st-api.ebarimt.mn"
+			# Public API (ebarimt.mn) - via gateway /ebarimt-staging/
+			self.api_url = f"{self.proxy_base}/ebarimt-staging"
 			self.api_url_direct = "https://st-api.ebarimt.mn"
 			
 			# ITC Auth - /auth/itc-staging/
 			self.itc_auth_url = f"{self.proxy_base}/auth/itc-staging"
 			
-			# ITC Service (OAT, Easy Register)
-			self.itc_url = "https://st-service.itc.gov.mn"
+			# ITC Service (OAT, Easy Register) - via gateway /itc-service-staging/
+			self.itc_url = f"{self.proxy_base}/itc-service-staging"
 			self.itc_url_direct = "https://st-service.itc.gov.mn"
 		else:
 			# Production URLs
@@ -59,15 +59,15 @@ class EBarimtClient:
 			self.pos_url = f"{self.proxy_base}/rest"
 			self.pos_url_ip = f"{self.ip_fallback}/rest"
 			
-			# Public API (ebarimt.mn) - direct
-			self.api_url = "https://api.ebarimt.mn"
+			# Public API (ebarimt.mn) - via gateway /ebarimt-prod/
+			self.api_url = f"{self.proxy_base}/ebarimt-prod"
 			self.api_url_direct = "https://api.ebarimt.mn"
 			
 			# ITC Auth - /auth/itc/
 			self.itc_auth_url = f"{self.proxy_base}/auth/itc"
 			
-			# ITC Service
-			self.itc_url = "https://service.itc.gov.mn"
+			# ITC Service - via gateway /itc-service-prod/
+			self.itc_url = f"{self.proxy_base}/itc-service-prod"
 			self.itc_url_direct = "https://service.itc.gov.mn"
 	
 	def _request(self, method, url, fallback_urls=None, auth_required=False, 
