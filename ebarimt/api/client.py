@@ -34,31 +34,40 @@ class EBarimtClient:
 		"""Setup all API URLs based on environment"""
 		is_staging = self.settings.environment == "Staging"
 		
-		# Primary URLs (via api.frappe.mn proxy)
+		# Primary URLs (via api.frappe.mn gateway)
 		self.proxy_base = "https://api.frappe.mn"
 		self.ip_fallback = "http://103.153.141.167"
 		
 		if is_staging:
-			# POS API (local terminal simulation)
+			# POS API (local terminal simulation) - /test/rest/
 			self.pos_url = f"{self.proxy_base}/test/rest"
 			self.pos_url_ip = f"{self.ip_fallback}/test/rest"
 			
-			# Public API (ebarimt.mn)
-			self.api_url = f"{self.proxy_base}/ebarimt-staging"
+			# Public API (ebarimt.mn) - direct for now
+			self.api_url = "https://st-api.ebarimt.mn"
 			self.api_url_direct = "https://st-api.ebarimt.mn"
 			
+			# ITC Auth - /auth/itc-staging/
+			self.itc_auth_url = f"{self.proxy_base}/auth/itc-staging"
+			
 			# ITC Service (OAT, Easy Register)
-			self.itc_url = f"{self.proxy_base}/itc-service-staging"
+			self.itc_url = "https://st-service.itc.gov.mn"
 			self.itc_url_direct = "https://st-service.itc.gov.mn"
 		else:
 			# Production URLs
+			# POS API - /rest/
 			self.pos_url = f"{self.proxy_base}/rest"
 			self.pos_url_ip = f"{self.ip_fallback}/rest"
 			
-			self.api_url = f"{self.proxy_base}/ebarimt-prod"
+			# Public API (ebarimt.mn) - direct
+			self.api_url = "https://api.ebarimt.mn"
 			self.api_url_direct = "https://api.ebarimt.mn"
 			
-			self.itc_url = f"{self.proxy_base}/itc-service-prod"
+			# ITC Auth - /auth/itc/
+			self.itc_auth_url = f"{self.proxy_base}/auth/itc"
+			
+			# ITC Service
+			self.itc_url = "https://service.itc.gov.mn"
 			self.itc_url_direct = "https://service.itc.gov.mn"
 	
 	def _request(self, method, url, fallback_urls=None, auth_required=False, 

@@ -20,4 +20,4 @@ Full integration with eBarimt (баримт.мн) tax receipt system
 - tpiDeclaration (Customs declarations)
 """
 
-__version__ = "1.8.0"
+__version__ = "1.8.1"
