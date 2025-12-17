@@ -43,11 +43,32 @@
         "include_city_tax",
         "column_break_tax",
         "auto_sync_tax_codes",
+        "section_autopilot",
+        "autopilot_enabled",
+        "auto_retry_failed",
+        "column_break_autopilot",
+        "auto_sync_pending",
+        "sync_interval_minutes",
         "section_erpnext",
         "enable_erpnext_integration",
         "auto_lookup_tin",
         "column_break_erpnext",
         "auto_lookup_barcode",
+        "section_healthcare",
+        "enable_healthcare_integration",
+        "auto_receipt_patient_encounter",
+        "column_break_healthcare",
+        "auto_receipt_patient_invoice",
+        "section_education",
+        "enable_education_integration",
+        "auto_receipt_fee_collection",
+        "column_break_education",
+        "auto_receipt_fee_schedule",
+        "section_lending",
+        "enable_lending_integration",
+        "auto_receipt_loan_repayment",
+        "column_break_lending",
+        "auto_receipt_loan_disbursement",
         "tab_advanced",
         "section_api",
         "proxy_url",
@@ -336,6 +357,157 @@
             "label": "Auto-lookup Barcode/BUNA",
             "depends_on": "enable_erpnext_integration",
             "description": "Automatically lookup product info when entering barcode in Item"
+        },
+        {
+            "fieldname": "section_autopilot",
+            "fieldtype": "Section Break",
+            "label": "Autopilot",
+            "collapsible": 1,
+            "collapsible_depends_on": "eval:!doc.autopilot_enabled"
+        },
+        {
+            "default": "0",
+            "fieldname": "autopilot_enabled",
+            "fieldtype": "Check",
+            "label": "Enable Autopilot",
+            "bold": 1,
+            "description": "Enable fully automated receipt processing"
+        },
+        {
+            "default": "1",
+            "fieldname": "auto_retry_failed",
+            "fieldtype": "Check",
+            "label": "Auto-retry Failed Receipts",
+            "depends_on": "autopilot_enabled",
+            "description": "Automatically retry failed receipt submissions"
+        },
+        {
+            "fieldname": "column_break_autopilot",
+            "fieldtype": "Column Break"
+        },
+        {
+            "default": "1",
+            "fieldname": "auto_sync_pending",
+            "fieldtype": "Check",
+            "label": "Auto-sync Pending",
+            "depends_on": "autopilot_enabled",
+            "description": "Automatically sync pending receipts with eBarimt"
+        },
+        {
+            "default": "15",
+            "fieldname": "sync_interval_minutes",
+            "fieldtype": "Int",
+            "label": "Sync Interval (minutes)",
+            "depends_on": "autopilot_enabled",
+            "description": "How often to sync pending receipts"
+        },
+        {
+            "fieldname": "section_healthcare",
+            "fieldtype": "Section Break",
+            "label": "Healthcare Integration",
+            "collapsible": 1,
+            "collapsible_depends_on": "eval:!doc.enable_healthcare_integration",
+            "description": "Integration with Frappe Healthcare app"
+        },
+        {
+            "default": "0",
+            "fieldname": "enable_healthcare_integration",
+            "fieldtype": "Check",
+            "label": "Enable Healthcare Integration",
+            "bold": 1,
+            "description": "Enable eBarimt receipts for Healthcare transactions"
+        },
+        {
+            "default": "1",
+            "fieldname": "auto_receipt_patient_encounter",
+            "fieldtype": "Check",
+            "label": "Auto-receipt Patient Encounter",
+            "depends_on": "enable_healthcare_integration",
+            "description": "Auto-create receipt when Patient Encounter is billed"
+        },
+        {
+            "fieldname": "column_break_healthcare",
+            "fieldtype": "Column Break"
+        },
+        {
+            "default": "1",
+            "fieldname": "auto_receipt_patient_invoice",
+            "fieldtype": "Check",
+            "label": "Auto-receipt Patient Invoice",
+            "depends_on": "enable_healthcare_integration",
+            "description": "Auto-create receipt for healthcare invoices"
+        },
+        {
+            "fieldname": "section_education",
+            "fieldtype": "Section Break",
+            "label": "Education Integration",
+            "collapsible": 1,
+            "collapsible_depends_on": "eval:!doc.enable_education_integration",
+            "description": "Integration with Frappe Education app"
+        },
+        {
+            "default": "0",
+            "fieldname": "enable_education_integration",
+            "fieldtype": "Check",
+            "label": "Enable Education Integration",
+            "bold": 1,
+            "description": "Enable eBarimt receipts for Education transactions"
+        },
+        {
+            "default": "1",
+            "fieldname": "auto_receipt_fee_collection",
+            "fieldtype": "Check",
+            "label": "Auto-receipt Fee Collection",
+            "depends_on": "enable_education_integration",
+            "description": "Auto-create receipt when fees are collected"
+        },
+        {
+            "fieldname": "column_break_education",
+            "fieldtype": "Column Break"
+        },
+        {
+            "default": "1",
+            "fieldname": "auto_receipt_fee_schedule",
+            "fieldtype": "Check",
+            "label": "Auto-receipt Fee Schedule Payment",
+            "depends_on": "enable_education_integration",
+            "description": "Auto-create receipt for scheduled fee payments"
+        },
+        {
+            "fieldname": "section_lending",
+            "fieldtype": "Section Break",
+            "label": "Lending Integration",
+            "collapsible": 1,
+            "collapsible_depends_on": "eval:!doc.enable_lending_integration",
+            "description": "Integration with Frappe Lending app"
+        },
+        {
+            "default": "0",
+            "fieldname": "enable_lending_integration",
+            "fieldtype": "Check",
+            "label": "Enable Lending Integration",
+            "bold": 1,
+            "description": "Enable eBarimt receipts for Lending transactions"
+        },
+        {
+            "default": "1",
+            "fieldname": "auto_receipt_loan_repayment",
+            "fieldtype": "Check",
+            "label": "Auto-receipt Loan Repayment",
+            "depends_on": "enable_lending_integration",
+            "description": "Auto-create receipt for loan repayments"
+        },
+        {
+            "fieldname": "column_break_lending",
+            "fieldtype": "Column Break"
+        },
+        {
+            "default": "1",
+            "fieldname": "auto_receipt_loan_disbursement",
+            "fieldtype": "Check",
+            "label": "Auto-receipt Loan Disbursement",
+            "depends_on": "enable_lending_integration",
+            "description": "Auto-create receipt for loan disbursements (fees)"
         },
         {
             "fieldname": "tab_advanced",

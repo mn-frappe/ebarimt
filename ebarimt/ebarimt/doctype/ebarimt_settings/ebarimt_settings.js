@@ -6,6 +6,9 @@ frappe.ui.form.on('eBarimt Settings', {
 		// Render connection status HTML
 		render_connection_status(frm);
 		
+		// Toggle integration sections based on installed apps
+		toggle_integration_sections(frm);
+		
 		// Environment warning
 		if (frm.doc.environment === 'Staging') {
 			frm.set_intro(__('You are using the STAGING environment. Switch to Production for live transactions.'), 'orange');
@@ -119,4 +122,49 @@ function render_connection_status(frm) {
 	}
 	
 	frm.fields_dict.connection_status_html.$wrapper.html(html);
+}
+
+
+/**
+ * Show/hide integration sections based on installed apps
+ */
+function toggle_integration_sections(frm) {
+	// Check for installed apps via boot flags
+	const apps = {
+		healthcare: frappe.boot.has_healthcare || false,
+		education: frappe.boot.has_education || false,
+		lending: frappe.boot.has_lending || false
+	};
+	
+	// Healthcare section fields
+	const healthcare_fields = [
+		'section_healthcare',
+		'enable_healthcare_integration',
+		'auto_receipt_patient_encounter',
+		'column_break_healthcare',
+		'auto_receipt_patient_invoice'
+	];
+	
+	// Education section fields
+	const education_fields = [
+		'section_education',
+		'enable_education_integration',
+		'auto_receipt_fee_collection',
+		'column_break_education',
+		'auto_receipt_fee_schedule'
+	];
+	
+	// Lending section fields
+	const lending_fields = [
+		'section_lending',
+		'enable_lending_integration',
+		'auto_receipt_loan_repayment',
+		'column_break_lending',
+		'auto_receipt_loan_disbursement'
+	];
+	
+	// Toggle visibility
+	healthcare_fields.forEach(f => frm.toggle_display(f, apps.healthcare));
+	education_fields.forEach(f => frm.toggle_display(f, apps.education));
+	lending_fields.forEach(f => frm.toggle_display(f, apps.lending));
 }

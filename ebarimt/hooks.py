@@ -168,11 +168,14 @@ scheduler_events = {
         "ebarimt.tasks.cleanup_old_failed_logs"
     ],
     "hourly": [
-        "ebarimt.tasks.sync_unsent_receipts"
+        "ebarimt.tasks.sync_unsent_receipts",
+        "ebarimt.performance.auto_retry_failed_receipts",
+        "ebarimt.performance.auto_sync_pending_receipts"
     ],
     "weekly": [
         "ebarimt.tasks.sync_taxpayer_info_weekly",
-        "ebarimt.tasks.sync_barcode_info_weekly"
+        "ebarimt.tasks.sync_barcode_info_weekly",
+        "ebarimt.performance.ensure_indexes"
     ]
 }
 

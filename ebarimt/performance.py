@@ -575,3 +575,107 @@ def optimize_database():
         results["analyze_error"] = str(e)
     
     return results
+
+
+# =============================================================================
+# AUTOPILOT FUNCTIONS
+# =============================================================================
+
+def auto_retry_failed_receipts():
+    """
+    Automatically retry failed receipt submissions.
+    Called by scheduler based on autopilot settings.
+    """
+    settings = frappe.get_single("eBarimt Settings")
+    if not getattr(settings, "autopilot_enabled", False):
+        return
+    
+    if not getattr(settings, "auto_retry_failed", True):
+        return
+    
+    # Find failed receipts from last 24 hours
+    failed_receipts = frappe.get_all(
+        "eBarimt Receipt Log",
+        filters={
+            "status": ["in", ["Failed", "Error"]],
+            "creation": [">", frappe.utils.add_days(frappe.utils.today(), -1)],
+            "retry_count": ["<", 3]
+        },
+        fields=["name", "sales_invoice", "pos_invoice", "retry_count"],
+        limit=50
+    )
+    
+    for receipt in failed_receipts:
+        try:
+            frappe.enqueue(
+                "ebarimt.api.receipt.retry_receipt",
+                receipt_log=receipt.name,
+                queue="short"
+            )
+        except Exception as e:
+            frappe.log_error(f"Failed to queue retry for {receipt.name}: {e}")
+
+
+def auto_sync_pending_receipts():
+    """
+    Automatically sync pending receipts with eBarimt.
+    Called by scheduler based on autopilot settings.
+    """
+    settings = frappe.get_single("eBarimt Settings")
+    if not getattr(settings, "autopilot_enabled", False):
+        return
+    
+    if not getattr(settings, "auto_sync_pending", True):
+        return
+    
+    # Find pending receipts
+    pending = frappe.get_all(
+        "eBarimt Receipt Log",
+        filters={
+            "status": "Pending",
+            "creation": [">", frappe.utils.add_days(frappe.utils.today(), -7)]
+        },
+        fields=["name", "receipt_id"],
+        limit=100
+    )
+    
+    for receipt in pending:
+        try:
+            frappe.enqueue(
+                "ebarimt.api.receipt.check_receipt_status",
+                receipt_log=receipt.name,
+                queue="short"
+            )
+        except Exception as e:
+            frappe.log_error(f"Failed to check status for {receipt.name}: {e}")
+
+
+def auto_void_cancelled_invoices():
+    """
+    Automatically void receipts for cancelled invoices.
+    Called by scheduler based on autopilot settings.
+    """
+    settings = frappe.get_single("eBarimt Settings")
+    if not getattr(settings, "auto_void_on_cancel", True):
+        return
+    
+    # Find receipts for cancelled invoices that haven't been voided
+    receipts_to_void = frappe.db.sql("""
+        SELECT r.name, r.receipt_id, r.sales_invoice
+        FROM `tabeBarimt Receipt Log` r
+        INNER JOIN `tabSales Invoice` si ON si.name = r.sales_invoice
+        WHERE si.docstatus = 2
+        AND r.status = 'Success'
+        AND r.voided = 0
+        LIMIT 50
+    """, as_dict=True)
+    
+    for receipt in receipts_to_void:
+        try:
+            frappe.enqueue(
+                "ebarimt.api.receipt.void_receipt",
+                receipt_log=receipt.name,
+                queue="short"
+            )
+        except Exception as e:
+            frappe.log_error(f"Failed to void receipt {receipt.name}: {e}")
