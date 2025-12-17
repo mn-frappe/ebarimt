@@ -81,6 +81,10 @@
         "log_api_calls",
         "column_break_debug",
         "alert_email",
+        "section_telemetry",
+        "enable_error_reporting",
+        "column_break_telemetry",
+        "github_token",
         "section_tokens",
         "access_token",
         "token_expiry",
@@ -580,6 +584,31 @@
             "label": "Alert Email",
             "options": "Email",
             "description": "Email for eBarimt alerts and errors"
+        },
+        {
+            "fieldname": "section_telemetry",
+            "fieldtype": "Section Break",
+            "label": "Error Reporting (Telemetry)",
+            "collapsible": 1,
+            "description": "Help improve eBarimt by sending anonymous error reports to GitHub Issues"
+        },
+        {
+            "default": "0",
+            "fieldname": "enable_error_reporting",
+            "fieldtype": "Check",
+            "label": "Enable Error Reporting",
+            "description": "Send anonymous error reports to mn-frappe/ebarimt GitHub repository"
+        },
+        {
+            "fieldname": "column_break_telemetry",
+            "fieldtype": "Column Break"
+        },
+        {
+            "fieldname": "github_token",
+            "fieldtype": "Password",
+            "label": "GitHub Token (Optional)",
+            "description": "Personal access token with 'repo' scope for issue creation",
+            "depends_on": "enable_error_reporting"
         },
         {
             "fieldname": "section_tokens",

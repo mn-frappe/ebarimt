@@ -75,6 +75,11 @@ doctype_js = {
 after_install = "ebarimt.install.after_install"
 before_uninstall = "ebarimt.install.before_uninstall"
 
+# Error Reporting / Telemetry
+# ---------------------------
+# Reports unhandled exceptions to GitHub Issues (if enabled in settings)
+exception_handler = "ebarimt.ebarimt.telemetry.on_error"
+
 # Migration - ensure workspace links exist and districts are synced
 after_migrate = [
     "ebarimt.install.add_to_integrations_workspace",
