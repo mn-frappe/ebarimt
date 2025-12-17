@@ -26,6 +26,12 @@ from typing import Any, Callable, TypeVar
 import frappe
 from frappe.utils import cint, flt, now_datetime
 
+# Import logger utilities
+from ebarimt.logger import (
+    log_info, log_debug, log_warning, log_error,
+    log_api_call, log_receipt, log_scheduler_task
+)
+
 T = TypeVar("T")
 
 
@@ -581,6 +587,7 @@ def optimize_database():
 # AUTOPILOT FUNCTIONS
 # =============================================================================
 
+@log_scheduler_task("Auto Retry Failed Receipts")
 def auto_retry_failed_receipts():
     """
     Automatically retry failed receipt submissions.
@@ -588,10 +595,12 @@ def auto_retry_failed_receipts():
     """
     settings = frappe.get_single("eBarimt Settings")
     if not getattr(settings, "autopilot_enabled", False):
-        return
+        log_debug("Autopilot disabled - skipping")
+        return {"status": "skipped", "reason": "autopilot_disabled"}
     
     if not getattr(settings, "auto_retry_failed", True):
-        return
+        log_debug("Auto retry disabled - skipping")
+        return {"status": "skipped", "reason": "auto_retry_disabled"}
     
     # Find failed receipts from last 24 hours
     failed_receipts = frappe.get_all(
@@ -605,6 +614,9 @@ def auto_retry_failed_receipts():
         limit=50
     )
     
+    retried_count = 0
+    error_count = 0
+    
     for receipt in failed_receipts:
         try:
             frappe.enqueue(
@@ -612,10 +624,16 @@ def auto_retry_failed_receipts():
                 receipt_log=receipt.name,
                 queue="short"
             )
+            log_info(f"Queued retry for receipt", {"receipt_log": receipt.name, "invoice": receipt.sales_invoice or receipt.pos_invoice})
+            retried_count += 1
         except Exception as e:
-            frappe.log_error(f"Failed to queue retry for {receipt.name}: {e}")
+            log_error(f"Failed to queue retry for {receipt.name}", exc=e)
+            error_count += 1
+    
+    return {"retried": retried_count, "errors": error_count, "total_found": len(failed_receipts)}
 
 
+@log_scheduler_task("Auto Sync Pending Receipts")
 def auto_sync_pending_receipts():
     """
     Automatically sync pending receipts with eBarimt.
@@ -623,10 +641,12 @@ def auto_sync_pending_receipts():
     """
     settings = frappe.get_single("eBarimt Settings")
     if not getattr(settings, "autopilot_enabled", False):
-        return
+        log_debug("Autopilot disabled - skipping")
+        return {"status": "skipped", "reason": "autopilot_disabled"}
     
     if not getattr(settings, "auto_sync_pending", True):
-        return
+        log_debug("Auto sync disabled - skipping")
+        return {"status": "skipped", "reason": "auto_sync_disabled"}
     
     # Find pending receipts
     pending = frappe.get_all(
@@ -639,6 +659,9 @@ def auto_sync_pending_receipts():
         limit=100
     )
     
+    synced_count = 0
+    error_count = 0
+    
     for receipt in pending:
         try:
             frappe.enqueue(
@@ -646,10 +669,16 @@ def auto_sync_pending_receipts():
                 receipt_log=receipt.name,
                 queue="short"
             )
+            log_debug(f"Queued sync check", {"receipt_log": receipt.name})
+            synced_count += 1
         except Exception as e:
-            frappe.log_error(f"Failed to check status for {receipt.name}: {e}")
+            log_error(f"Failed to check status for {receipt.name}", exc=e)
+            error_count += 1
+    
+    return {"synced": synced_count, "errors": error_count, "total_found": len(pending)}
 
 
+@log_scheduler_task("Auto Void Cancelled Invoices")
 def auto_void_cancelled_invoices():
     """
     Automatically void receipts for cancelled invoices.
@@ -657,7 +686,8 @@ def auto_void_cancelled_invoices():
     """
     settings = frappe.get_single("eBarimt Settings")
     if not getattr(settings, "auto_void_on_cancel", True):
-        return
+        log_debug("Auto void disabled - skipping")
+        return {"status": "skipped", "reason": "auto_void_disabled"}
     
     # Find receipts for cancelled invoices that haven't been voided
     receipts_to_void = frappe.db.sql("""
@@ -670,6 +700,9 @@ def auto_void_cancelled_invoices():
         LIMIT 50
     """, as_dict=True)
     
+    voided_count = 0
+    error_count = 0
+    
     for receipt in receipts_to_void:
         try:
             frappe.enqueue(
@@ -677,5 +710,10 @@ def auto_void_cancelled_invoices():
                 receipt_log=receipt.name,
                 queue="short"
             )
+            log_info(f"Queued void for receipt", {"receipt_log": receipt.name, "invoice": receipt.sales_invoice})
+            voided_count += 1
         except Exception as e:
-            frappe.log_error(f"Failed to void receipt {receipt.name}: {e}")
+            log_error(f"Failed to void receipt {receipt.name}", exc=e)
+            error_count += 1
+    
+    return {"voided": voided_count, "errors": error_count, "total_found": len(receipts_to_void)}
