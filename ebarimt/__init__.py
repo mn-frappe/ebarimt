@@ -18,6 +18,12 @@ Full integration with eBarimt (баримт.мн) tax receipt system
 - 28/28 eBarimt ITC endpoints implemented
 - getSaleListERP (ERP subsidiary purchases)
 - tpiDeclaration (Customs declarations)
+
+Features (v1.9.0):
+- Comprehensive logging utilities (logger.py)
+- Autopilot mode for auto-retry, auto-sync, auto-void
+- Performance indexes and batch processing
+- Multi-company entity support
 """
 
-__version__ = "1.8.2"
+__version__ = "1.9.0"
