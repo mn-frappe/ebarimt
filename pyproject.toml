@@ -1,19 +1,19 @@
 [project]
 name = "ebarimt"
-version = "1.8.2"
+version = "1.9.0"
 authors = [
     { name = "Digital Consulting Service LLC (Mongolia)", email = "dev@frappe.mn" }
 ]
-description = "eBarimt Mongolian Tax Receipt System Integration for ERPNext - VAT Compliance"
+description = "eBarimt Mongolian VAT Receipt System Integration for ERPNext"
 requires-python = ">=3.10"
 readme = "README.md"
-license = { text = "MIT" }
+license = { text = "GPL-3.0" }
 keywords = ["frappe", "erpnext", "ebarimt", "mongolia", "tax", "vat", "receipt"]
 classifiers = [
     "Development Status :: 5 - Production/Stable",
     "Framework :: Frappe",
     "Intended Audience :: Developers",
-    "License :: OSI Approved :: MIT License",
+    "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
     "Operating System :: OS Independent",
     "Programming Language :: Python :: 3",
     "Programming Language :: Python :: 3.10",
@@ -35,7 +35,6 @@ Issues = "https://github.com/mn-frappe/ebarimt/issues"
 requires = ["flit_core >=3.4,<4"]
 build-backend = "flit_core.buildapi"
 
-# These dependencies are only installed when developer mode is enabled
 [tool.bench.dev-dependencies]
 # package_name = "~=1.1.0"
 
@@ -44,29 +43,26 @@ line-length = 110
 target-version = "py310"
 
 [tool.ruff.lint]
-select = [
-    "F",
-    "E",
-    "W",
-    "I",
-    "UP",
-    "B",
-    "RUF",
-]
+select = ["F", "E", "W", "I", "UP", "B", "RUF"]
 ignore = [
-    "B017", # assertRaises(Exception) - should be more specific
-    "B018", # useless expression, not assigned to anything
-    "B023", # function doesn't bind loop variable - will have last iteration's value
-    "B904", # raise inside except without from
-    "E101", # indentation contains mixed spaces and tabs
-    "E402", # module level import not at top of file
-    "E501", # line too long
-    "E741", # ambiguous variable name
-    "F401", # "unused" imports
-    "F403", # can't detect undefined names from * import
-    "F405", # can't detect undefined names from * import
-    "F722", # syntax error in forward type annotation
-    "W191", # indentation contains tabs
+    "B015",  # Useless comparison
+    "B017",  # assertRaises(Exception) - should be more specific
+    "B018",  # useless expression, not assigned to anything
+    "B023",  # function doesn't bind loop variable
+    "B904",  # raise inside except without from
+    "E101",  # indentation contains mixed spaces and tabs
+    "E402",  # module level import not at top of file
+    "E501",  # line too long
+    "E741",  # ambiguous variable name
+    "F401",  # unused imports
+    "F403",  # can't detect undefined names from * import
+    "F405",  # can't detect undefined names from * import
+    "F722",  # syntax error in forward type annotation
+    "RUF001",  # Cyrillic characters (valid for Mongolian)
+    "RUF002",  # Cyrillic in docstrings
+    "RUF012",  # Mutable class defaults
+    "RUF022",  # __all__ sorting
+    "W191",  # indentation contains tabs
 ]
 typing-modules = ["frappe.types.DF"]
 
