@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 # Copyright (c) 2024, Digital Consulting Service LLC (Mongolia)
 # License: GNU General Public License v3
 
@@ -7,6 +6,7 @@ eBarimt Unit Tests for CI - Full Coverage
 """
 
 import unittest
+
 import frappe
 from frappe.tests.utils import FrappeTestCase
 
@@ -257,6 +257,6 @@ class TestEBarimtTranslations(FrappeTestCase):
         import os
         translations_path = frappe.get_app_path("ebarimt", "translations", "mn.csv")
         if os.path.exists(translations_path):
-            with open(translations_path, "r", encoding="utf-8") as f:
+            with open(translations_path, encoding="utf-8") as f:
                 content = f.read()
                 self.assertGreater(len(content), 100, "Translations file should have content")

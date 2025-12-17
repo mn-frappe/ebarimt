@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 # Copyright (c) 2024, Digital Consulting Service LLC (Mongolia)
 # License: GNU General Public License v3
 
@@ -16,21 +15,21 @@ def validate_tin_format(tin):
     """
     Validate TIN format
     TIN should be 7-12 digits
-    
+
     Returns:
         bool: True if valid, False otherwise
     """
     if not tin:
         return False
-    
+
     tin = str(tin).strip()
-    
+
     if not tin.isdigit():
         return False
-    
+
     if len(tin) < 7 or len(tin) > 12:
         return False
-    
+
     return True
 
 
@@ -38,9 +37,9 @@ def validate_customer(doc, method=None):
     """Validate customer TIN if provided"""
     if not doc.get("custom_tin"):
         return
-    
+
     tin = doc.custom_tin.strip()
-    
+
     # Validate TIN format (should be 7-12 digits)
     if not tin.isdigit() or len(tin) < 7 or len(tin) > 12:
         frappe.throw(_("Invalid TIN format. TIN should be 7-12 digits."))
@@ -49,15 +48,15 @@ def validate_customer(doc, method=None):
 def after_insert_customer(doc, method=None):
     """Auto-lookup taxpayer info for new customers with TIN"""
     settings = frappe.db.get_single_value("eBarimt Settings", "enabled")
-    
+
     if not settings:
         return
-    
+
     auto_lookup = frappe.db.get_single_value("eBarimt Settings", "auto_lookup_taxpayer")
-    
+
     if not auto_lookup:
         return
-    
+
     if doc.get("custom_tin") and not doc.get("custom_taxpayer_synced"):
         frappe.enqueue(
             "ebarimt.integrations.customer.sync_taxpayer_info",
@@ -69,14 +68,14 @@ def after_insert_customer(doc, method=None):
 def sync_taxpayer_info(customer_name):
     """Sync taxpayer information from eBarimt"""
     from ebarimt.api.client import EBarimtClient
-    
+
     customer = frappe.get_doc("Customer", customer_name)
-    
+
     if not customer.get("custom_tin"):
         return {"success": False, "message": _("No TIN provided")}
-    
+
     settings = frappe.get_cached_doc("eBarimt Settings")
-    
+
     client = EBarimtClient(
         environment=settings.environment,
         operator_tin=settings.operator_tin,
@@ -85,21 +84,21 @@ def sync_taxpayer_info(customer_name):
         username=settings.username,
         password=settings.get_password("password")
     )
-    
+
     try:
         taxpayer_info = client.get_taxpayer_info(customer.custom_tin)
-        
+
         if taxpayer_info.get("found"):
             # Update customer with taxpayer info
             customer.db_set("custom_taxpayer_name", taxpayer_info.get("name"), update_modified=False)
             customer.db_set("custom_vat_payer", cint(taxpayer_info.get("vatPayer")), update_modified=False)
             customer.db_set("custom_city_payer", cint(taxpayer_info.get("cityPayer")), update_modified=False)
             customer.db_set("custom_taxpayer_synced", 1, update_modified=False)
-            
+
             # Update customer name if empty
             if not customer.customer_name or customer.customer_name == customer_name:
                 customer.db_set("customer_name", taxpayer_info.get("name"), update_modified=False)
-            
+
             return {
                 "success": True,
                 "data": taxpayer_info
@@ -109,7 +108,7 @@ def sync_taxpayer_info(customer_name):
                 "success": False,
                 "message": _("Taxpayer not found")
             }
-    
+
     except Exception as e:
         frappe.log_error(
             message=str(e),
@@ -128,15 +127,15 @@ def lookup_taxpayer(tin=None, regno=None):
     Can be called from Customer form
     """
     from ebarimt.api.client import EBarimtClient
-    
+
     if not tin and not regno:
         frappe.throw(_("Please provide TIN or Registration Number"))
-    
+
     settings = frappe.get_cached_doc("eBarimt Settings")
-    
+
     if not settings.enabled:
         frappe.throw(_("eBarimt is not enabled"))
-    
+
     client = EBarimtClient(
         environment=settings.environment,
         operator_tin=settings.operator_tin,
@@ -145,7 +144,7 @@ def lookup_taxpayer(tin=None, regno=None):
         username=settings.username,
         password=settings.get_password("password")
     )
-    
+
     if tin:
         result = client.get_taxpayer_info(tin)
     else:
@@ -155,7 +154,7 @@ def lookup_taxpayer(tin=None, regno=None):
             result = client.get_taxpayer_info(tin_result.get("tin"))
         else:
             return {"success": False, "message": _("Registration number not found")}
-    
+
     if result.get("found"):
         return {
             "success": True,
@@ -165,7 +164,7 @@ def lookup_taxpayer(tin=None, regno=None):
             "city_payer": result.get("cityPayer"),
             "regno": result.get("regno")
         }
-    
+
     return {"success": False, "message": _("Taxpayer not found")}
 
 
@@ -173,7 +172,7 @@ def lookup_taxpayer(tin=None, regno=None):
 def sync_customer_from_tin(customer_name, tin):
     """Sync customer data from TIN"""
     result = lookup_taxpayer(tin=tin)
-    
+
     if result.get("success"):
         customer = frappe.get_doc("Customer", customer_name)
         customer.custom_tin = result.get("tin")
@@ -182,14 +181,14 @@ def sync_customer_from_tin(customer_name, tin):
         customer.custom_city_payer = cint(result.get("city_payer"))
         customer.custom_regno = result.get("regno")
         customer.custom_taxpayer_synced = 1
-        
+
         if not customer.customer_name or customer.customer_name == "New Customer":
             customer.customer_name = result.get("name")
-        
+
         customer.save(ignore_permissions=True)
-        
+
         return {"success": True, "data": result}
-    
+
     return result
 
 
@@ -200,15 +199,15 @@ def lookup_foreigner(passport_no=None, f_register=None, username=None):
     For VAT refund processing
     """
     from ebarimt.api.client import EBarimtClient
-    
+
     if not passport_no and not f_register and not username:
         frappe.throw(_("Please provide passport number, F-register, or username"))
-    
+
     settings = frappe.get_cached_doc("eBarimt Settings")
-    
+
     if not settings.enabled:
         frappe.throw(_("eBarimt is not enabled"))
-    
+
     client = EBarimtClient(
         environment=settings.environment,
         operator_tin=settings.operator_tin,
@@ -217,9 +216,9 @@ def lookup_foreigner(passport_no=None, f_register=None, username=None):
         username=settings.username,
         password=settings.get_password("password")
     )
-    
+
     result = None
-    
+
     if username:
         result = client.get_foreigner_by_username(username)
     else:
@@ -227,7 +226,7 @@ def lookup_foreigner(passport_no=None, f_register=None, username=None):
             passport_no=passport_no,
             f_register=f_register
         )
-    
+
     if result and result.get("status") == 200:
         data = result.get("data", {})
         return {
@@ -238,24 +237,24 @@ def lookup_foreigner(passport_no=None, f_register=None, username=None):
             "country_code": data.get("countryCode"),
             "passport_no": data.get("passportNo")
         }
-    
+
     return {"success": False, "message": _("Foreigner not found in eBarimt")}
 
 
 @frappe.whitelist()
-def register_foreigner(passport_no, first_name, last_name, country_code, 
+def register_foreigner(passport_no, first_name, last_name, country_code,
                        email=None, phone=None, customer_name=None):
     """
     Register foreign tourist in eBarimt for VAT refund
     Optionally link to existing customer
     """
     from ebarimt.api.client import EBarimtClient
-    
+
     settings = frappe.get_cached_doc("eBarimt Settings")
-    
+
     if not settings.enabled:
         frappe.throw(_("eBarimt is not enabled"))
-    
+
     client = EBarimtClient(
         environment=settings.environment,
         operator_tin=settings.operator_tin,
@@ -264,7 +263,7 @@ def register_foreigner(passport_no, first_name, last_name, country_code,
         username=settings.username,
         password=settings.get_password("password")
     )
-    
+
     result = client.register_foreigner(
         passport_no=passport_no,
         first_name=first_name,
@@ -273,11 +272,11 @@ def register_foreigner(passport_no, first_name, last_name, country_code,
         email=email,
         phone=phone
     )
-    
+
     if result.get("status") == 200:
         data = result.get("data", {})
         customer_no = data.get("customerNo")
-        
+
         # Link to customer if provided
         if customer_name and customer_no:
             frappe.db.set_value(
@@ -288,13 +287,13 @@ def register_foreigner(passport_no, first_name, last_name, country_code,
                     "custom_is_foreigner": 1
                 }
             )
-        
+
         return {
             "success": True,
             "customer_no": customer_no,
             "message": _("Foreigner registered successfully")
         }
-    
+
     return {
         "success": False,
         "message": result.get("msg") or _("Registration failed")
@@ -321,10 +320,10 @@ def bulk_sync_taxpayer_info(customers=None):
             pluck="name",
             limit=100
         )
-    
+
     synced = 0
     failed = 0
-    
+
     for customer_name in customers:
         try:
             result = sync_taxpayer_info(customer_name)
@@ -334,9 +333,9 @@ def bulk_sync_taxpayer_info(customers=None):
                 failed += 1
         except Exception:
             failed += 1
-    
+
     frappe.db.commit()
-    
+
     return {
         "success": True,
         "synced": synced,
@@ -352,14 +351,14 @@ def check_tin_format(tin):
     """
     if not tin:
         return {"valid": False, "message": _("TIN is required")}
-    
+
     tin = tin.strip()
-    
+
     # TIN should be 7-12 digits
     if not tin.isdigit():
         return {"valid": False, "message": _("TIN should contain only digits")}
-    
+
     if len(tin) < 7 or len(tin) > 12:
         return {"valid": False, "message": _("TIN should be 7-12 digits")}
-    
+
     return {"valid": True, "tin": tin}

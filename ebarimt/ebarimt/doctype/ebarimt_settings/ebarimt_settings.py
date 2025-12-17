@@ -11,24 +11,24 @@ class eBarimtSettings(Document):
 	def validate(self):
 		if self.enabled and not self.api_username:
 			frappe.msgprint(_("API Username is required for eBarimt integration"))
-	
+
 	def on_update(self):
 		# Clear cached settings
 		frappe.cache.delete_value("ebarimt_settings")
-		
+
 		# Clear auth token cache when credentials change
 		if self.has_value_changed("api_username") or self.has_value_changed("api_password"):
 			frappe.cache.delete_value("ebarimt_itc_token")
-	
+
 	@frappe.whitelist()
 	def test_connection(self):
 		"""Test connection to eBarimt API"""
 		from ebarimt.api.client import EBarimtClient
-		
+
 		try:
 			client = EBarimtClient(self)
 			info = client.get_info()
-			
+
 			# Update status fields
 			self.connection_status = "Connected"
 			self.last_sync = now_datetime()
@@ -37,7 +37,7 @@ class eBarimtSettings(Document):
 			self.pos_no = info.get("posNo", self.pos_no)
 			self.left_lotteries = info.get("leftLotteries", 0)
 			self.save()
-			
+
 			return {
 				"success": True,
 				"message": _("Connected successfully!"),
@@ -51,22 +51,22 @@ class eBarimtSettings(Document):
 		except Exception as e:
 			self.connection_status = "Disconnected"
 			self.save()
-			
+
 			return {
 				"success": False,
 				"message": str(e)
 			}
-	
+
 	@frappe.whitelist()
 	def sync_tax_codes(self):
 		"""Sync tax codes from eBarimt"""
 		from ebarimt.api.client import EBarimtClient
 		from ebarimt.ebarimt.doctype.ebarimt_tax_code.ebarimt_tax_code import sync_tax_codes
-		
+
 		try:
 			client = EBarimtClient(self)
 			tax_codes_synced = sync_tax_codes(client)
-			
+
 			return {
 				"success": True,
 				"message": _("Synced {0} tax codes").format(tax_codes_synced)
@@ -76,39 +76,27 @@ class eBarimtSettings(Document):
 				"success": False,
 				"message": str(e)
 			}
-	
+
 	@frappe.whitelist()
 	def lookup_taxpayer(self, tin):
 		"""Lookup taxpayer information"""
 		from ebarimt.api.client import EBarimtClient
-		
+
 		client = EBarimtClient(self)
 		return client.get_taxpayer_info(tin)
-	
+
 	@frappe.whitelist()
 	def detect_district(self):
 		"""Detect district from IP geolocation"""
 		import requests
-		
+
 		try:
 			# Try to detect location from IP
 			# Default to Chingeltei (most common for businesses)
-			district_map = {
-				"ulaanbaatar": {
-					"БЗД": "0102",
-					"СБД": "0103",
-					"СХД": "0104",
-					"ХУД": "0105",
-					"БГД": "0106",
-					"ЧД": "0107",
-					"НД": "0108",
-					"default": "0102"  # Баянзүрх дүүрэг
-				}
-			}
-			
+
 			# Default to Bayanzurkh District (most common)
 			default_code = "0102"
-			
+
 			# Check if eBarimt District exists
 			if frappe.db.exists("eBarimt District", default_code):
 				self.district_code = default_code
@@ -144,5 +132,5 @@ def is_enabled():
 	try:
 		settings = get_settings()
 		return settings.enabled
-	except:
+	except Exception:
 		return False

@@ -35,13 +35,13 @@ def is_qpay_installed():
 def get_product_code(code):
     """
     Get product code from eBarimt (preferred) or QPay.
-    
+
     eBarimt is preferred because it has tax configuration
     (VAT type, city tax, excise).
-    
+
     Args:
         code: Product classification code (GS1)
-    
+
     Returns:
         dict: Product code info with source
     """
@@ -66,7 +66,7 @@ def get_product_code(code):
                 "excise_type": ebarimt_code.excise_type,
                 "oat_product_code": ebarimt_code.oat_product_code
             }
-    
+
     # Fallback to QPay
     if is_qpay_installed():
         qpay_code = frappe.db.get_value(
@@ -87,7 +87,7 @@ def get_product_code(code):
                 "excise_type": None,
                 "oat_product_code": None
             }
-    
+
     return None
 
 
@@ -95,17 +95,17 @@ def get_product_code(code):
 def search_product_codes(query, limit=20):
     """
     Search product codes from both apps.
-    
+
     Args:
         query: Search string
         limit: Max results
-    
+
     Returns:
         list: Matching product codes with source
     """
     results = []
     limit = int(limit)
-    
+
     # Search eBarimt codes first
     if is_ebarimt_installed():
         ebarimt_codes = frappe.get_all(
@@ -130,13 +130,13 @@ def search_product_codes(query, limit=20):
                 "vat_type": code.vat_type,
                 "city_tax": code.city_tax_applicable
             })
-    
+
     # Add QPay codes if not enough results
     remaining = limit - len(results)
     if remaining > 0 and is_qpay_installed():
         # Exclude codes already in results
         existing_codes = [r["code"] for r in results]
-        
+
         qpay_codes = frappe.get_all(
             "QPay Product Code",
             filters=[
@@ -160,7 +160,7 @@ def search_product_codes(query, limit=20):
                     "vat_type": code.vat_type or "STANDARD",
                     "city_tax": False
                 })
-    
+
     return results
 
 
@@ -168,36 +168,36 @@ def search_product_codes(query, limit=20):
 def get_item_product_code(item_code):
     """
     Get product code for an Item.
-    
+
     Checks custom fields in this order:
     1. custom_ebarimt_product_code (preferred - has tax info)
     2. custom_qpay_product_code (fallback)
     3. custom_gs1_product_code (unified field)
-    
+
     Args:
         item_code: Item code
-    
+
     Returns:
         dict: Product code info or None
     """
     item = frappe.db.get_value(
-        "Item", 
+        "Item",
         item_code,
         ["custom_ebarimt_product_code", "custom_gs1_product_code"],
         as_dict=True
     )
-    
+
     if not item:
         return None
-    
+
     # Check eBarimt product code first
     if item.custom_ebarimt_product_code:
         return get_product_code(item.custom_ebarimt_product_code)
-    
+
     # Check unified field
     if item.get("custom_gs1_product_code"):
         return get_product_code(item.custom_gs1_product_code)
-    
+
     return None
 
 
@@ -205,38 +205,38 @@ def get_item_product_code(item_code):
 def sync_ebarimt_to_qpay():
     """
     Sync eBarimt product codes to QPay Product Code DocType.
-    
+
     This ensures QPay has access to the same codes without duplication.
     Only syncs if both apps are installed.
-    
+
     Returns:
         dict: Sync statistics
     """
     if not is_ebarimt_installed():
         return {"status": "skipped", "message": "eBarimt not installed"}
-    
+
     if not is_qpay_installed():
         return {"status": "skipped", "message": "QPay not installed"}
-    
+
     # Get all eBarimt codes
     ebarimt_codes = frappe.get_all(
         "eBarimt Product Code",
         fields=["classification_code", "name_mn", "code_level", "vat_type"],
         limit=0
     )
-    
+
     # Get existing QPay codes
     existing_qpay = set(frappe.get_all(
         "QPay Product Code",
         pluck="product_code"
     ))
-    
+
     created = 0
     updated = 0
-    
+
     for ec in ebarimt_codes:
         code = ec.classification_code
-        
+
         if code in existing_qpay:
             # Update existing
             frappe.db.set_value(
@@ -265,12 +265,12 @@ def sync_ebarimt_to_qpay():
                 created += 1
             except Exception:
                 pass  # Skip duplicates
-        
+
         if (created + updated) % 500 == 0:
             frappe.db.commit()
-    
+
     frappe.db.commit()
-    
+
     return {
         "status": "success",
         "created": created,
@@ -283,25 +283,25 @@ def sync_ebarimt_to_qpay():
 def sync_qpay_to_ebarimt():
     """
     Sync QPay product codes to eBarimt Product Code DocType.
-    
+
     Only syncs codes that don't exist in eBarimt.
     eBarimt codes have tax info that QPay codes don't.
-    
+
     Returns:
         dict: Sync statistics
     """
     if not is_qpay_installed():
         return {"status": "skipped", "message": "QPay not installed"}
-    
+
     if not is_ebarimt_installed():
         return {"status": "skipped", "message": "eBarimt not installed"}
-    
+
     # Get existing eBarimt codes
     existing_ebarimt = set(frappe.get_all(
         "eBarimt Product Code",
         pluck="classification_code"
     ))
-    
+
     # Get QPay codes not in eBarimt
     qpay_codes = frappe.get_all(
         "QPay Product Code",
@@ -311,13 +311,13 @@ def sync_qpay_to_ebarimt():
         fields=["product_code", "description", "code_level", "vat_type"],
         limit=0
     )
-    
+
     created = 0
-    
+
     for qc in qpay_codes:
         if qc.product_code in existing_ebarimt:
             continue
-        
+
         try:
             doc = frappe.get_doc({
                 "doctype": "eBarimt Product Code",
@@ -333,12 +333,12 @@ def sync_qpay_to_ebarimt():
             existing_ebarimt.add(qc.product_code)
         except Exception:
             pass  # Skip errors
-        
+
         if created % 500 == 0:
             frappe.db.commit()
-    
+
     frappe.db.commit()
-    
+
     return {
         "status": "success",
         "created": created,
@@ -351,15 +351,15 @@ def sync_qpay_to_ebarimt():
 def sync_product_codes():
     """
     Bidirectional sync between eBarimt and QPay product codes.
-    
+
     1. Sync eBarimt → QPay (so QPay has all codes)
     2. Sync QPay → eBarimt (import any QPay-only codes)
-    
+
     Returns:
         dict: Combined sync results
     """
     results = {}
-    
+
     if is_ebarimt_installed() and is_qpay_installed():
         results["ebarimt_to_qpay"] = sync_ebarimt_to_qpay()
         results["qpay_to_ebarimt"] = sync_qpay_to_ebarimt()
@@ -369,22 +369,22 @@ def sync_product_codes():
         results["message"] = "Only QPay installed - no sync needed"
     else:
         results["message"] = "Neither app has product codes installed"
-    
+
     return results
 
 
 def get_tax_info_for_item(item_code):
     """
     Get complete tax information for an Item.
-    
+
     Args:
         item_code: Item code
-    
+
     Returns:
         dict: Tax info (vat_type, vat_rate, city_tax_rate, excise_type)
     """
     product_info = get_item_product_code(item_code)
-    
+
     if not product_info:
         return {
             "vat_type": "STANDARD",
@@ -393,10 +393,10 @@ def get_tax_info_for_item(item_code):
             "city_tax_rate": 0,
             "excise_type": None
         }
-    
+
     vat_rate = 10 if product_info["vat_type"] == "STANDARD" else 0
     city_tax_rate = 0.02 if product_info["city_tax_applicable"] else 0
-    
+
     return {
         "vat_type": product_info["vat_type"],
         "vat_rate": vat_rate,

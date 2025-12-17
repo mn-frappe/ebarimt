@@ -26,24 +26,24 @@ def sync_tax_codes(client=None):
 	"""
 	Sync tax codes from eBarimt API
 	Endpoint: /api/receipt/receipt/getProductTaxCode
-	
+
 	Returns:
 		dict: {success: bool, count: int, message: str}
 	"""
 	if not client:
 		from ebarimt.api.client import EBarimtClient
 		client = EBarimtClient()
-	
+
 	try:
 		tax_codes = client.get_tax_codes()
 		count = 0
-		
+
 		for tc in tax_codes:
 			code = str(tc.get("taxProductCode", ""))
-			
+
 			if not code:
 				continue
-			
+
 			if not frappe.db.exists("eBarimt Tax Code", code):
 				doc = frappe.new_doc("eBarimt Tax Code")
 				doc.tax_product_code = code
@@ -63,10 +63,10 @@ def sync_tax_codes(client=None):
 				doc.tax_type_name = tc.get("taxTypeName", "")
 				doc.end_date = getdate(tc.get("endDate")) if tc.get("endDate") else None
 				doc.save(ignore_permissions=True)
-		
+
 		frappe.db.commit()
 		return {"success": True, "count": count, "message": _("{0} tax codes synced").format(count)}
-		
+
 	except Exception as e:
 		frappe.log_error(message=str(e), title="eBarimt Tax Code Sync Error")
 		return {"success": False, "count": 0, "message": str(e)}
@@ -75,39 +75,39 @@ def sync_tax_codes(client=None):
 def get_tax_type_for_item(item_code):
 	"""
 	Get tax type for an item based on its tax code
-	
+
 	Returns:
 		str: Tax type name (VAT_ABLE, VAT_FREE, VAT_ZERO, NOT_VAT)
 	"""
 	item = frappe.get_cached_doc("Item", item_code)
-	
+
 	if item.get("custom_ebarimt_tax_code"):
 		tax_code = frappe.get_cached_doc("eBarimt Tax Code", item.custom_ebarimt_tax_code)
 		return tax_code.tax_type_name or "VAT_ABLE"
-	
+
 	return "VAT_ABLE"  # Default: Standard VAT
 
 
 def get_valid_tax_codes(tax_type=None):
 	"""
 	Get list of currently valid tax codes
-	
+
 	Args:
 		tax_type: Filter by tax type (VAT_FREE, VAT_ZERO, NOT_VAT)
-		
+
 	Returns:
 		list: Tax codes that are currently valid
 	"""
 	from frappe.utils import today
-	
+
 	filters = [
 		["start_date", "<=", today()],
 		["end_date", ">=", today()]
 	]
-	
+
 	if tax_type:
 		filters.append(["tax_type_name", "=", tax_type])
-	
+
 	return frappe.get_all(
 		"eBarimt Tax Code",
 		filters=filters,

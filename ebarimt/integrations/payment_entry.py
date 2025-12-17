@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 # Copyright (c) 2024, Digital Consulting Service LLC (Mongolia)
 # License: GNU General Public License v3
 # pyright: reportAttributeAccessIssue=false, reportArgumentType=false
@@ -10,7 +9,7 @@ Handles payment tracking for eBarimt receipts
 
 import frappe
 from frappe import _
-from frappe.utils import flt, cint
+from frappe.utils import cint, flt
 
 
 def validate_payment_entry(doc, method=None):
@@ -21,27 +20,27 @@ def validate_payment_entry(doc, method=None):
     """
     if not frappe.db.get_single_value("eBarimt Settings", "enabled"):
         return
-    
+
     # Check if this payment is linked to an eBarimt invoice
     has_ebarimt_invoice = False
-    
+
     for ref in doc.references or []:
         if ref.reference_doctype in ("Sales Invoice", "POS Invoice"):
             receipt_id = frappe.db.get_value(
-                ref.reference_doctype, 
-                ref.reference_name, 
+                ref.reference_doctype,
+                ref.reference_name,
                 "custom_ebarimt_receipt_id"
             )
             if receipt_id:
                 has_ebarimt_invoice = True
                 break
-    
+
     if has_ebarimt_invoice:
         # Auto-set payment code from Mode of Payment if not set
         if not doc.get("custom_ebarimt_payment_code") and doc.mode_of_payment:
             payment_type = frappe.db.get_value(
-                "Mode of Payment", 
-                doc.mode_of_payment, 
+                "Mode of Payment",
+                doc.mode_of_payment,
                 "custom_ebarimt_payment_type"
             )
             if payment_type:
@@ -54,13 +53,13 @@ def on_submit_payment_entry(doc, method=None):
     """
     if not frappe.db.get_single_value("eBarimt Settings", "enabled"):
         return
-    
+
     # Find linked eBarimt receipts and update payment status
     for ref in doc.references or []:
         if ref.reference_doctype in ("Sales Invoice", "POS Invoice"):
             receipt_id = frappe.db.get_value(
-                ref.reference_doctype, 
-                ref.reference_name, 
+                ref.reference_doctype,
+                ref.reference_name,
                 "custom_ebarimt_receipt_id"
             )
             if receipt_id:
@@ -73,12 +72,12 @@ def on_cancel_payment_entry(doc, method=None):
     """
     if not frappe.db.get_single_value("eBarimt Settings", "enabled"):
         return
-    
+
     for ref in doc.references or []:
         if ref.reference_doctype in ("Sales Invoice", "POS Invoice"):
             receipt_id = frappe.db.get_value(
-                ref.reference_doctype, 
-                ref.reference_name, 
+                ref.reference_doctype,
+                ref.reference_name,
                 "custom_ebarimt_receipt_id"
             )
             if receipt_id:
@@ -89,19 +88,19 @@ def _update_receipt_payment_status(receipt_id, payment_doc, amount):
     """Update eBarimt Receipt Log with payment information"""
     try:
         receipt_log = frappe.get_doc("eBarimt Receipt Log", {"receipt_id": receipt_id})
-        
+
         # Track payment
         receipt_log.db_set("payment_entry", payment_doc.name, update_modified=False)
         receipt_log.db_set("payment_amount", flt(amount), update_modified=False)
         receipt_log.db_set("payment_date", payment_doc.posting_date, update_modified=False)
-        
+
         # Get payment type code
         payment_code = payment_doc.get("custom_ebarimt_payment_code")
         if payment_code:
             receipt_log.db_set("payment_type", payment_code, update_modified=False)
-        
+
         frappe.db.commit()
-        
+
     except frappe.DoesNotExistError:
         pass  # No receipt log found
     except Exception as e:
@@ -115,13 +114,13 @@ def _revert_receipt_payment_status(receipt_id, payment_name):
     """Revert payment tracking on cancellation"""
     try:
         receipt_log = frappe.get_doc("eBarimt Receipt Log", {"receipt_id": receipt_id})
-        
+
         if receipt_log.payment_entry == payment_name:
             receipt_log.db_set("payment_entry", None, update_modified=False)
             receipt_log.db_set("payment_amount", 0, update_modified=False)
             receipt_log.db_set("payment_date", None, update_modified=False)
             frappe.db.commit()
-            
+
     except frappe.DoesNotExistError:
         pass
     except Exception as e:
@@ -166,7 +165,7 @@ def get_payment_summary_for_invoice(doctype, docname):
         },
         fields=["parent", "allocated_amount"]
     )
-    
+
     result = []
     for payment in payments:
         pe = frappe.get_doc("Payment Entry", payment.parent)
@@ -177,5 +176,5 @@ def get_payment_summary_for_invoice(doctype, docname):
             "ebarimt_payment_code": pe.get("custom_ebarimt_payment_code"),
             "posting_date": pe.posting_date
         })
-    
+
     return result

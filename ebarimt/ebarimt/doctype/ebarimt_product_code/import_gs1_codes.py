@@ -1,7 +1,6 @@
 # Copyright (c) 2024, Digital Consulting Service LLC (Mongolia)
 # License: GNU General Public License v3
 # pyright: reportMissingImports=false, reportAttributeAccessIssue=false
-# ruff: noqa: E501
 
 """
 Import GS1 Product Codes from QPayAPIv2.xlsx
@@ -12,7 +11,6 @@ and imports them into the eBarimt Product Code DocType.
 
 import frappe
 from frappe.utils import cint, flt
-
 
 # VAT Zero Codes (0% VAT) - from QPayAPIv2.xlsx "Vat Free, Zero" sheet
 VAT_ZERO_CODES = {
@@ -77,18 +75,18 @@ VAT_EXEMPT_CODES = {
 def import_gs1_codes_from_excel(file_path=None):
     """
     Import GS1 codes from QPayAPIv2.xlsx file.
-    
+
     Args:
         file_path: Path to Excel file. Defaults to /opt/docs/QPayAPIv2.xlsx
     """
     import pandas as pd  # type: ignore
-    
+
     if not file_path:
         file_path = "/opt/docs/QPayAPIv2.xlsx"
-    
+
     # Read GS1 sheet
     df = pd.read_excel(file_path, sheet_name="GS1")
-    
+
     # Parse the hierarchical structure
     current_segment = None
     current_segment_name = None
@@ -96,16 +94,16 @@ def import_gs1_codes_from_excel(file_path=None):
     current_family_name = None
     current_class = None
     current_class_name = None
-    
+
     imported = 0
     skipped = 0
-    
+
     for idx, row in df.iterrows():
         try:
             # Skip header rows
             if int(idx) < 2:  # type: ignore
                 continue
-            
+
             # Get values from columns
             col1 = row.get("Unnamed: 1")  # Segment number
             col2 = row.get("Unnamed: 2")  # Family code (3 digits)
@@ -113,15 +111,15 @@ def import_gs1_codes_from_excel(file_path=None):
             col4 = row.get("Unnamed: 4")  # Brick code (5-6 digits)
             col5 = row.get("Unnamed: 5")  # Full brick code (6 digits)
             col6 = row.get("Unnamed: 6")  # Name
-            
+
             # Determine what type of row this is
             name = str(col6).strip() if pd.notna(col6) else None
             if not name or name == "nan":
                 continue
-            
+
             classification_code = None
             code_level = None
-            
+
             # Check if it's a segment (column 1 has number)
             if pd.notna(col1) and str(col1).replace(".", "").isdigit():
                 segment_num = int(float(col1))
@@ -129,7 +127,7 @@ def import_gs1_codes_from_excel(file_path=None):
                 current_segment_name = name
                 # Don't create segment records, they're categories
                 continue
-            
+
             # Check if it's a family (column 2 has 3-digit code)
             if pd.notna(col2) and str(col2).replace(".", "").isdigit():
                 code = str(int(float(col2))).zfill(3)
@@ -140,7 +138,7 @@ def import_gs1_codes_from_excel(file_path=None):
                     current_family_name = name
                     current_class = None
                     current_class_name = None
-            
+
             # Check if it's a class (column 3 has 4-digit code)
             elif pd.notna(col3) and str(col3).replace(".", "").isdigit():
                 code = str(int(float(col3))).zfill(4)
@@ -149,7 +147,7 @@ def import_gs1_codes_from_excel(file_path=None):
                     code_level = "Class"
                     current_class = code
                     current_class_name = name
-            
+
             # Check if it's a brick (column 4 or 5 has 6-digit code)
             elif pd.notna(col5) and str(col5).replace(".", "").isdigit():
                 code = str(int(float(col5))).zfill(6)
@@ -161,15 +159,15 @@ def import_gs1_codes_from_excel(file_path=None):
                 if len(code) >= 4:
                     classification_code = code.zfill(6)
                     code_level = "Brick"
-            
+
             if not classification_code:
                 continue
-            
+
             # Check if already exists
             if frappe.db.exists("eBarimt Product Code", classification_code):
                 skipped += 1
                 continue
-            
+
             # Create product code
             doc = frappe.new_doc("eBarimt Product Code")
             doc.classification_code = classification_code
@@ -177,7 +175,7 @@ def import_gs1_codes_from_excel(file_path=None):
             doc.code_level = code_level
             doc.enabled = 1
             doc.vat_type = "STANDARD"
-            
+
             # Set hierarchy
             if current_segment:
                 doc.segment_code = current_segment
@@ -191,11 +189,11 @@ def import_gs1_codes_from_excel(file_path=None):
             if code_level == "Brick":
                 doc.brick_code = classification_code
                 doc.brick_name = name
-            
+
             # Auto-detect excise and city tax (done in before_save)
             doc.insert(ignore_permissions=True)
             imported += 1
-            
+
             if imported % 500 == 0:
                 frappe.db.commit()
                 frappe.publish_progress(
@@ -203,11 +201,11 @@ def import_gs1_codes_from_excel(file_path=None):
                     title="Importing GS1 Codes",
                     description=f"Imported {imported} codes..."
                 )
-        
+
         except Exception as e:
-            frappe.log_error(f"Error importing row {idx}: {str(e)}", "GS1 Import Error")
+            frappe.log_error(f"Error importing row {idx}: {e!s}", "GS1 Import Error")
             continue
-    
+
     frappe.db.commit()
     return {"imported": imported, "skipped": skipped}
 
@@ -215,7 +213,7 @@ def import_gs1_codes_from_excel(file_path=None):
 def import_vat_codes():
     """Import VAT Zero and Exempt code definitions."""
     imported = 0
-    
+
     # Import VAT Zero codes
     for code, name in VAT_ZERO_CODES.items():
         if not frappe.db.exists("eBarimt Product Code", f"VAT_{code}"):
@@ -230,7 +228,7 @@ def import_vat_codes():
             doc.enabled = 1
             doc.insert(ignore_permissions=True)
             imported += 1
-    
+
     # Import VAT Exempt codes
     for code, name in VAT_EXEMPT_CODES.items():
         if not frappe.db.exists("eBarimt Product Code", f"VAT_{code}"):
@@ -245,7 +243,7 @@ def import_vat_codes():
             doc.enabled = 1
             doc.insert(ignore_permissions=True)
             imported += 1
-    
+
     frappe.db.commit()
     return imported
 
@@ -254,15 +252,15 @@ def import_vat_codes():
 def sync_product_codes(file_path=None):
     """
     Sync product codes from Excel file.
-    
+
     This is the main entry point for importing/syncing codes.
     """
     frappe.only_for("System Manager")
-    
+
     # Import VAT codes first
     vat_imported = import_vat_codes()
     frappe.msgprint(f"Imported {vat_imported} VAT codes")
-    
+
     # Import GS1 codes
     if file_path or frappe.os.path.exists("/opt/docs/QPayAPIv2.xlsx"):
         result = import_gs1_codes_from_excel(file_path)
@@ -277,9 +275,9 @@ def load_default_product_codes():
     """Load commonly used product codes with correct tax settings."""
     defaults = [
         # General merchandise - Standard VAT
-        {"code": "999999", "name_mn": "Бусад бараа бүтээгдэхүүн", "name_en": "Other Products", 
+        {"code": "999999", "name_mn": "Бусад бараа бүтээгдэхүүн", "name_en": "Other Products",
          "vat_type": "STANDARD", "city_tax": 0, "excise": None},
-        
+
         # Alcohol - City Tax + Excise
         {"code": "500100", "name_mn": "Архи, спиртлэг ундаа", "name_en": "Alcoholic Beverages",
          "vat_type": "STANDARD", "city_tax": 1, "excise": "Alcohol"},
@@ -289,13 +287,13 @@ def load_default_product_codes():
          "vat_type": "STANDARD", "city_tax": 1, "excise": "Alcohol"},
         {"code": "500103", "name_mn": "Дарс", "name_en": "Wine",
          "vat_type": "STANDARD", "city_tax": 1, "excise": "Alcohol"},
-        
+
         # Tobacco - City Tax + Excise
         {"code": "500200", "name_mn": "Тамхи", "name_en": "Tobacco Products",
          "vat_type": "STANDARD", "city_tax": 1, "excise": "Tobacco"},
         {"code": "500201", "name_mn": "Янжуур тамхи", "name_en": "Cigarettes",
          "vat_type": "STANDARD", "city_tax": 1, "excise": "Tobacco"},
-        
+
         # Fuel - City Tax + Excise
         {"code": "500300", "name_mn": "Шатахуун", "name_en": "Fuel",
          "vat_type": "STANDARD", "city_tax": 1, "excise": "Fuel"},
@@ -303,17 +301,17 @@ def load_default_product_codes():
          "vat_type": "STANDARD", "city_tax": 1, "excise": "Fuel"},
         {"code": "500302", "name_mn": "Дизель түлш", "name_en": "Diesel",
          "vat_type": "STANDARD", "city_tax": 1, "excise": "Fuel"},
-        
+
         # Healthcare - VAT Exempt
         {"code": "410001", "name_mn": "Эрүүл мэндийн үйлчилгээ", "name_en": "Healthcare Services",
          "vat_type": "EXEMPT", "vat_code": "410", "city_tax": 0, "excise": None},
         {"code": "410002", "name_mn": "Эм", "name_en": "Medicine/Drugs",
          "vat_type": "EXEMPT", "vat_code": "410", "city_tax": 0, "excise": None},
-        
+
         # Education - VAT Exempt
         {"code": "409001", "name_mn": "Боловсролын үйлчилгээ", "name_en": "Education Services",
          "vat_type": "EXEMPT", "vat_code": "409", "city_tax": 0, "excise": None},
-        
+
         # Food (domestic agriculture) - VAT Exempt
         {"code": "318001", "name_mn": "Үр тариа (дотоодын)", "name_en": "Grains (Domestic)",
          "vat_type": "EXEMPT", "vat_code": "318", "city_tax": 0, "excise": None},
@@ -322,7 +320,7 @@ def load_default_product_codes():
         {"code": "320001", "name_mn": "Сүү (дотоодын)", "name_en": "Milk (Domestic)",
          "vat_type": "EXEMPT", "vat_code": "320", "city_tax": 0, "excise": None},
     ]
-    
+
     imported = 0
     for d in defaults:
         if not frappe.db.exists("eBarimt Product Code", d["code"]):
@@ -338,7 +336,7 @@ def load_default_product_codes():
             doc.enabled = 1
             doc.insert(ignore_permissions=True)
             imported += 1
-    
+
     frappe.db.commit()
     return imported
 
@@ -346,26 +344,26 @@ def load_default_product_codes():
 def create_items_from_product_codes(force=False):
     """
     Create ERPNext Items from eBarimt Product Codes.
-    
+
     AVOIDS DUPLICATES: Checks if Item already exists before creating.
     Links Items to eBarimt Product Code via custom field.
-    
+
     Args:
         force: If True, update existing items
-    
+
     Returns:
         dict: Import statistics
     """
     if not frappe.db.exists("DocType", "Item"):
         return {"status": "skipped", "message": "ERPNext not installed"}
-    
+
     # Create Item Group if needed
     gs1_group = "GS1 Products"
     if not frappe.db.exists("Item Group", gs1_group):
         parent_group = "All Item Groups"
         if not frappe.db.exists("Item Group", parent_group):
             return {"status": "skipped", "message": "ERPNext setup not complete"}
-        
+
         frappe.get_doc({
             "doctype": "Item Group",
             "item_group_name": gs1_group,
@@ -373,31 +371,31 @@ def create_items_from_product_codes(force=False):
             "is_group": 0
         }).insert(ignore_permissions=True)
         frappe.db.commit()
-    
+
     # Get all eBarimt Product Codes
     product_codes = frappe.get_all(
         "eBarimt Product Code",
         filters={"enabled": 1},
         fields=["classification_code", "name_mn", "name_en"]
     )
-    
+
     # Get ALL existing items (not just GS1 group) to avoid duplicates
     all_existing_items = set(frappe.get_all("Item", pluck="item_code"))
-    
+
     # Check for custom field
     has_product_code_field = frappe.db.exists(
         "Custom Field",
         {"dt": "Item", "fieldname": "custom_ebarimt_product_code"}
     )
-    
+
     created = 0
     updated = 0
     skipped = 0
-    
+
     for pc in product_codes:
         code = pc.classification_code
         name = pc.name_mn or pc.name_en or code
-        
+
         if code in all_existing_items:
             if force:
                 # Update existing item
@@ -422,10 +420,10 @@ def create_items_from_product_codes(force=False):
                 "description": name,
                 "disabled": 0,
             }
-            
+
             if has_product_code_field:
                 item_data["custom_ebarimt_product_code"] = code
-            
+
             try:
                 item = frappe.get_doc(item_data)
                 item.flags.ignore_permissions = True
@@ -435,12 +433,12 @@ def create_items_from_product_codes(force=False):
                 all_existing_items.add(code)
             except Exception:
                 skipped += 1
-        
+
         if (created + updated) % 500 == 0:
             frappe.db.commit()
-    
+
     frappe.db.commit()
-    
+
     return {
         "status": "success",
         "created": created,
@@ -453,29 +451,29 @@ def create_items_from_product_codes(force=False):
 def sync_to_qpay():
     """
     Sync eBarimt Product Codes to QPay Product Code.
-    
+
     This ensures QPay has the same codes with tax info from eBarimt.
     Both apps now use the same VAT types: STANDARD, ZERO, EXEMPT
     """
     if not frappe.db.exists("DocType", "QPay Product Code"):
         return {"status": "skipped", "message": "QPay not installed"}
-    
+
     # Get all eBarimt codes
     ebarimt_codes = frappe.get_all(
         "eBarimt Product Code",
         filters={"enabled": 1},
         fields=["classification_code", "name_mn", "code_level", "vat_type"]
     )
-    
+
     # Get existing QPay codes
     existing_qpay = set(frappe.get_all("QPay Product Code", pluck="product_code"))
-    
+
     created = 0
     updated = 0
-    
+
     for ec in ebarimt_codes:
         code = ec.classification_code
-        
+
         if code in existing_qpay:
             frappe.db.set_value("QPay Product Code", code, {
                 "description": ec.name_mn,
@@ -496,12 +494,12 @@ def sync_to_qpay():
                 created += 1
             except Exception:
                 pass
-        
+
         if (created + updated) % 500 == 0:
             frappe.db.commit()
-    
+
     frappe.db.commit()
-    
+
     return {
         "status": "success",
         "created": created,

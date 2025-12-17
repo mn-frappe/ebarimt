@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 # Copyright (c) 2024, Digital Consulting Service LLC (Mongolia)
 # License: GNU General Public License v3
 # pyright: reportAttributeAccessIssue=false, reportArgumentType=false, reportOptionalMemberAccess=false
@@ -19,16 +18,16 @@ def validate_company(doc, method=None):
     """
     if not doc.get("custom_ebarimt_enabled"):
         return
-    
+
     # Validate required fields
     if not doc.get("custom_operator_tin"):
         frappe.throw(_("Operator TIN is required when eBarimt is enabled for company"))
-    
+
     # Validate TIN format
     tin = doc.custom_operator_tin.strip()
     if not tin.isdigit() or len(tin) < 7 or len(tin) > 12:
         frappe.throw(_("Invalid Operator TIN format. TIN should be 7-12 digits."))
-    
+
     # POS No validation
     if doc.get("custom_pos_no"):
         pos_no = doc.custom_pos_no.strip()
@@ -49,10 +48,10 @@ def get_company_ebarimt_settings(company):
     Falls back to global settings if not configured
     """
     settings = frappe.get_cached_doc("eBarimt Settings")
-    
+
     # Check if company has custom settings
     company_doc = frappe.get_cached_doc("Company", company)
-    
+
     if company_doc.get("custom_ebarimt_enabled"):
         return {
             "enabled": True,
@@ -62,7 +61,7 @@ def get_company_ebarimt_settings(company):
             "environment": settings.environment,
             "company_specific": True
         }
-    
+
     # Fall back to global settings
     return {
         "enabled": settings.enabled,
@@ -86,29 +85,29 @@ def sync_company_taxpayer_info(company):
     Sync company taxpayer information from eBarimt
     """
     from ebarimt.api.client import EBarimtClient
-    
+
     company_doc = frappe.get_doc("Company", company)
-    
+
     tin = company_doc.get("custom_operator_tin") or company_doc.get("tax_id")
-    
+
     if not tin:
         return {"success": False, "message": _("No TIN configured for company")}
-    
+
     settings = frappe.get_cached_doc("eBarimt Settings")
-    
+
     if not settings.enabled:
         return {"success": False, "message": _("eBarimt is not enabled")}
-    
+
     client = EBarimtClient(settings=settings)
-    
+
     try:
         taxpayer_info = client.get_taxpayer_info(tin)
-        
+
         if taxpayer_info and taxpayer_info.get("found"):
             # Update company tax_id if not set
             if not company_doc.tax_id:
                 company_doc.db_set("tax_id", tin, update_modified=False)
-            
+
             return {
                 "success": True,
                 "data": {
@@ -120,7 +119,7 @@ def sync_company_taxpayer_info(company):
             }
         else:
             return {"success": False, "message": _("Company TIN not found in eBarimt")}
-    
+
     except Exception as e:
         frappe.log_error(
             message=str(e),
@@ -136,19 +135,19 @@ def verify_company_registration(company):
     Checks POS registration status
     """
     from ebarimt.api.client import EBarimtClient
-    
+
     company_settings = get_company_ebarimt_settings(company)
-    
+
     if not company_settings.get("enabled"):
         return {"success": False, "message": _("eBarimt not enabled for this company")}
-    
+
     settings = frappe.get_cached_doc("eBarimt Settings")
-    
+
     client = EBarimtClient(settings=settings)
-    
+
     try:
         pos_info = client.get_info()
-        
+
         if pos_info and pos_info.get("success"):
             return {
                 "success": True,
@@ -165,7 +164,7 @@ def verify_company_registration(company):
                 "registered": False,
                 "message": _("POS not registered or inactive")
             }
-    
+
     except Exception as e:
         return {"success": False, "message": str(e)}
 
@@ -179,11 +178,11 @@ def get_ebarimt_enabled_companies():
         filters={"custom_ebarimt_enabled": 1},
         pluck="name"
     )
-    
+
     # All companies if global settings enabled and no specific company set
     settings = frappe.get_cached_doc("eBarimt Settings")
-    
+
     if settings.enabled and not custom_companies:
         return frappe.get_all("Company", pluck="name")
-    
+
     return custom_companies

@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 # Copyright (c) 2024, Digital Consulting Service LLC (Mongolia)
 # License: GNU General Public License v3
 
@@ -386,7 +385,7 @@ def get_custom_fields():
 def create_custom_fields():
     """Create all custom fields for eBarimt integration"""
     from frappe.custom.doctype.custom_field.custom_field import create_custom_fields as _create_custom_fields
-    
+
     custom_fields = get_custom_fields()
     _create_custom_fields(custom_fields)
 
@@ -394,13 +393,13 @@ def create_custom_fields():
 def delete_custom_fields():
     """Delete custom fields on uninstall"""
     import frappe
-    
+
     custom_fields = get_custom_fields()
-    
+
     for doctype, fields in custom_fields.items():
         for field in fields:
             fieldname = field.get("fieldname")
             try:
                 frappe.delete_doc("Custom Field", f"{doctype}-{fieldname}", force=True)
-            except:
+            except Exception:
                 pass
