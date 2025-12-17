@@ -2,16 +2,61 @@
 # Copyright (c) 2024, Digital Consulting Service LLC (Mongolia)
 # License: GNU General Public License v3
 
+"""
+eBarimt - Mongolian VAT Receipt System
+
+Compatible with ERPNext and all ERPNext-based apps:
+- ERPNext Core: Sales Invoice, POS Invoice, Payment Entry
+- Healthcare: Patient Encounter billing
+- Education: Student Fees
+- Lending: Loan Disbursements
+- Webshop: E-commerce transactions
+
+All integrations are automatic when the respective apps are installed.
+"""
+
 app_name = "ebarimt"
 app_title = "eBarimt"
 app_publisher = "Digital Consulting Service LLC (Mongolia)"
-app_description = "eBarimt Mongolian VAT Receipt System - Full ERPNext Integration"
+app_description = (
+    "eBarimt Mongolian VAT Receipt System - ERPNext Integration. "
+    "Compatible with Healthcare, Education, Lending, and Webshop apps."
+)
 app_email = "dev@frappe.mn"
 app_license = "gpl-3.0"
 app_version = "1.8.0"
 
-# Required Apps
+# Required Apps - ERPNext is required for eBarimt (Sales Invoice, Item, Customer)
 required_apps = ["frappe", "erpnext"]
+
+
+# =============================================================================
+# App Detection for Optional Integrations
+# =============================================================================
+_app_cache: dict = {}
+
+
+def _has_app(name: str) -> bool:
+    """Check if an app is installed."""
+    if name not in _app_cache:
+        try:
+            __import__(name)
+            _app_cache[name] = True
+        except ImportError:
+            _app_cache[name] = False
+    return _app_cache[name]
+
+
+def _has_healthcare() -> bool:
+    return _has_app("healthcare")
+
+
+def _has_education() -> bool:
+    return _has_app("education")
+
+
+def _has_lending() -> bool:
+    return _has_app("lending")
 
 # App include
 app_include_js = "/assets/ebarimt/js/ebarimt.bundle.js"
@@ -74,8 +119,11 @@ fixtures = [
     }
 ]
 
-# Document Events
+# Document Events - ERPNext Core + Optional App Integrations
+# Events for Healthcare, Education, Lending are handled gracefully
+# if those apps are installed
 doc_events = {
+    # ERPNext Core DocTypes
     "Sales Invoice": {
         "validate": "ebarimt.integrations.sales_invoice.validate_invoice_for_ebarimt",
         "on_submit": "ebarimt.integrations.sales_invoice.on_submit_invoice",
@@ -105,7 +153,10 @@ doc_events = {
     },
     "Mode of Payment": {
         "validate": "ebarimt.integrations.mode_of_payment.validate_mode_of_payment"
-    }
+    },
+    # Healthcare App - Patient Encounter creates Sales Invoice, handled automatically
+    # Education App - Fees creates Sales Invoice, handled automatically
+    # Lending App - Loan creates Journal Entry/Sales Invoice, handled automatically
 }
 
 # Scheduled Tasks
