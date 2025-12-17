@@ -1,3 +1,17 @@
+## [1.10.0](https://github.com/mn-frappe/ebarimt/compare/v1.9.0...v1.10.0) (2025-12-17)
+
+### 🚀 Features
+
+* add CodeQL, CODEOWNERS, MkDocs documentation ([74d9213](https://github.com/mn-frappe/ebarimt/commit/74d9213baef8b7084568d486b5ff4a1852d5c555))
+* add mypy type checking, matrix testing, enhanced VS Code ([5b3a73b](https://github.com/mn-frappe/ebarimt/commit/5b3a73baf170be56f2eada735f0a3ebbb3b20387))
+* add semantic-release for automatic versioning ([439e51d](https://github.com/mn-frappe/ebarimt/commit/439e51d02bcd411fa51bec292085b01977d90ba3))
+* add telemetry for GitHub issue auto-creation ([dcca0cb](https://github.com/mn-frappe/ebarimt/commit/dcca0cb791490a4965116ec8bc5ce93b9d33d5b4))
+
+### 🐛 Bug Fixes
+
+* resolve type errors in telemetry module ([584dd28](https://github.com/mn-frappe/ebarimt/commit/584dd28b194fdf521c0a483c848b0b022d94446b))
+* semantic-release auth and missing npm package ([1630991](https://github.com/mn-frappe/ebarimt/commit/1630991e261ad67e23ef3dd1ba5ca308f918750c))
+
 # Changelog
 
 All notable changes to eBarimt will be documented in this file.
