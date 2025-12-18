@@ -9,7 +9,6 @@ Sets up default configuration for staging environment
 import json
 
 import frappe
-from frappe import _
 
 
 def after_install():

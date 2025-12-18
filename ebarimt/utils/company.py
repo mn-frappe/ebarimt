@@ -17,7 +17,6 @@ For multi-company support, use:
     entity = get_ebarimt_entity("ABC LLC")
 """
 
-from typing import Optional
 
 import frappe
 

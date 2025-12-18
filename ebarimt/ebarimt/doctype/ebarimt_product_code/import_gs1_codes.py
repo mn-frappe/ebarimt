@@ -10,7 +10,6 @@ and imports them into the eBarimt Product Code DocType.
 """
 
 import frappe
-from frappe.utils import cint, flt
 
 # VAT Zero Codes (0% VAT) - from QPayAPIv2.xlsx "Vat Free, Zero" sheet
 VAT_ZERO_CODES = {

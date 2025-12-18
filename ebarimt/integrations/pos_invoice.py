@@ -10,7 +10,7 @@ POS Invoices are auto-submitted immediately on payment
 
 import frappe
 from frappe import _
-from frappe.utils import cint, flt, getdate, now_datetime
+from frappe.utils import flt, now_datetime
 
 
 def validate_pos_invoice(doc, method=None):

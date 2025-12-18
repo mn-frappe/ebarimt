@@ -9,7 +9,6 @@ Multi-company support with per-company eBarimt settings
 
 import frappe
 from frappe import _
-from frappe.utils import cint
 
 
 def validate_company(doc, method=None):

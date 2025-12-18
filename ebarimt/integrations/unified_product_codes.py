@@ -18,7 +18,6 @@ Usage:
 """
 
 import frappe
-from frappe import _
 
 
 def is_ebarimt_installed():
