@@ -1,3 +1,9 @@
+## [1.10.1](https://github.com/mn-frappe/ebarimt/compare/v1.10.0...v1.10.1) (2025-12-18)
+
+### 🐛 Bug Fixes
+
+* update linter workflow to match passing pattern ([53ad2b0](https://github.com/mn-frappe/ebarimt/commit/53ad2b03b33b34145c487c37c95b1cd93dcc92e5))
+
 ## [1.10.0](https://github.com/mn-frappe/ebarimt/compare/v1.9.0...v1.10.0) (2025-12-17)
 
 ### 🚀 Features

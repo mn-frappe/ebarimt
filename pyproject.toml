@@ -1,6 +1,6 @@
 [project]
 name = "ebarimt"
-version = "1.10.0"
+version = "1.10.1"
 authors = [
     { name = "Digital Consulting Service LLC (Mongolia)", email = "dev@frappe.mn" }
 ]
