@@ -23,7 +23,7 @@ app_description = (
 )
 app_email = "dev@frappe.mn"
 app_license = "gpl-3.0"
-app_version = "1.8.0"
+app_version = "1.10.0"
 
 # Required Apps - ERPNext is required for eBarimt (Sales Invoice, Item, Customer)
 required_apps = ["frappe", "erpnext"]
