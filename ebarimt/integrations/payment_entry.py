@@ -8,8 +8,7 @@ Handles payment tracking for eBarimt receipts
 """
 
 import frappe
-from frappe import _
-from frappe.utils import cint, flt
+from frappe.utils import flt
 
 
 def validate_payment_entry(doc, method=None):

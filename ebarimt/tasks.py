@@ -9,7 +9,6 @@ This allows independent operation without QPay installed.
 """
 
 import frappe
-from frappe import _
 from frappe.utils import add_days, add_years, now_datetime
 
 

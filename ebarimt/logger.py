@@ -12,10 +12,8 @@ Logs are stored in:
 import json
 import traceback
 from functools import wraps
-from typing import Any, Dict, Optional
 
 import frappe
-from frappe import _
 
 
 # Logger instance for file logging

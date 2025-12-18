@@ -63,7 +63,7 @@ Entity Object Properties:
 """
 
 from dataclasses import dataclass
-from typing import Any, Optional, Union
+from typing import Any
 
 import frappe
 from frappe import _

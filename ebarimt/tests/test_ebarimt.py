@@ -5,7 +5,6 @@
 eBarimt Unit Tests for CI - Full Coverage
 """
 
-import unittest
 
 import frappe
 from frappe.tests.utils import FrappeTestCase

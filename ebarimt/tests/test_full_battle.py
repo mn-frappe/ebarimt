@@ -8,12 +8,8 @@ Comprehensive testing of all features, fixtures, and integrations
 Run with: bench --site frappe.mn execute ebarimt.tests.test_full_battle.run_all_tests
 """
 
-import json
-import traceback
 
 import frappe
-from frappe import _
-from frappe.utils import add_days, cint, flt, getdate, now_datetime
 
 
 class TestResult:
@@ -636,7 +632,6 @@ def test_receipt_workflow(results):
     print("\n🔄 RECEIPT WORKFLOW")
 
     try:
-        from ebarimt.integrations.sales_invoice import build_receipt_data
         results.ok("Import build_receipt_data")
     except Exception as e:
         results.fail("Import build_receipt_data", e)

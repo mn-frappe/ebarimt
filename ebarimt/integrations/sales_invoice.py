@@ -8,7 +8,7 @@ Handles automatic receipt submission on Sales Invoice submission
 
 import frappe
 from frappe import _
-from frappe.utils import cint, flt, getdate, now_datetime
+from frappe.utils import flt, getdate, now_datetime
 
 
 def validate_invoice_for_ebarimt(doc, method=None):
@@ -175,8 +175,6 @@ def submit_ebarimt_receipt(invoice_doc):
 
 def build_receipt_data(invoice_doc, settings, bill_type):
     """Build receipt data from Sales Invoice"""
-    from ebarimt.ebarimt.doctype.ebarimt_payment_type.ebarimt_payment_type import get_payment_type_code
-    from ebarimt.ebarimt.doctype.ebarimt_tax_code.ebarimt_tax_code import get_tax_type_for_item
 
     # Get customer info
     customer_tin = ""
@@ -452,7 +450,6 @@ def on_cancel_invoice(doc, method=None):
 def create_return_receipt(original_invoice_name, return_invoice_name):
     """Create return/credit receipt for a return invoice"""
     from ebarimt.api.client import EBarimtClient
-    from ebarimt.ebarimt.doctype.ebarimt_receipt_log.ebarimt_receipt_log import create_receipt_log
 
     original_doc = frappe.get_doc("Sales Invoice", original_invoice_name)
     return_doc = frappe.get_doc("Sales Invoice", return_invoice_name)

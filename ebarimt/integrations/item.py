@@ -8,7 +8,6 @@ Handles barcode/BUNA lookup and synchronization
 
 import frappe
 from frappe import _
-from frappe.utils import flt
 
 
 def validate_item(doc, method=None):
