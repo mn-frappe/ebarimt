@@ -1,3 +1,9 @@
+## [1.11.0](https://github.com/mn-frappe/ebarimt/compare/v1.10.1...v1.11.0) (2025-12-19)
+
+### 🚀 Features
+
+* Production-ready infrastructure and error handling ([#5](https://github.com/mn-frappe/ebarimt/issues/5)) ([0bdfd68](https://github.com/mn-frappe/ebarimt/commit/0bdfd683054b9aace81529abdca4aa2f763af5d5))
+
 ## [1.10.1](https://github.com/mn-frappe/ebarimt/compare/v1.10.0...v1.10.1) (2025-12-18)
 
 ### 🐛 Bug Fixes
