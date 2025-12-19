@@ -59,6 +59,11 @@
         "auto_receipt_patient_encounter",
         "column_break_healthcare",
         "auto_receipt_patient_invoice",
+        "section_pharmacy",
+        "is_pharmacy",
+        "pharmacy_default_lot_no",
+        "column_break_pharmacy",
+        "require_lot_no",
         "section_education",
         "enable_education_integration",
         "auto_receipt_fee_collection",
@@ -440,6 +445,41 @@
             "label": "Auto-receipt Patient Invoice",
             "depends_on": "enable_healthcare_integration",
             "description": "Auto-create receipt for healthcare invoices"
+        },
+        {
+            "fieldname": "section_pharmacy",
+            "fieldtype": "Section Break",
+            "label": "Pharmacy Mode (Эмийн сан)",
+            "collapsible": 1,
+            "collapsible_depends_on": "eval:!doc.is_pharmacy",
+            "description": "Per Mongolian law on medicines/medical supplies, pharmacies must include lot numbers in receipts"
+        },
+        {
+            "default": "0",
+            "fieldname": "is_pharmacy",
+            "fieldtype": "Check",
+            "label": "This is a Pharmacy (Эмийн сан)",
+            "bold": 1,
+            "description": "Enable pharmacy mode to include lot numbers (lotNo) in receipts per Article 11.1.7, 47.11.1, 47.12 of the Law on Medicines"
+        },
+        {
+            "fieldname": "pharmacy_default_lot_no",
+            "fieldtype": "Data",
+            "label": "Default Lot Number",
+            "depends_on": "is_pharmacy",
+            "description": "Default lot number for items without a specific lot number"
+        },
+        {
+            "fieldname": "column_break_pharmacy",
+            "fieldtype": "Column Break"
+        },
+        {
+            "default": "0",
+            "fieldname": "require_lot_no",
+            "fieldtype": "Check",
+            "label": "Require Lot Number",
+            "depends_on": "is_pharmacy",
+            "description": "Require lot number for all pharmaceutical items"
         },
         {
             "fieldname": "section_education",
