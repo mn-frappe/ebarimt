@@ -25,4 +25,4 @@ Features (v1.9.0):
 - Multi-company entity support
 """
 
-__version__ = "1.10.0"
+__version__ = "1.11.0"
