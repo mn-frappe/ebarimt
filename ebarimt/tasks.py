@@ -230,3 +230,142 @@ def sync_barcode_info_weekly():
 
     if synced:
         frappe.logger("ebarimt").info(f"Weekly barcode sync: {synced} items updated")
+
+
+def check_lottery_status():
+    """
+    Check lottery ticket status every 3 days (per eBarimt documentation #6)
+    Uses /rest/info API to get leftLotteries count
+    Alerts when lottery count is low (< 100)
+
+    Per eBarimtRequirements.rtf: "getInformation service must be called every 3 days
+    to check lottery winner status and remaining lottery tickets"
+    """
+    if not frappe.db.get_single_value("eBarimt Settings", "enabled"):
+        return
+
+    from ebarimt.api.client import EBarimtClient
+
+    settings = frappe.get_cached_doc("eBarimt Settings")
+    client = EBarimtClient(settings=settings)
+
+    try:
+        # Get POS info which includes leftLotteries
+        info = client.get_info()
+
+        if not info:
+            frappe.log_error(
+                message="Failed to get POS info - no response",
+                title="eBarimt Lottery Check Failed"
+            )
+            return
+
+        left_lotteries = info.get("leftLotteries", 0)
+        operator_name = info.get("operatorName", "Unknown")
+        pos_id = info.get("posId", "Unknown")
+        last_sent_date = info.get("lastSentDate", "Unknown")
+
+        # Update settings with latest info
+        frappe.db.set_single_value("eBarimt Settings", "left_lotteries", left_lotteries)
+        frappe.db.set_single_value("eBarimt Settings", "operator_name", operator_name)
+        frappe.db.set_single_value("eBarimt Settings", "last_sync", now_datetime())
+        frappe.db.commit()
+
+        frappe.logger("ebarimt").info(
+            f"Lottery check: {left_lotteries} tickets remaining, "
+            f"POS ID: {pos_id}, Last sent: {last_sent_date}"
+        )
+
+        # Alert if lottery count is low (< 100)
+        LOW_LOTTERY_THRESHOLD = 100
+        if left_lotteries < LOW_LOTTERY_THRESHOLD:
+            _send_low_lottery_alert(left_lotteries, operator_name, pos_id)
+
+        # Check for lottery winners in recent receipts
+        _check_lottery_winners(client, info)
+
+    except Exception as e:
+        frappe.log_error(
+            message=str(e),
+            title="eBarimt Lottery Check Failed"
+        )
+
+
+def _send_low_lottery_alert(left_lotteries, operator_name, pos_id):
+    """Send alert email when lottery tickets are running low"""
+    alert_email = frappe.db.get_single_value("eBarimt Settings", "alert_email")
+
+    if not alert_email:
+        frappe.logger("ebarimt").warning(
+            f"LOW LOTTERY ALERT: Only {left_lotteries} tickets remaining! "
+            f"No alert email configured."
+        )
+        return
+
+    subject = f"eBarimt: Low Lottery Tickets Alert - {left_lotteries} remaining"
+    message = f"""
+    <h3>eBarimt Lottery Tickets Running Low</h3>
+    <p>Your POS terminal is running low on lottery tickets.</p>
+
+    <table border="1" cellpadding="8" cellspacing="0">
+        <tr><td><strong>Remaining Tickets:</strong></td><td>{left_lotteries}</td></tr>
+        <tr><td><strong>Operator:</strong></td><td>{operator_name}</td></tr>
+        <tr><td><strong>POS ID:</strong></td><td>{pos_id}</td></tr>
+    </table>
+
+    <p><strong>Action Required:</strong> Contact ITC at posapi@itc.gov.mn to request
+    additional lottery tickets before running out.</p>
+
+    <p>This is an automated message from eBarimt integration.</p>
+    """
+
+    try:
+        frappe.sendmail(
+            recipients=[alert_email],
+            subject=subject,
+            message=message,
+            now=True
+        )
+        frappe.logger("ebarimt").info(f"Low lottery alert sent to {alert_email}")
+    except Exception as e:
+        frappe.log_error(
+            message=f"Failed to send lottery alert: {e}",
+            title="eBarimt Alert Failed"
+        )
+
+
+def _check_lottery_winners(client, pos_info):
+    """
+    Check if any recent receipts have winning lottery numbers
+
+    Per documentation, lottery winners should be checked periodically.
+    This checks receipts from the last 3 days for potential winners.
+    """
+    try:
+        # Get recent receipts that might have lottery numbers
+        three_days_ago = add_days(now_datetime(), -3)
+
+        recent_receipts = frappe.get_all(
+            "eBarimt Receipt Log",
+            filters={
+                "status": "Success",
+                "lottery_number": ["is", "set"],
+                "creation": [">=", three_days_ago]
+            },
+            fields=["name", "receipt_id", "lottery_number", "linked_doctype", "linked_docname"],
+            limit=100
+        )
+
+        if not recent_receipts:
+            return
+
+        frappe.logger("ebarimt").debug(
+            f"Checking {len(recent_receipts)} recent receipts for lottery status"
+        )
+
+        # Note: Actual lottery winner checking requires the eBarimt app
+        # or citizen to check via ebarimt.mn portal
+        # This is logged for reference
+
+    except Exception as e:
+        frappe.logger("ebarimt").warning(f"Lottery winner check failed: {e}")

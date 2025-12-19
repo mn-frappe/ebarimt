@@ -21,6 +21,28 @@ import requests
 from requests.adapters import HTTPAdapter
 from urllib3.util.retry import Retry
 
+
+class EBarimtHTTPError(Exception):
+    """HTTP error for eBarimt API.
+    
+    Attributes:
+        message: Error message
+        status_code: HTTP status code (if available)
+        response_data: Response body (if available)
+    """
+    
+    def __init__(self, message: str, status_code: int | None = None, response_data: Any = None):
+        super().__init__(message)
+        self.message = message
+        self.status_code = status_code
+        self.response_data = response_data
+    
+    def __str__(self) -> str:
+        if self.status_code:
+            return f"[{self.status_code}] {self.message}"
+        return self.message
+
+
 # Global session cache (per site)
 _sessions: dict[str, requests.Session] = {}
 

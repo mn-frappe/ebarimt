@@ -239,6 +239,9 @@ def build_item_data(item, settings):
     if not barcode and item_doc.barcodes:
         barcode = item_doc.barcodes[0].barcode
 
+    # Determine barcode type (GS1, ISBN, or UNDEFINED)
+    barcode_type = determine_barcode_type(barcode)
+
     # Get tax type
     tax_code = item_doc.get("custom_ebarimt_tax_code") or ""
     tax_type = get_tax_type_for_item(item.item_code) if tax_code else "VAT_ABLE"
@@ -267,14 +270,98 @@ def build_item_data(item, settings):
         "totalAmount": item_amount,
         "vat": item_vat,
         "cityTax": item_city_tax,
-        "barCode": barcode
+        "barCode": barcode or None,
+        "barCodeType": barcode_type
     }
 
     # Add tax product code if exempt/zero
     if tax_code and tax_type != "VAT_ABLE":
         stock_data["taxProductCode"] = tax_code
 
+    # Pharmacy mode: Add lot number (lotNo) per Law on Medicines Article 11.1.7, 47.11.1, 47.12
+    if settings.get("is_pharmacy"):
+        lot_no = get_item_lot_no(item, item_doc, settings)
+        if lot_no:
+            stock_data["data"] = {"lotNo": lot_no}
+
     return stock_data
+
+
+def determine_barcode_type(barcode):
+    """
+    Determine barcode type for eBarimt receipt
+
+    Per eBarimt POS API 3.0 documentation:
+    - GS1: Standard GS1 barcodes (EAN-13, EAN-8, UPC-A, UPC-E, GTIN-14)
+    - ISBN: Book identification numbers (ISBN-10, ISBN-13)
+    - UNDEFINED: For items without standard barcodes or services
+
+    Args:
+        barcode: Barcode string or None
+
+    Returns:
+        str: "GS1", "ISBN", or "UNDEFINED"
+    """
+    if not barcode:
+        return "UNDEFINED"
+
+    # Clean the barcode
+    barcode = str(barcode).strip().replace("-", "").replace(" ", "")
+
+    # ISBN detection: 10 or 13 digits starting with 978 or 979
+    if len(barcode) == 10 and barcode[:-1].isdigit():
+        # Could be ISBN-10
+        return "ISBN"
+    elif len(barcode) == 13 and barcode.startswith(("978", "979")) and barcode.isdigit():
+        # ISBN-13
+        return "ISBN"
+
+    # GS1 detection: Common formats
+    if barcode.isdigit():
+        if len(barcode) in (8, 12, 13, 14):
+            # EAN-8, UPC-A, EAN-13, GTIN-14
+            return "GS1"
+
+    # Default to UNDEFINED for non-standard barcodes or services
+    return "UNDEFINED"
+
+
+def get_item_lot_no(item, item_doc, settings):
+    """
+    Get lot number for pharmaceutical items
+
+    Checks in order:
+    1. Batch serial from Sales Invoice Item (if using batch inventory)
+    2. Custom lot number field on Item
+    3. Default lot number from settings
+
+    Args:
+        item: Sales Invoice Item row
+        item_doc: Item DocType document
+        settings: eBarimt Settings document
+
+    Returns:
+        str: Lot number or None
+    """
+    # 1. Check batch number from invoice item
+    if item.get("batch_no"):
+        return item.batch_no
+
+    # 2. Check custom lot number field on item
+    if item_doc.get("custom_ebarimt_lot_no"):
+        return item_doc.custom_ebarimt_lot_no
+
+    # 3. Fall back to default lot number
+    if settings.get("pharmacy_default_lot_no"):
+        return settings.pharmacy_default_lot_no
+
+    # 4. If lot number is required, log warning
+    if settings.get("require_lot_no"):
+        frappe.logger("ebarimt").warning(
+            f"Lot number required but not found for item {item.item_code}"
+        )
+
+    return None
 
 
 def build_payment_data(invoice_doc, settings):

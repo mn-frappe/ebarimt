@@ -180,7 +180,13 @@ scheduler_events = {
         "ebarimt.tasks.sync_taxpayer_info_weekly",
         "ebarimt.tasks.sync_barcode_info_weekly",
         "ebarimt.performance.ensure_indexes"
-    ]
+    ],
+    # Per eBarimtRequirements.rtf #6: Check lottery status every 3 days
+    "cron": {
+        "0 9 */3 * *": [
+            "ebarimt.tasks.check_lottery_status"
+        ]
+    }
 }
 
 # Boot Session
